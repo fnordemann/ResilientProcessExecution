@@ -1,0 +1,28 @@
+# This file will pull up all the necessary Docker containers including their corresponding Ports!
+
+version: '3'
+services:
+        rpmn:
+                container_name: bpmn
+                image: bpmn
+                build:
+                        context: .
+                        dockerfile: Dockerfile
+
+                ports:
+                        - 8020:8020
+                        - 8025:8025
+                        - 8026:8026
+                        - 8027:8027
+                        - 8028:8028
+                        - 8029:8029
+                        - 8030:8030
+                        - 8031:8031
+                        - 8035:8035
+                        - 8036:8036
+                        - 8037:8037
+                        - 8040:8040
+                        - 8045:8045
+                        - 8050:8050
+                        - 8055:8055
+

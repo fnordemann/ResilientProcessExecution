@@ -1,0 +1,22 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.1.RELEASE)
+
+2020-03-12 14:38:52.432  INFO 18674 --- [           main] org.example.neighbor.Application         : Starting Application v0.1.0 on e04-laptop27 with PID 18674 (/home/julian/Schreibtisch/ResilientProcessExecution/precompiled/neighbor-service-0.1.0.jar started by julian in /home/julian/Schreibtisch/ResilientProcessExecution/precompiled)
+2020-03-12 14:38:52.493  INFO 18674 --- [           main] org.example.neighbor.Application         : No active profile set, falling back to default profiles: default
+2020-03-12 14:38:58.594  INFO 18674 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8031 (http)
+2020-03-12 14:38:58.691  INFO 18674 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-12 14:38:58.700  INFO 18674 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-03-12 14:38:59.056  INFO 18674 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-12 14:38:59.056  INFO 18674 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6333 ms
+2020-03-12 14:39:00.240  INFO 18674 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-12 14:39:01.636  INFO 18674 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8031 (http) with context path ''
+2020-03-12 14:39:01.651  INFO 18674 --- [           main] org.example.neighbor.Application         : Started Application in 11.439 seconds (JVM running for 13.103)
+2020-03-12 14:39:23.433  INFO 18674 --- [nio-8031-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-12 14:39:23.433  INFO 18674 --- [nio-8031-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-12 14:39:23.495  INFO 18674 --- [nio-8031-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 62 ms
