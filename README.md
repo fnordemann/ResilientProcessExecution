@@ -1,11 +1,11 @@
 
-#Introduction
+# Introduction
 This package provides the proof-of-concept implementation for the concepts presented in the paper "Resilient Business Process Execution using BPMN and Microservices". Since Github doesn't allow sharing private repositories with unknown collaborators/reviews, the code is hosted at GoogleDrive for the time of the review process. If accepted, the proof-of-concept implementation will be added to a public Github repository.
 
 The ReadMe provides information to execute and manipulate the proof-of-concept implementation. Since setting up an unreliable communication environment for evaluating the proof-of-concept is cumbersome, the code was adapted to be executable on a single system. A Neighbor-Service for SP is able to add and delete neighbors, resulting in an emulated unreliable communication environment. REST-Helpercalls allow users to easily add and delete neighbors during execution. By interfacing a proactive routing protocol, the code is able to run in real-world environments.
 
 
-#Single system port mapping
+# Single system port mapping
 The port mapping for the scenario participants is illustrated below:
 	- Locally-emulated Cloud environment:
 		- Eureka-Cloud: 8020
@@ -26,7 +26,7 @@ The port mapping for the scenario participants is illustrated below:
 		- LGCS: 8055
 
 
-#Control/manipulate scenario execution
+# Control/manipulate scenario execution
 REST-Helpercalls can be used to a start slurry process, to add/delete neighbor nodes, to inspect Eureka server instances. A collection of REST-calls can be imported into the program "Postman" (https://www.postman.com/):
 	postman-rest-helpercalls -> Postman_REST_Helpercalls.postman_collection.json
 
@@ -40,7 +40,7 @@ Addiotionally, process / service opertion can be examined from logs at
 	logs -> xyz-service.txt
 
 
-#Execution of proof-of-concept (precompiled)
+# Execution of proof-of-concept (precompiled)
 Users may execute precompiled Java archives or compile/adapt source files on their own (introduced later). Scripts are provided for UNIX environments.
 
 Requirements: Java Runtime Environment (JRE, v1.8+), UNIX-based system for bash-scripts (optional!)
@@ -64,7 +64,7 @@ OR manually trigger execution:
 	tail -f ../logs/sp.txt
 
 
-#Compilation and execution of proof-of-concept
+# Compilation and execution of proof-of-concept
 Requirements: Java Development Kit (JDK, v1.8+), UNIX-based system for bash-scripts (optional!)
 
 Automatically trigger compilation: Run bash script
@@ -110,7 +110,7 @@ OR manually trigger execution:
 	tail -f logs/sp.txt
 
 
-#Adaptation of proof-of-concept implementation
+# Adaptation of proof-of-concept implementation
 - Users may find the source code commentaries helpfull for understanding/adapting the proof-of-concept.
 - Real-world deployments require to adapt the network configuration of services
 	xyz-service->src->main->resources->application.yml
@@ -118,7 +118,7 @@ OR manually trigger execution:
 - Multiple instances of OSAS/OGCS may be started by using profiles osas1/osas2 ogcs1/ogcs2
 
 
-#Used software
+# Used software
 - Java
 - Spring Framework
 - Camunda BPM
