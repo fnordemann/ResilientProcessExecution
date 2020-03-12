@@ -1,0 +1,25 @@
+server:
+  port: 8035
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 5
+    statusPageUrl: http://${eureka.hostname}:${server.port}/start
+    healthCheckUrl: http://${eureka.hostname}:${server.port}/start
+    homePageUrl: http://${eureka.hostname}:${server.port}/start
+    metadata-map:
+      type: "central"
+      location: "local"
+      urlstart: "http://${eureka.hostname}:${server.port}/start"
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8030/eureka/
+spring:
+  application:
+    name: sp
+camunda.bpm:
+  admin-user:
+    id: demo
+    password: demo
+    firstName: demo
+  filter:
+    create: All tasks

@@ -1,0 +1,21 @@
+server:
+  port: 8045
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 5
+    statusPageUrl: http://${eureka.hostname}:${server.port}/nirs
+    healthCheckUrl: http://${eureka.hostname}:${server.port}/nirs
+    homePageUrl: http://${eureka.hostname}:${server.port}/nirs
+    metadata-map:
+      type: "NIRS"
+      location: "local"
+      accuracy: "0.7"
+      cost: "0.4"
+      time: "0.1"
+      urlanalysis: "/nirs"
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8040/eureka/
+spring:
+  application:
+    name: ingredients-service

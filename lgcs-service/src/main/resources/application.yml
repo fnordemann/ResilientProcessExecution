@@ -1,0 +1,22 @@
+server:
+  port: 8055
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 5
+    statusPageUrl: http://${eureka.hostname}:${server.port}/analysis
+    healthCheckUrl: http://${eureka.hostname}:${server.port}/analysis
+    homePageUrl: http://${eureka.hostname}:${server.port}/analysis
+    metadata-map:
+      type: "LOCAL"
+      location: "local"
+      accuracy: "0.9"
+      cost: "0.3"
+      time: "0.1"
+      urlanalysis: "/gps"
+  client:
+    serviceUrl:
+      #defaultZone: http://e04-laptop21.et.hs-osnabrueck.de:8761/eureka/
+      defaultZone: http://127.0.0.1:8050/eureka/
+spring:
+  application:
+    name: gps-service

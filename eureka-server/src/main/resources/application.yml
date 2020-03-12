@@ -1,0 +1,46 @@
+server:
+  enableSelfPreservation: false
+eureka:
+   client:
+      registerWithEureka: false
+      fetchRegistry: false
+
+---
+spring:
+  profiles: cloud
+server:
+  port: 8020
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8020/eureka
+
+---
+spring:
+  profiles: sp
+server:
+  port: 8030
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8030/eureka
+
+---
+spring:
+  profiles: nirs
+server:
+  port: 8040
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8040/eureka
+
+---
+spring:
+  profiles: lgcs
+server:
+  port: 8050
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8050/eureka

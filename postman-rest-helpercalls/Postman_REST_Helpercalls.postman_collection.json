@@ -1,0 +1,543 @@
+{
+	"info": {
+		"_postman_id": "76231ca7-55ca-454e-afef-4039e6cb33ce",
+		"name": "Resilient Process Execution",
+		"description": "This Postman collection provides REST-Helpercalls to control process operation / neighbor table regarding the proof-of-concept implementation of the paper \"Resilient Business Process Execution using BPMN and Microservices\".",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "StartSP",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"taskId\":\"123456789\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8035/start",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8035",
+					"path": [
+						"start"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StartMGMT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"messageName\" : \"ProcessStatus\",\n  \"businessKey\" : \"100\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8025/rest/process-definition/key/MgmtKey/start",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8025",
+					"path": [
+						"rest",
+						"process-definition",
+						"key",
+						"MgmtKey",
+						"start"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostStatusToMGMT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"taskId\":\"123456789\",\n    \"taskStatus\":4,\n    \"taskRuntime\":123,\n    \"taskCompletion\":80,\n    \"seq\":100\n }"
+				},
+				"url": {
+					"raw": "http://localhost:8025/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8025",
+					"path": [
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetLastStatusFromMGMT",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"taskId\":\"123456789\",\n    \"taskStatus\":2,\n    \"taskRuntime\":123,\n    \"taskCompletion\":80,\n    \"seq\":100\n }"
+				},
+				"url": {
+					"raw": "http://localhost:8025/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8025",
+					"path": [
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostLogToMGMT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"taskId\":\"123456789\",\n    \"taskStatus\":4,\n    \"taskTotalRuntime\":999,\n    \"taskCompletion\":100\n }"
+				},
+				"url": {
+					"raw": "http://localhost:8025/log",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8025",
+					"path": [
+						"log"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetNeighbortableSP",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"neighborAddress\":\"http://localhost:8030/\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8031/neighbortable",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8031",
+					"path": [
+						"neighbortable"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddCloudNeighborsToSP",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"neighborAddress\":\"http://localhost:8020/\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8031/neighbortable/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8031",
+					"path": [
+						"neighbortable",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddNIRSNeighborToSP",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"neighborAddress\":\"http://localhost:8040/\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8031/neighbortable/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8031",
+					"path": [
+						"neighbortable",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddLGCSNeighborToSP",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"neighborAddress\":\"http://localhost:8050/\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8031/neighbortable/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8031",
+					"path": [
+						"neighbortable",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DelCloudNeighborsFromSP",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"neighborAddress\":\"http://localhost:8020/\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8031/neighbortable/del",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8031",
+					"path": [
+						"neighbortable",
+						"del"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DelNIRSNeighborFromSP",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"neighborAddress\":\"http://localhost:8040/\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8031/neighbortable/del",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8031",
+					"path": [
+						"neighbortable",
+						"del"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DelLGCSNeighborFromSP",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"neighborAddress\":\"http://localhost:8050/\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8031/neighbortable/del",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8031",
+					"path": [
+						"neighbortable",
+						"del"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddTestEnvNeighborsSP",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"neighborAddress\":\"http://localhost:8030/\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8031/testenvsp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8031",
+					"path": [
+						"testenvsp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetEurekaServicesCloud",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"messageName\" : \"ProcessStatus\",\n  \"businessKey\" : \"100\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8020/eureka/apps/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8020",
+					"path": [
+						"eureka",
+						"apps",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetEurekaServicesSP",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"messageName\" : \"ProcessStatus\",\n  \"businessKey\" : \"100\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8030/eureka/apps/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8030",
+					"path": [
+						"eureka",
+						"apps",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetEurekaServicesNIRS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"messageName\" : \"ProcessStatus\",\n  \"businessKey\" : \"100\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8040/eureka/apps/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8040",
+					"path": [
+						"eureka",
+						"apps",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetEurekaServicesLGCS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"messageName\" : \"ProcessStatus\",\n  \"businessKey\" : \"100\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8050/eureka/apps/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8050",
+					"path": [
+						"eureka",
+						"apps",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

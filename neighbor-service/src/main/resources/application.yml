@@ -1,0 +1,14 @@
+server:
+  port: 8031
+
+---
+spring:
+  profiles: sp
+server:
+  port: 8031
+
+---
+spring:
+  profiles: mgmt
+server:
+  port: 8021
