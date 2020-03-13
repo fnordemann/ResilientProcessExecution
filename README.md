@@ -98,7 +98,7 @@ OR manually trigger execution by:
     java -jar sp/target/sp-0.0.1-SNAPSHOT.jar > logs/sp.txt &
     tail -f logs/sp.txt
 
-## Controlling-scenario-execution
+## Controlling scenario execution
 Different options to control and manipulate the slurry process execution exist.
 
 ### REST-Helpercalls in Postman
@@ -106,7 +106,7 @@ REST calls can be used to a start slurry process, to add/delete neighbor nodes a
 
     postman-rest-helpercalls -> Postman_REST_Helpercalls.postman_collection.json
 
-### Controlling/Inspecting BPMN processes running in Camunda BPM
+### Controlling and inspecting BPMN processes running in Camunda BPM
 *MGMT* and *SP* execute BPMN processes that can be started / monitored from Camunda tools (for *username/password*, use *demo/demo*). Use Camunda Tasklist to start a slurry process and Camunda Cockpit to inspect running processes at:
 - MGMT: http://localhost:8025
 - SP: http://localhost:8035
@@ -124,7 +124,7 @@ Process and service operation can be examined from logs at:
 
     logs -> xyz-service.txt
 
-(### Single-system-port-mapping)
+### Single-system port mapping
 Some services also provide information by accessing their interfaces. Besides, port information is helpful to adapt scenario execution. The port mapping for the scenario participants is illustrated below:
 - Locally-emulated Cloud environment:
     - Eureka-Cloud: 8020
