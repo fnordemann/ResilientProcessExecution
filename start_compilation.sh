@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Stop services on ctrl_c
-trap ctrl_c INT
-
-function ctrl_c() {
-		echo " "
-        ../stop_services.sh
-}
+#trap ctrl_c INT
+#
+#function ctrl_c() {
+#		echo " "
+#        sh stop_services.sh
+#}
 
 # Compile services
 echo "Going to compile all services..."
