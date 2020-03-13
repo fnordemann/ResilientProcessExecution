@@ -2,16 +2,16 @@
 This repository provides the proof-of-concept implementation for the concepts presented in the paper *Resilient Business Process Execution using BPMN and Microservices*. Since setting up an unreliable communication environment for evaluating the proof-of-concept is cumbersome, the code was adapted to be executable on a single system. A Neighbor-Service for *SP* is able to add and delete neighbors, resulting in an emulated unreliable communication environment. By interfacing a proactive routing protocol used in the unreliable network, the code is able to run in real-world environments.
 
 ## Run the proof-of-concept implementation
-The following three options exist to run the proof-of-concept implementation. Afterwards, the execution can be controlled and manipulated by methods presented in the next [section](##Controling/manipulating-scenario-execution).
+The following three options exist to run the proof-of-concept implementation. Afterwards, the execution can be controlled and manipulated by methods presented in the next [section](##Controling-scenario-execution).
 
 ### Option 1: Run with Docker
-Docker integration facilitates the execution of the proof-of-concept by setting up all dependencies. **Attention** Docker commands may take a long time - it is recommended to increase the available resources in the docker settings. 
+Docker integration facilitates the execution of the proof-of-concept by setting up all dependencies. **Attention**: Docker commands may take a long time to execute - it is recommended to increase the available resources in the docker settings. 
 
 Build the BPMN Container:
 
     docker-compose build
 
-Run the container and expose all necessary ports (see *Single system port mapping* section). If no output is desired, add the option *-d* to the statement.
+Run the container and expose all necessary ports (see [*Single system port mapping*](##Controling-scenario-execution)  section). If no output is desired, add the option *-d* to the statement.
 
     docker-compose up
 
@@ -98,7 +98,7 @@ OR manually trigger execution by:
     java -jar sp/target/sp-0.0.1-SNAPSHOT.jar > logs/sp.txt &
     tail -f logs/sp.txt
 
-(##Controling/manipulating-scenario-execution)
+(##Controling-scenario-execution)
 Different options to control and manipulate the slurry process execution exist.
 
 ### REST-Helpercalls in Postman
@@ -124,7 +124,7 @@ Process and service opertion can be examined from logs at:
 
     logs -> xyz-service.txt
 
-### Single system port mapping
+(###Single-system-port-mapping)
 Some services also provide information by accessing their interfaces. Besides, port information is helpful to adapt scenario execution. The port mapping for the scenario participants is illustrated below:
 - Locally-emulated Cloud environment:
     - Eureka-Cloud: 8020
