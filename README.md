@@ -11,7 +11,7 @@ Build the BPMN Container:
 
     docker-compose build
 
-Run the container and expose all necessary ports (see [*Single system port mapping*](##Controling-scenario-execution)  section). If no output is desired, add the option *-d* to the statement.
+Run the container and expose all necessary ports (see [*Single system port mapping*](Controling-scenario-execution)  section). If no output is desired, add the option *-d* to the statement.
 
     docker-compose up
 
