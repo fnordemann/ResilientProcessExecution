@@ -1,8 +1,8 @@
 # Resilient Business Process Execution
-This repository provides the proof-of-concept implementation for the concepts presented in the paper *Resilient Business Process Execution using BPMN and Microservices*. Since setting up an unreliable communication environment for evaluating the proof-of-concept is cumbersome, the code was adapted to be executable on a single system. A Neighbor-Service for *SP* is able to add and delete neighbors, resulting in an emulated unreliable communication environment. By interfacing a proactive routing protocol used in the unreliable network, the code is able to run in real-world environments.
+This repository provides the proof-of-concept implementation for the concepts presented in the paper *Resilient Business Process Execution using BPMN and Microservices*. Since setting up an unreliable communication environment for evaluating the proof-of-concept is cumbersome, the code was adapted to be executable on a single system. A Neighbor-Service for *SP* can add and delete neighbors, resulting in an emulated unreliable communication environment. By interfacing a proactive routing protocol used in the unreliable network, the code may be used for execution in real-world environments.
 
 ## Run the proof-of-concept implementation
-The following three options exist to run the proof-of-concept implementation. Afterwards, the execution can be controlled and manipulated by methods presented in the next section.
+The following three options exist to run the proof-of-concept implementation. Afterward, the execution can be controlled and manipulated by the methods presented in the next section.
 
 ### Option 1: Run with Docker
 Docker integration facilitates the execution of the proof-of-concept by setting up all dependencies. **Attention**: Docker commands may take a long time to execute - it is recommended to increase the available resources in the docker settings. 
@@ -26,11 +26,11 @@ Users may run precompiled Java archives, avoiding the need for source code compi
 
 Automatically trigger execution by running:
 
-	./start_precompiled_services.sh
+    ./start_precompiled_services.sh
 
 OR manually trigger execution by:
 
-	java -jar -Dspring.profiles.active=cloud server-0.0.1-SNAPSHOT.jar > ../logs/eureka_cloud.txt &
+    java -jar -Dspring.profiles.active=cloud server-0.0.1-SNAPSHOT.jar > ../logs/eureka_cloud.txt &
     java -jar -Dspring.profiles.active=sp server-0.0.1-SNAPSHOT.jar > ../logs/eureka_sp.txt &
     java -jar -Dspring.profiles.active=nirs server-0.0.1-SNAPSHOT.jar > ../logs/eureka_nirs.txt &
     java -jar -Dspring.profiles.active=lgcs server-0.0.1-SNAPSHOT.jar > ../logs/eureka_lgcs.txt &
@@ -50,12 +50,12 @@ OR manually trigger execution by:
 
 #### Compilation of source code
 Automatically trigger compilation by running:
-	
+    
     start_compilation.sh
 
 OR manually compile:
-	
-	cd datatypes
+    
+    cd datatypes
     mvn clean install
     cd ../eureka-server
     mvn clean install
@@ -81,9 +81,9 @@ Automatically trigger execution by running:
 
     start_freshlycompiled_services.sh
 
-OR manually trigger execution by:	
+OR manually trigger execution by:    
 
-	java -jar -Dspring.profiles.active=cloud eureka-server/target/server-0.0.1-SNAPSHOT.jar > logs/eureka_cloud.txt &
+    java -jar -Dspring.profiles.active=cloud eureka-server/target/server-0.0.1-SNAPSHOT.jar > logs/eureka_cloud.txt &
     java -jar -Dspring.profiles.active=sp eureka-server/target/server-0.0.1-SNAPSHOT.jar > logs/eureka_sp.txt &
     java -jar -Dspring.profiles.active=nirs eureka-server/target/server-0.0.1-SNAPSHOT.jar > logs/eureka_nirs.txt &
     java -jar -Dspring.profiles.active=lgcs eureka-server/target/server-0.0.1-SNAPSHOT.jar > logs/eureka_lgcs.txt &
@@ -98,7 +98,7 @@ OR manually trigger execution by:
     java -jar sp/target/sp-0.0.1-SNAPSHOT.jar > logs/sp.txt &
     tail -f logs/sp.txt
 
-## Controling-scenario-execution
+## Controlling-scenario-execution
 Different options to control and manipulate the slurry process execution exist.
 
 ### REST-Helpercalls in Postman
@@ -120,7 +120,7 @@ The Eureka servers are providing information about their current status, includi
 - Eureka-LGCS: http://localhost:8050
 
 ### Process and service logs
-Process and service opertion can be examined from logs at:
+Process and service operation can be examined from logs at:
 
     logs -> xyz-service.txt
 
@@ -145,9 +145,9 @@ Some services also provide information by accessing their interfaces. Besides, p
     - LGCS: 8055
 
 ## Adaptation of proof-of-concept implementation
-- Users may find the source code commentaries helpfull for understanding/adapting the proof-of-concept.
+- Users may find the source code commentaries helpful for understanding/adapting the proof-of-concept.
 - Real-world deployments require to adapt the network configuration of services
-	xyz-service->src->main->resources->application.yml
+    xyz-service->src->main->resources->application.yml
 - Service discovery and decision making is part of the *SP* implementation and may be used in other services.
 - Multiple instances of *OSAS/OGCS* may be started by using profiles *osas1/osas2 ogcs1/ogcs2*.
 
