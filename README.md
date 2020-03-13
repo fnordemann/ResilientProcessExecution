@@ -4,56 +4,69 @@
 This package provides the proof-of-concept implementation for the concepts presented in the paper "Resilient Business Process Execution using BPMN and Microservices". Since Github doesn't allow sharing private repositories with unknown collaborators/reviews, the code is hosted at GoogleDrive for the time of the review process. If accepted, the proof-of-concept implementation will be added to a public Github repository.
 
 The README provides information to execute and manipulate the proof-of-concept implementation. Since setting up an unreliable communication environment for evaluating the proof-of-concept is cumbersome, the code was adapted to be executable on a single system. A Neighbor-Service for SP is able to add and delete neighbors, resulting in an emulated unreliable communication environment. REST-Helpercalls allow users to easily add and delete neighbors during execution. By interfacing a proactive routing protocol, the code is able to run in real-world environments.
-# Run with Docker
-This PoC offers a Docker integration to facilitate the initial effort of setting up every depencency. The docker container will copy all of the precompiled jar files within the "precompiled" directory to the internal file structure. After that, it will start the shell script "start_precompiled_services.sh", which has also been copied into the container namespace before! To start the system simply execute the following steps:
-Build the BPMN Container:
-
-    docker-compose build
-
-Run the Container and expose all the necessary ports (ref. "Single system port mapping" section). Notice the "-d" option as it will detach from all output! If you want to see the logs, leave out the "-d" option
-
-    docker-compose up -d
-
-To shut down the system, simply run
-
-    docker-compose down
-
-# Single system port mapping
-The port mapping for the scenario participants is illustrated below:
-- Locally-emulated Cloud environment:
-	- Eureka-Cloud: 8020
-	- MGMT: 8025
-	- OSAS: 8026/8027
-	- OGCS: 8028/8029
-- SP:
-	- Eureka-SP: 8030
-	- Neighbor-Service: 8031
-	- Camunda-SP: 8035
-	- MGMT-Mov: 8036
-	- OSAS-Mov: 8037
-- NIRS:
-	- Eureka-NIRS: 8040
-	- NIRS: 8045
-- LGCS:
-	- Eureka-LGCS: 8050
-	- LGCS: 8055
-
 
 # Control/manipulate scenario execution
-REST-Helpercalls can be used to a start slurry process, to add/delete neighbor nodes, to inspect Eureka server instances. A collection of REST-calls can be imported into the program "Postman" (https://www.postman.com/):
+Different options to influcence process execution exist.
+
+## REST-Helpercalls in Postman
+REST-Helpercalls can be used to a start slurry process, to add/delete neighbor nodes, to inspect Eureka server instances. A collection of REST-calls can be imported into the program "Postman" (https://www.postman.com):
 	postman-rest-helpercalls -> Postman_REST_Helpercalls.postman_collection.json
 
-Controlling/Inspecting BPMN processes running in Camunda BPM:
+## Controlling/Inspecting BPMN processes running in Camunda BPM:
 MGMT and SP execute BPMN processes, that can be started / monitored from Camunda tasklist / cockpit (username/password demo/demo) at:
 - MGMT: http://localhost:8025
 - SP: http://localhost:8035
 - MGMT-MOV on SP: http://localhost:8036
 
-Addiotionally, process / service opertion can be examined from logs at
+## Inspecting Eureka service instances
+The Eureka servers are providing information about their current status, including registered services.
+- Eureka-Cloud: http://localhost:8020
+- Eureka-SP: http://localhost:8030
+- Eureka-NIRS: http://localhost:8040
+- Eureka-LGCS: http://localhost:8050
+
+## Addiotionally, process / service opertion can be examined from logs at
 	logs -> xyz-service.txt
 
+## Single system port mapping
+The port mapping for the scenario participants is illustrated below:
+- Locally-emulated Cloud environment:
+    - Eureka-Cloud: 8020
+    - MGMT: 8025
+    - OSAS: 8026/8027
+    - OGCS: 8028/8029
+- SP:
+    - Eureka-SP: 8030
+    - Neighbor-Service: 8031
+    - Camunda-SP: 8035
+    - MGMT-Mov: 8036
+    - OSAS-Mov: 8037
+- NIRS:
+    - Eureka-NIRS: 8040
+    - NIRS: 8045
+- LGCS:
+    - Eureka-LGCS: 8050
+    - LGCS: 8055
 
-# Execution of proof-of-concept (precompiled)
+# Run the proof-of-concept implementation
+The following three options exist to run the proof-of-concept implementation.
+
+## Option 1: Run with Docker
+Docker integration facilitates the execution of the proof-of-concept. The docker container will copy all precompiled .jar-files to the internal docker file structure and start the script "start_precompiled_services.sh".
+
+Build the BPMN Container:
+
+    docker-compose build
+
+Run the container and expose all the necessary ports (ref. "Single system port mapping" section). If no output is desired, add the "-d" option to the statement.
+
+    docker-compose up -d
+
+To shut down the system, run
+
+    docker-compose down
+
+## Option 2: Run precompiled .jar-files
 Users may execute precompiled Java archives or compile/adapt source files on their own (introduced later). Scripts are provided for UNIX environments.
 
 Requirements: Java Runtime Environment (JRE, v1.8+), UNIX-based system for bash-scripts (optional!)
@@ -80,7 +93,7 @@ OR manually trigger execution:
     java -jar sp-0.0.1-SNAPSHOT.jar > ../logs/sp.txt &
     tail -f ../logs/sp.txt
 
-# Compilation and execution of proof-of-concept
+## Option 3: Compile and run source code
 Requirements: Java Development Kit (JDK, v1.8+), UNIX-based system for bash-scripts (optional!)
 
 Automatically trigger compilation: Run bash script
