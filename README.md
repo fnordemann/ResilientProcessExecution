@@ -2,10 +2,10 @@
 This repository provides the proof-of-concept implementation for the concepts presented in the paper *Resilient Business Process Execution using BPMN and Microservices*. Since setting up an unreliable communication environment for evaluating the proof-of-concept is cumbersome, the code was adapted to be executable on a single system. A Neighbor-Service for *SP* is able to add and delete neighbors, resulting in an emulated unreliable communication environment. By interfacing a proactive routing protocol used in the unreliable network, the code is able to run in real-world environments.
 
 ## Run the proof-of-concept implementation
-The following three options exist to run the proof-of-concept implementation. Afterwards, the execution can be controlled and manipulated by methods presented in the next section.
+The following three options exist to run the proof-of-concept implementation. Afterwards, the execution can be controlled and manipulated by methods presented in the next [section](##Controling/manipulating-scenario-execution).
 
 ### Option 1: Run with Docker
-Docker integration facilitates the execution of the proof-of-concept by setting up all dependencies. The docker container will copy all precompiled .jar-files to the internal docker file structure and starts the scenario by running the shell script "start_precompiled_services.sh".
+Docker integration facilitates the execution of the proof-of-concept by setting up all dependencies. **Attention** Docker commands may take a long time - it is recommended to increase the available resources in the docker settings. 
 
 Build the BPMN Container:
 
@@ -98,7 +98,7 @@ OR manually trigger execution by:
     java -jar sp/target/sp-0.0.1-SNAPSHOT.jar > logs/sp.txt &
     tail -f logs/sp.txt
 
-## Controling/manipulating scenario execution
+(##Controling/manipulating-scenario-execution)
 Different options to control and manipulate the slurry process execution exist.
 
 ### REST-Helpercalls in Postman
