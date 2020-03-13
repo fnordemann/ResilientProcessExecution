@@ -2,7 +2,7 @@
 
 version: '3'
 services:
-        rpmn:
+        rbpmn:
                 container_name: bpmn
                 image: bpmn
                 build:
@@ -26,4 +26,3 @@ services:
                         - 8045:8045
                         - 8050:8050
                         - 8055:8055
-

@@ -7,13 +7,16 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.2.1.RELEASE)
 
-2020-03-12 14:51:24.863  INFO 17 --- [           main] org.example.neighbor.Application         : Starting Application v0.1.0 on db84c340c791 with PID 17 (/precompiled/neighbor-service-0.1.0.jar started by root in /precompiled)
-2020-03-12 14:51:24.901  INFO 17 --- [           main] org.example.neighbor.Application         : No active profile set, falling back to default profiles: default
-2020-03-12 14:51:31.497  INFO 17 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8031 (http)
-2020-03-12 14:51:31.534  INFO 17 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-03-12 14:51:31.535  INFO 17 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
-2020-03-12 14:51:31.907  INFO 17 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-03-12 14:51:31.912  INFO 17 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6742 ms
-2020-03-12 14:51:32.827  INFO 17 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-03-12 14:51:34.226  INFO 17 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8031 (http) with context path ''
-2020-03-12 14:51:34.233  INFO 17 --- [           main] org.example.neighbor.Application         : Started Application in 11.988 seconds (JVM running for 13.332)
+2020-03-13 08:27:06.481  INFO 18 --- [           main] org.example.neighbor.Application         : Starting Application v0.1.0 on 0077e4153486 with PID 18 (/precompiled/neighbor-service-0.1.0.jar started by root in /precompiled)
+2020-03-13 08:27:06.670  INFO 18 --- [           main] org.example.neighbor.Application         : No active profile set, falling back to default profiles: default
+2020-03-13 08:27:34.833  INFO 18 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8031 (http)
+2020-03-13 08:27:35.221  INFO 18 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-13 08:27:35.233  INFO 18 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-03-13 08:27:37.193  INFO 18 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-13 08:27:37.201  INFO 18 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 28852 ms
+2020-03-13 08:27:41.622  INFO 18 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-13 08:27:46.467  INFO 18 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8031 (http) with context path ''
+2020-03-13 08:27:46.513  INFO 18 --- [           main] org.example.neighbor.Application         : Started Application in 55.228 seconds (JVM running for 64.876)
+2020-03-13 08:29:43.376  INFO 18 --- [nio-8031-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-13 08:29:43.393  INFO 18 --- [nio-8031-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-13 08:29:45.593  INFO 18 --- [nio-8031-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2181 ms

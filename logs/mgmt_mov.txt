@@ -9,22 +9,22 @@
   Camunda BPM: (v7.12.0)
   Camunda BPM Spring Boot Starter: (v3.4.0)
 
-2020-03-12 14:51:28.318  INFO 16 --- [           main] org.example.mgmtmov.MgmtMovApplication   : No active profile set, falling back to default profiles: default
-2020-03-12 14:51:33.517  INFO 16 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=cfb51ca3-28ac-39a7-8402-73715d914319
-2020-03-12 14:51:35.021  INFO 16 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-03-12 14:51:37.586  INFO 16 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8036 (http)
-2020-03-12 14:51:37.624  INFO 16 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-03-12 14:51:37.648  INFO 16 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
-2020-03-12 14:51:37.929  INFO 16 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-03-12 14:51:37.929  INFO 16 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 9398 ms
-2020-03-12 14:51:38.054  INFO 16 --- [           main] .c.b.s.b.s.r.CamundaJerseyResourceConfig : Configuring camunda rest api.
-2020-03-12 14:51:38.140  INFO 16 --- [           main] .c.b.s.b.s.r.CamundaJerseyResourceConfig : Finished configuring camunda rest api.
-2020-03-12 14:51:39.657  INFO 16 --- [           main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2020-03-12 14:51:41.495  INFO 16 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB040 Setting up jobExecutor with corePoolSize=3, maxPoolSize:10
-2020-03-12 14:51:41.525  INFO 16 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'camundaTaskExecutor'
-2020-03-12 14:51:41.994  INFO 16 --- [           main] org.camunda.bpm.engine.cfg               : ENGINE-12003 Plugin 'CompositeProcessEnginePlugin[genericPropertiesConfiguration, camundaProcessEngineConfiguration, camundaDatasourceConfiguration, camundaJobConfiguration, camundaHistoryConfiguration, camundaMetricsConfiguration, camundaAuthorizationConfiguration, CreateAdminUserConfiguration[adminUser=AdminUserProperty[id=demo, firstName=demo, lastName=Demo, email=demo@localhost, password=******]], failedJobConfiguration, CreateFilterConfiguration[filterName=All tasks], disableDeploymentResourcePattern, eventPublisherPlugin]' activated on process engine 'default'
-2020-03-12 14:51:42.004  INFO 16 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB020 ProcessApplication enabled: autoDeployment via springConfiguration#deploymentResourcePattern is disabled
-2020-03-12 14:51:42.005  INFO 16 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-001: Initialized Camunda Spring Boot Eventing Engine Plugin.
-2020-03-12 14:51:42.006  INFO 16 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-003: Task events will be published as Spring Events.
-2020-03-12 14:51:42.006  INFO 16 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-005: Execution events will be published as Spring Events.
-2020-03-12 14:51:42.056  INFO 16 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-007: History events will be published as Spring events.
+2020-03-13 08:27:21.845  INFO 17 --- [           main] org.example.mgmtmov.MgmtMovApplication   : No active profile set, falling back to default profiles: default
+2020-03-13 08:27:46.065  INFO 17 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=cfb51ca3-28ac-39a7-8402-73715d914319
+2020-03-13 08:27:51.576  INFO 17 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 08:28:02.270  INFO 17 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8036 (http)
+2020-03-13 08:28:02.645  INFO 17 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-13 08:28:02.669  INFO 17 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-03-13 08:28:04.582  INFO 17 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-13 08:28:04.594  INFO 17 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 42043 ms
+2020-03-13 08:28:05.723  INFO 17 --- [           main] .c.b.s.b.s.r.CamundaJerseyResourceConfig : Configuring camunda rest api.
+2020-03-13 08:28:06.940  INFO 17 --- [           main] .c.b.s.b.s.r.CamundaJerseyResourceConfig : Finished configuring camunda rest api.
+2020-03-13 08:28:13.458  INFO 17 --- [           main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2020-03-13 08:28:20.772  INFO 17 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB040 Setting up jobExecutor with corePoolSize=3, maxPoolSize:10
+2020-03-13 08:28:20.839  INFO 17 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'camundaTaskExecutor'
+2020-03-13 08:28:23.519  INFO 17 --- [           main] org.camunda.bpm.engine.cfg               : ENGINE-12003 Plugin 'CompositeProcessEnginePlugin[genericPropertiesConfiguration, camundaProcessEngineConfiguration, camundaDatasourceConfiguration, camundaJobConfiguration, camundaHistoryConfiguration, camundaMetricsConfiguration, camundaAuthorizationConfiguration, CreateAdminUserConfiguration[adminUser=AdminUserProperty[id=demo, firstName=demo, lastName=Demo, email=demo@localhost, password=******]], failedJobConfiguration, CreateFilterConfiguration[filterName=All tasks], disableDeploymentResourcePattern, eventPublisherPlugin]' activated on process engine 'default'
+2020-03-13 08:28:23.672  INFO 17 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB020 ProcessApplication enabled: autoDeployment via springConfiguration#deploymentResourcePattern is disabled
+2020-03-13 08:28:23.708  INFO 17 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-001: Initialized Camunda Spring Boot Eventing Engine Plugin.
+2020-03-13 08:28:23.714  INFO 17 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-003: Task events will be published as Spring Events.
+2020-03-13 08:28:23.720  INFO 17 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-005: Execution events will be published as Spring Events.
+2020-03-13 08:28:23.816  INFO 17 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-007: History events will be published as Spring events.
