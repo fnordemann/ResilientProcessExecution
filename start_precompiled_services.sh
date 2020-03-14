@@ -8,9 +8,11 @@ function ctrl_c() {
     ../stop_services.sh
 }
 
+# Does log dir exist?
 if [ ! -d "logs" ]; then
 	mkdir logs
 fi
+
 # Start services
 cd precompiled
 

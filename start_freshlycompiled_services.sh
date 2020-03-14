@@ -5,7 +5,7 @@ trap ctrl_c INT
 
 function ctrl_c() {
 	echo " "
-    ../stop_services.sh
+    ./stop_services.sh
 }
 
 # Starting all services
