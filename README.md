@@ -1,5 +1,5 @@
-# Resilient Business Process Execution
-This repository provides the proof-of-concept implementation for the concepts presented in the paper *Resilient Business Process Execution using BPMN and Microservices*. Since setting up an unreliable communication environment for evaluating the proof-of-concept is cumbersome, the code was adapted to be executable on a single system. A Neighbor-Service for *SP* can add and delete neighbors, resulting in an emulated unreliable communication environment. By interfacing a proactive routing protocol used in the unreliable network, the code may be used for execution in real-world environments.
+# Resilient Business Process Execution using BPMN and Microservices
+This repository provides the proof-of-concept implementation for the resiliency concepts and implemention strategies presented in the paper *Resilient Business Process Execution using BPMN and Microservices*. Since setting up an unreliable communication environment for evaluating the proof-of-concept is cumbersome, the code was adapted to be executable on a single system. A Neighbor-Service for *SP* can add and delete neighbors, resulting in an emulated unreliable communication environment. By interfacing a proactive routing protocol used in the unreliable network, the code may be used for execution in real-world environments.
 
 ## Run the proof-of-concept implementation
 The following three options exist to run the proof-of-concept implementation. Afterward, the execution can be controlled and manipulated by the methods presented in the next section.
