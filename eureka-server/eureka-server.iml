@@ -1,164 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
   <component name="EclipseModuleManager">
-    <varelement var="jar://$MAVEN_REPOSITORY$/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar!/" value="M2_REPO/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar!/" value="M2_REPO/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.jar!/" value="M2_REPO/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1-sources.jar!/" kind="src:" value="M2_REPO/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1-sources.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/javax.inject-1.jar!/" value="M2_REPO/javax/inject/javax.inject/1/javax.inject-1.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/javax.inject-1-sources.jar!/" kind="src:" value="M2_REPO/javax/inject/javax.inject/1/javax.inject-1-sources.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter-netflix-eureka-server/2.1.2.RELEASE/spring-cloud-starter-netflix-eureka-server-2.1.2.RELEASE.jar!/" value="M2_REPO/org/springframework/cloud/spring-cloud-starter-netflix-eureka-server/2.1.2.RELEASE/spring-cloud-starter-netflix-eureka-server-2.1.2.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter/2.1.2.RELEASE/spring-cloud-starter-2.1.2.RELEASE.jar!/" value="M2_REPO/org/springframework/cloud/spring-cloud-starter/2.1.2.RELEASE/spring-cloud-starter-2.1.2.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter/2.1.7.RELEASE/spring-boot-starter-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot-starter/2.1.7.RELEASE/spring-boot-starter-2.1.7.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.1.7.RELEASE/spring-boot-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot/2.1.7.RELEASE/spring-boot-2.1.7.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.1.9.RELEASE/spring-core-5.1.9.RELEASE.jar!/" value="M2_REPO/org/springframework/spring-core/5.1.9.RELEASE/spring-core-5.1.9.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jcl/5.1.9.RELEASE/spring-jcl-5.1.9.RELEASE.jar!/" value="M2_REPO/org/springframework/spring-jcl/5.1.9.RELEASE/spring-jcl-5.1.9.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.9.RELEASE/spring-context-5.1.9.RELEASE.jar!/" value="M2_REPO/org/springframework/spring-context/5.1.9.RELEASE/spring-context-5.1.9.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.1.9.RELEASE/spring-aop-5.1.9.RELEASE.jar!/" value="M2_REPO/org/springframework/spring-aop/5.1.9.RELEASE/spring-aop-5.1.9.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.9.RELEASE/spring-beans-5.1.9.RELEASE.jar!/" value="M2_REPO/org/springframework/spring-beans/5.1.9.RELEASE/spring-beans-5.1.9.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/spring-expression/5.1.9.RELEASE/spring-expression-5.1.9.RELEASE.jar!/" value="M2_REPO/org/springframework/spring-expression/5.1.9.RELEASE/spring-expression-5.1.9.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.7.RELEASE/spring-boot-autoconfigure-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot-autoconfigure/2.1.7.RELEASE/spring-boot-autoconfigure-2.1.7.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-logging/2.1.7.RELEASE/spring-boot-starter-logging-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot-starter-logging/2.1.7.RELEASE/spring-boot-starter-logging-2.1.7.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/" value="M2_REPO/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3-sources.jar!/" kind="src:" value="M2_REPO/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3-sources.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar!/" value="M2_REPO/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3-sources.jar!/" kind="src:" value="M2_REPO/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3-sources.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.jar!/" value="M2_REPO/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26-sources.jar!/" kind="src:" value="M2_REPO/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26-sources.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-to-slf4j/2.11.2/log4j-to-slf4j-2.11.2.jar!/" value="M2_REPO/org/apache/logging/log4j/log4j-to-slf4j/2.11.2/log4j-to-slf4j-2.11.2.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-api/2.11.2/log4j-api-2.11.2.jar!/" value="M2_REPO/org/apache/logging/log4j/log4j-api/2.11.2/log4j-api-2.11.2.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/slf4j/jul-to-slf4j/1.7.26/jul-to-slf4j-1.7.26.jar!/" value="M2_REPO/org/slf4j/jul-to-slf4j/1.7.26/jul-to-slf4j-1.7.26.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/yaml/snakeyaml/1.23/snakeyaml-1.23.jar!/" value="M2_REPO/org/yaml/snakeyaml/1.23/snakeyaml-1.23.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-context/2.1.2.RELEASE/spring-cloud-context-2.1.2.RELEASE.jar!/" value="M2_REPO/org/springframework/cloud/spring-cloud-context/2.1.2.RELEASE/spring-cloud-context-2.1.2.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-crypto/5.1.6.RELEASE/spring-security-crypto-5.1.6.RELEASE.jar!/" value="M2_REPO/org/springframework/security/spring-security-crypto/5.1.6.RELEASE/spring-security-crypto-5.1.6.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-commons/2.1.2.RELEASE/spring-cloud-commons-2.1.2.RELEASE.jar!/" value="M2_REPO/org/springframework/cloud/spring-cloud-commons/2.1.2.RELEASE/spring-cloud-commons-2.1.2.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-rsa/1.0.7.RELEASE/spring-security-rsa-1.0.7.RELEASE.jar!/" value="M2_REPO/org/springframework/security/spring-security-rsa/1.0.7.RELEASE/spring-security-rsa-1.0.7.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/bouncycastle/bcpkix-jdk15on/1.60/bcpkix-jdk15on-1.60.jar!/" value="M2_REPO/org/bouncycastle/bcpkix-jdk15on/1.60/bcpkix-jdk15on-1.60.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/bouncycastle/bcprov-jdk15on/1.60/bcprov-jdk15on-1.60.jar!/" value="M2_REPO/org/bouncycastle/bcprov-jdk15on/1.60/bcprov-jdk15on-1.60.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-eureka-server/2.1.2.RELEASE/spring-cloud-netflix-eureka-server-2.1.2.RELEASE.jar!/" value="M2_REPO/org/springframework/cloud/spring-cloud-netflix-eureka-server/2.1.2.RELEASE/spring-cloud-netflix-eureka-server-2.1.2.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-web/2.1.7.RELEASE/spring-boot-starter-web-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot-starter-web/2.1.7.RELEASE/spring-boot-starter-web-2.1.7.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-json/2.1.7.RELEASE/spring-boot-starter-json-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot-starter-json/2.1.7.RELEASE/spring-boot-starter-json-2.1.7.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.9.RELEASE/spring-web-5.1.9.RELEASE.jar!/" value="M2_REPO/org/springframework/spring-web/5.1.9.RELEASE/spring-web-5.1.9.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.9/jackson-databind-2.9.9.jar!/" value="M2_REPO/com/fasterxml/jackson/core/jackson-databind/2.9.9/jackson-databind-2.9.9.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar!/" value="M2_REPO/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0-sources.jar!/" kind="src:" value="M2_REPO/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0-sources.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.9.9/jackson-core-2.9.9.jar!/" value="M2_REPO/com/fasterxml/jackson/core/jackson-core/2.9.9/jackson-core-2.9.9.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.9/jackson-datatype-jdk8-2.9.9.jar!/" value="M2_REPO/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.9/jackson-datatype-jdk8-2.9.9.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.9/jackson-datatype-jsr310-2.9.9.jar!/" value="M2_REPO/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.9/jackson-datatype-jsr310-2.9.9.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/module/jackson-module-parameter-names/2.9.9/jackson-module-parameter-names-2.9.9.jar!/" value="M2_REPO/com/fasterxml/jackson/module/jackson-module-parameter-names/2.9.9/jackson-module-parameter-names-2.9.9.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-tomcat/2.1.7.RELEASE/spring-boot-starter-tomcat-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot-starter-tomcat/2.1.7.RELEASE/spring-boot-starter-tomcat-2.1.7.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.22/tomcat-embed-core-9.0.22.jar!/" value="M2_REPO/org/apache/tomcat/embed/tomcat-embed-core/9.0.22/tomcat-embed-core-9.0.22.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-el/9.0.22/tomcat-embed-el-9.0.22.jar!/" value="M2_REPO/org/apache/tomcat/embed/tomcat-embed-el/9.0.22/tomcat-embed-el-9.0.22.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.22/tomcat-embed-websocket-9.0.22.jar!/" value="M2_REPO/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.22/tomcat-embed-websocket-9.0.22.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/hibernate/validator/hibernate-validator/6.0.17.Final/hibernate-validator-6.0.17.Final.jar!/" value="M2_REPO/org/hibernate/validator/hibernate-validator/6.0.17.Final/hibernate-validator-6.0.17.Final.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar!/" value="M2_REPO/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/fasterxml/classmate/1.4.0/classmate-1.4.0.jar!/" value="M2_REPO/com/fasterxml/classmate/1.4.0/classmate-1.4.0.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.9.RELEASE/spring-webmvc-5.1.9.RELEASE.jar!/" value="M2_REPO/org/springframework/spring-webmvc/5.1.9.RELEASE/spring-webmvc-5.1.9.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-actuator/2.1.7.RELEASE/spring-boot-starter-actuator-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot-starter-actuator/2.1.7.RELEASE/spring-boot-starter-actuator-2.1.7.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-actuator-autoconfigure/2.1.7.RELEASE/spring-boot-actuator-autoconfigure-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot-actuator-autoconfigure/2.1.7.RELEASE/spring-boot-actuator-autoconfigure-2.1.7.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-actuator/2.1.7.RELEASE/spring-boot-actuator-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot-actuator/2.1.7.RELEASE/spring-boot-actuator-2.1.7.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/io/micrometer/micrometer-core/1.1.5/micrometer-core-1.1.5.jar!/" value="M2_REPO/io/micrometer/micrometer-core/1.1.5/micrometer-core-1.1.5.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/hdrhistogram/HdrHistogram/2.1.9/HdrHistogram-2.1.9.jar!/" value="M2_REPO/org/hdrhistogram/HdrHistogram/2.1.9/HdrHistogram-2.1.9.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar!/" value="M2_REPO/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-freemarker/2.1.7.RELEASE/spring-boot-starter-freemarker-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot-starter-freemarker/2.1.7.RELEASE/spring-boot-starter-freemarker-2.1.7.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/freemarker/freemarker/2.3.28/freemarker-2.3.28.jar!/" value="M2_REPO/org/freemarker/freemarker/2.3.28/freemarker-2.3.28.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context-support/5.1.9.RELEASE/spring-context-support-5.1.9.RELEASE.jar!/" value="M2_REPO/org/springframework/spring-context-support/5.1.9.RELEASE/spring-context-support-5.1.9.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-hystrix/2.1.2.RELEASE/spring-cloud-netflix-hystrix-2.1.2.RELEASE.jar!/" value="M2_REPO/org/springframework/cloud/spring-cloud-netflix-hystrix/2.1.2.RELEASE/spring-cloud-netflix-hystrix-2.1.2.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-aop/2.1.7.RELEASE/spring-boot-starter-aop-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot-starter-aop/2.1.7.RELEASE/spring-boot-starter-aop-2.1.7.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjweaver/1.9.4/aspectjweaver-1.9.4.jar!/" value="M2_REPO/org/aspectj/aspectjweaver/1.9.4/aspectjweaver-1.9.4.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-eureka-client/2.1.2.RELEASE/spring-cloud-netflix-eureka-client-2.1.2.RELEASE.jar!/" value="M2_REPO/org/springframework/cloud/spring-cloud-netflix-eureka-client/2.1.2.RELEASE/spring-cloud-netflix-eureka-client-2.1.2.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-client/1.9.12/eureka-client-1.9.12.jar!/" value="M2_REPO/com/netflix/eureka/eureka-client/1.9.12/eureka-client-1.9.12.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/codehaus/jettison/jettison/1.3.7/jettison-1.3.7.jar!/" value="M2_REPO/org/codehaus/jettison/jettison/1.3.7/jettison-1.3.7.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/stax/stax-api/1.0.1/stax-api-1.0.1.jar!/" value="M2_REPO/stax/stax-api/1.0.1/stax-api-1.0.1.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/netflix/netflix-commons/netflix-eventbus/0.3.0/netflix-eventbus-0.3.0.jar!/" value="M2_REPO/com/netflix/netflix-commons/netflix-eventbus/0.3.0/netflix-eventbus-0.3.0.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/netflix/netflix-commons/netflix-infix/0.3.0/netflix-infix-0.3.0.jar!/" value="M2_REPO/com/netflix/netflix-commons/netflix-infix/0.3.0/netflix-infix-0.3.0.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/commons-jxpath/commons-jxpath/1.3/commons-jxpath-1.3.jar!/" value="M2_REPO/commons-jxpath/commons-jxpath/1.3/commons-jxpath-1.3.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/joda-time/joda-time/2.10.3/joda-time-2.10.3.jar!/" value="M2_REPO/joda-time/joda-time/2.10.3/joda-time-2.10.3.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/antlr/antlr-runtime/3.4/antlr-runtime-3.4.jar!/" value="M2_REPO/org/antlr/antlr-runtime/3.4/antlr-runtime-3.4.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/antlr/stringtemplate/3.2.1/stringtemplate-3.2.1.jar!/" value="M2_REPO/org/antlr/stringtemplate/3.2.1/stringtemplate-3.2.1.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/antlr/antlr/2.7.7/antlr-2.7.7.jar!/" value="M2_REPO/antlr/antlr/2.7.7/antlr-2.7.7.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/16.0/guava-16.0.jar!/" value="M2_REPO/com/google/guava/guava/16.0/guava-16.0.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar!/" value="M2_REPO/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.5/gson-2.8.5-sources.jar!/" kind="src:" value="M2_REPO/com/google/code/gson/gson/2.8.5/gson-2.8.5-sources.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/netflix/servo/servo-core/0.12.21/servo-core-0.12.21.jar!/" value="M2_REPO/com/netflix/servo/servo-core/0.12.21/servo-core-0.12.21.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/netflix/archaius/archaius-core/0.7.6/archaius-core-0.7.6.jar!/" value="M2_REPO/com/netflix/archaius/archaius-core/0.7.6/archaius-core-0.7.6.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/commons-configuration/commons-configuration/1.8/commons-configuration-1.8.jar!/" value="M2_REPO/commons-configuration/commons-configuration/1.8/commons-configuration-1.8.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/commons-lang/commons-lang/2.6/commons-lang-2.6.jar!/" value="M2_REPO/commons-lang/commons-lang/2.6/commons-lang-2.6.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/commons-lang/commons-lang/2.6/commons-lang-2.6-sources.jar!/" kind="src:" value="M2_REPO/commons-lang/commons-lang/2.6/commons-lang-2.6-sources.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-math/2.2/commons-math-2.2.jar!/" value="M2_REPO/org/apache/commons/commons-math/2.2/commons-math-2.2.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.jar!/" value="M2_REPO/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar!/" value="M2_REPO/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar!/" value="M2_REPO/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.19.1/jersey-core-1.19.1.jar!/" value="M2_REPO/com/sun/jersey/jersey-core/1.19.1/jersey-core-1.19.1.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-client/1.19.1/jersey-client-1.19.1.jar!/" value="M2_REPO/com/sun/jersey/jersey-client/1.19.1/jersey-client-1.19.1.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/sun/jersey/contribs/jersey-apache-client4/1.19.1/jersey-apache-client4-1.19.1.jar!/" value="M2_REPO/com/sun/jersey/contribs/jersey-apache-client4/1.19.1/jersey-apache-client4-1.19.1.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.5.9/httpclient-4.5.9.jar!/" value="M2_REPO/org/apache/httpcomponents/httpclient/4.5.9/httpclient-4.5.9.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.11/httpcore-4.4.11.jar!/" value="M2_REPO/org/apache/httpcomponents/httpcore/4.4.11/httpcore-4.4.11.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.11/commons-codec-1.11.jar!/" value="M2_REPO/commons-codec/commons-codec/1.11/commons-codec-1.11.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/google/inject/guice/4.1.0/guice-4.1.0.jar!/" value="M2_REPO/com/google/inject/guice/4.1.0/guice-4.1.0.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/aopalliance/aopalliance/1.0/aopalliance-1.0.jar!/" value="M2_REPO/aopalliance/aopalliance/1.0/aopalliance-1.0.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/aopalliance/aopalliance/1.0/aopalliance-1.0-sources.jar!/" kind="src:" value="M2_REPO/aopalliance/aopalliance/1.0/aopalliance-1.0-sources.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/github/vlsi/compactmap/compactmap/1.2.1/compactmap-1.2.1.jar!/" value="M2_REPO/com/github/vlsi/compactmap/compactmap/1.2.1/compactmap-1.2.1.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/github/andrewoma/dexx/dexx-collections/0.2/dexx-collections-0.2.jar!/" value="M2_REPO/com/github/andrewoma/dexx/dexx-collections/0.2/dexx-collections-0.2.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-servlet/1.19.1/jersey-servlet-1.19.1.jar!/" value="M2_REPO/com/sun/jersey/jersey-servlet/1.19.1/jersey-servlet-1.19.1.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-server/1.19.1/jersey-server-1.19.1.jar!/" value="M2_REPO/com/sun/jersey/jersey-server/1.19.1/jersey-server-1.19.1.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-core/1.9.12/eureka-core-1.9.12.jar!/" value="M2_REPO/com/netflix/eureka/eureka-core/1.9.12/eureka-core-1.9.12.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/amazonaws/aws-java-sdk-core/1.11.415/aws-java-sdk-core-1.11.415.jar!/" value="M2_REPO/com/amazonaws/aws-java-sdk-core/1.11.415/aws-java-sdk-core-1.11.415.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/software/amazon/ion/ion-java/1.0.2/ion-java-1.0.2.jar!/" value="M2_REPO/software/amazon/ion/ion-java/1.0.2/ion-java-1.0.2.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/dataformat/jackson-dataformat-cbor/2.9.9/jackson-dataformat-cbor-2.9.9.jar!/" value="M2_REPO/com/fasterxml/jackson/dataformat/jackson-dataformat-cbor/2.9.9/jackson-dataformat-cbor-2.9.9.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/amazonaws/aws-java-sdk-ec2/1.11.415/aws-java-sdk-ec2-1.11.415.jar!/" value="M2_REPO/com/amazonaws/aws-java-sdk-ec2/1.11.415/aws-java-sdk-ec2-1.11.415.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/amazonaws/jmespath-java/1.11.415/jmespath-java-1.11.415.jar!/" value="M2_REPO/com/amazonaws/jmespath-java/1.11.415/jmespath-java-1.11.415.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/amazonaws/aws-java-sdk-autoscaling/1.11.415/aws-java-sdk-autoscaling-1.11.415.jar!/" value="M2_REPO/com/amazonaws/aws-java-sdk-autoscaling/1.11.415/aws-java-sdk-autoscaling-1.11.415.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/amazonaws/aws-java-sdk-sts/1.11.415/aws-java-sdk-sts-1.11.415.jar!/" value="M2_REPO/com/amazonaws/aws-java-sdk-sts/1.11.415/aws-java-sdk-sts-1.11.415.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/amazonaws/aws-java-sdk-route53/1.11.415/aws-java-sdk-route53-1.11.415.jar!/" value="M2_REPO/com/amazonaws/aws-java-sdk-route53/1.11.415/aws-java-sdk-route53-1.11.415.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/fasterxml/woodstox/woodstox-core/5.0.3/woodstox-core-5.0.3.jar!/" value="M2_REPO/com/fasterxml/woodstox/woodstox-core/5.0.3/woodstox-core-5.0.3.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4.jar!/" value="M2_REPO/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar!/" value="M2_REPO/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1-sources.jar!/" kind="src:" value="M2_REPO/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1-sources.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.9.9/jackson-dataformat-xml-2.9.9.jar!/" value="M2_REPO/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.9.9/jackson-dataformat-xml-2.9.9.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.9.9/jackson-module-jaxb-annotations-2.9.9.jar!/" value="M2_REPO/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.9.9/jackson-module-jaxb-annotations-2.9.9.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter-netflix-archaius/2.1.2.RELEASE/spring-cloud-starter-netflix-archaius-2.1.2.RELEASE.jar!/" value="M2_REPO/org/springframework/cloud/spring-cloud-starter-netflix-archaius/2.1.2.RELEASE/spring-cloud-starter-netflix-archaius-2.1.2.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-ribbon/2.1.2.RELEASE/spring-cloud-netflix-ribbon-2.1.2.RELEASE.jar!/" value="M2_REPO/org/springframework/cloud/spring-cloud-netflix-ribbon/2.1.2.RELEASE/spring-cloud-netflix-ribbon-2.1.2.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-archaius/2.1.2.RELEASE/spring-cloud-netflix-archaius-2.1.2.RELEASE.jar!/" value="M2_REPO/org/springframework/cloud/spring-cloud-netflix-archaius/2.1.2.RELEASE/spring-cloud-netflix-archaius-2.1.2.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter-netflix-ribbon/2.1.2.RELEASE/spring-cloud-starter-netflix-ribbon-2.1.2.RELEASE.jar!/" value="M2_REPO/org/springframework/cloud/spring-cloud-starter-netflix-ribbon/2.1.2.RELEASE/spring-cloud-starter-netflix-ribbon-2.1.2.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon/2.3.0/ribbon-2.3.0.jar!/" value="M2_REPO/com/netflix/ribbon/ribbon/2.3.0/ribbon-2.3.0.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon-core/2.3.0/ribbon-core-2.3.0.jar!/" value="M2_REPO/com/netflix/ribbon/ribbon-core/2.3.0/ribbon-core-2.3.0.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon-transport/2.3.0/ribbon-transport-2.3.0.jar!/" value="M2_REPO/com/netflix/ribbon/ribbon-transport/2.3.0/ribbon-transport-2.3.0.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon-loadbalancer/2.3.0/ribbon-loadbalancer-2.3.0.jar!/" value="M2_REPO/com/netflix/ribbon/ribbon-loadbalancer/2.3.0/ribbon-loadbalancer-2.3.0.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/netflix/netflix-commons/netflix-statistics/0.1.1/netflix-statistics-0.1.1.jar!/" value="M2_REPO/com/netflix/netflix-commons/netflix-statistics/0.1.1/netflix-statistics-0.1.1.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/io/reactivex/rxjava/1.3.8/rxjava-1.3.8.jar!/" value="M2_REPO/io/reactivex/rxjava/1.3.8/rxjava-1.3.8.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/netflix/netflix-commons/netflix-commons-util/0.3.0/netflix-commons-util-0.3.0.jar!/" value="M2_REPO/com/netflix/netflix-commons/netflix-commons-util/0.3.0/netflix-commons-util-0.3.0.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/io/reactivex/rxnetty/0.4.9/rxnetty-0.4.9.jar!/" value="M2_REPO/io/reactivex/rxnetty/0.4.9/rxnetty-0.4.9.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/io/reactivex/rxnetty-contexts/0.4.9/rxnetty-contexts-0.4.9.jar!/" value="M2_REPO/io/reactivex/rxnetty-contexts/0.4.9/rxnetty-contexts-0.4.9.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/io/reactivex/rxnetty-servo/0.4.9/rxnetty-servo-0.4.9.jar!/" value="M2_REPO/io/reactivex/rxnetty-servo/0.4.9/rxnetty-servo-0.4.9.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/netflix/hystrix/hystrix-core/1.5.18/hystrix-core-1.5.18.jar!/" value="M2_REPO/com/netflix/hystrix/hystrix-core/1.5.18/hystrix-core-1.5.18.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon-httpclient/2.3.0/ribbon-httpclient-2.3.0.jar!/" value="M2_REPO/com/netflix/ribbon/ribbon-httpclient/2.3.0/ribbon-httpclient-2.3.0.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar!/" value="M2_REPO/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon-eureka/2.3.0/ribbon-eureka-2.3.0.jar!/" value="M2_REPO/com/netflix/ribbon/ribbon-eureka/2.3.0/ribbon-eureka-2.3.0.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter-config/2.1.3.RELEASE/spring-cloud-starter-config-2.1.3.RELEASE.jar!/" value="M2_REPO/org/springframework/cloud/spring-cloud-starter-config/2.1.3.RELEASE/spring-cloud-starter-config-2.1.3.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-config-client/2.1.3.RELEASE/spring-cloud-config-client-2.1.3.RELEASE.jar!/" value="M2_REPO/org/springframework/cloud/spring-cloud-config-client/2.1.3.RELEASE/spring-cloud-config-client-2.1.3.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-test/2.1.7.RELEASE/spring-boot-starter-test-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot-starter-test/2.1.7.RELEASE/spring-boot-starter-test-2.1.7.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-test/2.1.7.RELEASE/spring-boot-test-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot-test/2.1.7.RELEASE/spring-boot-test-2.1.7.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-test-autoconfigure/2.1.7.RELEASE/spring-boot-test-autoconfigure-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot-test-autoconfigure/2.1.7.RELEASE/spring-boot-test-autoconfigure-2.1.7.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/jayway/jsonpath/json-path/2.4.0/json-path-2.4.0.jar!/" value="M2_REPO/com/jayway/jsonpath/json-path/2.4.0/json-path-2.4.0.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/net/minidev/json-smart/2.3/json-smart-2.3.jar!/" value="M2_REPO/net/minidev/json-smart/2.3/json-smart-2.3.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar!/" value="M2_REPO/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar!/" value="M2_REPO/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/" value="M2_REPO/junit/junit/4.12/junit-4.12.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/" kind="src:" value="M2_REPO/junit/junit/4.12/junit-4.12-sources.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar!/" value="M2_REPO/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3-sources.jar!/" kind="src:" value="M2_REPO/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3-sources.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/assertj/assertj-core/3.11.1/assertj-core-3.11.1.jar!/" value="M2_REPO/org/assertj/assertj-core/3.11.1/assertj-core-3.11.1.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/2.23.4/mockito-core-2.23.4.jar!/" value="M2_REPO/org/mockito/mockito-core/2.23.4/mockito-core-2.23.4.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy/1.9.16/byte-buddy-1.9.16.jar!/" value="M2_REPO/net/bytebuddy/byte-buddy/1.9.16/byte-buddy-1.9.16.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy-agent/1.9.16/byte-buddy-agent-1.9.16.jar!/" value="M2_REPO/net/bytebuddy/byte-buddy-agent/1.9.16/byte-buddy-agent-1.9.16.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/objenesis/objenesis/2.6/objenesis-2.6.jar!/" value="M2_REPO/org/objenesis/objenesis/2.6/objenesis-2.6.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar!/" value="M2_REPO/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3-sources.jar!/" kind="src:" value="M2_REPO/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3-sources.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0.jar!/" value="M2_REPO/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/" value="M2_REPO/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/5.1.9.RELEASE/spring-test-5.1.9.RELEASE.jar!/" value="M2_REPO/org/springframework/spring-test/5.1.9.RELEASE/spring-test-5.1.9.RELEASE.jar" />
-    <varelement var="jar://$MAVEN_REPOSITORY$/org/xmlunit/xmlunit-core/2.6.3/xmlunit-core-2.6.3.jar!/" value="M2_REPO/org/xmlunit/xmlunit-core/2.6.3/xmlunit-core-2.6.3.jar" />
+    <varelement var="jar://$M2_REPO$/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar!/" value="M2_REPO/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar" />
+    <varelement var="jar://$M2_REPO$/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar!/" value="M2_REPO/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar" />
+    <varelement var="jar://$M2_REPO$/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.jar!/" value="M2_REPO/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.jar" />
+    <varelement var="jar://$M2_REPO$/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1-sources.jar!/" value="src:M2_REPO/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1-sources.jar" />
+    <varelement var="jar://$M2_REPO$/javax/inject/javax.inject/1/javax.inject-1.jar!/" value="M2_REPO/javax/inject/javax.inject/1/javax.inject-1.jar" />
+    <varelement var="jar://$M2_REPO$/javax/inject/javax.inject/1/javax.inject-1-sources.jar!/" value="src:M2_REPO/javax/inject/javax.inject/1/javax.inject-1-sources.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/cloud/spring-cloud-starter-netflix-eureka-server/2.1.2.RELEASE/spring-cloud-starter-netflix-eureka-server-2.1.2.RELEASE.jar!/" value="M2_REPO/org/springframework/cloud/spring-cloud-starter-netflix-eureka-server/2.1.2.RELEASE/spring-cloud-starter-netflix-eureka-server-2.1.2.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/cloud/spring-cloud-starter/2.1.2.RELEASE/spring-cloud-starter-2.1.2.RELEASE.jar!/" value="M2_REPO/org/springframework/cloud/spring-cloud-starter/2.1.2.RELEASE/spring-cloud-starter-2.1.2.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/boot/spring-boot-starter/2.1.7.RELEASE/spring-boot-starter-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot-starter/2.1.7.RELEASE/spring-boot-starter-2.1.7.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/boot/spring-boot/2.1.7.RELEASE/spring-boot-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot/2.1.7.RELEASE/spring-boot-2.1.7.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/spring-core/5.1.9.RELEASE/spring-core-5.1.9.RELEASE.jar!/" value="M2_REPO/org/springframework/spring-core/5.1.9.RELEASE/spring-core-5.1.9.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/spring-jcl/5.1.9.RELEASE/spring-jcl-5.1.9.RELEASE.jar!/" value="M2_REPO/org/springframework/spring-jcl/5.1.9.RELEASE/spring-jcl-5.1.9.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/spring-context/5.1.9.RELEASE/spring-context-5.1.9.RELEASE.jar!/" value="M2_REPO/org/springframework/spring-context/5.1.9.RELEASE/spring-context-5.1.9.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/spring-aop/5.1.9.RELEASE/spring-aop-5.1.9.RELEASE.jar!/" value="M2_REPO/org/springframework/spring-aop/5.1.9.RELEASE/spring-aop-5.1.9.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/spring-beans/5.1.9.RELEASE/spring-beans-5.1.9.RELEASE.jar!/" value="M2_REPO/org/springframework/spring-beans/5.1.9.RELEASE/spring-beans-5.1.9.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/spring-expression/5.1.9.RELEASE/spring-expression-5.1.9.RELEASE.jar!/" value="M2_REPO/org/springframework/spring-expression/5.1.9.RELEASE/spring-expression-5.1.9.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/boot/spring-boot-autoconfigure/2.1.7.RELEASE/spring-boot-autoconfigure-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot-autoconfigure/2.1.7.RELEASE/spring-boot-autoconfigure-2.1.7.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/boot/spring-boot-starter-logging/2.1.7.RELEASE/spring-boot-starter-logging-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot-starter-logging/2.1.7.RELEASE/spring-boot-starter-logging-2.1.7.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/" value="M2_REPO/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar" />
+    <varelement var="jar://$M2_REPO$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3-sources.jar!/" value="src:M2_REPO/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3-sources.jar" />
+    <varelement var="jar://$M2_REPO$/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar!/" value="M2_REPO/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar" />
+    <varelement var="jar://$M2_REPO$/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3-sources.jar!/" value="src:M2_REPO/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3-sources.jar" />
+    <varelement var="jar://$M2_REPO$/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.jar!/" value="M2_REPO/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.jar" />
+    <varelement var="jar://$M2_REPO$/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26-sources.jar!/" value="src:M2_REPO/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26-sources.jar" />
+    <varelement var="jar://$M2_REPO$/org/apache/logging/log4j/log4j-to-slf4j/2.11.2/log4j-to-slf4j-2.11.2.jar!/" value="M2_REPO/org/apache/logging/log4j/log4j-to-slf4j/2.11.2/log4j-to-slf4j-2.11.2.jar" />
+    <varelement var="jar://$M2_REPO$/org/apache/logging/log4j/log4j-api/2.11.2/log4j-api-2.11.2.jar!/" value="M2_REPO/org/apache/logging/log4j/log4j-api/2.11.2/log4j-api-2.11.2.jar" />
+    <varelement var="jar://$M2_REPO$/org/slf4j/jul-to-slf4j/1.7.26/jul-to-slf4j-1.7.26.jar!/" value="M2_REPO/org/slf4j/jul-to-slf4j/1.7.26/jul-to-slf4j-1.7.26.jar" />
+    <varelement var="jar://$M2_REPO$/org/yaml/snakeyaml/1.23/snakeyaml-1.23.jar!/" value="M2_REPO/org/yaml/snakeyaml/1.23/snakeyaml-1.23.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/cloud/spring-cloud-context/2.1.2.RELEASE/spring-cloud-context-2.1.2.RELEASE.jar!/" value="M2_REPO/org/springframework/cloud/spring-cloud-context/2.1.2.RELEASE/spring-cloud-context-2.1.2.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/security/spring-security-crypto/5.1.6.RELEASE/spring-security-crypto-5.1.6.RELEASE.jar!/" value="M2_REPO/org/springframework/security/spring-security-crypto/5.1.6.RELEASE/spring-security-crypto-5.1.6.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/cloud/spring-cloud-commons/2.1.2.RELEASE/spring-cloud-commons-2.1.2.RELEASE.jar!/" value="M2_REPO/org/springframework/cloud/spring-cloud-commons/2.1.2.RELEASE/spring-cloud-commons-2.1.2.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/security/spring-security-rsa/1.0.7.RELEASE/spring-security-rsa-1.0.7.RELEASE.jar!/" value="M2_REPO/org/springframework/security/spring-security-rsa/1.0.7.RELEASE/spring-security-rsa-1.0.7.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/bouncycastle/bcpkix-jdk15on/1.60/bcpkix-jdk15on-1.60.jar!/" value="M2_REPO/org/bouncycastle/bcpkix-jdk15on/1.60/bcpkix-jdk15on-1.60.jar" />
+    <varelement var="jar://$M2_REPO$/org/bouncycastle/bcprov-jdk15on/1.60/bcprov-jdk15on-1.60.jar!/" value="M2_REPO/org/bouncycastle/bcprov-jdk15on/1.60/bcprov-jdk15on-1.60.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/cloud/spring-cloud-netflix-eureka-server/2.1.2.RELEASE/spring-cloud-netflix-eureka-server-2.1.2.RELEASE.jar!/" value="M2_REPO/org/springframework/cloud/spring-cloud-netflix-eureka-server/2.1.2.RELEASE/spring-cloud-netflix-eureka-server-2.1.2.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/boot/spring-boot-starter-web/2.1.7.RELEASE/spring-boot-starter-web-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot-starter-web/2.1.7.RELEASE/spring-boot-starter-web-2.1.7.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/boot/spring-boot-starter-json/2.1.7.RELEASE/spring-boot-starter-json-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot-starter-json/2.1.7.RELEASE/spring-boot-starter-json-2.1.7.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/spring-web/5.1.9.RELEASE/spring-web-5.1.9.RELEASE.jar!/" value="M2_REPO/org/springframework/spring-web/5.1.9.RELEASE/spring-web-5.1.9.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/com/fasterxml/jackson/core/jackson-databind/2.9.9/jackson-databind-2.9.9.jar!/" value="M2_REPO/com/fasterxml/jackson/core/jackson-databind/2.9.9/jackson-databind-2.9.9.jar" />
+    <varelement var="jar://$M2_REPO$/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar!/" value="M2_REPO/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar" />
+    <varelement var="jar://$M2_REPO$/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0-sources.jar!/" value="src:M2_REPO/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0-sources.jar" />
+    <varelement var="jar://$M2_REPO$/com/fasterxml/jackson/core/jackson-core/2.9.9/jackson-core-2.9.9.jar!/" value="M2_REPO/com/fasterxml/jackson/core/jackson-core/2.9.9/jackson-core-2.9.9.jar" />
+    <varelement var="jar://$M2_REPO$/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.9/jackson-datatype-jdk8-2.9.9.jar!/" value="M2_REPO/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.9/jackson-datatype-jdk8-2.9.9.jar" />
+    <varelement var="jar://$M2_REPO$/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.9/jackson-datatype-jsr310-2.9.9.jar!/" value="M2_REPO/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.9/jackson-datatype-jsr310-2.9.9.jar" />
+    <varelement var="jar://$M2_REPO$/com/fasterxml/jackson/module/jackson-module-parameter-names/2.9.9/jackson-module-parameter-names-2.9.9.jar!/" value="M2_REPO/com/fasterxml/jackson/module/jackson-module-parameter-names/2.9.9/jackson-module-parameter-names-2.9.9.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/boot/spring-boot-starter-tomcat/2.1.7.RELEASE/spring-boot-starter-tomcat-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot-starter-tomcat/2.1.7.RELEASE/spring-boot-starter-tomcat-2.1.7.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/apache/tomcat/embed/tomcat-embed-core/9.0.22/tomcat-embed-core-9.0.22.jar!/" value="M2_REPO/org/apache/tomcat/embed/tomcat-embed-core/9.0.22/tomcat-embed-core-9.0.22.jar" />
+    <varelement var="jar://$M2_REPO$/org/apache/tomcat/embed/tomcat-embed-el/9.0.22/tomcat-embed-el-9.0.22.jar!/" value="M2_REPO/org/apache/tomcat/embed/tomcat-embed-el/9.0.22/tomcat-embed-el-9.0.22.jar" />
+    <varelement var="jar://$M2_REPO$/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.22/tomcat-embed-websocket-9.0.22.jar!/" value="M2_REPO/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.22/tomcat-embed-websocket-9.0.22.jar" />
+    <varelement var="jar://$M2_REPO$/org/hibernate/validator/hibernate-validator/6.0.17.Final/hibernate-validator-6.0.17.Final.jar!/" value="M2_REPO/org/hibernate/validator/hibernate-validator/6.0.17.Final/hibernate-validator-6.0.17.Final.jar" />
+    <varelement var="jar://$M2_REPO$/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar!/" value="M2_REPO/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar" />
+    <varelement var="jar://$M2_REPO$/com/fasterxml/classmate/1.4.0/classmate-1.4.0.jar!/" value="M2_REPO/com/fasterxml/classmate/1.4.0/classmate-1.4.0.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/spring-webmvc/5.1.9.RELEASE/spring-webmvc-5.1.9.RELEASE.jar!/" value="M2_REPO/org/springframework/spring-webmvc/5.1.9.RELEASE/spring-webmvc-5.1.9.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/boot/spring-boot-starter-actuator/2.1.7.RELEASE/spring-boot-starter-actuator-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot-starter-actuator/2.1.7.RELEASE/spring-boot-starter-actuator-2.1.7.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/boot/spring-boot-actuator-autoconfigure/2.1.7.RELEASE/spring-boot-actuator-autoconfigure-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot-actuator-autoconfigure/2.1.7.RELEASE/spring-boot-actuator-autoconfigure-2.1.7.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/boot/spring-boot-actuator/2.1.7.RELEASE/spring-boot-actuator-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot-actuator/2.1.7.RELEASE/spring-boot-actuator-2.1.7.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/io/micrometer/micrometer-core/1.1.5/micrometer-core-1.1.5.jar!/" value="M2_REPO/io/micrometer/micrometer-core/1.1.5/micrometer-core-1.1.5.jar" />
+    <varelement var="jar://$M2_REPO$/org/hdrhistogram/HdrHistogram/2.1.9/HdrHistogram-2.1.9.jar!/" value="M2_REPO/org/hdrhistogram/HdrHistogram/2.1.9/HdrHistogram-2.1.9.jar" />
+    <varelement var="jar://$M2_REPO$/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar!/" value="M2_REPO/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/boot/spring-boot-starter-freemarker/2.1.7.RELEASE/spring-boot-starter-freemarker-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot-starter-freemarker/2.1.7.RELEASE/spring-boot-starter-freemarker-2.1.7.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/freemarker/freemarker/2.3.28/freemarker-2.3.28.jar!/" value="M2_REPO/org/freemarker/freemarker/2.3.28/freemarker-2.3.28.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/spring-context-support/5.1.9.RELEASE/spring-context-support-5.1.9.RELEASE.jar!/" value="M2_REPO/org/springframework/spring-context-support/5.1.9.RELEASE/spring-context-support-5.1.9.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/cloud/spring-cloud-netflix-hystrix/2.1.2.RELEASE/spring-cloud-netflix-hystrix-2.1.2.RELEASE.jar!/" value="M2_REPO/org/springframework/cloud/spring-cloud-netflix-hystrix/2.1.2.RELEASE/spring-cloud-netflix-hystrix-2.1.2.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/boot/spring-boot-starter-aop/2.1.7.RELEASE/spring-boot-starter-aop-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot-starter-aop/2.1.7.RELEASE/spring-boot-starter-aop-2.1.7.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/aspectj/aspectjweaver/1.9.4/aspectjweaver-1.9.4.jar!/" value="M2_REPO/org/aspectj/aspectjweaver/1.9.4/aspectjweaver-1.9.4.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/cloud/spring-cloud-netflix-eureka-client/2.1.2.RELEASE/spring-cloud-netflix-eureka-client-2.1.2.RELEASE.jar!/" value="M2_REPO/org/springframework/cloud/spring-cloud-netflix-eureka-client/2.1.2.RELEASE/spring-cloud-netflix-eureka-client-2.1.2.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/com/netflix/eureka/eureka-client/1.9.12/eureka-client-1.9.12.jar!/" value="M2_REPO/com/netflix/eureka/eureka-client/1.9.12/eureka-client-1.9.12.jar" />
+    <varelement var="jar://$M2_REPO$/org/codehaus/jettison/jettison/1.3.7/jettison-1.3.7.jar!/" value="M2_REPO/org/codehaus/jettison/jettison/1.3.7/jettison-1.3.7.jar" />
+    <varelement var="jar://$M2_REPO$/stax/stax-api/1.0.1/stax-api-1.0.1.jar!/" value="M2_REPO/stax/stax-api/1.0.1/stax-api-1.0.1.jar" />
+    <varelement var="jar://$M2_REPO$/com/netflix/netflix-commons/netflix-eventbus/0.3.0/netflix-eventbus-0.3.0.jar!/" value="M2_REPO/com/netflix/netflix-commons/netflix-eventbus/0.3.0/netflix-eventbus-0.3.0.jar" />
+    <varelement var="jar://$M2_REPO$/com/netflix/netflix-commons/netflix-infix/0.3.0/netflix-infix-0.3.0.jar!/" value="M2_REPO/com/netflix/netflix-commons/netflix-infix/0.3.0/netflix-infix-0.3.0.jar" />
+    <varelement var="jar://$M2_REPO$/commons-jxpath/commons-jxpath/1.3/commons-jxpath-1.3.jar!/" value="M2_REPO/commons-jxpath/commons-jxpath/1.3/commons-jxpath-1.3.jar" />
+    <varelement var="jar://$M2_REPO$/joda-time/joda-time/2.10.3/joda-time-2.10.3.jar!/" value="M2_REPO/joda-time/joda-time/2.10.3/joda-time-2.10.3.jar" />
+    <varelement var="jar://$M2_REPO$/org/antlr/antlr-runtime/3.4/antlr-runtime-3.4.jar!/" value="M2_REPO/org/antlr/antlr-runtime/3.4/antlr-runtime-3.4.jar" />
+    <varelement var="jar://$M2_REPO$/org/antlr/stringtemplate/3.2.1/stringtemplate-3.2.1.jar!/" value="M2_REPO/org/antlr/stringtemplate/3.2.1/stringtemplate-3.2.1.jar" />
+    <varelement var="jar://$M2_REPO$/antlr/antlr/2.7.7/antlr-2.7.7.jar!/" value="M2_REPO/antlr/antlr/2.7.7/antlr-2.7.7.jar" />
+    <varelement var="jar://$M2_REPO$/com/google/guava/guava/16.0/guava-16.0.jar!/" value="M2_REPO/com/google/guava/guava/16.0/guava-16.0.jar" />
+    <varelement var="jar://$M2_REPO$/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar!/" value="M2_REPO/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar" />
+    <varelement var="jar://$M2_REPO$/com/google/code/gson/gson/2.8.5/gson-2.8.5-sources.jar!/" value="src:M2_REPO/com/google/code/gson/gson/2.8.5/gson-2.8.5-sources.jar" />
+    <varelement var="jar://$M2_REPO$/com/netflix/servo/servo-core/0.12.21/servo-core-0.12.21.jar!/" value="M2_REPO/com/netflix/servo/servo-core/0.12.21/servo-core-0.12.21.jar" />
+    <varelement var="jar://$M2_REPO$/com/netflix/archaius/archaius-core/0.7.6/archaius-core-0.7.6.jar!/" value="M2_REPO/com/netflix/archaius/archaius-core/0.7.6/archaius-core-0.7.6.jar" />
+    <varelement var="jar://$M2_REPO$/commons-configuration/commons-configuration/1.8/commons-configuration-1.8.jar!/" value="M2_REPO/commons-configuration/commons-configuration/1.8/commons-configuration-1.8.jar" />
+    <varelement var="jar://$M2_REPO$/commons-lang/commons-lang/2.6/commons-lang-2.6.jar!/" value="M2_REPO/commons-lang/commons-lang/2.6/commons-lang-2.6.jar" />
+    <varelement var="jar://$M2_REPO$/commons-lang/commons-lang/2.6/commons-lang-2.6-sources.jar!/" value="src:M2_REPO/commons-lang/commons-lang/2.6/commons-lang-2.6-sources.jar" />
+    <varelement var="jar://$M2_REPO$/org/apache/commons/commons-math/2.2/commons-math-2.2.jar!/" value="M2_REPO/org/apache/commons/commons-math/2.2/commons-math-2.2.jar" />
+    <varelement var="jar://$M2_REPO$/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.jar!/" value="M2_REPO/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.jar" />
+    <varelement var="jar://$M2_REPO$/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar!/" value="M2_REPO/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar" />
+    <varelement var="jar://$M2_REPO$/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar!/" value="M2_REPO/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar" />
+    <varelement var="jar://$M2_REPO$/com/sun/jersey/jersey-core/1.19.1/jersey-core-1.19.1.jar!/" value="M2_REPO/com/sun/jersey/jersey-core/1.19.1/jersey-core-1.19.1.jar" />
+    <varelement var="jar://$M2_REPO$/com/sun/jersey/jersey-client/1.19.1/jersey-client-1.19.1.jar!/" value="M2_REPO/com/sun/jersey/jersey-client/1.19.1/jersey-client-1.19.1.jar" />
+    <varelement var="jar://$M2_REPO$/com/sun/jersey/contribs/jersey-apache-client4/1.19.1/jersey-apache-client4-1.19.1.jar!/" value="M2_REPO/com/sun/jersey/contribs/jersey-apache-client4/1.19.1/jersey-apache-client4-1.19.1.jar" />
+    <varelement var="jar://$M2_REPO$/org/apache/httpcomponents/httpclient/4.5.9/httpclient-4.5.9.jar!/" value="M2_REPO/org/apache/httpcomponents/httpclient/4.5.9/httpclient-4.5.9.jar" />
+    <varelement var="jar://$M2_REPO$/org/apache/httpcomponents/httpcore/4.4.11/httpcore-4.4.11.jar!/" value="M2_REPO/org/apache/httpcomponents/httpcore/4.4.11/httpcore-4.4.11.jar" />
+    <varelement var="jar://$M2_REPO$/commons-codec/commons-codec/1.11/commons-codec-1.11.jar!/" value="M2_REPO/commons-codec/commons-codec/1.11/commons-codec-1.11.jar" />
+    <varelement var="jar://$M2_REPO$/com/google/inject/guice/4.1.0/guice-4.1.0.jar!/" value="M2_REPO/com/google/inject/guice/4.1.0/guice-4.1.0.jar" />
+    <varelement var="jar://$M2_REPO$/aopalliance/aopalliance/1.0/aopalliance-1.0.jar!/" value="M2_REPO/aopalliance/aopalliance/1.0/aopalliance-1.0.jar" />
+    <varelement var="jar://$M2_REPO$/aopalliance/aopalliance/1.0/aopalliance-1.0-sources.jar!/" value="src:M2_REPO/aopalliance/aopalliance/1.0/aopalliance-1.0-sources.jar" />
+    <varelement var="jar://$M2_REPO$/com/github/vlsi/compactmap/compactmap/1.2.1/compactmap-1.2.1.jar!/" value="M2_REPO/com/github/vlsi/compactmap/compactmap/1.2.1/compactmap-1.2.1.jar" />
+    <varelement var="jar://$M2_REPO$/com/github/andrewoma/dexx/dexx-collections/0.2/dexx-collections-0.2.jar!/" value="M2_REPO/com/github/andrewoma/dexx/dexx-collections/0.2/dexx-collections-0.2.jar" />
+    <varelement var="jar://$M2_REPO$/com/sun/jersey/jersey-servlet/1.19.1/jersey-servlet-1.19.1.jar!/" value="M2_REPO/com/sun/jersey/jersey-servlet/1.19.1/jersey-servlet-1.19.1.jar" />
+    <varelement var="jar://$M2_REPO$/com/sun/jersey/jersey-server/1.19.1/jersey-server-1.19.1.jar!/" value="M2_REPO/com/sun/jersey/jersey-server/1.19.1/jersey-server-1.19.1.jar" />
+    <varelement var="jar://$M2_REPO$/com/netflix/eureka/eureka-core/1.9.12/eureka-core-1.9.12.jar!/" value="M2_REPO/com/netflix/eureka/eureka-core/1.9.12/eureka-core-1.9.12.jar" />
+    <varelement var="jar://$M2_REPO$/com/amazonaws/aws-java-sdk-core/1.11.415/aws-java-sdk-core-1.11.415.jar!/" value="M2_REPO/com/amazonaws/aws-java-sdk-core/1.11.415/aws-java-sdk-core-1.11.415.jar" />
+    <varelement var="jar://$M2_REPO$/software/amazon/ion/ion-java/1.0.2/ion-java-1.0.2.jar!/" value="M2_REPO/software/amazon/ion/ion-java/1.0.2/ion-java-1.0.2.jar" />
+    <varelement var="jar://$M2_REPO$/com/fasterxml/jackson/dataformat/jackson-dataformat-cbor/2.9.9/jackson-dataformat-cbor-2.9.9.jar!/" value="M2_REPO/com/fasterxml/jackson/dataformat/jackson-dataformat-cbor/2.9.9/jackson-dataformat-cbor-2.9.9.jar" />
+    <varelement var="jar://$M2_REPO$/com/amazonaws/aws-java-sdk-ec2/1.11.415/aws-java-sdk-ec2-1.11.415.jar!/" value="M2_REPO/com/amazonaws/aws-java-sdk-ec2/1.11.415/aws-java-sdk-ec2-1.11.415.jar" />
+    <varelement var="jar://$M2_REPO$/com/amazonaws/jmespath-java/1.11.415/jmespath-java-1.11.415.jar!/" value="M2_REPO/com/amazonaws/jmespath-java/1.11.415/jmespath-java-1.11.415.jar" />
+    <varelement var="jar://$M2_REPO$/com/amazonaws/aws-java-sdk-autoscaling/1.11.415/aws-java-sdk-autoscaling-1.11.415.jar!/" value="M2_REPO/com/amazonaws/aws-java-sdk-autoscaling/1.11.415/aws-java-sdk-autoscaling-1.11.415.jar" />
+    <varelement var="jar://$M2_REPO$/com/amazonaws/aws-java-sdk-sts/1.11.415/aws-java-sdk-sts-1.11.415.jar!/" value="M2_REPO/com/amazonaws/aws-java-sdk-sts/1.11.415/aws-java-sdk-sts-1.11.415.jar" />
+    <varelement var="jar://$M2_REPO$/com/amazonaws/aws-java-sdk-route53/1.11.415/aws-java-sdk-route53-1.11.415.jar!/" value="M2_REPO/com/amazonaws/aws-java-sdk-route53/1.11.415/aws-java-sdk-route53-1.11.415.jar" />
+    <varelement var="jar://$M2_REPO$/com/fasterxml/woodstox/woodstox-core/5.0.3/woodstox-core-5.0.3.jar!/" value="M2_REPO/com/fasterxml/woodstox/woodstox-core/5.0.3/woodstox-core-5.0.3.jar" />
+    <varelement var="jar://$M2_REPO$/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4.jar!/" value="M2_REPO/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4.jar" />
+    <varelement var="jar://$M2_REPO$/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar!/" value="M2_REPO/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar" />
+    <varelement var="jar://$M2_REPO$/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1-sources.jar!/" value="src:M2_REPO/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1-sources.jar" />
+    <varelement var="jar://$M2_REPO$/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.9.9/jackson-dataformat-xml-2.9.9.jar!/" value="M2_REPO/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.9.9/jackson-dataformat-xml-2.9.9.jar" />
+    <varelement var="jar://$M2_REPO$/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.9.9/jackson-module-jaxb-annotations-2.9.9.jar!/" value="M2_REPO/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.9.9/jackson-module-jaxb-annotations-2.9.9.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/cloud/spring-cloud-starter-netflix-archaius/2.1.2.RELEASE/spring-cloud-starter-netflix-archaius-2.1.2.RELEASE.jar!/" value="M2_REPO/org/springframework/cloud/spring-cloud-starter-netflix-archaius/2.1.2.RELEASE/spring-cloud-starter-netflix-archaius-2.1.2.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/cloud/spring-cloud-netflix-ribbon/2.1.2.RELEASE/spring-cloud-netflix-ribbon-2.1.2.RELEASE.jar!/" value="M2_REPO/org/springframework/cloud/spring-cloud-netflix-ribbon/2.1.2.RELEASE/spring-cloud-netflix-ribbon-2.1.2.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/cloud/spring-cloud-netflix-archaius/2.1.2.RELEASE/spring-cloud-netflix-archaius-2.1.2.RELEASE.jar!/" value="M2_REPO/org/springframework/cloud/spring-cloud-netflix-archaius/2.1.2.RELEASE/spring-cloud-netflix-archaius-2.1.2.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/cloud/spring-cloud-starter-netflix-ribbon/2.1.2.RELEASE/spring-cloud-starter-netflix-ribbon-2.1.2.RELEASE.jar!/" value="M2_REPO/org/springframework/cloud/spring-cloud-starter-netflix-ribbon/2.1.2.RELEASE/spring-cloud-starter-netflix-ribbon-2.1.2.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/com/netflix/ribbon/ribbon/2.3.0/ribbon-2.3.0.jar!/" value="M2_REPO/com/netflix/ribbon/ribbon/2.3.0/ribbon-2.3.0.jar" />
+    <varelement var="jar://$M2_REPO$/com/netflix/ribbon/ribbon-core/2.3.0/ribbon-core-2.3.0.jar!/" value="M2_REPO/com/netflix/ribbon/ribbon-core/2.3.0/ribbon-core-2.3.0.jar" />
+    <varelement var="jar://$M2_REPO$/com/netflix/ribbon/ribbon-transport/2.3.0/ribbon-transport-2.3.0.jar!/" value="M2_REPO/com/netflix/ribbon/ribbon-transport/2.3.0/ribbon-transport-2.3.0.jar" />
+    <varelement var="jar://$M2_REPO$/com/netflix/ribbon/ribbon-loadbalancer/2.3.0/ribbon-loadbalancer-2.3.0.jar!/" value="M2_REPO/com/netflix/ribbon/ribbon-loadbalancer/2.3.0/ribbon-loadbalancer-2.3.0.jar" />
+    <varelement var="jar://$M2_REPO$/com/netflix/netflix-commons/netflix-statistics/0.1.1/netflix-statistics-0.1.1.jar!/" value="M2_REPO/com/netflix/netflix-commons/netflix-statistics/0.1.1/netflix-statistics-0.1.1.jar" />
+    <varelement var="jar://$M2_REPO$/io/reactivex/rxjava/1.3.8/rxjava-1.3.8.jar!/" value="M2_REPO/io/reactivex/rxjava/1.3.8/rxjava-1.3.8.jar" />
+    <varelement var="jar://$M2_REPO$/com/netflix/netflix-commons/netflix-commons-util/0.3.0/netflix-commons-util-0.3.0.jar!/" value="M2_REPO/com/netflix/netflix-commons/netflix-commons-util/0.3.0/netflix-commons-util-0.3.0.jar" />
+    <varelement var="jar://$M2_REPO$/io/reactivex/rxnetty/0.4.9/rxnetty-0.4.9.jar!/" value="M2_REPO/io/reactivex/rxnetty/0.4.9/rxnetty-0.4.9.jar" />
+    <varelement var="jar://$M2_REPO$/io/reactivex/rxnetty-contexts/0.4.9/rxnetty-contexts-0.4.9.jar!/" value="M2_REPO/io/reactivex/rxnetty-contexts/0.4.9/rxnetty-contexts-0.4.9.jar" />
+    <varelement var="jar://$M2_REPO$/io/reactivex/rxnetty-servo/0.4.9/rxnetty-servo-0.4.9.jar!/" value="M2_REPO/io/reactivex/rxnetty-servo/0.4.9/rxnetty-servo-0.4.9.jar" />
+    <varelement var="jar://$M2_REPO$/com/netflix/hystrix/hystrix-core/1.5.18/hystrix-core-1.5.18.jar!/" value="M2_REPO/com/netflix/hystrix/hystrix-core/1.5.18/hystrix-core-1.5.18.jar" />
+    <varelement var="jar://$M2_REPO$/com/netflix/ribbon/ribbon-httpclient/2.3.0/ribbon-httpclient-2.3.0.jar!/" value="M2_REPO/com/netflix/ribbon/ribbon-httpclient/2.3.0/ribbon-httpclient-2.3.0.jar" />
+    <varelement var="jar://$M2_REPO$/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar!/" value="M2_REPO/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar" />
+    <varelement var="jar://$M2_REPO$/com/netflix/ribbon/ribbon-eureka/2.3.0/ribbon-eureka-2.3.0.jar!/" value="M2_REPO/com/netflix/ribbon/ribbon-eureka/2.3.0/ribbon-eureka-2.3.0.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/cloud/spring-cloud-starter-config/2.1.3.RELEASE/spring-cloud-starter-config-2.1.3.RELEASE.jar!/" value="M2_REPO/org/springframework/cloud/spring-cloud-starter-config/2.1.3.RELEASE/spring-cloud-starter-config-2.1.3.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/cloud/spring-cloud-config-client/2.1.3.RELEASE/spring-cloud-config-client-2.1.3.RELEASE.jar!/" value="M2_REPO/org/springframework/cloud/spring-cloud-config-client/2.1.3.RELEASE/spring-cloud-config-client-2.1.3.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/boot/spring-boot-starter-test/2.1.7.RELEASE/spring-boot-starter-test-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot-starter-test/2.1.7.RELEASE/spring-boot-starter-test-2.1.7.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/boot/spring-boot-test/2.1.7.RELEASE/spring-boot-test-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot-test/2.1.7.RELEASE/spring-boot-test-2.1.7.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/boot/spring-boot-test-autoconfigure/2.1.7.RELEASE/spring-boot-test-autoconfigure-2.1.7.RELEASE.jar!/" value="M2_REPO/org/springframework/boot/spring-boot-test-autoconfigure/2.1.7.RELEASE/spring-boot-test-autoconfigure-2.1.7.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/com/jayway/jsonpath/json-path/2.4.0/json-path-2.4.0.jar!/" value="M2_REPO/com/jayway/jsonpath/json-path/2.4.0/json-path-2.4.0.jar" />
+    <varelement var="jar://$M2_REPO$/net/minidev/json-smart/2.3/json-smart-2.3.jar!/" value="M2_REPO/net/minidev/json-smart/2.3/json-smart-2.3.jar" />
+    <varelement var="jar://$M2_REPO$/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar!/" value="M2_REPO/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar" />
+    <varelement var="jar://$M2_REPO$/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar!/" value="M2_REPO/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar" />
+    <varelement var="jar://$M2_REPO$/junit/junit/4.12/junit-4.12.jar!/" value="M2_REPO/junit/junit/4.12/junit-4.12.jar" />
+    <varelement var="jar://$M2_REPO$/junit/junit/4.12/junit-4.12-sources.jar!/" value="src:M2_REPO/junit/junit/4.12/junit-4.12-sources.jar" />
+    <varelement var="jar://$M2_REPO$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar!/" value="M2_REPO/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar" />
+    <varelement var="jar://$M2_REPO$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3-sources.jar!/" value="src:M2_REPO/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3-sources.jar" />
+    <varelement var="jar://$M2_REPO$/org/assertj/assertj-core/3.11.1/assertj-core-3.11.1.jar!/" value="M2_REPO/org/assertj/assertj-core/3.11.1/assertj-core-3.11.1.jar" />
+    <varelement var="jar://$M2_REPO$/org/mockito/mockito-core/2.23.4/mockito-core-2.23.4.jar!/" value="M2_REPO/org/mockito/mockito-core/2.23.4/mockito-core-2.23.4.jar" />
+    <varelement var="jar://$M2_REPO$/net/bytebuddy/byte-buddy/1.9.16/byte-buddy-1.9.16.jar!/" value="M2_REPO/net/bytebuddy/byte-buddy/1.9.16/byte-buddy-1.9.16.jar" />
+    <varelement var="jar://$M2_REPO$/net/bytebuddy/byte-buddy-agent/1.9.16/byte-buddy-agent-1.9.16.jar!/" value="M2_REPO/net/bytebuddy/byte-buddy-agent/1.9.16/byte-buddy-agent-1.9.16.jar" />
+    <varelement var="jar://$M2_REPO$/org/objenesis/objenesis/2.6/objenesis-2.6.jar!/" value="M2_REPO/org/objenesis/objenesis/2.6/objenesis-2.6.jar" />
+    <varelement var="jar://$M2_REPO$/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar!/" value="M2_REPO/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar" />
+    <varelement var="jar://$M2_REPO$/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3-sources.jar!/" value="src:M2_REPO/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3-sources.jar" />
+    <varelement var="jar://$M2_REPO$/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0.jar!/" value="M2_REPO/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0.jar" />
+    <varelement var="jar://$M2_REPO$/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/" value="M2_REPO/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar" />
+    <varelement var="jar://$M2_REPO$/org/springframework/spring-test/5.1.9.RELEASE/spring-test-5.1.9.RELEASE.jar!/" value="M2_REPO/org/springframework/spring-test/5.1.9.RELEASE/spring-test-5.1.9.RELEASE.jar" />
+    <varelement var="jar://$M2_REPO$/org/xmlunit/xmlunit-core/2.6.3/xmlunit-core-2.6.3.jar!/" value="M2_REPO/org/xmlunit/xmlunit-core/2.6.3/xmlunit-core-2.6.3.jar" />
     <src_description expected_position="0">
       <src_folder value="file://$MODULE_DIR$/src/test/java" expected_position="0" />
       <src_folder value="file://$MODULE_DIR$/src/main/java" expected_position="1" />
@@ -179,7 +179,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+  <component name="NewModuleRootManager">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -188,11 +188,12 @@
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
       <library name="javax.annotation-api-1.3.2.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar!/" />
+          <root url="jar://$M2_REPO$/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -201,7 +202,7 @@
     <orderEntry type="module-library">
       <library name="validation-api-2.0.1.Final.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar!/" />
+          <root url="jar://$M2_REPO$/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -210,30 +211,29 @@
     <orderEntry type="module-library">
       <library name="jsr311-api-1.1.1.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.jar!/" />
+          <root url="jar://$M2_REPO$/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MAVEN_REPOSITORY$/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1-sources.jar!/" />
+          <root url="jar://$M2_REPO$/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library name="javax.inject-1.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/javax.inject-1.jar!/" />
+          <root url="jar://$M2_REPO$/javax/inject/javax.inject/1/javax.inject-1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/javax.inject-1-sources.jar!/" />
+          <root url="jar://$M2_REPO$/javax/inject/javax.inject/1/javax.inject-1-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="inheritedJdk" />
     <orderEntry type="module-library">
       <library name="spring-cloud-starter-netflix-eureka-server-2.1.2.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter-netflix-eureka-server/2.1.2.RELEASE/spring-cloud-starter-netflix-eureka-server-2.1.2.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/cloud/spring-cloud-starter-netflix-eureka-server/2.1.2.RELEASE/spring-cloud-starter-netflix-eureka-server-2.1.2.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -242,7 +242,7 @@
     <orderEntry type="module-library">
       <library name="spring-cloud-starter-2.1.2.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter/2.1.2.RELEASE/spring-cloud-starter-2.1.2.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/cloud/spring-cloud-starter/2.1.2.RELEASE/spring-cloud-starter-2.1.2.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -251,7 +251,7 @@
     <orderEntry type="module-library">
       <library name="spring-boot-starter-2.1.7.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter/2.1.7.RELEASE/spring-boot-starter-2.1.7.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/boot/spring-boot-starter/2.1.7.RELEASE/spring-boot-starter-2.1.7.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -260,7 +260,7 @@
     <orderEntry type="module-library">
       <library name="spring-boot-2.1.7.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.1.7.RELEASE/spring-boot-2.1.7.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/boot/spring-boot/2.1.7.RELEASE/spring-boot-2.1.7.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -269,7 +269,7 @@
     <orderEntry type="module-library">
       <library name="spring-core-5.1.9.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.1.9.RELEASE/spring-core-5.1.9.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/spring-core/5.1.9.RELEASE/spring-core-5.1.9.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -278,7 +278,7 @@
     <orderEntry type="module-library">
       <library name="spring-jcl-5.1.9.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jcl/5.1.9.RELEASE/spring-jcl-5.1.9.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/spring-jcl/5.1.9.RELEASE/spring-jcl-5.1.9.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -287,7 +287,7 @@
     <orderEntry type="module-library">
       <library name="spring-context-5.1.9.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.9.RELEASE/spring-context-5.1.9.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/spring-context/5.1.9.RELEASE/spring-context-5.1.9.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -296,7 +296,7 @@
     <orderEntry type="module-library">
       <library name="spring-aop-5.1.9.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.1.9.RELEASE/spring-aop-5.1.9.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/spring-aop/5.1.9.RELEASE/spring-aop-5.1.9.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -305,7 +305,7 @@
     <orderEntry type="module-library">
       <library name="spring-beans-5.1.9.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.9.RELEASE/spring-beans-5.1.9.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/spring-beans/5.1.9.RELEASE/spring-beans-5.1.9.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -314,7 +314,7 @@
     <orderEntry type="module-library">
       <library name="spring-expression-5.1.9.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-expression/5.1.9.RELEASE/spring-expression-5.1.9.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/spring-expression/5.1.9.RELEASE/spring-expression-5.1.9.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -323,7 +323,7 @@
     <orderEntry type="module-library">
       <library name="spring-boot-autoconfigure-2.1.7.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.7.RELEASE/spring-boot-autoconfigure-2.1.7.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/boot/spring-boot-autoconfigure/2.1.7.RELEASE/spring-boot-autoconfigure-2.1.7.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -332,7 +332,7 @@
     <orderEntry type="module-library">
       <library name="spring-boot-starter-logging-2.1.7.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-logging/2.1.7.RELEASE/spring-boot-starter-logging-2.1.7.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/boot/spring-boot-starter-logging/2.1.7.RELEASE/spring-boot-starter-logging-2.1.7.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -341,40 +341,40 @@
     <orderEntry type="module-library">
       <library name="logback-classic-1.2.3.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/" />
+          <root url="jar://$M2_REPO$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3-sources.jar!/" />
+          <root url="jar://$M2_REPO$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library name="logback-core-1.2.3.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar!/" />
+          <root url="jar://$M2_REPO$/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3-sources.jar!/" />
+          <root url="jar://$M2_REPO$/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library name="slf4j-api-1.7.26.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.jar!/" />
+          <root url="jar://$M2_REPO$/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26-sources.jar!/" />
+          <root url="jar://$M2_REPO$/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library name="log4j-to-slf4j-2.11.2.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-to-slf4j/2.11.2/log4j-to-slf4j-2.11.2.jar!/" />
+          <root url="jar://$M2_REPO$/org/apache/logging/log4j/log4j-to-slf4j/2.11.2/log4j-to-slf4j-2.11.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -383,7 +383,7 @@
     <orderEntry type="module-library">
       <library name="log4j-api-2.11.2.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-api/2.11.2/log4j-api-2.11.2.jar!/" />
+          <root url="jar://$M2_REPO$/org/apache/logging/log4j/log4j-api/2.11.2/log4j-api-2.11.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -392,7 +392,7 @@
     <orderEntry type="module-library">
       <library name="jul-to-slf4j-1.7.26.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/jul-to-slf4j/1.7.26/jul-to-slf4j-1.7.26.jar!/" />
+          <root url="jar://$M2_REPO$/org/slf4j/jul-to-slf4j/1.7.26/jul-to-slf4j-1.7.26.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -401,7 +401,7 @@
     <orderEntry type="module-library">
       <library name="snakeyaml-1.23.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/yaml/snakeyaml/1.23/snakeyaml-1.23.jar!/" />
+          <root url="jar://$M2_REPO$/org/yaml/snakeyaml/1.23/snakeyaml-1.23.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -410,7 +410,7 @@
     <orderEntry type="module-library">
       <library name="spring-cloud-context-2.1.2.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-context/2.1.2.RELEASE/spring-cloud-context-2.1.2.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/cloud/spring-cloud-context/2.1.2.RELEASE/spring-cloud-context-2.1.2.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -419,7 +419,7 @@
     <orderEntry type="module-library">
       <library name="spring-security-crypto-5.1.6.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-crypto/5.1.6.RELEASE/spring-security-crypto-5.1.6.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/security/spring-security-crypto/5.1.6.RELEASE/spring-security-crypto-5.1.6.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -428,7 +428,7 @@
     <orderEntry type="module-library">
       <library name="spring-cloud-commons-2.1.2.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-commons/2.1.2.RELEASE/spring-cloud-commons-2.1.2.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/cloud/spring-cloud-commons/2.1.2.RELEASE/spring-cloud-commons-2.1.2.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -437,7 +437,7 @@
     <orderEntry type="module-library">
       <library name="spring-security-rsa-1.0.7.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-rsa/1.0.7.RELEASE/spring-security-rsa-1.0.7.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/security/spring-security-rsa/1.0.7.RELEASE/spring-security-rsa-1.0.7.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -446,7 +446,7 @@
     <orderEntry type="module-library">
       <library name="bcpkix-jdk15on-1.60.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/bouncycastle/bcpkix-jdk15on/1.60/bcpkix-jdk15on-1.60.jar!/" />
+          <root url="jar://$M2_REPO$/org/bouncycastle/bcpkix-jdk15on/1.60/bcpkix-jdk15on-1.60.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -455,7 +455,7 @@
     <orderEntry type="module-library">
       <library name="bcprov-jdk15on-1.60.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/bouncycastle/bcprov-jdk15on/1.60/bcprov-jdk15on-1.60.jar!/" />
+          <root url="jar://$M2_REPO$/org/bouncycastle/bcprov-jdk15on/1.60/bcprov-jdk15on-1.60.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -464,7 +464,7 @@
     <orderEntry type="module-library">
       <library name="spring-cloud-netflix-eureka-server-2.1.2.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-eureka-server/2.1.2.RELEASE/spring-cloud-netflix-eureka-server-2.1.2.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/cloud/spring-cloud-netflix-eureka-server/2.1.2.RELEASE/spring-cloud-netflix-eureka-server-2.1.2.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -473,7 +473,7 @@
     <orderEntry type="module-library">
       <library name="spring-boot-starter-web-2.1.7.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-web/2.1.7.RELEASE/spring-boot-starter-web-2.1.7.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/boot/spring-boot-starter-web/2.1.7.RELEASE/spring-boot-starter-web-2.1.7.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -482,7 +482,7 @@
     <orderEntry type="module-library">
       <library name="spring-boot-starter-json-2.1.7.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-json/2.1.7.RELEASE/spring-boot-starter-json-2.1.7.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/boot/spring-boot-starter-json/2.1.7.RELEASE/spring-boot-starter-json-2.1.7.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -491,7 +491,7 @@
     <orderEntry type="module-library">
       <library name="spring-web-5.1.9.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.9.RELEASE/spring-web-5.1.9.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/spring-web/5.1.9.RELEASE/spring-web-5.1.9.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -500,7 +500,7 @@
     <orderEntry type="module-library">
       <library name="jackson-databind-2.9.9.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.9/jackson-databind-2.9.9.jar!/" />
+          <root url="jar://$M2_REPO$/com/fasterxml/jackson/core/jackson-databind/2.9.9/jackson-databind-2.9.9.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -509,18 +509,18 @@
     <orderEntry type="module-library">
       <library name="jackson-annotations-2.9.0.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar!/" />
+          <root url="jar://$M2_REPO$/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0-sources.jar!/" />
+          <root url="jar://$M2_REPO$/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library name="jackson-core-2.9.9.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.9.9/jackson-core-2.9.9.jar!/" />
+          <root url="jar://$M2_REPO$/com/fasterxml/jackson/core/jackson-core/2.9.9/jackson-core-2.9.9.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -529,7 +529,7 @@
     <orderEntry type="module-library">
       <library name="jackson-datatype-jdk8-2.9.9.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.9/jackson-datatype-jdk8-2.9.9.jar!/" />
+          <root url="jar://$M2_REPO$/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.9/jackson-datatype-jdk8-2.9.9.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -538,7 +538,7 @@
     <orderEntry type="module-library">
       <library name="jackson-datatype-jsr310-2.9.9.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.9/jackson-datatype-jsr310-2.9.9.jar!/" />
+          <root url="jar://$M2_REPO$/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.9/jackson-datatype-jsr310-2.9.9.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -547,7 +547,7 @@
     <orderEntry type="module-library">
       <library name="jackson-module-parameter-names-2.9.9.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/module/jackson-module-parameter-names/2.9.9/jackson-module-parameter-names-2.9.9.jar!/" />
+          <root url="jar://$M2_REPO$/com/fasterxml/jackson/module/jackson-module-parameter-names/2.9.9/jackson-module-parameter-names-2.9.9.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -556,7 +556,7 @@
     <orderEntry type="module-library">
       <library name="spring-boot-starter-tomcat-2.1.7.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-tomcat/2.1.7.RELEASE/spring-boot-starter-tomcat-2.1.7.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/boot/spring-boot-starter-tomcat/2.1.7.RELEASE/spring-boot-starter-tomcat-2.1.7.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -565,7 +565,7 @@
     <orderEntry type="module-library">
       <library name="tomcat-embed-core-9.0.22.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.22/tomcat-embed-core-9.0.22.jar!/" />
+          <root url="jar://$M2_REPO$/org/apache/tomcat/embed/tomcat-embed-core/9.0.22/tomcat-embed-core-9.0.22.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -574,7 +574,7 @@
     <orderEntry type="module-library">
       <library name="tomcat-embed-el-9.0.22.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-el/9.0.22/tomcat-embed-el-9.0.22.jar!/" />
+          <root url="jar://$M2_REPO$/org/apache/tomcat/embed/tomcat-embed-el/9.0.22/tomcat-embed-el-9.0.22.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -583,7 +583,7 @@
     <orderEntry type="module-library">
       <library name="tomcat-embed-websocket-9.0.22.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.22/tomcat-embed-websocket-9.0.22.jar!/" />
+          <root url="jar://$M2_REPO$/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.22/tomcat-embed-websocket-9.0.22.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -592,7 +592,7 @@
     <orderEntry type="module-library">
       <library name="hibernate-validator-6.0.17.Final.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/validator/hibernate-validator/6.0.17.Final/hibernate-validator-6.0.17.Final.jar!/" />
+          <root url="jar://$M2_REPO$/org/hibernate/validator/hibernate-validator/6.0.17.Final/hibernate-validator-6.0.17.Final.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -601,7 +601,7 @@
     <orderEntry type="module-library">
       <library name="jboss-logging-3.3.2.Final.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar!/" />
+          <root url="jar://$M2_REPO$/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -610,7 +610,7 @@
     <orderEntry type="module-library">
       <library name="classmate-1.4.0.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/classmate/1.4.0/classmate-1.4.0.jar!/" />
+          <root url="jar://$M2_REPO$/com/fasterxml/classmate/1.4.0/classmate-1.4.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -619,7 +619,7 @@
     <orderEntry type="module-library">
       <library name="spring-webmvc-5.1.9.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.9.RELEASE/spring-webmvc-5.1.9.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/spring-webmvc/5.1.9.RELEASE/spring-webmvc-5.1.9.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -628,7 +628,7 @@
     <orderEntry type="module-library">
       <library name="spring-boot-starter-actuator-2.1.7.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-actuator/2.1.7.RELEASE/spring-boot-starter-actuator-2.1.7.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/boot/spring-boot-starter-actuator/2.1.7.RELEASE/spring-boot-starter-actuator-2.1.7.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -637,7 +637,7 @@
     <orderEntry type="module-library">
       <library name="spring-boot-actuator-autoconfigure-2.1.7.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-actuator-autoconfigure/2.1.7.RELEASE/spring-boot-actuator-autoconfigure-2.1.7.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/boot/spring-boot-actuator-autoconfigure/2.1.7.RELEASE/spring-boot-actuator-autoconfigure-2.1.7.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -646,7 +646,7 @@
     <orderEntry type="module-library">
       <library name="spring-boot-actuator-2.1.7.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-actuator/2.1.7.RELEASE/spring-boot-actuator-2.1.7.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/boot/spring-boot-actuator/2.1.7.RELEASE/spring-boot-actuator-2.1.7.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -655,7 +655,7 @@
     <orderEntry type="module-library">
       <library name="micrometer-core-1.1.5.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/io/micrometer/micrometer-core/1.1.5/micrometer-core-1.1.5.jar!/" />
+          <root url="jar://$M2_REPO$/io/micrometer/micrometer-core/1.1.5/micrometer-core-1.1.5.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -664,7 +664,7 @@
     <orderEntry type="module-library">
       <library name="HdrHistogram-2.1.9.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/hdrhistogram/HdrHistogram/2.1.9/HdrHistogram-2.1.9.jar!/" />
+          <root url="jar://$M2_REPO$/org/hdrhistogram/HdrHistogram/2.1.9/HdrHistogram-2.1.9.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -673,7 +673,7 @@
     <orderEntry type="module-library">
       <library name="LatencyUtils-2.0.3.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar!/" />
+          <root url="jar://$M2_REPO$/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -682,7 +682,7 @@
     <orderEntry type="module-library">
       <library name="spring-boot-starter-freemarker-2.1.7.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-freemarker/2.1.7.RELEASE/spring-boot-starter-freemarker-2.1.7.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/boot/spring-boot-starter-freemarker/2.1.7.RELEASE/spring-boot-starter-freemarker-2.1.7.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -691,7 +691,7 @@
     <orderEntry type="module-library">
       <library name="freemarker-2.3.28.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/freemarker/freemarker/2.3.28/freemarker-2.3.28.jar!/" />
+          <root url="jar://$M2_REPO$/org/freemarker/freemarker/2.3.28/freemarker-2.3.28.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -700,7 +700,7 @@
     <orderEntry type="module-library">
       <library name="spring-context-support-5.1.9.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context-support/5.1.9.RELEASE/spring-context-support-5.1.9.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/spring-context-support/5.1.9.RELEASE/spring-context-support-5.1.9.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -709,7 +709,7 @@
     <orderEntry type="module-library">
       <library name="spring-cloud-netflix-hystrix-2.1.2.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-hystrix/2.1.2.RELEASE/spring-cloud-netflix-hystrix-2.1.2.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/cloud/spring-cloud-netflix-hystrix/2.1.2.RELEASE/spring-cloud-netflix-hystrix-2.1.2.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -718,7 +718,7 @@
     <orderEntry type="module-library">
       <library name="spring-boot-starter-aop-2.1.7.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-aop/2.1.7.RELEASE/spring-boot-starter-aop-2.1.7.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/boot/spring-boot-starter-aop/2.1.7.RELEASE/spring-boot-starter-aop-2.1.7.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -727,7 +727,7 @@
     <orderEntry type="module-library">
       <library name="aspectjweaver-1.9.4.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjweaver/1.9.4/aspectjweaver-1.9.4.jar!/" />
+          <root url="jar://$M2_REPO$/org/aspectj/aspectjweaver/1.9.4/aspectjweaver-1.9.4.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -736,7 +736,7 @@
     <orderEntry type="module-library">
       <library name="spring-cloud-netflix-eureka-client-2.1.2.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-eureka-client/2.1.2.RELEASE/spring-cloud-netflix-eureka-client-2.1.2.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/cloud/spring-cloud-netflix-eureka-client/2.1.2.RELEASE/spring-cloud-netflix-eureka-client-2.1.2.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -745,7 +745,7 @@
     <orderEntry type="module-library">
       <library name="eureka-client-1.9.12.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-client/1.9.12/eureka-client-1.9.12.jar!/" />
+          <root url="jar://$M2_REPO$/com/netflix/eureka/eureka-client/1.9.12/eureka-client-1.9.12.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -754,7 +754,7 @@
     <orderEntry type="module-library">
       <library name="jettison-1.3.7.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jettison/jettison/1.3.7/jettison-1.3.7.jar!/" />
+          <root url="jar://$M2_REPO$/org/codehaus/jettison/jettison/1.3.7/jettison-1.3.7.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -763,7 +763,7 @@
     <orderEntry type="module-library">
       <library name="stax-api-1.0.1.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/stax/stax-api/1.0.1/stax-api-1.0.1.jar!/" />
+          <root url="jar://$M2_REPO$/stax/stax-api/1.0.1/stax-api-1.0.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -772,7 +772,7 @@
     <orderEntry type="module-library">
       <library name="netflix-eventbus-0.3.0.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/netflix/netflix-commons/netflix-eventbus/0.3.0/netflix-eventbus-0.3.0.jar!/" />
+          <root url="jar://$M2_REPO$/com/netflix/netflix-commons/netflix-eventbus/0.3.0/netflix-eventbus-0.3.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -781,7 +781,7 @@
     <orderEntry type="module-library">
       <library name="netflix-infix-0.3.0.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/netflix/netflix-commons/netflix-infix/0.3.0/netflix-infix-0.3.0.jar!/" />
+          <root url="jar://$M2_REPO$/com/netflix/netflix-commons/netflix-infix/0.3.0/netflix-infix-0.3.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -790,7 +790,7 @@
     <orderEntry type="module-library">
       <library name="commons-jxpath-1.3.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/commons-jxpath/commons-jxpath/1.3/commons-jxpath-1.3.jar!/" />
+          <root url="jar://$M2_REPO$/commons-jxpath/commons-jxpath/1.3/commons-jxpath-1.3.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -799,7 +799,7 @@
     <orderEntry type="module-library">
       <library name="joda-time-2.10.3.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/joda-time/joda-time/2.10.3/joda-time-2.10.3.jar!/" />
+          <root url="jar://$M2_REPO$/joda-time/joda-time/2.10.3/joda-time-2.10.3.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -808,7 +808,7 @@
     <orderEntry type="module-library">
       <library name="antlr-runtime-3.4.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/antlr/antlr-runtime/3.4/antlr-runtime-3.4.jar!/" />
+          <root url="jar://$M2_REPO$/org/antlr/antlr-runtime/3.4/antlr-runtime-3.4.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -817,7 +817,7 @@
     <orderEntry type="module-library">
       <library name="stringtemplate-3.2.1.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/antlr/stringtemplate/3.2.1/stringtemplate-3.2.1.jar!/" />
+          <root url="jar://$M2_REPO$/org/antlr/stringtemplate/3.2.1/stringtemplate-3.2.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -826,7 +826,7 @@
     <orderEntry type="module-library">
       <library name="antlr-2.7.7.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/antlr/antlr/2.7.7/antlr-2.7.7.jar!/" />
+          <root url="jar://$M2_REPO$/antlr/antlr/2.7.7/antlr-2.7.7.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -835,7 +835,7 @@
     <orderEntry type="module-library">
       <library name="guava-16.0.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/16.0/guava-16.0.jar!/" />
+          <root url="jar://$M2_REPO$/com/google/guava/guava/16.0/guava-16.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -844,18 +844,18 @@
     <orderEntry type="module-library">
       <library name="gson-2.8.5.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar!/" />
+          <root url="jar://$M2_REPO$/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.5/gson-2.8.5-sources.jar!/" />
+          <root url="jar://$M2_REPO$/com/google/code/gson/gson/2.8.5/gson-2.8.5-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library name="servo-core-0.12.21.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/netflix/servo/servo-core/0.12.21/servo-core-0.12.21.jar!/" />
+          <root url="jar://$M2_REPO$/com/netflix/servo/servo-core/0.12.21/servo-core-0.12.21.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -864,7 +864,7 @@
     <orderEntry type="module-library">
       <library name="archaius-core-0.7.6.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/netflix/archaius/archaius-core/0.7.6/archaius-core-0.7.6.jar!/" />
+          <root url="jar://$M2_REPO$/com/netflix/archaius/archaius-core/0.7.6/archaius-core-0.7.6.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -873,7 +873,7 @@
     <orderEntry type="module-library">
       <library name="commons-configuration-1.8.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/commons-configuration/commons-configuration/1.8/commons-configuration-1.8.jar!/" />
+          <root url="jar://$M2_REPO$/commons-configuration/commons-configuration/1.8/commons-configuration-1.8.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -882,18 +882,18 @@
     <orderEntry type="module-library">
       <library name="commons-lang-2.6.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/commons-lang/commons-lang/2.6/commons-lang-2.6.jar!/" />
+          <root url="jar://$M2_REPO$/commons-lang/commons-lang/2.6/commons-lang-2.6.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MAVEN_REPOSITORY$/commons-lang/commons-lang/2.6/commons-lang-2.6-sources.jar!/" />
+          <root url="jar://$M2_REPO$/commons-lang/commons-lang/2.6/commons-lang-2.6-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library name="commons-math-2.2.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-math/2.2/commons-math-2.2.jar!/" />
+          <root url="jar://$M2_REPO$/org/apache/commons/commons-math/2.2/commons-math-2.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -902,7 +902,7 @@
     <orderEntry type="module-library">
       <library name="xstream-1.4.10.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.jar!/" />
+          <root url="jar://$M2_REPO$/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -911,7 +911,7 @@
     <orderEntry type="module-library">
       <library name="xmlpull-1.1.3.1.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar!/" />
+          <root url="jar://$M2_REPO$/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -920,7 +920,7 @@
     <orderEntry type="module-library">
       <library name="xpp3_min-1.1.4c.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar!/" />
+          <root url="jar://$M2_REPO$/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -929,7 +929,7 @@
     <orderEntry type="module-library">
       <library name="jersey-core-1.19.1.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.19.1/jersey-core-1.19.1.jar!/" />
+          <root url="jar://$M2_REPO$/com/sun/jersey/jersey-core/1.19.1/jersey-core-1.19.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -938,7 +938,7 @@
     <orderEntry type="module-library">
       <library name="jersey-client-1.19.1.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-client/1.19.1/jersey-client-1.19.1.jar!/" />
+          <root url="jar://$M2_REPO$/com/sun/jersey/jersey-client/1.19.1/jersey-client-1.19.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -947,7 +947,7 @@
     <orderEntry type="module-library">
       <library name="jersey-apache-client4-1.19.1.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/contribs/jersey-apache-client4/1.19.1/jersey-apache-client4-1.19.1.jar!/" />
+          <root url="jar://$M2_REPO$/com/sun/jersey/contribs/jersey-apache-client4/1.19.1/jersey-apache-client4-1.19.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -956,7 +956,7 @@
     <orderEntry type="module-library">
       <library name="httpclient-4.5.9.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.5.9/httpclient-4.5.9.jar!/" />
+          <root url="jar://$M2_REPO$/org/apache/httpcomponents/httpclient/4.5.9/httpclient-4.5.9.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -965,7 +965,7 @@
     <orderEntry type="module-library">
       <library name="httpcore-4.4.11.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.11/httpcore-4.4.11.jar!/" />
+          <root url="jar://$M2_REPO$/org/apache/httpcomponents/httpcore/4.4.11/httpcore-4.4.11.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -974,7 +974,7 @@
     <orderEntry type="module-library">
       <library name="commons-codec-1.11.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.11/commons-codec-1.11.jar!/" />
+          <root url="jar://$M2_REPO$/commons-codec/commons-codec/1.11/commons-codec-1.11.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -983,7 +983,7 @@
     <orderEntry type="module-library">
       <library name="guice-4.1.0.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/google/inject/guice/4.1.0/guice-4.1.0.jar!/" />
+          <root url="jar://$M2_REPO$/com/google/inject/guice/4.1.0/guice-4.1.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -992,18 +992,18 @@
     <orderEntry type="module-library">
       <library name="aopalliance-1.0.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/aopalliance/aopalliance/1.0/aopalliance-1.0.jar!/" />
+          <root url="jar://$M2_REPO$/aopalliance/aopalliance/1.0/aopalliance-1.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MAVEN_REPOSITORY$/aopalliance/aopalliance/1.0/aopalliance-1.0-sources.jar!/" />
+          <root url="jar://$M2_REPO$/aopalliance/aopalliance/1.0/aopalliance-1.0-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library name="compactmap-1.2.1.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/github/vlsi/compactmap/compactmap/1.2.1/compactmap-1.2.1.jar!/" />
+          <root url="jar://$M2_REPO$/com/github/vlsi/compactmap/compactmap/1.2.1/compactmap-1.2.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1012,7 +1012,7 @@
     <orderEntry type="module-library">
       <library name="dexx-collections-0.2.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/github/andrewoma/dexx/dexx-collections/0.2/dexx-collections-0.2.jar!/" />
+          <root url="jar://$M2_REPO$/com/github/andrewoma/dexx/dexx-collections/0.2/dexx-collections-0.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1021,7 +1021,7 @@
     <orderEntry type="module-library">
       <library name="jersey-servlet-1.19.1.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-servlet/1.19.1/jersey-servlet-1.19.1.jar!/" />
+          <root url="jar://$M2_REPO$/com/sun/jersey/jersey-servlet/1.19.1/jersey-servlet-1.19.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1030,7 +1030,7 @@
     <orderEntry type="module-library">
       <library name="jersey-server-1.19.1.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-server/1.19.1/jersey-server-1.19.1.jar!/" />
+          <root url="jar://$M2_REPO$/com/sun/jersey/jersey-server/1.19.1/jersey-server-1.19.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1039,7 +1039,7 @@
     <orderEntry type="module-library">
       <library name="eureka-core-1.9.12.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-core/1.9.12/eureka-core-1.9.12.jar!/" />
+          <root url="jar://$M2_REPO$/com/netflix/eureka/eureka-core/1.9.12/eureka-core-1.9.12.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1048,7 +1048,7 @@
     <orderEntry type="module-library">
       <library name="aws-java-sdk-core-1.11.415.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/amazonaws/aws-java-sdk-core/1.11.415/aws-java-sdk-core-1.11.415.jar!/" />
+          <root url="jar://$M2_REPO$/com/amazonaws/aws-java-sdk-core/1.11.415/aws-java-sdk-core-1.11.415.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1057,7 +1057,7 @@
     <orderEntry type="module-library">
       <library name="ion-java-1.0.2.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/software/amazon/ion/ion-java/1.0.2/ion-java-1.0.2.jar!/" />
+          <root url="jar://$M2_REPO$/software/amazon/ion/ion-java/1.0.2/ion-java-1.0.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1066,7 +1066,7 @@
     <orderEntry type="module-library">
       <library name="jackson-dataformat-cbor-2.9.9.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/dataformat/jackson-dataformat-cbor/2.9.9/jackson-dataformat-cbor-2.9.9.jar!/" />
+          <root url="jar://$M2_REPO$/com/fasterxml/jackson/dataformat/jackson-dataformat-cbor/2.9.9/jackson-dataformat-cbor-2.9.9.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1075,7 +1075,7 @@
     <orderEntry type="module-library">
       <library name="aws-java-sdk-ec2-1.11.415.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/amazonaws/aws-java-sdk-ec2/1.11.415/aws-java-sdk-ec2-1.11.415.jar!/" />
+          <root url="jar://$M2_REPO$/com/amazonaws/aws-java-sdk-ec2/1.11.415/aws-java-sdk-ec2-1.11.415.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1084,7 +1084,7 @@
     <orderEntry type="module-library">
       <library name="jmespath-java-1.11.415.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/amazonaws/jmespath-java/1.11.415/jmespath-java-1.11.415.jar!/" />
+          <root url="jar://$M2_REPO$/com/amazonaws/jmespath-java/1.11.415/jmespath-java-1.11.415.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1093,7 +1093,7 @@
     <orderEntry type="module-library">
       <library name="aws-java-sdk-autoscaling-1.11.415.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/amazonaws/aws-java-sdk-autoscaling/1.11.415/aws-java-sdk-autoscaling-1.11.415.jar!/" />
+          <root url="jar://$M2_REPO$/com/amazonaws/aws-java-sdk-autoscaling/1.11.415/aws-java-sdk-autoscaling-1.11.415.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1102,7 +1102,7 @@
     <orderEntry type="module-library">
       <library name="aws-java-sdk-sts-1.11.415.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/amazonaws/aws-java-sdk-sts/1.11.415/aws-java-sdk-sts-1.11.415.jar!/" />
+          <root url="jar://$M2_REPO$/com/amazonaws/aws-java-sdk-sts/1.11.415/aws-java-sdk-sts-1.11.415.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1111,7 +1111,7 @@
     <orderEntry type="module-library">
       <library name="aws-java-sdk-route53-1.11.415.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/amazonaws/aws-java-sdk-route53/1.11.415/aws-java-sdk-route53-1.11.415.jar!/" />
+          <root url="jar://$M2_REPO$/com/amazonaws/aws-java-sdk-route53/1.11.415/aws-java-sdk-route53-1.11.415.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1120,7 +1120,7 @@
     <orderEntry type="module-library">
       <library name="woodstox-core-5.0.3.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/woodstox/woodstox-core/5.0.3/woodstox-core-5.0.3.jar!/" />
+          <root url="jar://$M2_REPO$/com/fasterxml/woodstox/woodstox-core/5.0.3/woodstox-core-5.0.3.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1129,7 +1129,7 @@
     <orderEntry type="module-library">
       <library name="stax2-api-3.1.4.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4.jar!/" />
+          <root url="jar://$M2_REPO$/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1138,18 +1138,18 @@
     <orderEntry type="module-library">
       <library name="jsr305-3.0.1.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar!/" />
+          <root url="jar://$M2_REPO$/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1-sources.jar!/" />
+          <root url="jar://$M2_REPO$/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library name="jackson-dataformat-xml-2.9.9.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.9.9/jackson-dataformat-xml-2.9.9.jar!/" />
+          <root url="jar://$M2_REPO$/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.9.9/jackson-dataformat-xml-2.9.9.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1158,7 +1158,7 @@
     <orderEntry type="module-library">
       <library name="jackson-module-jaxb-annotations-2.9.9.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.9.9/jackson-module-jaxb-annotations-2.9.9.jar!/" />
+          <root url="jar://$M2_REPO$/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.9.9/jackson-module-jaxb-annotations-2.9.9.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1167,7 +1167,7 @@
     <orderEntry type="module-library">
       <library name="spring-cloud-starter-netflix-archaius-2.1.2.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter-netflix-archaius/2.1.2.RELEASE/spring-cloud-starter-netflix-archaius-2.1.2.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/cloud/spring-cloud-starter-netflix-archaius/2.1.2.RELEASE/spring-cloud-starter-netflix-archaius-2.1.2.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1176,7 +1176,7 @@
     <orderEntry type="module-library">
       <library name="spring-cloud-netflix-ribbon-2.1.2.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-ribbon/2.1.2.RELEASE/spring-cloud-netflix-ribbon-2.1.2.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/cloud/spring-cloud-netflix-ribbon/2.1.2.RELEASE/spring-cloud-netflix-ribbon-2.1.2.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1185,7 +1185,7 @@
     <orderEntry type="module-library">
       <library name="spring-cloud-netflix-archaius-2.1.2.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-archaius/2.1.2.RELEASE/spring-cloud-netflix-archaius-2.1.2.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/cloud/spring-cloud-netflix-archaius/2.1.2.RELEASE/spring-cloud-netflix-archaius-2.1.2.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1194,7 +1194,7 @@
     <orderEntry type="module-library">
       <library name="spring-cloud-starter-netflix-ribbon-2.1.2.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter-netflix-ribbon/2.1.2.RELEASE/spring-cloud-starter-netflix-ribbon-2.1.2.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/cloud/spring-cloud-starter-netflix-ribbon/2.1.2.RELEASE/spring-cloud-starter-netflix-ribbon-2.1.2.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1203,7 +1203,7 @@
     <orderEntry type="module-library">
       <library name="ribbon-2.3.0.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon/2.3.0/ribbon-2.3.0.jar!/" />
+          <root url="jar://$M2_REPO$/com/netflix/ribbon/ribbon/2.3.0/ribbon-2.3.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1212,7 +1212,7 @@
     <orderEntry type="module-library">
       <library name="ribbon-core-2.3.0.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon-core/2.3.0/ribbon-core-2.3.0.jar!/" />
+          <root url="jar://$M2_REPO$/com/netflix/ribbon/ribbon-core/2.3.0/ribbon-core-2.3.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1221,7 +1221,7 @@
     <orderEntry type="module-library">
       <library name="ribbon-transport-2.3.0.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon-transport/2.3.0/ribbon-transport-2.3.0.jar!/" />
+          <root url="jar://$M2_REPO$/com/netflix/ribbon/ribbon-transport/2.3.0/ribbon-transport-2.3.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1230,7 +1230,7 @@
     <orderEntry type="module-library">
       <library name="ribbon-loadbalancer-2.3.0.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon-loadbalancer/2.3.0/ribbon-loadbalancer-2.3.0.jar!/" />
+          <root url="jar://$M2_REPO$/com/netflix/ribbon/ribbon-loadbalancer/2.3.0/ribbon-loadbalancer-2.3.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1239,7 +1239,7 @@
     <orderEntry type="module-library">
       <library name="netflix-statistics-0.1.1.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/netflix/netflix-commons/netflix-statistics/0.1.1/netflix-statistics-0.1.1.jar!/" />
+          <root url="jar://$M2_REPO$/com/netflix/netflix-commons/netflix-statistics/0.1.1/netflix-statistics-0.1.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1248,7 +1248,7 @@
     <orderEntry type="module-library">
       <library name="rxjava-1.3.8.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/io/reactivex/rxjava/1.3.8/rxjava-1.3.8.jar!/" />
+          <root url="jar://$M2_REPO$/io/reactivex/rxjava/1.3.8/rxjava-1.3.8.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1257,7 +1257,7 @@
     <orderEntry type="module-library">
       <library name="netflix-commons-util-0.3.0.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/netflix/netflix-commons/netflix-commons-util/0.3.0/netflix-commons-util-0.3.0.jar!/" />
+          <root url="jar://$M2_REPO$/com/netflix/netflix-commons/netflix-commons-util/0.3.0/netflix-commons-util-0.3.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1266,7 +1266,7 @@
     <orderEntry type="module-library">
       <library name="rxnetty-0.4.9.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/io/reactivex/rxnetty/0.4.9/rxnetty-0.4.9.jar!/" />
+          <root url="jar://$M2_REPO$/io/reactivex/rxnetty/0.4.9/rxnetty-0.4.9.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1275,7 +1275,7 @@
     <orderEntry type="module-library">
       <library name="rxnetty-contexts-0.4.9.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/io/reactivex/rxnetty-contexts/0.4.9/rxnetty-contexts-0.4.9.jar!/" />
+          <root url="jar://$M2_REPO$/io/reactivex/rxnetty-contexts/0.4.9/rxnetty-contexts-0.4.9.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1284,7 +1284,7 @@
     <orderEntry type="module-library">
       <library name="rxnetty-servo-0.4.9.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/io/reactivex/rxnetty-servo/0.4.9/rxnetty-servo-0.4.9.jar!/" />
+          <root url="jar://$M2_REPO$/io/reactivex/rxnetty-servo/0.4.9/rxnetty-servo-0.4.9.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1293,7 +1293,7 @@
     <orderEntry type="module-library">
       <library name="hystrix-core-1.5.18.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/netflix/hystrix/hystrix-core/1.5.18/hystrix-core-1.5.18.jar!/" />
+          <root url="jar://$M2_REPO$/com/netflix/hystrix/hystrix-core/1.5.18/hystrix-core-1.5.18.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1302,7 +1302,7 @@
     <orderEntry type="module-library">
       <library name="ribbon-httpclient-2.3.0.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon-httpclient/2.3.0/ribbon-httpclient-2.3.0.jar!/" />
+          <root url="jar://$M2_REPO$/com/netflix/ribbon/ribbon-httpclient/2.3.0/ribbon-httpclient-2.3.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1311,7 +1311,7 @@
     <orderEntry type="module-library">
       <library name="commons-collections-3.2.2.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar!/" />
+          <root url="jar://$M2_REPO$/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1320,7 +1320,7 @@
     <orderEntry type="module-library">
       <library name="ribbon-eureka-2.3.0.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon-eureka/2.3.0/ribbon-eureka-2.3.0.jar!/" />
+          <root url="jar://$M2_REPO$/com/netflix/ribbon/ribbon-eureka/2.3.0/ribbon-eureka-2.3.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1329,7 +1329,7 @@
     <orderEntry type="module-library">
       <library name="spring-cloud-starter-config-2.1.3.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter-config/2.1.3.RELEASE/spring-cloud-starter-config-2.1.3.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/cloud/spring-cloud-starter-config/2.1.3.RELEASE/spring-cloud-starter-config-2.1.3.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1338,7 +1338,7 @@
     <orderEntry type="module-library">
       <library name="spring-cloud-config-client-2.1.3.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-config-client/2.1.3.RELEASE/spring-cloud-config-client-2.1.3.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/cloud/spring-cloud-config-client/2.1.3.RELEASE/spring-cloud-config-client-2.1.3.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1347,7 +1347,7 @@
     <orderEntry type="module-library">
       <library name="spring-boot-starter-test-2.1.7.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-test/2.1.7.RELEASE/spring-boot-starter-test-2.1.7.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/boot/spring-boot-starter-test/2.1.7.RELEASE/spring-boot-starter-test-2.1.7.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1356,7 +1356,7 @@
     <orderEntry type="module-library">
       <library name="spring-boot-test-2.1.7.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-test/2.1.7.RELEASE/spring-boot-test-2.1.7.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/boot/spring-boot-test/2.1.7.RELEASE/spring-boot-test-2.1.7.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1365,7 +1365,7 @@
     <orderEntry type="module-library">
       <library name="spring-boot-test-autoconfigure-2.1.7.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-test-autoconfigure/2.1.7.RELEASE/spring-boot-test-autoconfigure-2.1.7.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/boot/spring-boot-test-autoconfigure/2.1.7.RELEASE/spring-boot-test-autoconfigure-2.1.7.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1374,7 +1374,7 @@
     <orderEntry type="module-library">
       <library name="json-path-2.4.0.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/jayway/jsonpath/json-path/2.4.0/json-path-2.4.0.jar!/" />
+          <root url="jar://$M2_REPO$/com/jayway/jsonpath/json-path/2.4.0/json-path-2.4.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1383,7 +1383,7 @@
     <orderEntry type="module-library">
       <library name="json-smart-2.3.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/net/minidev/json-smart/2.3/json-smart-2.3.jar!/" />
+          <root url="jar://$M2_REPO$/net/minidev/json-smart/2.3/json-smart-2.3.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1392,7 +1392,7 @@
     <orderEntry type="module-library">
       <library name="accessors-smart-1.2.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar!/" />
+          <root url="jar://$M2_REPO$/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1401,7 +1401,7 @@
     <orderEntry type="module-library">
       <library name="asm-5.0.4.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar!/" />
+          <root url="jar://$M2_REPO$/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1410,29 +1410,29 @@
     <orderEntry type="module-library">
       <library name="junit-4.12.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/" />
+          <root url="jar://$M2_REPO$/junit/junit/4.12/junit-4.12.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/" />
+          <root url="jar://$M2_REPO$/junit/junit/4.12/junit-4.12-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library name="hamcrest-core-1.3.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar!/" />
+          <root url="jar://$M2_REPO$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3-sources.jar!/" />
+          <root url="jar://$M2_REPO$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library name="assertj-core-3.11.1.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/assertj/assertj-core/3.11.1/assertj-core-3.11.1.jar!/" />
+          <root url="jar://$M2_REPO$/org/assertj/assertj-core/3.11.1/assertj-core-3.11.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1441,7 +1441,7 @@
     <orderEntry type="module-library">
       <library name="mockito-core-2.23.4.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/2.23.4/mockito-core-2.23.4.jar!/" />
+          <root url="jar://$M2_REPO$/org/mockito/mockito-core/2.23.4/mockito-core-2.23.4.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1450,7 +1450,7 @@
     <orderEntry type="module-library">
       <library name="byte-buddy-1.9.16.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy/1.9.16/byte-buddy-1.9.16.jar!/" />
+          <root url="jar://$M2_REPO$/net/bytebuddy/byte-buddy/1.9.16/byte-buddy-1.9.16.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1459,7 +1459,7 @@
     <orderEntry type="module-library">
       <library name="byte-buddy-agent-1.9.16.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy-agent/1.9.16/byte-buddy-agent-1.9.16.jar!/" />
+          <root url="jar://$M2_REPO$/net/bytebuddy/byte-buddy-agent/1.9.16/byte-buddy-agent-1.9.16.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1468,7 +1468,7 @@
     <orderEntry type="module-library">
       <library name="objenesis-2.6.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/objenesis/objenesis/2.6/objenesis-2.6.jar!/" />
+          <root url="jar://$M2_REPO$/org/objenesis/objenesis/2.6/objenesis-2.6.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1477,18 +1477,18 @@
     <orderEntry type="module-library">
       <library name="hamcrest-library-1.3.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar!/" />
+          <root url="jar://$M2_REPO$/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3-sources.jar!/" />
+          <root url="jar://$M2_REPO$/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library name="jsonassert-1.5.0.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0.jar!/" />
+          <root url="jar://$M2_REPO$/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1497,7 +1497,7 @@
     <orderEntry type="module-library">
       <library name="android-json-0.0.20131108.vaadin1.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/" />
+          <root url="jar://$M2_REPO$/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1506,7 +1506,7 @@
     <orderEntry type="module-library">
       <library name="spring-test-5.1.9.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/5.1.9.RELEASE/spring-test-5.1.9.RELEASE.jar!/" />
+          <root url="jar://$M2_REPO$/org/springframework/spring-test/5.1.9.RELEASE/spring-test-5.1.9.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1515,7 +1515,7 @@
     <orderEntry type="module-library">
       <library name="xmlunit-core-2.6.3.jar">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/xmlunit/xmlunit-core/2.6.3/xmlunit-core-2.6.3.jar!/" />
+          <root url="jar://$M2_REPO$/org/xmlunit/xmlunit-core/2.6.3/xmlunit-core-2.6.3.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
