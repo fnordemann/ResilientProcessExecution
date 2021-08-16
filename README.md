@@ -26,7 +26,7 @@ Users may run precompiled Java archives, avoiding the need for source code compi
 
 Automatically trigger execution by running:
 
-    ./start_precompiled_services.sh
+    start_precompiled_services.sh
 
 OR manually trigger execution by:
 
