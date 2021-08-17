@@ -7,13 +7,16 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.2.1.RELEASE)
 
-2021-08-17 14:14:45.577  INFO 6009 --- [           main] org.example.neighbor.Application         : Starting Application v0.1.0 on e04-laptop21.fritz.box with PID 6009 (/Users/fnordemann/eclipse-workspace/resilient-process/neighbor-service/target/neighbor-service-0.1.0.jar started by fnordemann in /Users/fnordemann/eclipse-workspace/resilient-process)
-2021-08-17 14:14:45.582  INFO 6009 --- [           main] org.example.neighbor.Application         : No active profile set, falling back to default profiles: default
-2021-08-17 14:14:48.909  INFO 6009 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8031 (http)
-2021-08-17 14:14:48.964  INFO 6009 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-08-17 14:14:48.964  INFO 6009 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
-2021-08-17 14:14:49.218  INFO 6009 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-08-17 14:14:49.218  INFO 6009 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3394 ms
-2021-08-17 14:14:49.823  INFO 6009 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-08-17 14:14:50.621  INFO 6009 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8031 (http) with context path ''
-2021-08-17 14:14:50.629  INFO 6009 --- [           main] org.example.neighbor.Application         : Started Application in 6.882 seconds (JVM running for 8.374)
+2021-08-17 14:25:35.836  INFO 6763 --- [           main] org.example.neighbor.Application         : Starting Application v0.1.0 on e04-laptop21.fritz.box with PID 6763 (/Users/fnordemann/eclipse-workspace/resilient-process/neighbor-service/target/neighbor-service-0.1.0.jar started by fnordemann in /Users/fnordemann/eclipse-workspace/resilient-process)
+2021-08-17 14:25:35.849  INFO 6763 --- [           main] org.example.neighbor.Application         : No active profile set, falling back to default profiles: default
+2021-08-17 14:25:57.172  INFO 6763 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8031 (http)
+2021-08-17 14:25:57.195  INFO 6763 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-17 14:25:57.195  INFO 6763 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-08-17 14:25:58.232  INFO 6763 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-17 14:25:58.232  INFO 6763 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 21538 ms
+2021-08-17 14:26:01.450  INFO 6763 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-17 14:26:04.749  INFO 6763 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8031 (http) with context path ''
+2021-08-17 14:26:04.831  INFO 6763 --- [           main] org.example.neighbor.Application         : Started Application in 38.072 seconds (JVM running for 44.025)
+2021-08-17 14:27:13.813  INFO 6763 --- [nio-8031-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-17 14:27:13.815  INFO 6763 --- [nio-8031-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-17 14:27:13.829  INFO 6763 --- [nio-8031-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
