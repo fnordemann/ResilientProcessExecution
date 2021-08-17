@@ -4,13 +4,13 @@ WORKDIR /
 
 COPY datatypes/ /datatypes/
 COPY eureka-server/ /eureka-server/
-COPY lgcs-service/ /lgcs-service/
+COPY loc-service/ /loc-service/
 COPY mgmt/ /mgmt/
 COPY mgmt-mov/ /mgmt-mov/
 COPY neighbor-service/ /neighbor-service/
 COPY nirs-service/ /nirs-service/
-COPY ogcs-service/ /ogcs-service/
-COPY osas-service/ /osas-service/
+COPY cell-service/ /cell-service/
+COPY ref-service/ /ref-service/
 COPY postman-rest-helpercalls/ /postman-rest-helpercalls/
 COPY sp/ /sp/
 COPY *.sh /

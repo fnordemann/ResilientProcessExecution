@@ -1,0 +1,60 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8020/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 5
+    statusPageUrl: http://${eureka.hostname}:${server.port}/analysis
+    healthCheckUrl: http://${eureka.hostname}:${server.port}/analysis
+    homePageUrl: http://${eureka.hostname}:${server.port}/analysis
+spring:
+  application:
+    name: ingredients-service
+
+---
+spring:
+  profiles: ref1
+server:
+  port: 8026
+eureka:
+  instance:
+    metadata-map:
+      type: "REF"
+      location: "cloud"
+      accuracy: "0.4"
+      cost: "0.1"
+      time: "0.1"
+      urlanalysis: "/analysis"
+
+---
+spring:
+  profiles: ref2
+server:
+  port: 8027
+eureka:
+  instance:
+    metadata-map:
+      type: "REF"
+      location: "cloud"
+      accuracy: "0.3"
+      cost: "0.0"
+      time: "0.1"
+      urlanalysis: "/analysis"
+
+---
+spring:
+  profiles: refmov
+server:
+  port: 8037
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8030/eureka/
+  instance:
+    metadata-map:
+      type: "REF"
+      location: "local"
+      accuracy: "0.2"
+      cost: "0.0"
+      time: "0.0"
+      urlanalysis: "/analysis"

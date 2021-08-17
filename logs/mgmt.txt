@@ -9,89 +9,190 @@
   Camunda BPM: (v7.12.0)
   Camunda BPM Spring Boot Starter: (v3.4.0)
 
-2020-03-14 21:17:36.216  INFO 28 --- [           main] org.example.mgmt.MgmtApplication         : No active profile set, falling back to default profiles: default
-2020-03-14 21:21:05.919  INFO 28 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=09346a0d-6683-34ec-83ed-dff0ca22df5c
-2020-03-14 21:21:20.332  INFO 28 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-03-14 21:21:37.691  INFO 28 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8025 (http)
-2020-03-14 21:21:38.620  INFO 28 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-03-14 21:21:38.623  INFO 28 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
-2020-03-14 21:21:41.531  INFO 28 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-03-14 21:21:41.548  INFO 28 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 241273 ms
-2020-03-14 21:21:42.717  INFO 28 --- [           main] .c.b.s.b.s.r.CamundaJerseyResourceConfig : Configuring camunda rest api.
-2020-03-14 21:21:43.919  INFO 28 --- [           main] .c.b.s.b.s.r.CamundaJerseyResourceConfig : Finished configuring camunda rest api.
-2020-03-14 21:21:57.622  INFO 28 --- [           main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2020-03-14 21:22:06.436  INFO 28 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB040 Setting up jobExecutor with corePoolSize=3, maxPoolSize:10
-2020-03-14 21:22:06.497  INFO 28 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'camundaTaskExecutor'
-2020-03-14 21:22:09.217  INFO 28 --- [           main] org.camunda.bpm.engine.cfg               : ENGINE-12003 Plugin 'CompositeProcessEnginePlugin[genericPropertiesConfiguration, camundaProcessEngineConfiguration, camundaDatasourceConfiguration, camundaJobConfiguration, camundaHistoryConfiguration, camundaMetricsConfiguration, camundaAuthorizationConfiguration, CreateAdminUserConfiguration[adminUser=AdminUserProperty[id=demo, firstName=demo, lastName=Demo, email=demo@localhost, password=******]], failedJobConfiguration, CreateFilterConfiguration[filterName=All tasks], disableDeploymentResourcePattern, eventPublisherPlugin]' activated on process engine 'default'
-2020-03-14 21:22:09.328  INFO 28 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB020 ProcessApplication enabled: autoDeployment via springConfiguration#deploymentResourcePattern is disabled
-2020-03-14 21:22:09.354  INFO 28 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-001: Initialized Camunda Spring Boot Eventing Engine Plugin.
-2020-03-14 21:22:09.362  INFO 28 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-003: Task events will be published as Spring Events.
-2020-03-14 21:22:09.367  INFO 28 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-005: Execution events will be published as Spring Events.
-2020-03-14 21:22:09.437  INFO 28 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-007: History events will be published as Spring events.
-2020-03-14 21:23:10.537  INFO 28 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.engine.sql'
-2020-03-14 21:23:13.039  INFO 28 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.history.sql'
-2020-03-14 21:23:13.472  INFO 28 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'identity' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.identity.sql'
-2020-03-14 21:23:14.136  INFO 28 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'case.engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.case.engine.sql'
-2020-03-14 21:23:14.487  INFO 28 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'case.history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.case.history.sql'
-2020-03-14 21:23:14.735  INFO 28 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'decision.engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.decision.engine.sql'
-2020-03-14 21:23:15.174  INFO 28 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'decision.history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.decision.history.sql'
-2020-03-14 21:23:15.649  INFO 28 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03067 No history level property found in database
-2020-03-14 21:23:15.656  INFO 28 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03065 Creating historyLevel property in database for level: HistoryLevelFull(name=full, id=3)
-2020-03-14 21:23:17.638  INFO 28 --- [           main] org.camunda.bpm.engine                   : ENGINE-00001 Process Engine default created.
-2020-03-14 21:23:21.517  INFO 28 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB010 creating initial Admin User: AdminUserProperty[id=demo, firstName=demo, lastName=Demo, email=demo@localhost, password=******]
-2020-03-14 21:23:23.134  INFO 28 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB015 create initial filter: id=08c8e01a-663a-11ea-8004-0242ac120002 name=All tasks
-2020-03-14 21:23:27.507  WARN 28 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2020-03-14 21:23:27.514  INFO 28 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2020-03-14 21:23:27.589  WARN 28 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2020-03-14 21:23:27.598  INFO 28 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2020-03-14 21:23:37.274  INFO 28 --- [           main] o.c.b.s.b.s.w.f.LazyInitRegistration     : lazy initialized org.camunda.bpm.spring.boot.starter.webapp.filter.LazySecurityFilter@bd9f51af
-2020-03-14 21:23:37.298  INFO 28 --- [           main] o.c.b.s.b.s.w.f.LazyInitRegistration     : lazy initialized org.camunda.bpm.spring.boot.starter.webapp.filter.LazyProcessEnginesFilter@4ad6fc0c
-2020-03-14 21:23:40.214  WARN 28 --- [           main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
-2020-03-14 21:23:41.179  INFO 28 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2020-03-14 21:23:43.343  INFO 28 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2020-03-14 21:23:46.003  INFO 28 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2020-03-14 21:23:46.015  INFO 28 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2020-03-14 21:23:50.252  INFO 28 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2020-03-14 21:23:50.255  INFO 28 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2020-03-14 21:23:54.267  INFO 28 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2020-03-14 21:23:54.576  INFO 28 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2020-03-14 21:23:54.584  INFO 28 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2020-03-14 21:23:54.586  INFO 28 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2020-03-14 21:23:54.588  INFO 28 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2020-03-14 21:23:54.594  INFO 28 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2020-03-14 21:23:54.596  INFO 28 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2020-03-14 21:23:54.597  INFO 28 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2020-03-14 21:23:57.073  INFO 28 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2020-03-14 21:23:57.118  INFO 28 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 5
-2020-03-14 21:23:57.146  INFO 28 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2020-03-14 21:23:57.167  INFO 28 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1584221037161 with initial instances count: 2
-2020-03-14 21:23:57.171  INFO 28 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MGMT-SERVICE with eureka with status UP
-2020-03-14 21:23:57.176  INFO 28 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1584221037176, current=UP, previous=STARTING]
-2020-03-14 21:23:57.190  INFO 28 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MGMT-SERVICE/2306694abf49:mgmt-service:8025: registering service...
-2020-03-14 21:23:57.612  INFO 28 --- [           main] org.camunda.bpm.container                : ENGINE-08024 Found processes.xml file at jar:file:/mgmt/target/mgmt-0.0.1-SNAPSHOT.jar!/META-INF/processes.xml
-2020-03-14 21:23:57.617  INFO 28 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MGMT-SERVICE/2306694abf49:mgmt-service:8025 - registration status: 204
-2020-03-14 21:23:57.620  INFO 28 --- [           main] org.camunda.bpm.container                : ENGINE-08025 Detected empty processes.xml file, using default values
-2020-03-14 21:23:57.699  INFO 28 --- [           main] org.camunda.bpm.container                : ENGINE-08023 Deployment summary for process archive 'mgmtApplication': 
+2021-08-17 11:24:19.617  INFO 4035 --- [           main] org.example.mgmt.MgmtApplication         : No active profile set, falling back to default profiles: default
+2021-08-17 11:24:34.746  INFO 4035 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=09346a0d-6683-34ec-83ed-dff0ca22df5c
+2021-08-17 11:24:37.692  INFO 4035 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-17 11:24:43.449  INFO 4035 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8025 (http)
+2021-08-17 11:24:43.620  INFO 4035 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-17 11:24:43.621  INFO 4035 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2021-08-17 11:24:44.637  INFO 4035 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-17 11:24:44.638  INFO 4035 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 24520 ms
+2021-08-17 11:24:44.841  INFO 4035 --- [           main] .c.b.s.b.s.r.CamundaJerseyResourceConfig : Configuring camunda rest api.
+2021-08-17 11:24:45.410  INFO 4035 --- [           main] .c.b.s.b.s.r.CamundaJerseyResourceConfig : Finished configuring camunda rest api.
+2021-08-17 11:24:48.793  INFO 4035 --- [           main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2021-08-17 11:24:52.751  INFO 4035 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB040 Setting up jobExecutor with corePoolSize=3, maxPoolSize:10
+2021-08-17 11:24:52.924  INFO 4035 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'camundaTaskExecutor'
+2021-08-17 11:24:53.801  INFO 4035 --- [           main] org.camunda.bpm.engine.cfg               : ENGINE-12003 Plugin 'CompositeProcessEnginePlugin[genericPropertiesConfiguration, camundaProcessEngineConfiguration, camundaDatasourceConfiguration, camundaJobConfiguration, camundaHistoryConfiguration, camundaMetricsConfiguration, camundaAuthorizationConfiguration, CreateAdminUserConfiguration[adminUser=AdminUserProperty[id=demo, firstName=demo, lastName=Demo, email=demo@localhost, password=******]], failedJobConfiguration, CreateFilterConfiguration[filterName=All tasks], disableDeploymentResourcePattern, eventPublisherPlugin]' activated on process engine 'default'
+2021-08-17 11:24:53.884  INFO 4035 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB020 ProcessApplication enabled: autoDeployment via springConfiguration#deploymentResourcePattern is disabled
+2021-08-17 11:24:53.885  INFO 4035 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-001: Initialized Camunda Spring Boot Eventing Engine Plugin.
+2021-08-17 11:24:53.886  INFO 4035 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-003: Task events will be published as Spring Events.
+2021-08-17 11:24:53.886  INFO 4035 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-005: Execution events will be published as Spring Events.
+2021-08-17 11:24:53.889  INFO 4035 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-007: History events will be published as Spring events.
+2021-08-17 11:25:25.313  INFO 4035 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.engine.sql'
+2021-08-17 11:25:25.707  INFO 4035 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.history.sql'
+2021-08-17 11:25:25.756  INFO 4035 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'identity' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.identity.sql'
+2021-08-17 11:25:26.030  INFO 4035 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'case.engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.case.engine.sql'
+2021-08-17 11:25:26.079  INFO 4035 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'case.history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.case.history.sql'
+2021-08-17 11:25:26.099  INFO 4035 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'decision.engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.decision.engine.sql'
+2021-08-17 11:25:26.186  INFO 4035 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'decision.history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.decision.history.sql'
+2021-08-17 11:25:26.361  INFO 4035 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03067 No history level property found in database
+2021-08-17 11:25:26.361  INFO 4035 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03065 Creating historyLevel property in database for level: HistoryLevelFull(name=full, id=3)
+2021-08-17 11:25:26.639  INFO 4035 --- [           main] org.camunda.bpm.engine                   : ENGINE-00001 Process Engine default created.
+2021-08-17 11:25:27.516  INFO 4035 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB010 creating initial Admin User: AdminUserProperty[id=demo, firstName=demo, lastName=Demo, email=demo@localhost, password=******]
+2021-08-17 11:25:27.769  INFO 4035 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB015 create initial filter: id=0f2a2401-ff3d-11eb-8dd1-a6be4b97ae00 name=All tasks
+2021-08-17 11:25:28.519  WARN 4035 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-08-17 11:25:28.520  INFO 4035 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-08-17 11:25:28.550  WARN 4035 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-08-17 11:25:28.551  INFO 4035 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-08-17 11:25:30.710  INFO 4035 --- [           main] o.c.b.s.b.s.w.f.LazyInitRegistration     : lazy initialized org.camunda.bpm.spring.boot.starter.webapp.filter.LazySecurityFilter@6cfcd46d
+2021-08-17 11:25:30.711  INFO 4035 --- [           main] o.c.b.s.b.s.w.f.LazyInitRegistration     : lazy initialized org.camunda.bpm.spring.boot.starter.webapp.filter.LazyProcessEnginesFilter@16746061
+2021-08-17 11:25:31.279  WARN 4035 --- [           main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2021-08-17 11:25:31.647  INFO 4035 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-08-17 11:25:32.145  INFO 4035 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2021-08-17 11:25:33.274  INFO 4035 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2021-08-17 11:25:33.274  INFO 4035 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2021-08-17 11:25:34.336  INFO 4035 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2021-08-17 11:25:34.337  INFO 4035 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2021-08-17 11:25:35.409  INFO 4035 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 11:25:35.544  INFO 4035 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2021-08-17 11:25:35.544  INFO 4035 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2021-08-17 11:25:35.544  INFO 4035 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2021-08-17 11:25:35.544  INFO 4035 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2021-08-17 11:25:35.544  INFO 4035 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2021-08-17 11:25:35.544  INFO 4035 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2021-08-17 11:25:35.544  INFO 4035 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2021-08-17 11:25:36.472  INFO 4035 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2021-08-17 11:25:36.479  INFO 4035 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 5
+2021-08-17 11:25:36.484  INFO 4035 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-08-17 11:25:36.492  INFO 4035 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1629192336490 with initial instances count: 2
+2021-08-17 11:25:36.509  INFO 4035 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MGMT-SERVICE with eureka with status UP
+2021-08-17 11:25:36.511  INFO 4035 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1629192336511, current=UP, previous=STARTING]
+2021-08-17 11:25:36.516  INFO 4035 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MGMT-SERVICE/e04-laptop21.fritz.box:mgmt-service:8025: registering service...
+2021-08-17 11:25:36.606  INFO 4035 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MGMT-SERVICE/e04-laptop21.fritz.box:mgmt-service:8025 - registration status: 204
+2021-08-17 11:25:36.642  INFO 4035 --- [           main] org.camunda.bpm.container                : ENGINE-08024 Found processes.xml file at jar:file:/Users/fnordemann/eclipse-workspace/resilient-process/mgmt/target/mgmt-0.0.1-SNAPSHOT.jar!/META-INF/processes.xml
+2021-08-17 11:25:36.649  INFO 4035 --- [           main] org.camunda.bpm.container                : ENGINE-08025 Detected empty processes.xml file, using default values
+2021-08-17 11:25:36.662  INFO 4035 --- [           main] org.camunda.bpm.container                : ENGINE-08023 Deployment summary for process archive 'mgmtApplication': 
 
         BOOT-INF/classes/mgmt.bpmn
 
-2020-03-14 21:23:59.555  INFO 28 --- [           main] org.camunda.bpm.engine.bpmn.parser       : ENGINE-01002 Ignoring non-executable process with id 'SpKey'. Set the attribute isExecutable="true" to deploy this process.
-2020-03-14 21:23:59.700  INFO 28 --- [           main] org.camunda.bpm.application              : ENGINE-07021 ProcessApplication 'mgmtApplication' registered for DB deployments [1dafaccb-663a-11ea-8004-0242ac120002]. Will execute process definitions 
+2021-08-17 11:25:37.361  INFO 4035 --- [           main] org.camunda.bpm.engine.bpmn.parser       : ENGINE-01002 Ignoring non-executable process with id 'SpKey'. Set the attribute isExecutable="true" to deploy this process.
+2021-08-17 11:25:37.565  INFO 4035 --- [           main] org.camunda.bpm.application              : ENGINE-07021 ProcessApplication 'mgmtApplication' registered for DB deployments [14846142-ff3d-11eb-8dd1-a6be4b97ae00]. Will execute process definitions 
 
-        MgmtKey[version: 1, id: MgmtKey:1:1ea9c43d-663a-11ea-8004-0242ac120002]
+        MgmtKey[version: 1, id: MgmtKey:1:15021cc4-ff3d-11eb-8dd1-a6be4b97ae00]
 Deployment does not provide any case definitions.
-2020-03-14 21:23:59.792  INFO 28 --- [           main] MGMT                                     : Going to start MGMT process...
-2020-03-14 21:23:59.999  INFO 28 --- [           main] DEPLOY-TASK                              : Deploying task.
-2020-03-14 21:24:00.134  INFO 28 --- [           main] org.camunda.bpm.container                : ENGINE-08050 Process application mgmtApplication successfully deployed
-2020-03-14 21:24:00.237  INFO 28 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8025 (http) with context path ''
-2020-03-14 21:24:00.243  INFO 28 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8025
-2020-03-14 21:24:00.253  INFO 28 --- [           main] org.example.mgmt.MgmtApplication         : Started MgmtApplication in 503.213 seconds (JVM running for 537.518)
-2020-03-14 21:24:00.258  INFO 28 --- [           main] org.camunda.bpm.engine.jobexecutor       : ENGINE-14014 Starting up the JobExecutor[org.camunda.bpm.engine.spring.components.jobexecutor.SpringJobExecutor].
-2020-03-14 21:24:00.263  INFO 28 --- [ingJobExecutor]] org.camunda.bpm.engine.jobexecutor       : ENGINE-14018 JobExecutor[org.camunda.bpm.engine.spring.components.jobexecutor.SpringJobExecutor] starting to acquire jobs
-2020-03-14 21:25:46.604  INFO 28 --- [io-8025-exec-10] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-03-14 21:25:46.609  INFO 28 --- [io-8025-exec-10] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-03-14 21:25:46.671  INFO 28 --- [io-8025-exec-10] o.s.web.servlet.DispatcherServlet        : Completed initialization in 55 ms
-2020-03-14 21:25:47.820  INFO 28 --- [io-8025-exec-10] CONTROL-SLURRY-APPLICATION               : Received status message from SP: {"taskId":"123456789","taskStatus":2,"taskRuntime":999.0,"taskCompletion":55.0,"seq":0}
-2020-03-14 21:25:47.850  INFO 28 --- [io-8025-exec-10] CONTROL-SLURRY-APPLICATION               : Checking slurry application.
-2020-03-14 21:25:47.853  INFO 28 --- [io-8025-exec-10] CONTROL-SLURRY-APPLICATION               : Process status: taskId 123456789 with status 2.
-2020-03-14 21:25:47.858  INFO 28 --- [io-8025-exec-10] CONTROL-SLURRY-APPLICATION               : Continuing slurry application.
+2021-08-17 11:25:37.627  INFO 4035 --- [           main] MGMT                                     : Going to start MGMT process...
+2021-08-17 11:25:37.751  INFO 4035 --- [           main] DEPLOY-TASK                              : Deploying task.
+2021-08-17 11:25:37.842  INFO 4035 --- [           main] org.camunda.bpm.container                : ENGINE-08050 Process application mgmtApplication successfully deployed
+2021-08-17 11:25:37.935  INFO 4035 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8025 (http) with context path ''
+2021-08-17 11:25:37.938  INFO 4035 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8025
+2021-08-17 11:25:37.944  INFO 4035 --- [           main] org.example.mgmt.MgmtApplication         : Started MgmtApplication in 97.621 seconds (JVM running for 107.854)
+2021-08-17 11:25:37.947  INFO 4035 --- [           main] org.camunda.bpm.engine.jobexecutor       : ENGINE-14014 Starting up the JobExecutor[org.camunda.bpm.engine.spring.components.jobexecutor.SpringJobExecutor].
+2021-08-17 11:25:37.950  INFO 4035 --- [ingJobExecutor]] org.camunda.bpm.engine.jobexecutor       : ENGINE-14018 JobExecutor[org.camunda.bpm.engine.spring.components.jobexecutor.SpringJobExecutor] starting to acquire jobs
+2021-08-17 11:25:39.057  INFO 4035 --- [nio-8025-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-17 11:25:39.058  INFO 4035 --- [nio-8025-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-17 11:25:39.071  INFO 4035 --- [nio-8025-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2021-08-17 11:25:39.235  INFO 4035 --- [nio-8025-exec-1] CONTROL-SLURRY-APPLICATION               : Received status message from SP: {"taskId":"0000","taskStatus":2,"taskRuntime":999.0,"taskCompletion":55.0,"seq":0}
+2021-08-17 11:25:39.239  INFO 4035 --- [nio-8025-exec-1] CONTROL-SLURRY-APPLICATION               : Checking slurry application.
+2021-08-17 11:25:39.239  INFO 4035 --- [nio-8025-exec-1] CONTROL-SLURRY-APPLICATION               : Process status: taskId 0000 with status 2.
+2021-08-17 11:25:39.239  INFO 4035 --- [nio-8025-exec-1] CONTROL-SLURRY-APPLICATION               : Continuing slurry application.
+2021-08-17 11:30:35.556  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 11:35:35.569  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 11:40:35.586  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 11:45:35.601  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 11:50:35.618  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 11:55:35.628  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 12:00:35.645  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 12:05:35.663  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 12:10:35.713  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 12:15:35.724  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 12:38:06.839 ERROR 4035 --- [tbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:8020/eureka/}
+
+com.sun.jersey.api.client.ClientHandlerException: org.apache.http.NoHttpResponseException: 127.0.0.1:8020 failed to respond
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar!/:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.13.jar!/:1.9.13]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.put(WebResource.java:529) ~[jersey-client-1.19.1.jar!/:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:102) ~[eureka-client-1.9.13.jar!/:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.9.13.jar!/:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.13.jar!/:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.9.13.jar!/:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.9.13.jar!/:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:89) ~[eureka-client-1.9.13.jar!/:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.9.13.jar!/:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.9.13.jar!/:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) ~[eureka-client-1.9.13.jar!/:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.9.13.jar!/:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.9.13.jar!/:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.13.jar!/:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.9.13.jar!/:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:864) ~[eureka-client-1.9.13.jar!/:1.9.13]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1423) ~[eureka-client-1.9.13.jar!/:1.9.13]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: org.apache.http.NoHttpResponseException: 127.0.0.1:8020 failed to respond
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:294) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:679) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:481) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar!/:1.19.1]
+	... 26 common frames omitted
+
+2021-08-17 12:38:06.862  WARN 4035 --- [tbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: org.apache.http.NoHttpResponseException: 127.0.0.1:8020 failed to respond
+2021-08-17 12:38:06.888  INFO 4035 --- [tbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution succeeded on retry #1
+2021-08-17 12:38:06.889  INFO 4035 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MGMT-SERVICE/e04-laptop21.fritz.box:mgmt-service:8025 - Re-registering apps/MGMT-SERVICE
+2021-08-17 12:38:06.889  INFO 4035 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MGMT-SERVICE/e04-laptop21.fritz.box:mgmt-service:8025: registering service...
+2021-08-17 12:38:06.977  INFO 4035 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MGMT-SERVICE/e04-laptop21.fritz.box:mgmt-service:8025 - registration status: 204
+2021-08-17 12:38:07.803  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 12:43:07.822  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 12:48:07.835  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 12:53:07.847  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 12:58:07.874  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 13:03:07.890  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 13:08:07.905  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 13:13:07.915  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 13:18:07.929  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 13:23:07.947  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 13:28:07.959  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 13:33:07.973  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 13:38:07.984  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 13:43:07.996  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 13:48:07.997  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 13:53:08.007  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 13:58:08.020  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 14:03:08.032  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 14:07:14.175  INFO 4035 --- [nio-8025-exec-3] CONTROL-SLURRY-APPLICATION               : Received status message from SP: {"taskId":"123456789","taskStatus":2,"taskRuntime":999.0,"taskCompletion":55.0,"seq":1}
+2021-08-17 14:07:14.207  INFO 4035 --- [nio-8025-exec-3] CONTROL-SLURRY-APPLICATION               : Checking slurry application.
+2021-08-17 14:07:14.208  INFO 4035 --- [nio-8025-exec-3] CONTROL-SLURRY-APPLICATION               : Process status: taskId 123456789 with status 2.
+2021-08-17 14:07:14.208  INFO 4035 --- [nio-8025-exec-3] CONTROL-SLURRY-APPLICATION               : Continuing slurry application.
+2021-08-17 14:08:08.040  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-17 14:11:55.127  INFO 4035 --- [nio-8025-exec-6] DEPLOY-TASK                              : Deploying task.
+2021-08-17 14:12:22.626  INFO 4035 --- [nio-8025-exec-7] CONTROL-SLURRY-APPLICATION               : Received status message from SP: {"taskId":"123456789","taskStatus":4,"taskRuntime":123.0,"taskCompletion":80.0,"seq":100}
+2021-08-17 14:12:22.630  INFO 4035 --- [nio-8025-exec-7] CONTROL-SLURRY-APPLICATION               : Checking slurry application.
+2021-08-17 14:12:22.630  INFO 4035 --- [nio-8025-exec-7] CONTROL-SLURRY-APPLICATION               : Process status: taskId 123456789 with status 4.
+2021-08-17 14:12:22.630  INFO 4035 --- [nio-8025-exec-7] CONTROL-SLURRY-APPLICATION               : Finished slurry application. Waiting for task log from SP.
+2021-08-17 14:12:22.653  INFO 4035 --- [nio-8025-exec-7] CONTROL-SLURRY-APPLICATION               : Received status message from SP: {"taskId":"123456789","taskStatus":4,"taskRuntime":123.0,"taskCompletion":80.0,"seq":100}
+2021-08-17 14:12:22.654  INFO 4035 --- [nio-8025-exec-7] CONTROL-SLURRY-APPLICATION               : Checking slurry application.
+2021-08-17 14:12:22.654  INFO 4035 --- [nio-8025-exec-7] CONTROL-SLURRY-APPLICATION               : Process status: taskId 123456789 with status 4.
+2021-08-17 14:12:22.654  INFO 4035 --- [nio-8025-exec-7] CONTROL-SLURRY-APPLICATION               : Finished slurry application. Waiting for task log from SP.
+2021-08-17 14:12:37.433  INFO 4035 --- [nio-8025-exec-9] DOCUMENT-TASK                            : Received log from SP.
+2021-08-17 14:12:37.434  INFO 4035 --- [nio-8025-exec-9] DOCUMENT-TASK                            : Documenting task.
+2021-08-17 14:12:37.434  INFO 4035 --- [nio-8025-exec-9] DOCUMENT-TASK                            : Process done.
+2021-08-17 14:12:37.444  INFO 4035 --- [nio-8025-exec-9] DOCUMENT-TASK                            : Received log from SP.
+2021-08-17 14:12:37.445  INFO 4035 --- [nio-8025-exec-9] DOCUMENT-TASK                            : Documenting task.
+2021-08-17 14:12:37.445  INFO 4035 --- [nio-8025-exec-9] DOCUMENT-TASK                            : Process done.
+2021-08-17 14:13:08.048  INFO 4035 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

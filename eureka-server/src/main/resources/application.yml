@@ -37,7 +37,7 @@ eureka:
 
 ---
 spring:
-  profiles: lgcs
+  profiles: loc
 server:
   port: 8050
 eureka:

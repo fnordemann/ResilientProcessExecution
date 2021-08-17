@@ -15,7 +15,7 @@ cd datatypes
 mvn clean install
 cd ../eureka-server
 mvn clean install
-cd ../lgcs-service
+cd ../loc-service
 mvn clean install
 cd ../mgmt
 mvn clean install
@@ -25,9 +25,9 @@ cd ../neighbor-service
 mvn clean install
 cd ../nirs-service
 mvn clean install
-cd ../ogcs-service
+cd ../cell-service
 mvn clean install
-cd ../osas-service
+cd ../ref-service
 mvn clean install
 cd ../sp
 mvn clean install
