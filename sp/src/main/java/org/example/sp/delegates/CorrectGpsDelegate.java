@@ -11,6 +11,7 @@ import org.example.datatypes.GpsRequest;
 import org.example.eureka.Instance;
 import org.example.eureka.Metadata;
 import org.example.sp.functions.ServiceDecision;
+import org.example.sp.functions.ServiceDecisionGraph;
 import org.example.sp.functions.ServiceSearch;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -39,8 +40,10 @@ public class CorrectGpsDelegate implements JavaDelegate {
     private final static Logger LOGGER = Logger.getLogger("CORRECT-GPS");
 
     int debug = 0;
-    private ServiceDecision serviceDecision = new ServiceDecision();
+    private ServiceDecisionGraph serviceDecisionGraph = new ServiceDecisionGraph();
     private ServiceSearch serviceSearch = new ServiceSearch();
+
+    double dCostLimit = 2.0;
 
     public void execute(DelegateExecution execution) throws Exception {
         // Setup process variables
@@ -63,8 +66,6 @@ public class CorrectGpsDelegate implements JavaDelegate {
         Instance serviceInstance = null;
         Map<String, String> metadataMap;
         String serviceId = "gps-service";
-        String[] criteria = {"accuracy", "cost", "time"};
-        double[] criteriaWeights = new double[]{0.7, 0.2, 0.1};
 
         LOGGER.info("Fetching available services for serviceId " + serviceId + "...");
         List<Instance> instanceList = serviceSearch.findServices("gps-service");
@@ -82,8 +83,12 @@ public class CorrectGpsDelegate implements JavaDelegate {
         while (searchService) {
             // Instances found?
             if (instanceList.size() > 0) {
-                // Select by using decision matrix
-                serviceInstance = serviceDecision.selectServiceRestBased(instanceList, criteria, criteriaWeights);
+                // Select by using a multi-criteria graph
+                // Update graph for position correction segment
+                serviceDecisionGraph.updateGraph(instanceList);
+                serviceDecisionGraph.printGraph();
+
+                serviceInstance = serviceDecisionGraph.selectServiceGraphBased(instanceList, "G2", "S'", 2.0, "position-correction");
 
                 if (serviceInstance != null) {
                     // Call chosen instance
@@ -137,7 +142,8 @@ public class CorrectGpsDelegate implements JavaDelegate {
                         instanceList.remove(serviceInstance);
                     }
                 } else {
-                    LOGGER.info("Received no service instance from service dictionary!");
+                    // GPS
+                    LOGGER.info("GPS only has been chosen for position sensing.");
                 }
             } else {
                 LOGGER.info("No services for serviceId " + serviceId + " available!");

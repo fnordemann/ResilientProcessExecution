@@ -26,11 +26,13 @@ public class Metadata {
     private String urllog;
     @JsonProperty
     private String urlgps;
+    @JsonProperty
+    private String id;
 
     public Metadata() {
     }
 
-    public Metadata(String urlanalysis, String cost, String accuracy, String location, String management_port, String time, String type, String urlstatus, String urllog, String urlgps) {
+    public Metadata(String urlanalysis, String cost, String accuracy, String location, String management_port, String time, String type, String urlstatus, String urllog, String urlgps, String id) {
         this.urlanalysis = urlanalysis;
         this.cost = cost;
         this.accuracy = accuracy;
@@ -41,6 +43,7 @@ public class Metadata {
         this.urlstatus = urlstatus;
         this.urllog = urllog;
         this.urlgps = urlgps;
+        this.id = id;
     }
 
 
@@ -124,8 +127,16 @@ public class Metadata {
         this.urlgps = urlgps;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String urlgps) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
-        return "[urlanalysis = " + urlanalysis + ", urlstatus = " + urlstatus + ", urllog = " + urllog + ", cost = " + cost + ", accuracy = " + accuracy + ", location = " + location + ", management.port = " + management_port + ", time = " + time + ", type = " + type + "]";
+        return "[urlanalysis = " + urlanalysis + ", urlstatus = " + urlstatus + ", urllog = " + urllog + ", cost = " + cost + ", accuracy = " + accuracy + ", location = " + location + ", management.port = " + management_port + ", time = " + time + ", type = " + type + ", id = " + id + "]";
     }
 }

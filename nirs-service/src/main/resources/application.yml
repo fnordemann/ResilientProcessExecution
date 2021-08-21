@@ -12,6 +12,7 @@ eureka:
       accuracy: "0.7"
       cost: "0.4"
       time: "0.1"
+      id: "NIRS"
       urlanalysis: "/nirs"
   client:
     serviceUrl:

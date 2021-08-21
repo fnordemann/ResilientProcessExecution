@@ -32,10 +32,8 @@ java -jar -Dspring.profiles.active=sp server-0.0.1-SNAPSHOT.jar > ../logs/eureka
 java -jar -Dspring.profiles.active=nirs server-0.0.1-SNAPSHOT.jar > ../logs/eureka_nirs.txt &
 java -jar -Dspring.profiles.active=loc server-0.0.1-SNAPSHOT.jar > ../logs/eureka_loc.txt &
 java -jar -Dspring.profiles.active=ref1 ref-service-0.1.0.jar > ../logs/ref1.txt &
-java -jar -Dspring.profiles.active=ref2 ref-service-0.1.0.jar > ../logs/ref2.txt &
 java -jar -Dspring.profiles.active=refmov ref-service-0.1.0.jar > ../logs/refmov.txt &
 java -jar -Dspring.profiles.active=cell1 cell-service-0.1.0.jar > ../logs/cell1.txt &
-java -jar -Dspring.profiles.active=cell2 cell-service-0.1.0.jar > ../logs/cell2.txt &
 java -jar nirs-service-0.1.0.jar > ../logs/nirs.txt &
 java -jar loc-service-0.1.0.jar > ../logs/loc.txt &
 java -jar mgmt-0.0.1-SNAPSHOT.jar > ../logs/mgmt.txt &

@@ -24,21 +24,7 @@ eureka:
       accuracy: "0.4"
       cost: "0.1"
       time: "0.1"
-      urlanalysis: "/analysis"
-
----
-spring:
-  profiles: ref2
-server:
-  port: 8027
-eureka:
-  instance:
-    metadata-map:
-      type: "REF"
-      location: "cloud"
-      accuracy: "0.3"
-      cost: "0.0"
-      time: "0.1"
+      id: "REF"
       urlanalysis: "/analysis"
 
 ---
@@ -52,9 +38,10 @@ eureka:
       defaultZone: http://127.0.0.1:8030/eureka/
   instance:
     metadata-map:
-      type: "REF"
+      type: "REF(L)"
       location: "local"
-      accuracy: "0.2"
-      cost: "0.0"
-      time: "0.0"
+      accuracy: "0.3"
+      cost: "0.1"
+      time: "0.1"
+      id: "REF(L)"
       urlanalysis: "/analysis"
