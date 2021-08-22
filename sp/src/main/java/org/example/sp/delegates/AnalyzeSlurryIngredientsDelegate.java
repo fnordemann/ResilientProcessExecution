@@ -77,7 +77,7 @@ public class AnalyzeSlurryIngredientsDelegate implements JavaDelegate {
         String serviceId = "ingredients-service";
 
         LOGGER.info("Fetching available services for serviceId " + serviceId + "...");
-        List<Instance> instanceList = serviceSearch.findServices("ingredients-service");
+        List<Instance> instanceList = serviceSearch.findServices(serviceId);
 
         LOGGER.info("Available services: " + instanceList.size());
         for (int i = 0; i < instanceList.size(); i++) {
@@ -99,7 +99,7 @@ public class AnalyzeSlurryIngredientsDelegate implements JavaDelegate {
                 serviceDecisionGraph.updateGraph(serviceSearch.findServices("gps-service"));
                 serviceDecisionGraph.printGraph();
 
-                serviceInstance = serviceDecisionGraph.selectServiceGraphBased(instanceList, "G1", "S'", 2.0, "slurry-analysis");
+                serviceInstance = serviceDecisionGraph.selectServiceGraphBased(instanceList, "G1", "S'", dCostLimit, "slurry-analysis");
 
                 if (serviceInstance != null) {
                     // Call chosen instance

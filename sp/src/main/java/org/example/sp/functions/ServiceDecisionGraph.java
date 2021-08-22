@@ -10,7 +10,6 @@ import org.jgrapht.alg.shortestpath.DijkstraShortestPath;
 import org.jgrapht.alg.shortestpath.YenKShortestPath;
 import org.jgrapht.graph.DefaultWeightedEdge;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
-import org.springframework.cloud.client.ServiceInstance;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,6 +47,8 @@ public class ServiceDecisionGraph {
     final double dAccuracyWeight = 0.5;
     final double dCostWeight = 0.3;
     final double dTimeWeight = 0.2;
+
+    final double dAccuracyMin = 0.3;
 
     double dCostPF = 0.8;
     double dCostPFL = 0.4;
@@ -98,9 +99,11 @@ public class ServiceDecisionGraph {
         DefaultWeightedEdge eSnoPF = directedGraph.addEdge(sP, noPF);
         dWeight = 0;
         directedGraph.setEdgeWeight(eSnoPF, dWeight);
+        /* Not setting this edge since accuracy of noPF is smaller than required (0.2 < 0.3)
         DefaultWeightedEdge eNoPF = directedGraph.addEdge(noPF, sP_);
         dWeight = 0.43;
         directedGraph.setEdgeWeight(eNoPF, dWeight);
+         */
 
         // G1 to G2
         DefaultWeightedEdge eG1LAB = directedGraph.addEdge(G1, LAB);
@@ -204,66 +207,88 @@ public class ServiceDecisionGraph {
             double dCost = Double.parseDouble(instanceList.get(i).getMetadata().getCost());
             double dTime = Double.parseDouble(instanceList.get(i).getMetadata().getTime());
             double dWeight = (1 - dAccuracy) * dAccuracyWeight + dCost * dCostWeight + dTime * dTimeWeight;
+            dWeight = Double.parseDouble(String.format("%1.2f", dWeight));
 
+            // Update edge weight or remove vertex since i) it is not available or ii) min accuracy is not provided
             if(sId != null) {
                 switch (sId) {
                     case PF:
-                        directedGraph.setEdgeWeight(PF, G1, dWeight);
-                        unavailableVertexList.remove(PF);
-                        dCostPF = dCost;
-                        System.out.println("\tUpdated edge " + directedGraph.getEdge(PF, G1) + " with weight " + directedGraph.getEdgeWeight(directedGraph.getEdge(PF, G1)));
+                        if(dAccuracy >= dAccuracyMin) {
+                            directedGraph.setEdgeWeight(PF, G1, dWeight);
+                            unavailableVertexList.remove(PF);
+                            dCostPF = dCost;
+                            System.out.println("\tUpdated edge " + directedGraph.getEdge(PF, G1) + " with weight " + directedGraph.getEdgeWeight(directedGraph.getEdge(PF, G1)));
+                        }
                         break;
                     case PFL:
-                        directedGraph.setEdgeWeight(PFL, G1, dWeight);
-                        unavailableVertexList.remove(PFL);
-                        dCostPFL = dCost;
-                        System.out.println("\tUpdated edge " + directedGraph.getEdge(PFL, G1) + " with weight " + directedGraph.getEdgeWeight(directedGraph.getEdge(PFL, G1)));
+                        if(dAccuracy >= dAccuracyMin) {
+                            directedGraph.setEdgeWeight(PFL, G1, dWeight);
+                            unavailableVertexList.remove(PFL);
+                            dCostPFL = dCost;
+                            System.out.println("\tUpdated edge " + directedGraph.getEdge(PFL, G1) + " with weight " + directedGraph.getEdgeWeight(directedGraph.getEdge(PFL, G1)));
+                        }
                         break;
                     case noPF:
-                        directedGraph.setEdgeWeight(noPF, sP_, dWeight);
-                        dCostNoPF = dCost;
-                        System.out.println("\tUpdated edge " + directedGraph.getEdge(noPF, sP_) + " with weight " + directedGraph.getEdgeWeight(directedGraph.getEdge(noPF, sP_)));
+                        if(dAccuracy >= dAccuracyMin) {
+                            directedGraph.setEdgeWeight(noPF, sP_, dWeight);
+                            dCostNoPF = dCost;
+                            System.out.println("\tUpdated edge " + directedGraph.getEdge(noPF, sP_) + " with weight " + directedGraph.getEdgeWeight(directedGraph.getEdge(noPF, sP_)));
+                        }
                         break;
                     case LAB:
-                        directedGraph.setEdgeWeight(LAB, G2, dWeight);
-                        unavailableVertexList.remove(LAB);
-                        dCostLAB = dCost;
-                        System.out.println("\tUpdated edge " + directedGraph.getEdge(LAB, G2) + " with weight " + directedGraph.getEdgeWeight(directedGraph.getEdge(LAB, G2)));
+                        if(dAccuracy >= dAccuracyMin) {
+                            directedGraph.setEdgeWeight(LAB, G2, dWeight);
+                            unavailableVertexList.remove(LAB);
+                            dCostLAB = dCost;
+                            System.out.println("\tUpdated edge " + directedGraph.getEdge(LAB, G2) + " with weight " + directedGraph.getEdgeWeight(directedGraph.getEdge(LAB, G2)));
+                        }
                         break;
                     case NIRS:
-                        directedGraph.setEdgeWeight(NIRS, G2, dWeight);
-                        unavailableVertexList.remove(NIRS);
-                        dCostNIRS = dCost;
-                        System.out.println("\tUpdated edge " + directedGraph.getEdge(NIRS, G2) + " with weight " + directedGraph.getEdgeWeight(directedGraph.getEdge(NIRS, G2)));
+                        if(dAccuracy >= dAccuracyMin) {
+                            directedGraph.setEdgeWeight(NIRS, G2, dWeight);
+                            unavailableVertexList.remove(NIRS);
+                            dCostNIRS = dCost;
+                            System.out.println("\tUpdated edge " + directedGraph.getEdge(NIRS, G2) + " with weight " + directedGraph.getEdgeWeight(directedGraph.getEdge(NIRS, G2)));
+                        }
                         break;
                     case REF:
-                        directedGraph.setEdgeWeight(REF, G2, dWeight);
-                        unavailableVertexList.remove(REF);
-                        dCostREF = dCost;
-                        System.out.println("\tUpdated edge " + directedGraph.getEdge(REF, G2) + " with weight " + directedGraph.getEdgeWeight(directedGraph.getEdge(REF, G2)));
+                        if(dAccuracy >= dAccuracyMin) {
+                            directedGraph.setEdgeWeight(REF, G2, dWeight);
+                            unavailableVertexList.remove(REF);
+                            dCostREF = dCost;
+                            System.out.println("\tUpdated edge " + directedGraph.getEdge(REF, G2) + " with weight " + directedGraph.getEdgeWeight(directedGraph.getEdge(REF, G2)));
+                        }
                         break;
                     case REFL:
-                        directedGraph.setEdgeWeight(REFL, G2, dWeight);
-                        unavailableVertexList.remove(REFL);
-                        dCostREFL = dCost;
-                        System.out.println("\tUpdated edge " + directedGraph.getEdge(REFL, G2) + " with weight " + directedGraph.getEdgeWeight(directedGraph.getEdge(REFL, G2)));
+                        if(dAccuracy >= dAccuracyMin) {
+                            directedGraph.setEdgeWeight(REFL, G2, dWeight);
+                            unavailableVertexList.remove(REFL);
+                            dCostREFL = dCost;
+                            System.out.println("\tUpdated edge " + directedGraph.getEdge(REFL, G2) + " with weight " + directedGraph.getEdgeWeight(directedGraph.getEdge(REFL, G2)));
+                        }
                         break;
                     case GPS:
-                        directedGraph.setEdgeWeight(GPS, sP_, dWeight);
-                        dCostGPS = dCost;
-                        System.out.println("\tUpdated edge " + directedGraph.getEdge(GPS, sP_) + " with weight " + directedGraph.getEdgeWeight(directedGraph.getEdge(GPS, sP_)));
+                        if(dAccuracy >= dAccuracyMin) {
+                            directedGraph.setEdgeWeight(GPS, sP_, dWeight);
+                            dCostGPS = dCost;
+                            System.out.println("\tUpdated edge " + directedGraph.getEdge(GPS, sP_) + " with weight " + directedGraph.getEdgeWeight(directedGraph.getEdge(GPS, sP_)));
+                        }
                         break;
                     case CELL:
-                        directedGraph.setEdgeWeight(CELL, sP_, dWeight);
-                        unavailableVertexList.remove(CELL);
-                        dCostCELL = dCost;
-                        System.out.println("\tUpdated edge " + directedGraph.getEdge(CELL, sP_) + " with weight " + directedGraph.getEdgeWeight(directedGraph.getEdge(CELL, sP_)));
+                        if(dAccuracy >= dAccuracyMin) {
+                            directedGraph.setEdgeWeight(CELL, sP_, dWeight);
+                            unavailableVertexList.remove(CELL);
+                            dCostCELL = dCost;
+                            System.out.println("\tUpdated edge " + directedGraph.getEdge(CELL, sP_) + " with weight " + directedGraph.getEdgeWeight(directedGraph.getEdge(CELL, sP_)));
+                        }
                         break;
                     case LOC:
-                        directedGraph.setEdgeWeight(LOC, sP_, dWeight);
-                        unavailableVertexList.remove(LOC);
-                        dCostLOC = dCost;
-                        System.out.println("\tUpdated edge " + directedGraph.getEdge(LOC, sP_) + " with weight " + directedGraph.getEdgeWeight(directedGraph.getEdge(LOC, sP_)));
+                        if(dAccuracy >= dAccuracyMin) {
+                            directedGraph.setEdgeWeight(LOC, sP_, dWeight);
+                            unavailableVertexList.remove(LOC);
+                            dCostLOC = dCost;
+                            System.out.println("\tUpdated edge " + directedGraph.getEdge(LOC, sP_) + " with weight " + directedGraph.getEdgeWeight(directedGraph.getEdge(LOC, sP_)));
+                        }
                         break;
                     default:
                         System.out.println("\tCould not find a vertex for id " + sId);
@@ -279,7 +304,7 @@ public class ServiceDecisionGraph {
     public void removeFromGraph(List<String> removalList) {
         for (int i = 0; i < removalList.size(); i++) {
             directedGraph.removeVertex(removalList.get(i));
-            System.out.println("Removed vertex " + removalList.get(i) + " from graph.");
+            System.out.println("Removed vertex " + removalList.get(i) + " from graph: unavailable or failing minimum accuracy.");
         }
         //System.out.println("New graph after removal method: " + directedGraph.toString());
     }
@@ -332,7 +357,7 @@ public class ServiceDecisionGraph {
                     break;
             }
         }
-        System.out.println("Path with vertex list: " + pathVertexList.toString());
+        System.out.println("Path with vertex list: " + pathVertexList);
         System.out.println("Total cost for path: " + dTotalCost);
 
         return dTotalCost;

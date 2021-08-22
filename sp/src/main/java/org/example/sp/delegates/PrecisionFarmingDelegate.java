@@ -6,11 +6,12 @@ import org.camunda.bpm.engine.ProcessEngines;
 import org.camunda.bpm.engine.RuntimeService;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
+import org.example.datatypes.AppMapReply;
+import org.example.datatypes.AppMapRequest;
 import org.example.datatypes.GpsReply;
 import org.example.datatypes.GpsRequest;
 import org.example.eureka.Instance;
 import org.example.eureka.Metadata;
-import org.example.sp.functions.ServiceDecision;
 import org.example.sp.functions.ServiceDecisionGraph;
 import org.example.sp.functions.ServiceSearch;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +30,7 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 @Component
-public class CorrectGpsDelegate implements JavaDelegate {
+public class PrecisionFarmingDelegate implements JavaDelegate {
 
     @Autowired
     private DiscoveryClient discoveryClient;
@@ -37,7 +38,7 @@ public class CorrectGpsDelegate implements JavaDelegate {
     // Camunda variables
     private ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
     private RuntimeService runtimeService = processEngine.getRuntimeService();
-    private final static Logger LOGGER = Logger.getLogger("CORRECT-GPS");
+    private final static Logger LOGGER = Logger.getLogger("PRECISION-FARMING");
 
     int debug = 0;
     private ServiceDecisionGraph serviceDecisionGraph = new ServiceDecisionGraph();
@@ -59,13 +60,13 @@ public class CorrectGpsDelegate implements JavaDelegate {
         }
 
         // Do work
-        LOGGER.info("Correcting GPS.");
+        LOGGER.info("Precision Farming.");
 
         // Prepare service search
         boolean searchService = true;
         Instance serviceInstance = null;
         Map<String, String> metadataMap;
-        String serviceId = "gps-service";
+        String serviceId = "precision-farming-service";
 
         LOGGER.info("Fetching available services for serviceId " + serviceId + "...");
         List<Instance> instanceList = serviceSearch.findServices(serviceId);
@@ -84,11 +85,15 @@ public class CorrectGpsDelegate implements JavaDelegate {
             // Instances found?
             if (instanceList.size() > 0) {
                 // Select by using a multi-criteria graph
-                // Update graph for position correction segment
+                // Update graph for precision farming segment
                 serviceDecisionGraph.updateGraph(instanceList);
+                // Update graph for slurry analysis segment
+                serviceDecisionGraph.updateGraph(serviceSearch.findServices("ingredients-service"));
+                // Update graph for position correction segment
+                serviceDecisionGraph.updateGraph(serviceSearch.findServices("gps-service"));
                 serviceDecisionGraph.printGraph();
 
-                serviceInstance = serviceDecisionGraph.selectServiceGraphBased(instanceList, "G2", "S'", dCostLimit, "position-correction");
+                serviceInstance = serviceDecisionGraph.selectServiceGraphBased(instanceList, "S", "S'", dCostLimit, "precision-farming");
 
                 if (serviceInstance != null) {
                     // Call chosen instance
@@ -109,8 +114,8 @@ public class CorrectGpsDelegate implements JavaDelegate {
                         if (serviceUri.isAbsolute()) {
 
                             // POST example
-                            GpsRequest gpsRequest = new GpsRequest();
-                            gpsRequest.setTaskId(taskId);
+                            AppMapRequest appMapRequest = new AppMapRequest();
+                            appMapRequest.setTaskId(taskId);
 
                             LOGGER.info("Going to call service at " + serviceUri.toString());
                             //restTemplate = new RestTemplate();
@@ -120,10 +125,10 @@ public class CorrectGpsDelegate implements JavaDelegate {
                                 HttpHeaders headers = new HttpHeaders();
                                 headers.setContentType(MediaType.APPLICATION_JSON);
 
-                                HttpEntity<GpsRequest> requestEntity = new HttpEntity<GpsRequest>(gpsRequest, headers);
-                                ResponseEntity<GpsReply> responseEntity = restTemplate.postForEntity(serviceUri, requestEntity, GpsReply.class);
-                                GpsReply gpsReply = responseEntity.getBody();
-                                LOGGER.info("GPS correction for taskId " + gpsReply.getTaskId() + " resulted in offsets: " + gpsReply.getLatOffset() + " / " + gpsReply.getLongOffset());
+                                HttpEntity<AppMapRequest> requestEntity = new HttpEntity<AppMapRequest>(appMapRequest, headers);
+                                ResponseEntity<AppMapReply> responseEntity = restTemplate.postForEntity(serviceUri, requestEntity, AppMapReply.class);
+                                AppMapReply appMapReply = responseEntity.getBody();
+                                LOGGER.info("AppMap for taskId " + appMapReply.getTaskId() + " received: " + appMapReply.getAppMap());
                                 searchService = false;
                             } catch (HttpServerErrorException e) {
                                 LOGGER.info("Could not call service " + serviceInstance.getInstanceId() + ": HTTP 500");
@@ -142,8 +147,8 @@ public class CorrectGpsDelegate implements JavaDelegate {
                         instanceList.remove(serviceInstance);
                     }
                 } else {
-                    // GPS
-                    LOGGER.info("GPS only has been chosen for position sensing.");
+                    // noPF
+                    LOGGER.info("Applying slurry without AppMap (noPF).");
                     instanceList.clear();
                     searchService = false;
                 }

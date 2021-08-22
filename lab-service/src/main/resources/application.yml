@@ -1,0 +1,22 @@
+server:
+  port: 8023
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 5
+    statusPageUrl: http://${eureka.hostname}:${server.port}/lab
+    healthCheckUrl: http://${eureka.hostname}:${server.port}/lab
+    homePageUrl: http://${eureka.hostname}:${server.port}/lab
+    metadata-map:
+      type: "LAB"
+      location: "local"
+      accuracy: "0.9"
+      cost: "0.9"
+      time: "0.9"
+      id: "LAB"
+      urlanalysis: "/lab"
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8020/eureka/
+spring:
+  application:
+    name: ingredients-service

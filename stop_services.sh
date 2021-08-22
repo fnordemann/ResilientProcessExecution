@@ -1,7 +1,9 @@
 #!/bin/bash
 
 echo "Stoping all services..."
+pkill -9 -f pf-service-0.1.0.jar
 pkill -9 -f ref-service-0.1.0.jar
+pkill -9 -f lab-service-0.1.0.jar
 pkill -9 -f nirs-service-0.1.0.jar
 pkill -9 -f cell-service-0.1.0.jar
 pkill -9 -f loc-service-0.1.0.jar

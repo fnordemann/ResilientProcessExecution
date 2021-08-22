@@ -128,21 +128,23 @@ Process and service operation can be examined from logs at:
 Some services also provide information by accessing their interfaces. Besides, port information is helpful to adapt scenario execution. The port mapping for the scenario participants is illustrated below:
 - Locally-emulated Cloud environment:
     - Eureka-Cloud: 8020
+    - LAB: 8023
+    - PF: 8024
     - MGMT: 8025
-    - OSAS: 8026/8027
-    - OGCS: 8028/8029
+    - REF: 8026/8027
+    - CELL: 8028/8029
 - SP:
     - Eureka-SP: 8030
     - Neighbor-Service: 8031
     - Camunda-SP: 8035
     - MGMT-Mov: 8036
-    - OSAS-Mov: 8037
+    - REF(L): 8037
 - NIRS:
     - Eureka-NIRS: 8040
     - NIRS: 8045
 - LGCS:
-    - Eureka-LGCS: 8050
-    - LGCS: 8055
+    - Eureka-LOC: 8050
+    - LOC: 8055
 
 ## Adaptation of proof-of-concept implementation
 - Users may find the source code commentaries helpful for understanding/adapting the proof-of-concept.

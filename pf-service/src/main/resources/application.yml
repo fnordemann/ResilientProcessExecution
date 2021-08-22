@@ -1,0 +1,47 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8020/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 5
+    statusPageUrl: http://${eureka.hostname}:${server.port}/analysis
+    healthCheckUrl: http://${eureka.hostname}:${server.port}/analysis
+    homePageUrl: http://${eureka.hostname}:${server.port}/analysis
+spring:
+  application:
+    name: precision-farming-service
+
+---
+spring:
+  profiles: pf
+server:
+  port: 8024
+eureka:
+  instance:
+    metadata-map:
+      type: "PF"
+      location: "cloud"
+      accuracy: "0.9"
+      cost: "0.8"
+      time: "0.8"
+      id: "PF"
+      urlanalysis: "/analysis"
+
+---
+spring:
+  profiles: pfmov
+server:
+  port: 8038
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8030/eureka/
+  instance:
+    metadata-map:
+      type: "PF(L)"
+      location: "local"
+      accuracy: "0.7"
+      cost: "0.4"
+      time: "0.1"
+      id: "PF(L)"
+      urlanalysis: "/analysis"
