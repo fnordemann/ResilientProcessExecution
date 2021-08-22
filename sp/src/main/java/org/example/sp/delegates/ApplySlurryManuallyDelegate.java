@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 import java.util.logging.Logger;
 
 @Component
-public class CreateTaskLogDelegate implements JavaDelegate {
+public class ApplySlurryManuallyDelegate implements JavaDelegate {
 
     @Autowired
     private DiscoveryClient discoveryClient;
@@ -20,12 +20,12 @@ public class CreateTaskLogDelegate implements JavaDelegate {
     // Camunda variables
     private ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
     private RuntimeService runtimeService = processEngine.getRuntimeService();
-    private final static Logger LOGGER = Logger.getLogger("CREATING-LOG");
+    private final static Logger LOGGER = Logger.getLogger("APPLY-MANUALLY");
 
     public void execute(DelegateExecution execution) throws Exception {
 
         // Do work
-        LOGGER.info("Creating task log.");
-        LOGGER.info("Finished slurry application process.");
+        LOGGER.info("Applying slurry manually...");
+        LOGGER.info("Manual slurry application done.");
     }
 }

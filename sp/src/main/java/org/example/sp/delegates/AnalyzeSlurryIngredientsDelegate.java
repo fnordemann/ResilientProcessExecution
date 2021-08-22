@@ -67,6 +67,7 @@ public class AnalyzeSlurryIngredientsDelegate implements JavaDelegate {
         LOGGER.info("Analyzing slurry.");
 
         searchAndDecideRestBased(taskId);
+
     }
 
     // Search and decide based on Eureka REST calls
@@ -94,7 +95,7 @@ public class AnalyzeSlurryIngredientsDelegate implements JavaDelegate {
             if (instanceList.size() > 0) {
                 // Select by using a multi-criteria graph
                 // Update graph for slurry analysis segment
-                serviceDecisionGraph.updateGraph(instanceList);
+                //serviceDecisionGraph.updateGraph(instanceList);
                 // Update graph for position correction segment
                 serviceDecisionGraph.updateGraph(serviceSearch.findServices("gps-service"));
                 serviceDecisionGraph.printGraph();

@@ -9,100 +9,85 @@
   Camunda BPM: (v7.12.0)
   Camunda BPM Spring Boot Starter: (v3.4.0)
 
-2021-08-22 13:56:04.971  INFO 66941 --- [           main] org.example.sp.SpApplication             : No active profile set, falling back to default profiles: default
-2021-08-22 13:56:31.919  INFO 66941 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3b207634-5093-308f-ba7b-eedecde363b0
-2021-08-22 13:56:37.688  INFO 66941 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-08-22 13:56:49.075  INFO 66941 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8035 (http)
-2021-08-22 13:56:49.442  INFO 66941 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-08-22 13:56:49.443  INFO 66941 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
-2021-08-22 13:56:51.490  INFO 66941 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-08-22 13:56:51.491  INFO 66941 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 45535 ms
-2021-08-22 13:56:52.147  INFO 66941 --- [           main] .c.b.s.b.s.r.CamundaJerseyResourceConfig : Configuring camunda rest api.
-2021-08-22 13:56:52.670  INFO 66941 --- [           main] .c.b.s.b.s.r.CamundaJerseyResourceConfig : Finished configuring camunda rest api.
-2021-08-22 13:56:56.555  INFO 66941 --- [           main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2021-08-22 13:57:00.262  INFO 66941 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB040 Setting up jobExecutor with corePoolSize=3, maxPoolSize:10
-2021-08-22 13:57:00.282  INFO 66941 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'camundaTaskExecutor'
-2021-08-22 13:57:01.364  INFO 66941 --- [           main] org.camunda.bpm.engine.cfg               : ENGINE-12003 Plugin 'CompositeProcessEnginePlugin[genericPropertiesConfiguration, camundaProcessEngineConfiguration, camundaDatasourceConfiguration, camundaJobConfiguration, camundaHistoryConfiguration, camundaMetricsConfiguration, camundaAuthorizationConfiguration, CreateAdminUserConfiguration[adminUser=AdminUserProperty[id=demo, firstName=demo, lastName=Demo, email=demo@localhost, password=******]], failedJobConfiguration, CreateFilterConfiguration[filterName=All tasks], disableDeploymentResourcePattern, eventPublisherPlugin]' activated on process engine 'default'
-2021-08-22 13:57:01.371  INFO 66941 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB020 ProcessApplication enabled: autoDeployment via springConfiguration#deploymentResourcePattern is disabled
-2021-08-22 13:57:01.372  INFO 66941 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-001: Initialized Camunda Spring Boot Eventing Engine Plugin.
-2021-08-22 13:57:01.372  INFO 66941 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-003: Task events will be published as Spring Events.
-2021-08-22 13:57:01.372  INFO 66941 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-005: Execution events will be published as Spring Events.
-2021-08-22 13:57:01.429  INFO 66941 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-007: History events will be published as Spring events.
-2021-08-22 13:57:35.130  INFO 66941 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.engine.sql'
-2021-08-22 13:57:35.576  INFO 66941 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.history.sql'
-2021-08-22 13:57:35.687  INFO 66941 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'identity' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.identity.sql'
-2021-08-22 13:57:35.832  INFO 66941 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'case.engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.case.engine.sql'
-2021-08-22 13:57:35.899  INFO 66941 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'case.history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.case.history.sql'
-2021-08-22 13:57:35.968  INFO 66941 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'decision.engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.decision.engine.sql'
-2021-08-22 13:57:36.063  INFO 66941 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'decision.history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.decision.history.sql'
-2021-08-22 13:57:36.151  INFO 66941 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03067 No history level property found in database
-2021-08-22 13:57:36.154  INFO 66941 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03065 Creating historyLevel property in database for level: HistoryLevelFull(name=full, id=3)
-2021-08-22 13:57:36.485  INFO 66941 --- [           main] org.camunda.bpm.engine                   : ENGINE-00001 Process Engine default created.
-2021-08-22 13:57:37.408  INFO 66941 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB010 creating initial Admin User: AdminUserProperty[id=demo, firstName=demo, lastName=Demo, email=demo@localhost, password=******]
-2021-08-22 13:57:37.693  INFO 66941 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB015 create initial filter: id=251695a9-0340-11ec-90be-a6be4b97ae00 name=All tasks
-2021-08-22 13:57:40.585  WARN 66941 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2021-08-22 13:57:40.586  INFO 66941 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-08-22 13:57:40.641  WARN 66941 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2021-08-22 13:57:40.641  INFO 66941 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-08-22 13:57:43.642  INFO 66941 --- [           main] o.c.b.s.b.s.w.f.LazyInitRegistration     : lazy initialized org.camunda.bpm.spring.boot.starter.webapp.filter.LazyProcessEnginesFilter@1698fc68
-2021-08-22 13:57:44.088  INFO 66941 --- [           main] o.c.b.s.b.s.w.f.LazyInitRegistration     : lazy initialized org.camunda.bpm.spring.boot.starter.webapp.filter.LazySecurityFilter@207b8649
-2021-08-22 13:57:45.378  WARN 66941 --- [           main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
-2021-08-22 13:57:45.944  INFO 66941 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2021-08-22 13:57:46.949  INFO 66941 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2021-08-22 13:57:48.426  INFO 66941 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2021-08-22 13:57:48.427  INFO 66941 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2021-08-22 13:57:49.877  INFO 66941 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2021-08-22 13:57:49.878  INFO 66941 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2021-08-22 13:57:51.659  INFO 66941 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2021-08-22 13:57:51.854  INFO 66941 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2021-08-22 13:57:51.854  INFO 66941 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2021-08-22 13:57:51.854  INFO 66941 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2021-08-22 13:57:51.854  INFO 66941 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2021-08-22 13:57:51.854  INFO 66941 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2021-08-22 13:57:51.855  INFO 66941 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2021-08-22 13:57:51.855  INFO 66941 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2021-08-22 13:57:52.622  INFO 66941 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2021-08-22 13:57:52.630  INFO 66941 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 5
-2021-08-22 13:57:52.634  INFO 66941 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2021-08-22 13:57:52.647  INFO 66941 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1629633472639 with initial instances count: 2
-2021-08-22 13:57:52.653  INFO 66941 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SP with eureka with status UP
-2021-08-22 13:57:52.655  INFO 66941 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1629633472655, current=UP, previous=STARTING]
-2021-08-22 13:57:52.668  INFO 66941 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SP/e04-laptop21.fritz.box:sp:8035: registering service...
-2021-08-22 13:57:52.749  INFO 66941 --- [           main] org.camunda.bpm.container                : ENGINE-08024 Found processes.xml file at jar:file:/Users/fnordemann/eclipse-workspace/resilient-process/sp/target/sp-0.0.1-SNAPSHOT.jar!/META-INF/processes.xml
-2021-08-22 13:57:52.764  INFO 66941 --- [           main] org.camunda.bpm.container                : ENGINE-08025 Detected empty processes.xml file, using default values
-2021-08-22 13:57:52.875  INFO 66941 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SP/e04-laptop21.fritz.box:sp:8035 - registration status: 204
-2021-08-22 13:57:52.869  INFO 66941 --- [           main] org.camunda.bpm.container                : ENGINE-08023 Deployment summary for process archive 'spApplication': 
+2021-08-22 21:19:44.396  INFO 70294 --- [           main] org.example.sp.SpApplication             : No active profile set, falling back to default profiles: default
+2021-08-22 21:20:05.723  INFO 70294 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1ca71c5b-cab3-3cba-aa53-b723c82a92ac
+2021-08-22 21:20:10.050  INFO 70294 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-22 21:20:18.379  INFO 70294 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8035 (http)
+2021-08-22 21:20:18.733  INFO 70294 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-22 21:20:18.734  INFO 70294 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2021-08-22 21:20:20.118  INFO 70294 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-22 21:20:20.202  INFO 70294 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 34970 ms
+2021-08-22 21:20:20.653  INFO 70294 --- [           main] .c.b.s.b.s.r.CamundaJerseyResourceConfig : Configuring camunda rest api.
+2021-08-22 21:20:21.334  INFO 70294 --- [           main] .c.b.s.b.s.r.CamundaJerseyResourceConfig : Finished configuring camunda rest api.
+2021-08-22 21:20:25.986  INFO 70294 --- [           main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2021-08-22 21:20:30.653  INFO 70294 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB040 Setting up jobExecutor with corePoolSize=3, maxPoolSize:10
+2021-08-22 21:20:30.657  INFO 70294 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'camundaTaskExecutor'
+2021-08-22 21:20:32.179  INFO 70294 --- [           main] org.camunda.bpm.engine.cfg               : ENGINE-12003 Plugin 'CompositeProcessEnginePlugin[genericPropertiesConfiguration, camundaProcessEngineConfiguration, camundaDatasourceConfiguration, camundaJobConfiguration, camundaHistoryConfiguration, camundaMetricsConfiguration, camundaAuthorizationConfiguration, CreateAdminUserConfiguration[adminUser=AdminUserProperty[id=demo, firstName=demo, lastName=Demo, email=demo@localhost, password=******]], failedJobConfiguration, CreateFilterConfiguration[filterName=All tasks], disableDeploymentResourcePattern, eventPublisherPlugin]' activated on process engine 'default'
+2021-08-22 21:20:32.187  INFO 70294 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB020 ProcessApplication enabled: autoDeployment via springConfiguration#deploymentResourcePattern is disabled
+2021-08-22 21:20:32.195  INFO 70294 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-001: Initialized Camunda Spring Boot Eventing Engine Plugin.
+2021-08-22 21:20:32.196  INFO 70294 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-003: Task events will be published as Spring Events.
+2021-08-22 21:20:32.197  INFO 70294 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-005: Execution events will be published as Spring Events.
+2021-08-22 21:20:32.204  INFO 70294 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-007: History events will be published as Spring events.
+2021-08-22 21:21:03.847  INFO 70294 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.engine.sql'
+2021-08-22 21:21:04.170  INFO 70294 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.history.sql'
+2021-08-22 21:21:04.240  INFO 70294 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'identity' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.identity.sql'
+2021-08-22 21:21:04.324  INFO 70294 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'case.engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.case.engine.sql'
+2021-08-22 21:21:04.345  INFO 70294 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'case.history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.case.history.sql'
+2021-08-22 21:21:04.363  INFO 70294 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'decision.engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.decision.engine.sql'
+2021-08-22 21:21:04.401  INFO 70294 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'decision.history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.decision.history.sql'
+2021-08-22 21:21:04.517  INFO 70294 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03067 No history level property found in database
+2021-08-22 21:21:04.517  INFO 70294 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03065 Creating historyLevel property in database for level: HistoryLevelFull(name=full, id=3)
+2021-08-22 21:21:04.684  INFO 70294 --- [           main] org.camunda.bpm.engine                   : ENGINE-00001 Process Engine default created.
+2021-08-22 21:21:05.083  INFO 70294 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB010 creating initial Admin User: AdminUserProperty[id=demo, firstName=demo, lastName=Demo, email=demo@localhost, password=******]
+2021-08-22 21:21:05.188  INFO 70294 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB015 create initial filter: id=18661adf-037e-11ec-841f-a6be4b97ae00 name=All tasks
+2021-08-22 21:21:06.346  WARN 70294 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-08-22 21:21:06.349  INFO 70294 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-08-22 21:21:06.379  WARN 70294 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-08-22 21:21:06.379  INFO 70294 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-08-22 21:21:07.276  INFO 70294 --- [           main] o.c.b.s.b.s.w.f.LazyInitRegistration     : lazy initialized org.camunda.bpm.spring.boot.starter.webapp.filter.LazyProcessEnginesFilter@45efc20d
+2021-08-22 21:21:07.486  INFO 70294 --- [           main] o.c.b.s.b.s.w.f.LazyInitRegistration     : lazy initialized org.camunda.bpm.spring.boot.starter.webapp.filter.LazySecurityFilter@67ab1c47
+2021-08-22 21:21:07.834  WARN 70294 --- [           main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2021-08-22 21:21:07.979  INFO 70294 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-08-22 21:21:08.221  INFO 70294 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2021-08-22 21:21:08.840  INFO 70294 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2021-08-22 21:21:08.840  INFO 70294 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2021-08-22 21:21:09.444  INFO 70294 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2021-08-22 21:21:09.444  INFO 70294 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2021-08-22 21:21:11.514  INFO 70294 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-22 21:21:11.752  INFO 70294 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2021-08-22 21:21:11.753  INFO 70294 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2021-08-22 21:21:11.753  INFO 70294 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2021-08-22 21:21:11.753  INFO 70294 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2021-08-22 21:21:11.753  INFO 70294 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2021-08-22 21:21:11.754  INFO 70294 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2021-08-22 21:21:11.755  INFO 70294 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2021-08-22 21:21:14.916  INFO 70294 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2021-08-22 21:21:14.930  INFO 70294 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 5
+2021-08-22 21:21:14.939  INFO 70294 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-08-22 21:21:14.967  INFO 70294 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1629660074965 with initial instances count: 2
+2021-08-22 21:21:15.013  INFO 70294 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SP with eureka with status UP
+2021-08-22 21:21:15.014  INFO 70294 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1629660075014, current=UP, previous=STARTING]
+2021-08-22 21:21:15.020  INFO 70294 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SP/e04-laptop21.fritz.box:sp:8035: registering service...
+2021-08-22 21:21:15.171  INFO 70294 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SP/e04-laptop21.fritz.box:sp:8035 - registration status: 204
+2021-08-22 21:21:15.184  INFO 70294 --- [           main] org.camunda.bpm.container                : ENGINE-08024 Found processes.xml file at jar:file:/Users/fnordemann/eclipse-workspace/resilient-process/sp/target/sp-0.0.1-SNAPSHOT.jar!/META-INF/processes.xml
+2021-08-22 21:21:15.401  INFO 70294 --- [           main] org.camunda.bpm.container                : ENGINE-08025 Detected empty processes.xml file, using default values
+2021-08-22 21:21:15.423  INFO 70294 --- [           main] org.camunda.bpm.container                : ENGINE-08023 Deployment summary for process archive 'spApplication': 
 
         BOOT-INF/classes/sp.bpmn
 
-2021-08-22 13:57:53.923  INFO 66941 --- [           main] org.camunda.bpm.engine.bpmn.parser       : ENGINE-01002 Ignoring non-executable process with id 'MgmtKey'. Set the attribute isExecutable="true" to deploy this process.
-2021-08-22 13:57:53.995  INFO 66941 --- [           main] org.camunda.bpm.application              : ENGINE-07021 ProcessApplication 'spApplication' registered for DB deployments [2e40788a-0340-11ec-90be-a6be4b97ae00]. Will execute process definitions 
+2021-08-22 21:21:16.796  INFO 70294 --- [           main] org.camunda.bpm.application              : ENGINE-07021 ProcessApplication 'spApplication' registered for DB deployments [1eaf24f0-037e-11ec-841f-a6be4b97ae00]. Will execute process definitions 
 
-        SpKey[version: 1, id: SpKey:1:2ecade3c-0340-11ec-90be-a6be4b97ae00]
+        SpKey[version: 1, id: SpKey:1:1f459892-037e-11ec-841f-a6be4b97ae00]
 Deployment does not provide any case definitions.
-2021-08-22 13:57:54.024  INFO 66941 --- [           main] SP                                       : 
-2021-08-22 13:57:54.026  INFO 66941 --- [           main] SP                                       : --------------------------------
-2021-08-22 13:57:54.026  INFO 66941 --- [           main] SP                                       : In slurry spreader process (SP).
-2021-08-22 13:57:54.026  INFO 66941 --- [           main] SP                                       : --------------------------------
-2021-08-22 13:57:54.027  INFO 66941 --- [           main] SP                                       : 
-2021-08-22 13:57:54.176  INFO 66941 --- [           main] MONITOR-OPERATION                        : Monitoring operation.
-2021-08-22 13:57:54.176  INFO 66941 --- [           main] MONITOR-OPERATION                        : Fetching available services for serviceId mgmt-service...
-2021-08-22 13:57:54.435  INFO 66941 --- [           main] SERVICE-SEARCH                           : Current neighbors of SP: [http://localhost:8020/, http://localhost:8030/, http://localhost:8040/, http://localhost:8050/]
-2021-08-22 13:57:55.707  INFO 66941 --- [           main] MONITOR-OPERATION                        : Available services: 2
---- Service number 0 ---
-Host: e04-laptop21.fritz.box
-InstanceId: e04-laptop21.fritz.box:mgmt-service:8025
-Metadata: [urlanalysis = null, urlstatus = /status, urllog = /log, cost = null, accuracy = null, location = cloud, management.port = 8025, time = null, type = central, id = null]
---- Service number 1 ---
-Host: e04-laptop21.fritz.box
-InstanceId: e04-laptop21.fritz.box:mgmt-service:8036
-Metadata: [urlanalysis = null, urlstatus = /status, urllog = null, cost = null, accuracy = null, location = local, management.port = 8036, time = null, type = backup, id = null]
-2021-08-22 13:57:55.710  INFO 66941 --- [           main] MONITOR-OPERATION                        : Going to call service at http://e04-laptop21.fritz.box:8025/status of type central
-2021-08-22 13:57:57.075  INFO 66941 --- [           main] MONITOR-OPERATION                        : Posted status successfully to mgmt-instance.
-2021-08-22 13:57:57.112  INFO 66941 --- [           main] PRECISION-FARMING                        : Precision Farming.
-2021-08-22 13:57:57.113  INFO 66941 --- [           main] PRECISION-FARMING                        : Fetching available services for serviceId precision-farming-service...
-2021-08-22 13:57:57.184  INFO 66941 --- [           main] SERVICE-SEARCH                           : Current neighbors of SP: [http://localhost:8020/, http://localhost:8030/, http://localhost:8040/, http://localhost:8050/]
-2021-08-22 13:57:57.254  INFO 66941 --- [           main] PRECISION-FARMING                        : Available services: 2
+2021-08-22 21:21:16.817  INFO 70294 --- [           main] SP                                       : 
+2021-08-22 21:21:16.817  INFO 70294 --- [           main] SP                                       : --------------------------------
+2021-08-22 21:21:16.817  INFO 70294 --- [           main] SP                                       : In slurry spreader process (SP).
+2021-08-22 21:21:16.817  INFO 70294 --- [           main] SP                                       : --------------------------------
+2021-08-22 21:21:16.817  INFO 70294 --- [           main] SP                                       : 
+2021-08-22 21:21:16.903  INFO 70294 --- [           main] PRECISION-FARMING                        : Precision Farming.
+2021-08-22 21:21:16.903  INFO 70294 --- [           main] PRECISION-FARMING                        : Fetching available services for serviceId precision-farming-service...
+2021-08-22 21:21:17.106  INFO 70294 --- [           main] SERVICE-SEARCH                           : Current neighbors of SP: [http://localhost:8020/, http://localhost:8030/, http://localhost:8040/, http://localhost:8050/]
+2021-08-22 21:21:17.616  INFO 70294 --- [           main] PRECISION-FARMING                        : Available services: 2
 --- Service number 0 ---
 Host: e04-laptop21.fritz.box
 InstanceId: e04-laptop21.fritz.box:precision-farming-service:8024
@@ -113,31 +98,31 @@ InstanceId: e04-laptop21.fritz.box:precision-farming-service:8038
 Metadata: [urlanalysis = /analysis, urlstatus = null, urllog = null, cost = 0.4, accuracy = 0.7, location = local, management.port = 8038, time = 0.1, type = PF(L), id = null]
 Updating precision farming segment in graph...
 Found vertex id: PF	Updated edge (PF : G1) with weight 0.45
-Found vertex id: PF(L)	Updated edge (PF(L) : G1) with weight 0.29000000000000004
-2021-08-22 13:57:57.403  INFO 66941 --- [           main] SERVICE-SEARCH                           : Current neighbors of SP: [http://localhost:8020/, http://localhost:8030/, http://localhost:8040/, http://localhost:8050/]
+Found vertex id: PF(L)	Updated edge (PF(L) : G1) with weight 0.29
+2021-08-22 21:21:17.690  INFO 70294 --- [           main] SERVICE-SEARCH                           : Current neighbors of SP: [http://localhost:8020/, http://localhost:8030/, http://localhost:8040/, http://localhost:8050/]
 Updating slurry analysis segment in graph...
 Found vertex id: LAB	Updated edge (LAB : G2) with weight 0.5
 Found vertex id: REF	Updated edge (REF : G2) with weight 0.35
 Found vertex id: REF(L)	Updated edge (REF(L) : G2) with weight 0.4
-Found vertex id: NIRS	Updated edge (NIRS : G2) with weight 0.29000000000000004
-2021-08-22 13:57:57.685  INFO 66941 --- [           main] SERVICE-SEARCH                           : Current neighbors of SP: [http://localhost:8020/, http://localhost:8030/, http://localhost:8040/, http://localhost:8050/]
+Found vertex id: NIRS	Updated edge (NIRS : G2) with weight 0.29
+2021-08-22 21:21:17.913  INFO 70294 --- [           main] SERVICE-SEARCH                           : Current neighbors of SP: [http://localhost:8020/, http://localhost:8030/, http://localhost:8040/, http://localhost:8050/]
 Updating position correction segment in graph...
-Found vertex id: CELL	Updated edge (CELL : S') with weight 0.15999999999999998
-Found vertex id: LOC	Updated edge (LOC : S') with weight 0.22999999999999998
+Found vertex id: CELL	Updated edge (CELL : S') with weight 0.16
+Found vertex id: LOC	Updated edge (LOC : S') with weight 0.23
 Found vertex id: LOCAL	Could not find a vertex for id LOCAL
 Current graph: ([S, S', PF, PF(L), noPF, G1, LAB, NIRS, REF, REF(L), G2, GPS, CELL, LOC], [(S,PF), (PF,G1), (S,PF(L)), (PF(L),G1), (S,noPF), (G1,LAB), (LAB,G2), (G1,NIRS), (NIRS,G2), (G1,REF), (REF,G2), (G1,REF(L)), (REF(L),G2), (G2,GPS), (GPS,S'), (G2,CELL), (CELL,S'), (G2,LOC), (LOC,S')])
 --- Precising Farming Segment ---
 	Edge (PF : G1) with weight 0.45
-	Edge (PF(L) : G1) with weight 0.29000000000000004
+	Edge (PF(L) : G1) with weight 0.29
 --- Slurry Analysis Segment ---
 	Edge (LAB : G2) with weight 0.5
-	Edge (NIRS : G2) with weight 0.29000000000000004
+	Edge (NIRS : G2) with weight 0.29
 	Edge (REF : G2) with weight 0.35
 	Edge (REF(L) : G2) with weight 0.4
 --- Position Correction Segment ---
 	Edge (GPS : S') with weight 0.28
-	Edge (CELL : S') with weight 0.15999999999999998
-	Edge (LOC : S') with weight 0.22999999999999998
+	Edge (CELL : S') with weight 0.16
+	Edge (LOC : S') with weight 0.23
 Number of Shortest Paths (S to S') found: 24
 yenKShortestPath-#0: [(S : PF(L)), (PF(L) : G1), (G1 : NIRS), (NIRS : G2), (G2 : CELL), (CELL : S')]
 yenKShortestPath-#0-VertexList: [S, PF(L), G1, NIRS, G2, CELL, S']
@@ -150,12 +135,12 @@ Total cost for path: 1.1
 	Path #0
 	Path [(S : PF(L)), (PF(L) : G1), (G1 : NIRS), (NIRS : G2), (G2 : CELL), (CELL : S')]
 	Path vertex list [S, PF(L), G1, NIRS, G2, CELL, S']
-2021-08-22 13:57:57.918  INFO 66941 --- [           main] PRECISION-FARMING                        : Going to call service at http://e04-laptop21.fritz.box:8038/analysis
-2021-08-22 13:57:58.707  INFO 66941 --- [           main] PRECISION-FARMING                        : AppMap for taskId 0000 received: null
-2021-08-22 13:57:58.707  INFO 66941 --- [           main] ANALYZE-SLURRY                           : Analyzing slurry.
-2021-08-22 13:57:58.707  INFO 66941 --- [           main] ANALYZE-SLURRY                           : Fetching available services for serviceId ingredients-service...
-2021-08-22 13:57:58.753  INFO 66941 --- [           main] SERVICE-SEARCH                           : Current neighbors of SP: [http://localhost:8020/, http://localhost:8030/, http://localhost:8040/, http://localhost:8050/]
-2021-08-22 13:57:58.813  INFO 66941 --- [           main] ANALYZE-SLURRY                           : Available services: 4
+2021-08-22 21:21:18.133  INFO 70294 --- [           main] PRECISION-FARMING                        : Going to call service at http://e04-laptop21.fritz.box:8038/analysis
+2021-08-22 21:21:18.617  INFO 70294 --- [           main] PRECISION-FARMING                        : AppMap for taskId 0000 received: null
+2021-08-22 21:21:18.637  INFO 70294 --- [           main] ANALYZE-SLURRY                           : Analyzing slurry.
+2021-08-22 21:21:18.638  INFO 70294 --- [           main] ANALYZE-SLURRY                           : Fetching available services for serviceId ingredients-service...
+2021-08-22 21:21:18.814  INFO 70294 --- [           main] SERVICE-SEARCH                           : Current neighbors of SP: [http://localhost:8020/, http://localhost:8030/, http://localhost:8040/, http://localhost:8050/]
+2021-08-22 21:21:18.897  INFO 70294 --- [           main] ANALYZE-SLURRY                           : Available services: 4
 --- Service number 0 ---
 Host: e04-laptop21.fritz.box
 InstanceId: e04-laptop21.fritz.box:ingredients-service:8023
@@ -176,11 +161,11 @@ Updating slurry analysis segment in graph...
 Found vertex id: LAB	Updated edge (LAB : G2) with weight 0.5
 Found vertex id: REF	Updated edge (REF : G2) with weight 0.35
 Found vertex id: REF(L)	Updated edge (REF(L) : G2) with weight 0.4
-Found vertex id: NIRS	Updated edge (NIRS : G2) with weight 0.29000000000000004
-2021-08-22 13:57:58.961  INFO 66941 --- [           main] SERVICE-SEARCH                           : Current neighbors of SP: [http://localhost:8020/, http://localhost:8030/, http://localhost:8040/, http://localhost:8050/]
+Found vertex id: NIRS	Updated edge (NIRS : G2) with weight 0.29
+2021-08-22 21:21:19.020  INFO 70294 --- [           main] SERVICE-SEARCH                           : Current neighbors of SP: [http://localhost:8020/, http://localhost:8030/, http://localhost:8040/, http://localhost:8050/]
 Updating position correction segment in graph...
-Found vertex id: CELL	Updated edge (CELL : S') with weight 0.15999999999999998
-Found vertex id: LOC	Updated edge (LOC : S') with weight 0.22999999999999998
+Found vertex id: CELL	Updated edge (CELL : S') with weight 0.16
+Found vertex id: LOC	Updated edge (LOC : S') with weight 0.23
 Found vertex id: LOCAL	Could not find a vertex for id LOCAL
 Current graph: ([S, S', PF, PF(L), noPF, G1, LAB, NIRS, REF, REF(L), G2, GPS, CELL, LOC], [(S,PF), (PF,G1), (S,PF(L)), (PF(L),G1), (S,noPF), (G1,LAB), (LAB,G2), (G1,NIRS), (NIRS,G2), (G1,REF), (REF,G2), (G1,REF(L)), (REF(L),G2), (G2,GPS), (GPS,S'), (G2,CELL), (CELL,S'), (G2,LOC), (LOC,S')])
 --- Precising Farming Segment ---
@@ -188,17 +173,17 @@ Current graph: ([S, S', PF, PF(L), noPF, G1, LAB, NIRS, REF, REF(L), G2, GPS, CE
 	Edge (PF(L) : G1) with weight 0.29
 --- Slurry Analysis Segment ---
 	Edge (LAB : G2) with weight 0.5
-	Edge (NIRS : G2) with weight 0.29000000000000004
+	Edge (NIRS : G2) with weight 0.29
 	Edge (REF : G2) with weight 0.35
 	Edge (REF(L) : G2) with weight 0.4
 --- Position Correction Segment ---
 	Edge (GPS : S') with weight 0.28
-	Edge (CELL : S') with weight 0.15999999999999998
-	Edge (LOC : S') with weight 0.22999999999999998
+	Edge (CELL : S') with weight 0.16
+	Edge (LOC : S') with weight 0.23
 Number of Shortest Paths (G1 to S') found: 12
 yenKShortestPath-#0: [(G1 : NIRS), (NIRS : G2), (G2 : CELL), (CELL : S')]
 yenKShortestPath-#0-VertexList: [G1, NIRS, G2, CELL, S']
-yenKShortestPath-#0-Weight: 0.45
+yenKShortestPath-#0-Weight: 0.44999999999999996
 yenKShortestPath-#1: [G1, REF, G2, CELL, S']
 yenKShortestPath-#1-VertexList: [G1, REF, G2, CELL, S']
 yenKShortestPath-#1-Weight: 0.51
@@ -207,12 +192,12 @@ Total cost for path: 0.7
 	Path #0
 	Path [(G1 : NIRS), (NIRS : G2), (G2 : CELL), (CELL : S')]
 	Path vertex list [G1, NIRS, G2, CELL, S']
-2021-08-22 13:57:59.099  INFO 66941 --- [           main] ANALYZE-SLURRY                           : Going to call service at http://e04-laptop21.fritz.box:8045/nirs
-2021-08-22 13:57:59.869  INFO 66941 --- [           main] ANALYZE-SLURRY                           : Analysis for taskId 0000 resulted in nitrogen: 22.690957029563663
-2021-08-22 13:57:59.871  INFO 66941 --- [           main] CORRECT-GPS                              : Correcting GPS.
-2021-08-22 13:57:59.871  INFO 66941 --- [           main] CORRECT-GPS                              : Fetching available services for serviceId gps-service...
-2021-08-22 13:57:59.927  INFO 66941 --- [           main] SERVICE-SEARCH                           : Current neighbors of SP: [http://localhost:8020/, http://localhost:8030/, http://localhost:8040/, http://localhost:8050/]
-2021-08-22 13:57:59.964  INFO 66941 --- [           main] CORRECT-GPS                              : Available services: 3
+2021-08-22 21:21:19.135  INFO 70294 --- [           main] ANALYZE-SLURRY                           : Going to call service at http://e04-laptop21.fritz.box:8045/nirs
+2021-08-22 21:21:19.413  INFO 70294 --- [           main] ANALYZE-SLURRY                           : Analysis for taskId 0000 resulted in nitrogen: 43.19642197336236
+2021-08-22 21:21:19.416  INFO 70294 --- [           main] CORRECT-GPS                              : Correcting GPS.
+2021-08-22 21:21:19.416  INFO 70294 --- [           main] CORRECT-GPS                              : Fetching available services for serviceId gps-service...
+2021-08-22 21:21:19.457  INFO 70294 --- [           main] SERVICE-SEARCH                           : Current neighbors of SP: [http://localhost:8020/, http://localhost:8030/, http://localhost:8040/, http://localhost:8050/]
+2021-08-22 21:21:19.552  INFO 70294 --- [           main] CORRECT-GPS                              : Available services: 3
 --- Service number 0 ---
 Host: e04-laptop21.fritz.box
 InstanceId: e04-laptop21.fritz.box:gps-service:8028
@@ -226,8 +211,8 @@ Host: e04-laptop21.fritz.box
 InstanceId: e04-laptop21.fritz.box:gps-service:8055
 Metadata: [urlanalysis = /gps, urlstatus = null, urllog = null, cost = 0.3, accuracy = 0.9, location = local, management.port = 8055, time = 0.1, type = LOCAL, id = null]
 Updating position correction segment in graph...
-Found vertex id: CELL	Updated edge (CELL : S') with weight 0.15999999999999998
-Found vertex id: LOC	Updated edge (LOC : S') with weight 0.22999999999999998
+Found vertex id: CELL	Updated edge (CELL : S') with weight 0.16
+Found vertex id: LOC	Updated edge (LOC : S') with weight 0.23
 Found vertex id: LOCAL	Could not find a vertex for id LOCAL
 Current graph: ([S, S', PF, PF(L), noPF, G1, LAB, NIRS, REF, REF(L), G2, GPS, CELL, LOC], [(S,PF), (PF,G1), (S,PF(L)), (PF(L),G1), (S,noPF), (G1,LAB), (LAB,G2), (G1,NIRS), (NIRS,G2), (G1,REF), (REF,G2), (G1,REF(L)), (REF(L),G2), (G2,GPS), (GPS,S'), (G2,CELL), (CELL,S'), (G2,LOC), (LOC,S')])
 --- Precising Farming Segment ---
@@ -240,28 +225,30 @@ Current graph: ([S, S', PF, PF(L), noPF, G1, LAB, NIRS, REF, REF(L), G2, GPS, CE
 	Edge (REF(L) : G2) with weight 0.4
 --- Position Correction Segment ---
 	Edge (GPS : S') with weight 0.28
-	Edge (CELL : S') with weight 0.15999999999999998
-	Edge (LOC : S') with weight 0.22999999999999998
+	Edge (CELL : S') with weight 0.16
+	Edge (LOC : S') with weight 0.23
 Number of Shortest Paths (G2 to S') found: 3
 yenKShortestPath-#0: [(G2 : CELL), (CELL : S')]
 yenKShortestPath-#0-VertexList: [G2, CELL, S']
-yenKShortestPath-#0-Weight: 0.15999999999999998
+yenKShortestPath-#0-Weight: 0.16
 yenKShortestPath-#1: [G2, LOC, S']
 yenKShortestPath-#1-VertexList: [G2, LOC, S']
-yenKShortestPath-#1-Weight: 0.22999999999999998
+yenKShortestPath-#1-Weight: 0.23
 Path with vertex list: [G2, CELL, S']
 Total cost for path: 0.3
 	Path #0
 	Path [(G2 : CELL), (CELL : S')]
 	Path vertex list [G2, CELL, S']
-2021-08-22 13:57:59.969  INFO 66941 --- [           main] CORRECT-GPS                              : Going to call service at http://e04-laptop21.fritz.box:8028/gps
-2021-08-22 13:58:00.690  INFO 66941 --- [           main] CORRECT-GPS                              : GPS correction for taskId 0000 resulted in offsets: 0.05222719541446542 / 0.0502817661372035
-2021-08-22 13:58:00.700  INFO 66941 --- [           main] CREATING-LOG                             : Creating task log.
-2021-08-22 13:58:00.700  INFO 66941 --- [           main] CREATING-LOG                             : Finished slurry application process.
-2021-08-22 13:58:00.727  INFO 66941 --- [           main] org.camunda.bpm.container                : ENGINE-08050 Process application spApplication successfully deployed
-2021-08-22 13:58:00.818  INFO 66941 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8035 (http) with context path ''
-2021-08-22 13:58:00.820  INFO 66941 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8035
-2021-08-22 13:58:00.857  INFO 66941 --- [           main] org.example.sp.SpApplication             : Started SpApplication in 151.294 seconds (JVM running for 168.957)
-2021-08-22 13:58:00.870  INFO 66941 --- [           main] org.camunda.bpm.engine.jobexecutor       : ENGINE-14014 Starting up the JobExecutor[org.camunda.bpm.engine.spring.components.jobexecutor.SpringJobExecutor].
-2021-08-22 13:58:00.879  INFO 66941 --- [ingJobExecutor]] org.camunda.bpm.engine.jobexecutor       : ENGINE-14018 JobExecutor[org.camunda.bpm.engine.spring.components.jobexecutor.SpringJobExecutor] starting to acquire jobs
-2021-08-22 14:02:51.858  INFO 66941 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-22 21:21:19.569  INFO 70294 --- [           main] CORRECT-GPS                              : Going to call service at http://e04-laptop21.fritz.box:8028/gps
+2021-08-22 21:21:19.903  INFO 70294 --- [           main] CORRECT-GPS                              : GPS correction for taskId 0000 resulted in offsets: 0.052787675827697465 / 0.05309203167827049
+2021-08-22 21:21:19.925  INFO 70294 --- [           main] org.camunda.bpm.container                : ENGINE-08050 Process application spApplication successfully deployed
+2021-08-22 21:21:20.009  INFO 70294 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8035 (http) with context path ''
+2021-08-22 21:21:20.012  INFO 70294 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8035
+2021-08-22 21:21:20.020  INFO 70294 --- [           main] org.example.sp.SpApplication             : Started SpApplication in 119.959 seconds (JVM running for 136.845)
+2021-08-22 21:21:20.025  INFO 70294 --- [           main] org.camunda.bpm.engine.jobexecutor       : ENGINE-14014 Starting up the JobExecutor[org.camunda.bpm.engine.spring.components.jobexecutor.SpringJobExecutor].
+2021-08-22 21:21:20.029  INFO 70294 --- [ingJobExecutor]] org.camunda.bpm.engine.jobexecutor       : ENGINE-14018 JobExecutor[org.camunda.bpm.engine.spring.components.jobexecutor.SpringJobExecutor] starting to acquire jobs
+2021-08-22 21:26:11.775  INFO 70294 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-22 21:31:11.787  INFO 70294 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-22 21:36:11.839  INFO 70294 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-22 21:41:11.851  INFO 70294 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-22 21:46:11.865  INFO 70294 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

@@ -13,6 +13,7 @@ import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.logging.Logger;
 
 public class ServiceDecisionGraph {
@@ -207,7 +208,7 @@ public class ServiceDecisionGraph {
             double dCost = Double.parseDouble(instanceList.get(i).getMetadata().getCost());
             double dTime = Double.parseDouble(instanceList.get(i).getMetadata().getTime());
             double dWeight = (1 - dAccuracy) * dAccuracyWeight + dCost * dCostWeight + dTime * dTimeWeight;
-            dWeight = Double.parseDouble(String.format("%1.2f", dWeight));
+            dWeight = Double.parseDouble(String.format(Locale.ENGLISH, "%1.2f", dWeight));
 
             // Update edge weight or remove vertex since i) it is not available or ii) min accuracy is not provided
             if(sId != null) {
@@ -376,20 +377,22 @@ public class ServiceDecisionGraph {
         YenKShortestPath<String, DefaultWeightedEdge> yenKShortestPath = new YenKShortestPath<>(directedGraph);
         List<GraphPath<String, DefaultWeightedEdge>> yenKGraphPaths = yenKShortestPath.getPaths(sStartVertex, sEndVertex, 99);
 
+        System.out.println("--- k-shortest-paths analysis ---");
         System.out.println("Number of Shortest Paths (" + sStartVertex + " to " + sEndVertex + ") found: " + yenKGraphPaths.size());
         if (yenKGraphPaths.size() > 1) {
-            System.out.println("yenKShortestPath-#0: " + yenKGraphPaths.get(0));
-            System.out.println("yenKShortestPath-#0-VertexList: " + yenKGraphPaths.get(0).getVertexList().toString());
-            System.out.println("yenKShortestPath-#0-Weight: " + yenKGraphPaths.get(0).getWeight());
-            System.out.println("yenKShortestPath-#1: " + yenKGraphPaths.get(1));
-            System.out.println("yenKShortestPath-#1-VertexList: " + yenKGraphPaths.get(1).getVertexList().toString());
-            System.out.println("yenKShortestPath-#1-Weight: " + yenKGraphPaths.get(1).getWeight());
+            System.out.println("\tShowing the first two paths...");
+            System.out.println("\tyenKShortestPath-#0: " + yenKGraphPaths.get(0));
+            System.out.println("\tyenKShortestPath-#0-VertexList: " + yenKGraphPaths.get(0).getVertexList().toString());
+            System.out.println("\tyenKShortestPath-#0-Weight: " + yenKGraphPaths.get(0).getWeight());
+            System.out.println("\tyenKShortestPath-#1: " + yenKGraphPaths.get(1));
+            System.out.println("\tyenKShortestPath-#1-VertexList: " + yenKGraphPaths.get(1).getVertexList().toString());
+            System.out.println("\tyenKShortestPath-#1-Weight: " + yenKGraphPaths.get(1).getWeight());
         } else if (yenKGraphPaths.size() > 0) {
-            System.out.println("yenKShortestPath-#0: " + yenKGraphPaths.get(0));
-            System.out.println("yenKShortestPath-#0-VertexList: " + yenKGraphPaths.get(0).getVertexList().toString());
-            System.out.println("yenKShortestPath-#0-Weight: " + yenKGraphPaths.get(0).getWeight());
+            System.out.println("\tyenKShortestPath-#0: " + yenKGraphPaths.get(0));
+            System.out.println("\tyenKShortestPath-#0-VertexList: " + yenKGraphPaths.get(0).getVertexList().toString());
+            System.out.println("\tyenKShortestPath-#0-Weight: " + yenKGraphPaths.get(0).getWeight());
         } else {
-            System.out.println("No paths found! Process unable to proceed!");
+            System.out.println("\tNo paths found! Process unable to proceed!");
         }
 
         return yenKGraphPaths;
@@ -429,9 +432,9 @@ public class ServiceDecisionGraph {
         for(int i = 0; i < graphPathsList.size(); i++){
             dTotalCost = this.calcTotalCost(graphPathsList.get(i).getVertexList());
             if(dTotalCost < dCostLimit){
-                System.out.println("\tPath #" + i);
-                System.out.println("\tPath " + graphPathsList.get(i).toString());
-                System.out.println("\tPath vertex list " + graphPathsList.get(i).getVertexList());
+                System.out.println("\tPath selected: #" + i);
+                System.out.println("\tPath: " + graphPathsList.get(i).toString());
+                System.out.println("\tPath vertex list: " + graphPathsList.get(i).getVertexList());
                 iChosenPath = i;
                 break;
             }

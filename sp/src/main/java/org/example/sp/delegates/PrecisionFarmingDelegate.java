@@ -46,6 +46,8 @@ public class PrecisionFarmingDelegate implements JavaDelegate {
 
     double dCostLimit = 2.0;
 
+    boolean bUsePf = true;
+
     public void execute(DelegateExecution execution) throws Exception {
         // Setup process variables
         String taskId = "0000";
@@ -60,7 +62,7 @@ public class PrecisionFarmingDelegate implements JavaDelegate {
         }
 
         // Do work
-        LOGGER.info("Precision Farming.");
+        LOGGER.info("Deciding on Precision Farming usage...");
 
         // Prepare service search
         boolean searchService = true;
@@ -88,9 +90,9 @@ public class PrecisionFarmingDelegate implements JavaDelegate {
                 // Update graph for precision farming segment
                 serviceDecisionGraph.updateGraph(instanceList);
                 // Update graph for slurry analysis segment
-                serviceDecisionGraph.updateGraph(serviceSearch.findServices("ingredients-service"));
+                //serviceDecisionGraph.updateGraph(serviceSearch.findServices("ingredients-service"));
                 // Update graph for position correction segment
-                serviceDecisionGraph.updateGraph(serviceSearch.findServices("gps-service"));
+                //serviceDecisionGraph.updateGraph(serviceSearch.findServices("gps-service"));
                 serviceDecisionGraph.printGraph();
 
                 serviceInstance = serviceDecisionGraph.selectServiceGraphBased(instanceList, "S", "S'", dCostLimit, "precision-farming");
@@ -150,6 +152,7 @@ public class PrecisionFarmingDelegate implements JavaDelegate {
                     // noPF
                     LOGGER.info("Applying slurry without AppMap (noPF).");
                     instanceList.clear();
+                    bUsePf = false;
                     searchService = false;
                 }
             } else {
@@ -158,5 +161,8 @@ public class PrecisionFarmingDelegate implements JavaDelegate {
                 searchService = false;
             }
         }
+
+        // export process variables
+        execution.setVariable("bUsePf", bUsePf);
     }
 }

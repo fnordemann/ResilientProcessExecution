@@ -39,8 +39,6 @@ java -jar -Dspring.profiles.active=cell1 cell-service-0.1.0.jar > ../logs/cell1.
 java -jar lab-service-0.1.0.jar > ../logs/lab.txt &
 java -jar nirs-service-0.1.0.jar > ../logs/nirs.txt &
 java -jar loc-service-0.1.0.jar > ../logs/loc.txt &
-java -jar mgmt-0.0.1-SNAPSHOT.jar > ../logs/mgmt.txt &
-java -jar mgmtmov-0.0.1-SNAPSHOT.jar > ../logs/mgmt_mov.txt &
 java -jar neighbor-service-0.1.0.jar > ../logs/neighbor.txt &
 java -jar sp-0.0.1-SNAPSHOT.jar > ../logs/sp.txt &
 
