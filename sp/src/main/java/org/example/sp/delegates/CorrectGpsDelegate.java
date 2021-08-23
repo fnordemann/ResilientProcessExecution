@@ -10,7 +10,6 @@ import org.example.datatypes.GpsReply;
 import org.example.datatypes.GpsRequest;
 import org.example.eureka.Instance;
 import org.example.eureka.Metadata;
-import org.example.sp.functions.ServiceDecision;
 import org.example.sp.functions.ServiceDecisionGraph;
 import org.example.sp.functions.ServiceSearch;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,11 +42,15 @@ public class CorrectGpsDelegate implements JavaDelegate {
     private ServiceDecisionGraph serviceDecisionGraph = new ServiceDecisionGraph();
     private ServiceSearch serviceSearch = new ServiceSearch();
 
-    double dCostLimit = 2.0;
 
     public void execute(DelegateExecution execution) throws Exception {
         // Setup process variables
-        String taskId = "0000";
+        String taskId;
+        double dMinAccuracy;
+        double dCostLimit;
+        double dAccuracyWeight;
+        double dCostWeight;
+        double dTimeWeight;
 
         // Fetch taskId
         try {
@@ -57,6 +60,52 @@ public class CorrectGpsDelegate implements JavaDelegate {
             if (debug == 1)
                 LOGGER.info("No taskId provided. Using taskId " + taskId + ".");
         }
+
+        // Fetch dMinAccuracy
+        try {
+            dMinAccuracy = Double.parseDouble(execution.getVariable("dMinAccuracy").toString());
+        } catch (Exception e) {
+            dMinAccuracy = 0.3;
+            if (debug == 1)
+                LOGGER.info("Could not fetch dMinAccuracy. Using dMinAccuracy of 0.3");
+        }
+
+        // Fetch dCostLimit
+        try {
+            dCostLimit = Double.parseDouble(execution.getVariable("dCostLimit").toString());
+        } catch (Exception e) {
+            dCostLimit = 2.0;
+            if (debug == 1)
+                LOGGER.info("Could not fetch dCostLimit. Using dCostLimit of 2.0");
+        }
+
+        // Fetch dAccuracyWeight
+        try {
+            dAccuracyWeight = Double.parseDouble(execution.getVariable("dAccuracyWeight").toString());
+        } catch (Exception e) {
+            dAccuracyWeight = 0.5;
+            if (debug == 1)
+                LOGGER.info("Could not fetch dAccuracyWeight. Using dAccuracyWeight of 0.5");
+        }
+
+        // Fetch dCostWeight
+        try {
+            dCostWeight = Double.parseDouble(execution.getVariable("dCostWeight").toString());
+        } catch (Exception e) {
+            dCostWeight = 0.3;
+            if (debug == 1)
+                LOGGER.info("Could not fetch dCostWeight. Using dCostWeight of 0.3");
+        }
+
+        // Fetch dTimeWeight
+        try {
+            dTimeWeight = Double.parseDouble(execution.getVariable("dTimeWeight").toString());
+        } catch (Exception e) {
+            dTimeWeight = 0.2;
+            if (debug == 1)
+                LOGGER.info("Could not fetch dTimeWeight. Using dTimeWeight of 0.2");
+        }
+
 
         // Do work
         LOGGER.info("Correcting GPS.");
@@ -81,14 +130,16 @@ public class CorrectGpsDelegate implements JavaDelegate {
 
         // Search for service until an appropriate is found
         while (searchService) {
-            // Instances found?
-            if (instanceList.size() > 0) {
-                // Select by using a multi-criteria graph
+                // Update graph for precision farming segment
+                serviceDecisionGraph.updateGraph(serviceSearch.findServices("precision-farming-service"), dAccuracyWeight, dCostWeight, dTimeWeight);
+                // Update graph for slurry analysis segment
+                serviceDecisionGraph.updateGraph(serviceSearch.findServices("ingredients-service"), dAccuracyWeight, dCostWeight, dTimeWeight);
                 // Update graph for position correction segment
-                serviceDecisionGraph.updateGraph(instanceList);
+                serviceDecisionGraph.updateGraph(instanceList, dAccuracyWeight, dCostWeight, dTimeWeight);
                 serviceDecisionGraph.printGraph();
 
-                serviceInstance = serviceDecisionGraph.selectServiceGraphBased(instanceList, "G2", "S'", dCostLimit, "position-correction");
+                String sChosenId = serviceDecisionGraph.selectServiceGraphBased("G2", "S'", dMinAccuracy, dCostLimit, "position-correction");
+                serviceInstance = serviceDecisionGraph.getInstanceForId(instanceList, sChosenId);
 
                 if (serviceInstance != null) {
                     // Call chosen instance
@@ -141,17 +192,25 @@ public class CorrectGpsDelegate implements JavaDelegate {
                         LOGGER.info("No valid service address available! urlString: " + urlString);
                         instanceList.remove(serviceInstance);
                     }
-                } else {
-                    // GPS
-                    LOGGER.info("GPS only has been chosen for position sensing.");
-                    instanceList.clear();
-                    searchService = false;
-                }
-            } else {
-                LOGGER.info("No services for serviceId " + serviceId + " available!");
+            } else if (sChosenId.equals("GPS")){
+                // noPF
+                LOGGER.info("GPS only has been chosen for position sensing.");
                 instanceList.clear();
                 searchService = false;
             }
+            else{
+                // No path found! Process fails!
+                    LOGGER.warning("Process fails. Process instance is deleted. Please restart proof-of-concept.");
+                    LOGGER.warning("Variables:");
+                    LOGGER.warning("\tsChosenId: " + sChosenId);
+                    LOGGER.warning("\tserviceInstance: " + serviceInstance.toString());
+                    searchService = false;
+                    runtimeService.deleteProcessInstance(execution.getProcessInstanceId(), sChosenId);
+                    System.exit(-1);
+            }
         }
+
+        // Done
+        LOGGER.info("Slurry application done.");
     }
 }

@@ -26,6 +26,6 @@ public class ApplySlurryManuallyDelegate implements JavaDelegate {
 
         // Do work
         LOGGER.info("Applying slurry manually...");
-        LOGGER.info("Manual slurry application done.");
+        LOGGER.info("Slurry application done.");
     }
 }

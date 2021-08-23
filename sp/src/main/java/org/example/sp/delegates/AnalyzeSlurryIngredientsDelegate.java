@@ -10,13 +10,9 @@ import org.example.datatypes.AnalysisReply;
 import org.example.datatypes.AnalysisRequest;
 import org.example.eureka.Instance;
 import org.example.eureka.Metadata;
-import org.example.sp.functions.ServiceDecision;
 import org.example.sp.functions.ServiceDecisionGraph;
 import org.example.sp.functions.ServiceSearch;
-import org.jgrapht.GraphPath;
-import org.jgrapht.graph.DefaultWeightedEdge;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -46,13 +42,16 @@ public class AnalyzeSlurryIngredientsDelegate implements JavaDelegate {
     private ServiceDecisionGraph serviceDecisionGraph = new ServiceDecisionGraph();
     private ServiceSearch serviceSearch = new ServiceSearch();
 
-    double dCostLimit = 2.0;
-
 
     public void execute(DelegateExecution execution) throws Exception {
 
         // Variables
-        String taskId = "0000";
+        String taskId;
+        double dMinAccuracy;
+        double dCostLimit;
+        double dAccuracyWeight;
+        double dCostWeight;
+        double dTimeWeight;
 
         // Fetch taskId
         try {
@@ -63,15 +62,56 @@ public class AnalyzeSlurryIngredientsDelegate implements JavaDelegate {
                 LOGGER.info("No taskId provided. Using taskId " + taskId + ".");
         }
 
+        // Fetch dMinAccuracy
+        try {
+            dMinAccuracy = Double.parseDouble(execution.getVariable("dMinAccuracy").toString());
+        } catch (Exception e) {
+            dMinAccuracy = 0.3;
+            if (debug == 1)
+                LOGGER.info("Could not fetch dMinAccuracy. Using dMinAccuracy of 0.3");
+        }
+
+        // Fetch dCostLimit
+        try {
+            dCostLimit = Double.parseDouble(execution.getVariable("dCostLimit").toString());
+        } catch (Exception e) {
+            dCostLimit = 2.0;
+            if (debug == 1)
+                LOGGER.info("Could not fetch dCostLimit. Using dCostLimit of 2.0");
+        }
+
+        // Fetch dAccuracyWeight
+        try {
+            dAccuracyWeight = Double.parseDouble(execution.getVariable("dAccuracyWeight").toString());
+        } catch (Exception e) {
+            dAccuracyWeight = 0.5;
+            if (debug == 1)
+                LOGGER.info("Could not fetch dAccuracyWeight. Using dAccuracyWeight of 0.5");
+        }
+
+        // Fetch dCostWeight
+        try {
+            dCostWeight = Double.parseDouble(execution.getVariable("dCostWeight").toString());
+        } catch (Exception e) {
+            dCostWeight = 0.3;
+            if (debug == 1)
+                LOGGER.info("Could not fetch dCostWeight. Using dCostWeight of 0.3");
+        }
+
+        // Fetch dTimeWeight
+        try {
+            dTimeWeight = Double.parseDouble(execution.getVariable("dTimeWeight").toString());
+        } catch (Exception e) {
+            dTimeWeight = 0.2;
+            if (debug == 1)
+                LOGGER.info("Could not fetch dTimeWeight. Using dTimeWeight of 0.2");
+        }
+
+
         // Do work
         LOGGER.info("Analyzing slurry.");
 
-        searchAndDecideRestBased(taskId);
-
-    }
-
-    // Search and decide based on Eureka REST calls
-    private void searchAndDecideRestBased(String taskId) {
+        // Prepare service search
         boolean searchService = true;
         Instance serviceInstance = null;
         Map<String, String> metadataMap;
@@ -91,75 +131,77 @@ public class AnalyzeSlurryIngredientsDelegate implements JavaDelegate {
 
         // Search for service until an appropriate is found
         while (searchService) {
-            // Instances found?
-            if (instanceList.size() > 0) {
-                // Select by using a multi-criteria graph
-                // Update graph for slurry analysis segment
-                //serviceDecisionGraph.updateGraph(instanceList);
-                // Update graph for position correction segment
-                serviceDecisionGraph.updateGraph(serviceSearch.findServices("gps-service"));
-                serviceDecisionGraph.printGraph();
+            // Update graph for precision farming segment
+            serviceDecisionGraph.updateGraph(serviceSearch.findServices("precision-farming-service"), dAccuracyWeight, dCostWeight, dTimeWeight);
+            // Update graph for slurry analysis segment
+            serviceDecisionGraph.updateGraph(instanceList, dAccuracyWeight, dCostWeight, dTimeWeight);
+            // Update graph for position correction segment
+            serviceDecisionGraph.updateGraph(serviceSearch.findServices("gps-service"), dAccuracyWeight, dCostWeight, dTimeWeight);
+            serviceDecisionGraph.printGraph();
 
-                serviceInstance = serviceDecisionGraph.selectServiceGraphBased(instanceList, "G1", "S'", dCostLimit, "slurry-analysis");
+            String sChosenId = serviceDecisionGraph.selectServiceGraphBased("G1", "S'", dMinAccuracy, dCostLimit, "slurry-analysis");
+            serviceInstance = serviceDecisionGraph.getInstanceForId(instanceList, sChosenId);
 
-                if (serviceInstance != null) {
-                    // Call chosen instance
-                    Metadata metadata = serviceInstance.getMetadata();
-                    String serviceString = metadata.getUrlanalysis();
-                    String urlString = "http://" + serviceInstance.getHostName() + ":" + serviceInstance.getMetadata().getManagement_port() + serviceString;
+            if (serviceInstance != null) {
+                // Call chosen instance
+                Metadata metadata = serviceInstance.getMetadata();
+                String serviceString = metadata.getUrlanalysis();
+                String urlString = "http://" + serviceInstance.getHostName() + ":" + serviceInstance.getMetadata().getManagement_port() + serviceString;
 
-                    // URI available?
-                    if (serviceString != null && serviceString != "") {
+                // URI available?
+                if (serviceString != null && serviceString != "") {
 
-                        // URI absolute?
-                        URI serviceUri = null;
+                    // URI absolute?
+                    URI serviceUri = null;
+                    try {
+                        serviceUri = new URI(urlString);
+                    } catch (Exception e) {
+                        LOGGER.info("URI Exception: " + e.toString());
+                    }
+                    if (serviceUri.isAbsolute()) {
+
+                        // POST example
+                        AnalysisRequest analysisRequest = new AnalysisRequest();
+                        analysisRequest.setTaskId(taskId);
+
+                        LOGGER.info("Going to call service at " + serviceUri.toString());
+                        //restTemplate = new RestTemplate();
                         try {
-                            serviceUri = new URI(urlString);
+                            ObjectMapper objectMapper = new ObjectMapper();
+                            RestTemplate restTemplate = new RestTemplate();
+                            HttpHeaders headers = new HttpHeaders();
+                            headers.setContentType(MediaType.APPLICATION_JSON);
+
+                            HttpEntity<AnalysisRequest> requestEntity = new HttpEntity<AnalysisRequest>(analysisRequest, headers);
+                            ResponseEntity<AnalysisReply> responseEntity = restTemplate.postForEntity(serviceUri, requestEntity, AnalysisReply.class);
+                            AnalysisReply analysisReply = responseEntity.getBody();
+                            LOGGER.info("Analysis for taskId " + analysisReply.getTaskId() + " resulted in nitrogen: " + analysisReply.getNitrogen());
+                            searchService = false;
+                        } catch (HttpServerErrorException e) {
+                            LOGGER.info("Could not call service " + serviceInstance.getInstanceId() + ": HTTP 500");
+                            instanceList.remove(serviceInstance);
                         } catch (Exception e) {
-                            LOGGER.info("URI Exception: " + e.toString());
-                        }
-                        if (serviceUri.isAbsolute()) {
-
-                            // POST example
-                            AnalysisRequest analysisRequest = new AnalysisRequest();
-                            analysisRequest.setTaskId(taskId);
-
-                            LOGGER.info("Going to call service at " + serviceUri.toString());
-                            //restTemplate = new RestTemplate();
-                            try {
-                                ObjectMapper objectMapper = new ObjectMapper();
-                                RestTemplate restTemplate = new RestTemplate();
-                                HttpHeaders headers = new HttpHeaders();
-                                headers.setContentType(MediaType.APPLICATION_JSON);
-
-                                HttpEntity<AnalysisRequest> requestEntity = new HttpEntity<AnalysisRequest>(analysisRequest, headers);
-                                ResponseEntity<AnalysisReply> responseEntity = restTemplate.postForEntity(serviceUri, requestEntity, AnalysisReply.class);
-                                AnalysisReply analysisReply = responseEntity.getBody();
-                                LOGGER.info("Analysis for taskId " + analysisReply.getTaskId() + " resulted in nitrogen: " + analysisReply.getNitrogen());
-                                searchService = false;
-                            } catch (HttpServerErrorException e) {
-                                LOGGER.info("Could not call service " + serviceInstance.getInstanceId() + ": HTTP 500");
-                                instanceList.remove(serviceInstance);
-                            } catch (Exception e) {
-                                LOGGER.info("Could not call service " + serviceInstance.getInstanceId() + "!");
-                                LOGGER.info(e.toString());
-                                instanceList.remove(serviceInstance);
-                            }
-                        } else {
-                            LOGGER.info("URI not absolute: " + serviceUri.toString());
+                            LOGGER.info("Could not call service " + serviceInstance.getInstanceId() + "!");
+                            LOGGER.info(e.toString());
                             instanceList.remove(serviceInstance);
                         }
                     } else {
-                        LOGGER.info("No valid service address available! urlString: " + urlString);
+                        LOGGER.info("URI not absolute: " + serviceUri.toString());
                         instanceList.remove(serviceInstance);
                     }
                 } else {
-                    LOGGER.info("Received no service instance from service dictionary!");
+                    LOGGER.info("No valid service address available! urlString: " + urlString);
+                    instanceList.remove(serviceInstance);
                 }
             } else {
-                LOGGER.info("No services for serviceId " + serviceId + " available!");
-                instanceList.clear();
+                // No path found! Process fails!
+                LOGGER.warning("Process fails. Process instance is deleted. Please restart proof-of-concept.");
+                LOGGER.warning("Variables:");
+                LOGGER.warning("\tsChosenId: " + sChosenId);
+                LOGGER.warning("\tserviceInstance: " + serviceInstance.toString());
                 searchService = false;
+                runtimeService.deleteProcessInstance(execution.getProcessInstanceId(), sChosenId);
+                System.exit(-1);
             }
         }
     }

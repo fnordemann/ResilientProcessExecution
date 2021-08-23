@@ -48,10 +48,19 @@ public class RestStart {
         }
 
         LOGGER.info("");
-        LOGGER.info("---------");
-        LOGGER.info("Slurry process started with taskId "
-                + givenProcessStart.getTaskId() + ".");
-        LOGGER.info("---------");
+        LOGGER.info("-------------------------------");
+        LOGGER.info("Slurry process S3 started...");
+        LOGGER.info("\ttaskId: "
+                + givenProcessStart.getTaskId());
+        LOGGER.info("\tdMinAccuracy: " + givenProcessStart.getdMinAccuracy());
+        LOGGER.info("\tdCostLimit: " + givenProcessStart.getdCostLimit());
+        LOGGER.info("\tdAccuracyWeight: " + givenProcessStart.getdAccuracyWeight());
+        LOGGER.info("\tdCostWeight: " + givenProcessStart.getdCostWeight());
+        LOGGER.info("\tdTimeWeight: " + givenProcessStart.getdTimeWeight());
+        LOGGER.info("* Graph-based decision making *");
+        LOGGER.info("** Initialized by REST-POST  **");
+        LOGGER.info("-------------------------------");
+        LOGGER.info("");
 
         // map object to JSON for Camunda transfer
         try {
@@ -63,30 +72,17 @@ public class RestStart {
         // create message event to initiate BPMN process
         Map<String, Object> variables = new HashMap<String, Object>();
         variables.put("taskId", givenProcessStart.getTaskId());
-        runtimeService.startProcessInstanceByMessage("ProcessStart", variables);
+        variables.put("dMinAccuracy", givenProcessStart.getdMinAccuracy());
+        variables.put("dCostLimit", givenProcessStart.getdCostLimit());
+        variables.put("dAccuracyWeight", givenProcessStart.getdAccuracyWeight());
+        variables.put("dCostWeight", givenProcessStart.getdCostWeight());
+        variables.put("dTimeWeight", givenProcessStart.getdTimeWeight());
+        runtimeService.startProcessInstanceByKey("SpKey", variables);
 
         latestProcessStart = givenProcessStart;
 
         // return object as success message
         return Response.ok(jsonString, MediaType.APPLICATION_JSON).build();
-    }
-
-    @RequestMapping(value = "/start", method = RequestMethod.POST, consumes = "text/plain", produces = "text/plain")
-    @ResponseBody
-    public Response postStatus(@RequestBody String textString) {
-        LOGGER.info("Received text message: " + textString);
-
-        // replace by given
-        ProcessStart givenProcessStart = new ProcessStart(textString);
-
-        List<MessageCorrelationResult> results = runtimeService.createMessageCorrelation("ProcessStart")
-                .setVariable("ProcessStart", givenProcessStart).correlateAllWithResult();
-        if (results.size() > 0)
-            LOGGER.info("Triggered message event ProcessStart " + results.size() + " times.");
-
-        latestProcessStart = givenProcessStart;
-
-        return Response.ok(textString, MediaType.TEXT_PLAIN).build();
     }
 
 

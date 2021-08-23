@@ -8,8 +8,6 @@ import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
 import org.example.datatypes.AppMapReply;
 import org.example.datatypes.AppMapRequest;
-import org.example.datatypes.GpsReply;
-import org.example.datatypes.GpsRequest;
 import org.example.eureka.Instance;
 import org.example.eureka.Metadata;
 import org.example.sp.functions.ServiceDecisionGraph;
@@ -44,13 +42,16 @@ public class PrecisionFarmingDelegate implements JavaDelegate {
     private ServiceDecisionGraph serviceDecisionGraph = new ServiceDecisionGraph();
     private ServiceSearch serviceSearch = new ServiceSearch();
 
-    double dCostLimit = 2.0;
-
-    boolean bUsePf = true;
 
     public void execute(DelegateExecution execution) throws Exception {
         // Setup process variables
-        String taskId = "0000";
+        String taskId;
+        double dMinAccuracy;
+        double dCostLimit;
+        double dAccuracyWeight;
+        double dCostWeight;
+        double dTimeWeight;
+        boolean bUsePf = true;
 
         // Fetch taskId
         try {
@@ -60,6 +61,52 @@ public class PrecisionFarmingDelegate implements JavaDelegate {
             if (debug == 1)
                 LOGGER.info("No taskId provided. Using taskId " + taskId + ".");
         }
+
+        // Fetch dMinAccuracy
+        try {
+            dMinAccuracy = Double.parseDouble(execution.getVariable("dMinAccuracy").toString());
+        } catch (Exception e) {
+            dMinAccuracy = 0.3;
+            if (debug == 1)
+                LOGGER.info("Could not fetch dMinAccuracy. Using dMinAccuracy of 0.3");
+        }
+
+        // Fetch dCostLimit
+        try {
+            dCostLimit = Double.parseDouble(execution.getVariable("dCostLimit").toString());
+        } catch (Exception e) {
+            dCostLimit = 2.0;
+            if (debug == 1)
+                LOGGER.info("Could not fetch dCostLimit. Using dCostLimit of 2.0");
+        }
+
+        // Fetch dAccuracyWeight
+        try {
+            dAccuracyWeight = Double.parseDouble(execution.getVariable("dAccuracyWeight").toString());
+        } catch (Exception e) {
+            dAccuracyWeight = 0.5;
+            if (debug == 1)
+                LOGGER.info("Could not fetch dAccuracyWeight. Using dAccuracyWeight of 0.5");
+        }
+
+        // Fetch dCostWeight
+        try {
+            dCostWeight = Double.parseDouble(execution.getVariable("dCostWeight").toString());
+        } catch (Exception e) {
+            dCostWeight = 0.3;
+            if (debug == 1)
+                LOGGER.info("Could not fetch dCostWeight. Using dCostWeight of 0.3");
+        }
+
+        // Fetch dTimeWeight
+        try {
+            dTimeWeight = Double.parseDouble(execution.getVariable("dTimeWeight").toString());
+        } catch (Exception e) {
+            dTimeWeight = 0.2;
+            if (debug == 1)
+                LOGGER.info("Could not fetch dTimeWeight. Using dTimeWeight of 0.2");
+        }
+
 
         // Do work
         LOGGER.info("Deciding on Precision Farming usage...");
@@ -84,81 +131,85 @@ public class PrecisionFarmingDelegate implements JavaDelegate {
 
         // Search for service until an appropriate is found
         while (searchService) {
-            // Instances found?
-            if (instanceList.size() > 0) {
-                // Select by using a multi-criteria graph
-                // Update graph for precision farming segment
-                serviceDecisionGraph.updateGraph(instanceList);
-                // Update graph for slurry analysis segment
-                //serviceDecisionGraph.updateGraph(serviceSearch.findServices("ingredients-service"));
-                // Update graph for position correction segment
-                //serviceDecisionGraph.updateGraph(serviceSearch.findServices("gps-service"));
-                serviceDecisionGraph.printGraph();
+            // Select by using a multi-criteria graph
+            // Update graph for precision farming segment
+            serviceDecisionGraph.updateGraph(instanceList, dAccuracyWeight, dCostWeight, dTimeWeight);
+            // Update graph for slurry analysis segment
+            serviceDecisionGraph.updateGraph(serviceSearch.findServices("ingredients-service"), dAccuracyWeight, dCostWeight, dTimeWeight);
+            // Update graph for position correction segment
+            serviceDecisionGraph.updateGraph(serviceSearch.findServices("gps-service"), dAccuracyWeight, dCostWeight, dTimeWeight);
+            serviceDecisionGraph.printGraph();
 
-                serviceInstance = serviceDecisionGraph.selectServiceGraphBased(instanceList, "S", "S'", dCostLimit, "precision-farming");
+            // Select service
+            String sChosenId = serviceDecisionGraph.selectServiceGraphBased("S", "S'", dMinAccuracy, dCostLimit, "precision-farming");
+            serviceInstance = serviceDecisionGraph.getInstanceForId(instanceList, sChosenId);
 
-                if (serviceInstance != null) {
-                    // Call chosen instance
-                    Metadata metadata = serviceInstance.getMetadata();
-                    String serviceString = metadata.getUrlanalysis();
-                    String urlString = "http://" + serviceInstance.getHostName() + ":" + serviceInstance.getMetadata().getManagement_port() + serviceString;
+            if (serviceInstance != null) {
+                // Call chosen instance
+                Metadata metadata = serviceInstance.getMetadata();
+                String serviceString = metadata.getUrlanalysis();
+                String urlString = "http://" + serviceInstance.getHostName() + ":" + serviceInstance.getMetadata().getManagement_port() + serviceString;
 
-                    // URI available?
-                    if (serviceString != null && serviceString != "") {
+                // URI available?
+                if (serviceString != null && serviceString != "") {
 
-                        // URI absolute?
-                        URI serviceUri = null;
+                    // URI absolute?
+                    URI serviceUri = null;
+                    try {
+                        serviceUri = new URI(urlString);
+                    } catch (Exception e) {
+                        LOGGER.info("URI Exception: " + e.toString());
+                    }
+                    if (serviceUri.isAbsolute()) {
+
+                        // POST example
+                        AppMapRequest appMapRequest = new AppMapRequest();
+                        appMapRequest.setTaskId(taskId);
+
+                        LOGGER.info("Going to call service at " + serviceUri.toString());
+                        //restTemplate = new RestTemplate();
                         try {
-                            serviceUri = new URI(urlString);
+                            ObjectMapper objectMapper = new ObjectMapper();
+                            RestTemplate restTemplate = new RestTemplate();
+                            HttpHeaders headers = new HttpHeaders();
+                            headers.setContentType(MediaType.APPLICATION_JSON);
+
+                            HttpEntity<AppMapRequest> requestEntity = new HttpEntity<AppMapRequest>(appMapRequest, headers);
+                            ResponseEntity<AppMapReply> responseEntity = restTemplate.postForEntity(serviceUri, requestEntity, AppMapReply.class);
+                            AppMapReply appMapReply = responseEntity.getBody();
+                            LOGGER.info("AppMap for taskId " + appMapReply.getTaskId() + " received: " + appMapReply.getAppMap());
+                            searchService = false;
+                        } catch (HttpServerErrorException e) {
+                            LOGGER.info("Could not call service " + serviceInstance.getInstanceId() + ": HTTP 500");
+                            instanceList.remove(serviceInstance);
                         } catch (Exception e) {
-                            LOGGER.info("URI Exception: " + e.toString());
-                        }
-                        if (serviceUri.isAbsolute()) {
-
-                            // POST example
-                            AppMapRequest appMapRequest = new AppMapRequest();
-                            appMapRequest.setTaskId(taskId);
-
-                            LOGGER.info("Going to call service at " + serviceUri.toString());
-                            //restTemplate = new RestTemplate();
-                            try {
-                                ObjectMapper objectMapper = new ObjectMapper();
-                                RestTemplate restTemplate = new RestTemplate();
-                                HttpHeaders headers = new HttpHeaders();
-                                headers.setContentType(MediaType.APPLICATION_JSON);
-
-                                HttpEntity<AppMapRequest> requestEntity = new HttpEntity<AppMapRequest>(appMapRequest, headers);
-                                ResponseEntity<AppMapReply> responseEntity = restTemplate.postForEntity(serviceUri, requestEntity, AppMapReply.class);
-                                AppMapReply appMapReply = responseEntity.getBody();
-                                LOGGER.info("AppMap for taskId " + appMapReply.getTaskId() + " received: " + appMapReply.getAppMap());
-                                searchService = false;
-                            } catch (HttpServerErrorException e) {
-                                LOGGER.info("Could not call service " + serviceInstance.getInstanceId() + ": HTTP 500");
-                                instanceList.remove(serviceInstance);
-                            } catch (Exception e) {
-                                LOGGER.info("Could not call service " + serviceInstance.getInstanceId() + "!");
-                                LOGGER.info(e.toString());
-                                instanceList.remove(serviceInstance);
-                            }
-                        } else {
-                            LOGGER.info("URI not absolute: " + serviceUri.toString());
+                            LOGGER.info("Could not call service " + serviceInstance.getInstanceId() + "!");
+                            LOGGER.info(e.toString());
                             instanceList.remove(serviceInstance);
                         }
                     } else {
-                        LOGGER.info("No valid service address available! urlString: " + urlString);
+                        LOGGER.info("URI not absolute: " + serviceUri.toString());
                         instanceList.remove(serviceInstance);
                     }
                 } else {
-                    // noPF
-                    LOGGER.info("Applying slurry without AppMap (noPF).");
-                    instanceList.clear();
-                    bUsePf = false;
-                    searchService = false;
+                    LOGGER.info("No valid service address available! urlString: " + urlString);
+                    instanceList.remove(serviceInstance);
                 }
-            } else {
-                LOGGER.info("No services for serviceId " + serviceId + " available!");
+            } else if (sChosenId.equals("noPF")) {
+                // noPF
+                LOGGER.info("Applying slurry without AppMap (noPF).");
                 instanceList.clear();
+                bUsePf = false;
                 searchService = false;
+            } else {
+                // No path found! Process fails!
+                LOGGER.warning("Process fails. Process instance is deleted. Please restart proof-of-concept.");
+                LOGGER.warning("Variables:");
+                LOGGER.warning("\tsChosenId: " + sChosenId);
+                LOGGER.warning("\tserviceInstance: " + serviceInstance.toString());
+                searchService = false;
+                runtimeService.deleteProcessInstance(execution.getProcessInstanceId(), sChosenId);
+                System.exit(-1);
             }
         }
 

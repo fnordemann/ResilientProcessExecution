@@ -33,16 +33,18 @@ OR manually trigger execution by:
     java -jar -Dspring.profiles.active=cloud server-0.0.1-SNAPSHOT.jar > ../logs/eureka_cloud.txt &
     java -jar -Dspring.profiles.active=sp server-0.0.1-SNAPSHOT.jar > ../logs/eureka_sp.txt &
     java -jar -Dspring.profiles.active=nirs server-0.0.1-SNAPSHOT.jar > ../logs/eureka_nirs.txt &
-    java -jar -Dspring.profiles.active=lgcs server-0.0.1-SNAPSHOT.jar > ../logs/eureka_lgcs.txt &
-    java -jar -Dspring.profiles.active=osas1 osas-service-0.1.0.jar > ../logs/osas1.txt &
-    java -jar -Dspring.profiles.active=osasmov osas-service-0.1.0.jar > ../logs/osas1.txt &
-    java -jar -Dspring.profiles.active=ogcs1 ogcs-service-0.1.0.jar > ../logs/ogcs1.txt &
+    java -jar -Dspring.profiles.active=loc server-0.0.1-SNAPSHOT.jar > ../logs/eureka_loc.txt &
+    java -jar -Dspring.profiles.active=pf pf-service-0.1.0.jar > ../logs/pf1.txt &
+    java -jar -Dspring.profiles.active=pfmov pf-service-0.1.0.jar > ../logs/pfmov.txt &
+    java -jar -Dspring.profiles.active=ref1 ref-service-0.1.0.jar > ../logs/ref1.txt &
+    java -jar -Dspring.profiles.active=refmov ref-service-0.1.0.jar > ../logs/refmov.txt &
+    java -jar -Dspring.profiles.active=cell1 cell-service-0.1.0.jar > ../logs/cell1.txt &
+    java -jar lab-service-0.1.0.jar > ../logs/lab.txt &
     java -jar nirs-service-0.1.0.jar > ../logs/nirs.txt &
-    java -jar lgcs-service-0.1.0.jar > ../logs/lgcs.txt &
-    java -jar mgmt-0.0.1-SNAPSHOT.jar > ../logs/mgmt.txt &
-    java -jar mgmtmov-0.0.1-SNAPSHOT.jar > ../logs/mgmt_mov.txt &
+    java -jar loc-service-0.1.0.jar > ../logs/loc.txt &
     java -jar neighbor-service-0.1.0.jar > ../logs/neighbor.txt &
     java -jar sp-0.0.1-SNAPSHOT.jar > ../logs/sp.txt &
+
     tail -f ../logs/sp.txt
 
 ### Option 3: Compile and run source code
@@ -59,19 +61,19 @@ OR manually compile:
     mvn clean install
     cd ../eureka-server
     mvn clean install
-    cd ../lgcs-service
-    mvn clean install
-    cd ../mgmt
-    mvn clean install
-    cd ../mgmt-mov
-    mvn clean install
     cd ../neighbor-service
+    mvn clean install
+    cd ../pf-service
+    mvn clean install
+    cd ../lab-service
     mvn clean install
     cd ../nirs-service
     mvn clean install
-    cd ../ogcs-service
+    cd ../ref-service
     mvn clean install
-    cd ../osas-service
+    cd ../cell-service
+    mvn clean install
+    cd ../loc-service
     mvn clean install
     cd ../sp
     mvn clean install
@@ -86,16 +88,18 @@ OR manually trigger execution by:
     java -jar -Dspring.profiles.active=cloud eureka-server/target/server-0.0.1-SNAPSHOT.jar > logs/eureka_cloud.txt &
     java -jar -Dspring.profiles.active=sp eureka-server/target/server-0.0.1-SNAPSHOT.jar > logs/eureka_sp.txt &
     java -jar -Dspring.profiles.active=nirs eureka-server/target/server-0.0.1-SNAPSHOT.jar > logs/eureka_nirs.txt &
-    java -jar -Dspring.profiles.active=lgcs eureka-server/target/server-0.0.1-SNAPSHOT.jar > logs/eureka_lgcs.txt &
-    java -jar -Dspring.profiles.active=osas1 osas-service/target/osas-service-0.1.0.jar > logs/osas1.txt &
-    java -jar -Dspring.profiles.active=osasmov osas-service/target/osas-service-0.1.0.jar > logs/osas1.txt &
-    java -jar -Dspring.profiles.active=ogcs1 ogcs-service/target/ogcs-service-0.1.0.jar > logs/ogcs1.txt &
+    java -jar -Dspring.profiles.active=loc eureka-server/target/server-0.0.1-SNAPSHOT.jar > logs/eureka_loc.txt &
+    java -jar -Dspring.profiles.active=pf pf-service/target/pf-service-0.1.0.jar > logs/pf.txt &
+    java -jar -Dspring.profiles.active=pfmov pf-service/target/pf-service-0.1.0.jar > logs/pfmov.txt &
+    java -jar -Dspring.profiles.active=ref1 ref-service/target/ref-service-0.1.0.jar > logs/ref1.txt &
+    java -jar -Dspring.profiles.active=refmov ref-service/target/ref-service-0.1.0.jar > logs/refmov.txt &
+    java -jar -Dspring.profiles.active=cell1 cell-service/target/cell-service-0.1.0.jar > logs/cell1.txt &
+    java -jar lab-service/target/lab-service-0.1.0.jar > logs/lab.txt &
     java -jar nirs-service/target/nirs-service-0.1.0.jar > logs/nirs.txt &
-    java -jar lgcs-service/target/lgcs-service-0.1.0.jar > logs/lgcs.txt &
-    java -jar mgmt/target/mgmt-0.0.1-SNAPSHOT.jar > logs/mgmt.txt &
-    java -jar mgmt-mov/target/mgmtmov-0.0.1-SNAPSHOT.jar > logs/mgmt_mov.txt &
+    java -jar loc-service/target/loc-service-0.1.0.jar > logs/loc.txt &
     java -jar neighbor-service/target/neighbor-service-0.1.0.jar > logs/neighbor.txt &
     java -jar sp/target/sp-0.0.1-SNAPSHOT.jar > logs/sp.txt &
+
     tail -f logs/sp.txt
 
 ## Controlling scenario execution
@@ -128,21 +132,20 @@ Process and service operation can be examined from logs at:
 Some services also provide information by accessing their interfaces. Besides, port information is helpful to adapt scenario execution. The port mapping for the scenario participants is illustrated below:
 - Locally-emulated Cloud environment:
     - Eureka-Cloud: 8020
-    - LAB: 8023
     - PF: 8024
-    - MGMT: 8025
-    - REF: 8026/8027
-    - CELL: 8028/8029
+    - LAB: 8023
+    - REF: 8026
+    - CELL: 8028
 - SP:
     - Eureka-SP: 8030
     - Neighbor-Service: 8031
     - Camunda-SP: 8035
-    - MGMT-Mov: 8036
+    - PF(L): 8038
     - REF(L): 8037
 - NIRS:
     - Eureka-NIRS: 8040
     - NIRS: 8045
-- LGCS:
+- LOC:
     - Eureka-LOC: 8050
     - LOC: 8055
 

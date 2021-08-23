@@ -53,9 +53,16 @@ public class SpApplication {
 
         // Start process
         LOGGER.info("");
-        LOGGER.info("--------------------------------");
-        LOGGER.info("In slurry spreader process (SP).");
-        LOGGER.info("--------------------------------");
+        LOGGER.info("-------------------------------");
+        LOGGER.info("Slurry process S3 started...");
+        LOGGER.info("\ttaskId: 0000");
+        LOGGER.info("\tdMinAccuracy: 0.3");
+        LOGGER.info("\tdCostLimit: 2.0");
+        LOGGER.info("\tdAccuracyWeight: 0.5");
+        LOGGER.info("\tdCostWeight: 0.3");
+        LOGGER.info("\tdTimeWeight: 0.2");
+        LOGGER.info("* Graph-based decision making *");
+        LOGGER.info("-------------------------------");
         LOGGER.info("");
         runtimeService.startProcessInstanceByKey("SpKey");
     }
