@@ -154,7 +154,8 @@ public class ServiceSearch {
             for (int i = 0; i < neighborArray.length; i++) {
                 serverList.add(neighborArray[i].getNeighborAddress());
             }
-            LOGGER.info("Current neighbors of SP (Eureka server list): " + serverList.toString());
+            if (debug == 1)
+                LOGGER.info("Current neighbors of SP (Eureka server list): " + serverList.toString());
         } catch (HttpServerErrorException e) {
             LOGGER.info("Could not call neighbor service!");
         } catch (Exception e) {

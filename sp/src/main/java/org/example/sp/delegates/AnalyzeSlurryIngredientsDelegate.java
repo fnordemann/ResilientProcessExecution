@@ -38,9 +38,9 @@ public class AnalyzeSlurryIngredientsDelegate implements JavaDelegate {
     private RuntimeService runtimeService = processEngine.getRuntimeService();
     private final static Logger LOGGER = Logger.getLogger("ANALYZE-SLURRY");
 
-    int debug = 0;
-    private ServiceDecisionGraph serviceDecisionGraph = new ServiceDecisionGraph();
     private ServiceSearch serviceSearch = new ServiceSearch();
+
+    int debug = 0;
 
 
     public void execute(DelegateExecution execution) throws Exception {
@@ -52,6 +52,8 @@ public class AnalyzeSlurryIngredientsDelegate implements JavaDelegate {
         double dAccuracyWeight;
         double dCostWeight;
         double dTimeWeight;
+
+        ServiceDecisionGraph serviceDecisionGraph = new ServiceDecisionGraph();
 
         // Fetch taskId
         try {
@@ -132,11 +134,11 @@ public class AnalyzeSlurryIngredientsDelegate implements JavaDelegate {
         // Search for service until an appropriate is found
         while (searchService) {
             // Update graph for precision farming segment
-            serviceDecisionGraph.updateGraph(serviceSearch.findServices("precision-farming-service"), dAccuracyWeight, dCostWeight, dTimeWeight);
+            serviceDecisionGraph.updateGraph("precision-farming", serviceSearch.findServices("precision-farming-service"), dAccuracyWeight, dCostWeight, dTimeWeight);
             // Update graph for slurry analysis segment
-            serviceDecisionGraph.updateGraph(instanceList, dAccuracyWeight, dCostWeight, dTimeWeight);
+            serviceDecisionGraph.updateGraph("slurry-analysis", instanceList, dAccuracyWeight, dCostWeight, dTimeWeight);
             // Update graph for position correction segment
-            serviceDecisionGraph.updateGraph(serviceSearch.findServices("gps-service"), dAccuracyWeight, dCostWeight, dTimeWeight);
+            serviceDecisionGraph.updateGraph("position-sensing", serviceSearch.findServices("gps-service"), dAccuracyWeight, dCostWeight, dTimeWeight);
             serviceDecisionGraph.printGraph();
 
             String sChosenId = serviceDecisionGraph.selectServiceGraphBased("G1", "S'", dMinAccuracy, dCostLimit, "slurry-analysis");
@@ -198,7 +200,6 @@ public class AnalyzeSlurryIngredientsDelegate implements JavaDelegate {
                 LOGGER.warning("Process fails. Process instance is deleted. Please restart proof-of-concept.");
                 LOGGER.warning("Variables:");
                 LOGGER.warning("\tsChosenId: " + sChosenId);
-                LOGGER.warning("\tserviceInstance: " + serviceInstance.toString());
                 searchService = false;
                 runtimeService.deleteProcessInstance(execution.getProcessInstanceId(), sChosenId);
                 System.exit(-1);

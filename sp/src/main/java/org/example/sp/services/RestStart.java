@@ -21,7 +21,7 @@ public class RestStart {
     // Variables
     private ProcessStart latestProcessStart = null;
     private ObjectMapper objectMapper = new ObjectMapper();
-    private final static Logger LOGGER = Logger.getLogger("REST-START");
+    private final static Logger LOGGER = Logger.getLogger("S3 REST-BASED START");
     private ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
     private RuntimeService runtimeService = processEngine.getRuntimeService();
 

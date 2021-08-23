@@ -37,7 +37,7 @@ public class SpApplication {
 
     @Autowired
     private RuntimeService runtimeService;
-    private final static Logger LOGGER = Logger.getLogger("SP");
+    private final static Logger LOGGER = Logger.getLogger("S3 INITIAL START");
     @Autowired
     private DiscoveryClient discoveryClient;
     @Autowired

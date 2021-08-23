@@ -26,7 +26,7 @@ public class ServiceDecisionGraph {
     private final static Logger LOGGER = Logger.getLogger("SERVICE-DECISION-GRAPH-BASED");
 
     // Graph variables
-    private static Graph<String, DefaultWeightedEdge> directedGraph = new SimpleDirectedWeightedGraph<>(DefaultWeightedEdge.class);
+    private Graph<String, DefaultWeightedEdge> directedGraph = new SimpleDirectedWeightedGraph<>(DefaultWeightedEdge.class);
 
     final String sP = "S";
     final String sP_ = "S'";
@@ -42,10 +42,13 @@ public class ServiceDecisionGraph {
     final String GPS = "GPS";
     final String CELL = "CELL";
     final String LOC = "LOC";
+
+    /*
     List<String> vertexList = new ArrayList<String>();
     List<String> preFarmingList = new ArrayList<String>();
     List<String> analysisList = new ArrayList<String>();
     List<String> corrGpsList = new ArrayList<String>();
+    */
 
     double dAccPF = 0.9;
     double dAccPFL = 0.7;
@@ -160,6 +163,7 @@ public class ServiceDecisionGraph {
         directedGraph.setEdgeWeight(eLOC, dWeight);
 
         // create vertex lists
+        /*
         vertexList.add(sP);
         vertexList.add(sP_);
         vertexList.add(G1);
@@ -185,32 +189,33 @@ public class ServiceDecisionGraph {
 
         corrGpsList.add(CELL);
         corrGpsList.add(LOC);
+
+         */
     }
 
-    public void updateGraph(List<Instance> instanceList, double dAccuracyWeight, double dCostWeight, double dTimeWeight) {
-        this.updateGraph(instanceList, 0.0, dAccuracyWeight, dCostWeight, dTimeWeight);
+    public void updateGraph(String sProcessSegment, List<Instance> instanceList, double dAccuracyWeight, double dCostWeight, double dTimeWeight) {
+        this.updateGraph(sProcessSegment, instanceList, 0.0, dAccuracyWeight, dCostWeight, dTimeWeight);
     }
 
-    public void updateGraph(List<Instance> instanceList, double dMinAccuracy, double dAccuracyWeight, double dCostWeight, double dTimeWeight) {
+    public void updateGraph(String sProcessSegment, List<Instance> instanceList, double dMinAccuracy, double dAccuracyWeight, double dCostWeight, double dTimeWeight) {
         // Preparing list for unavailable vertices
         List<String> unavailableVertexList = new ArrayList<String>();
-        if (instanceList.size() > 0) {
-            String sProcessSegment = instanceList.get(0).getApp();
-            System.out.println("App: " + instanceList.get(0).getApp());
-            System.out.println("InstanceId: " + instanceList.get(0).getInstanceId());
-            System.out.println("Instance: " + instanceList.get(0).toString());
 
-            if (sProcessSegment.equals("PRECISION-FARMING-SERVICE")) {
-                unavailableVertexList = preFarmingList;
+            if (sProcessSegment.equals("precision-farming")) {
+                unavailableVertexList.add(PF);
+                unavailableVertexList.add(PFL);
                 System.out.println("Updating precision farming segment in graph...");
-            } else if (sProcessSegment.equals("INGREDIENTS-SERVICE")) {
-                unavailableVertexList = analysisList;
+            } else if (sProcessSegment.equals("slurry-analysis")) {
+                unavailableVertexList.add(LAB);
+                unavailableVertexList.add(NIRS);
+                unavailableVertexList.add(REF);
+                unavailableVertexList.add(REFL);
                 System.out.println("Updating slurry analysis segment in graph...");
-            } else if (sProcessSegment.equals("GPS-SERVICE")) {
+            } else if (sProcessSegment.equals("position-sensing")) {
                 System.out.println("Updating position correction segment in graph...");
-                unavailableVertexList = corrGpsList;
+                unavailableVertexList.add(CELL);
+                unavailableVertexList.add(LOC);
             }
-        }
 
         // Updating the graph weights
         for (int i = 0; i < instanceList.size(); i++) {
@@ -303,7 +308,6 @@ public class ServiceDecisionGraph {
         }
 
         // Remove unavailable / unqualified services from graph
-        System.out.println("unavailableVertexList: " + unavailableVertexList.toString());
         removeFromGraph(unavailableVertexList);
 
         // Check noPF for min accucary

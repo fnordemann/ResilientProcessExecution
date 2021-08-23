@@ -38,9 +38,9 @@ public class PrecisionFarmingDelegate implements JavaDelegate {
     private RuntimeService runtimeService = processEngine.getRuntimeService();
     private final static Logger LOGGER = Logger.getLogger("PRECISION-FARMING");
 
-    int debug = 0;
-    private ServiceDecisionGraph serviceDecisionGraph = new ServiceDecisionGraph();
     private ServiceSearch serviceSearch = new ServiceSearch();
+
+    int debug = 0;
 
 
     public void execute(DelegateExecution execution) throws Exception {
@@ -52,6 +52,8 @@ public class PrecisionFarmingDelegate implements JavaDelegate {
         double dCostWeight;
         double dTimeWeight;
         boolean bUsePf = true;
+
+        ServiceDecisionGraph serviceDecisionGraph = new ServiceDecisionGraph();
 
         // Fetch taskId
         try {
@@ -133,11 +135,11 @@ public class PrecisionFarmingDelegate implements JavaDelegate {
         while (searchService) {
             // Select by using a multi-criteria graph
             // Update graph for precision farming segment
-            serviceDecisionGraph.updateGraph(instanceList, dAccuracyWeight, dCostWeight, dTimeWeight);
+            serviceDecisionGraph.updateGraph("precision-farming", instanceList, dAccuracyWeight, dCostWeight, dTimeWeight);
             // Update graph for slurry analysis segment
-            serviceDecisionGraph.updateGraph(serviceSearch.findServices("ingredients-service"), dAccuracyWeight, dCostWeight, dTimeWeight);
+            serviceDecisionGraph.updateGraph("slurry-analysis", serviceSearch.findServices("ingredients-service"), dAccuracyWeight, dCostWeight, dTimeWeight);
             // Update graph for position correction segment
-            serviceDecisionGraph.updateGraph(serviceSearch.findServices("gps-service"), dAccuracyWeight, dCostWeight, dTimeWeight);
+            serviceDecisionGraph.updateGraph("position-sensing", serviceSearch.findServices("gps-service"), dAccuracyWeight, dCostWeight, dTimeWeight);
             serviceDecisionGraph.printGraph();
 
             // Select service
@@ -206,7 +208,6 @@ public class PrecisionFarmingDelegate implements JavaDelegate {
                 LOGGER.warning("Process fails. Process instance is deleted. Please restart proof-of-concept.");
                 LOGGER.warning("Variables:");
                 LOGGER.warning("\tsChosenId: " + sChosenId);
-                LOGGER.warning("\tserviceInstance: " + serviceInstance.toString());
                 searchService = false;
                 runtimeService.deleteProcessInstance(execution.getProcessInstanceId(), sChosenId);
                 System.exit(-1);
