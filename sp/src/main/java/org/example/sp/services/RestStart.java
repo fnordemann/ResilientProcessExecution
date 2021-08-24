@@ -21,7 +21,7 @@ public class RestStart {
     // Variables
     private ProcessStart latestProcessStart = null;
     private ObjectMapper objectMapper = new ObjectMapper();
-    private final static Logger LOGGER = Logger.getLogger("REST-START");
+    private final static Logger LOGGER = Logger.getLogger("S4 REST-BASED START");
     private ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
     private RuntimeService runtimeService = processEngine.getRuntimeService();
 
@@ -48,10 +48,14 @@ public class RestStart {
         }
 
         LOGGER.info("");
-        LOGGER.info("---------");
-        LOGGER.info("Slurry process started with taskId "
-                + givenProcessStart.getTaskId() + ".");
-        LOGGER.info("---------");
+        LOGGER.info("-------------------------------");
+        LOGGER.info("Slurry process S4 started...");
+        LOGGER.info("\ttaskId: "
+                + givenProcessStart.getTaskId());
+        LOGGER.info("*  WSM-based decision making  *");
+        LOGGER.info("** Initialized by REST-POST  **");
+        LOGGER.info("-------------------------------");
+        LOGGER.info("");
 
         // map object to JSON for Camunda transfer
         try {

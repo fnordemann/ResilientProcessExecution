@@ -37,7 +37,7 @@ public class SpApplication {
 
     @Autowired
     private RuntimeService runtimeService;
-    private final static Logger LOGGER = Logger.getLogger("SP");
+    private final static Logger LOGGER = Logger.getLogger("S4 INITIAL START");
     @Autowired
     private DiscoveryClient discoveryClient;
     @Autowired
@@ -53,9 +53,10 @@ public class SpApplication {
 
         // Start process
         LOGGER.info("");
-        LOGGER.info("--------------------------------");
-        LOGGER.info("In slurry spreader process (SP).");
-        LOGGER.info("--------------------------------");
+        LOGGER.info("-------------------------------");
+        LOGGER.info("Slurry process S4 started...");
+        LOGGER.info("*  WSM-based decision making  *");
+        LOGGER.info("-------------------------------");
         LOGGER.info("");
         runtimeService.startProcessInstanceByKey("SpKey");
     }

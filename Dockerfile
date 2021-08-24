@@ -15,6 +15,6 @@ COPY postman-rest-helpercalls/ /postman-rest-helpercalls/
 COPY sp/ /sp/
 COPY *.sh /
 
-EXPOSE 8020 8023 8024 8025 8026 8027 8028 8029 8030 8031 8035 8036 8037 8038 8040 8041 8045 8050 8055 8056
+EXPOSE 8020 8025 8026 8027 8028 8029 8030 8031 8035 8036 8037 8040 8041 8045 8050 8055 8056
 RUN bash start_compilation.sh
 CMD bash start_freshlycompiled_services.sh
