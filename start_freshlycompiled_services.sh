@@ -29,11 +29,11 @@ java -jar -Dspring.profiles.active=ref2 ref-service/target/ref-service-0.1.0.jar
 java -jar -Dspring.profiles.active=refmov ref-service/target/ref-service-0.1.0.jar > logs/refmov.txt &
 java -jar -Dspring.profiles.active=cell1 cell-service/target/cell-service-0.1.0.jar > logs/cell1.txt &
 java -jar -Dspring.profiles.active=cell2 cell-service/target/cell-service-0.1.0.jar > logs/cell2.txt &
-java -jar nirs-service/target/nirs-service-0.1.0.jar > logs/nirs.txt &
-java -jar loc-service/target/loc-service-0.1.0.jar > logs/loc.txt &
+java -jar neighbor-service/target/neighbor-service-0.1.0.jar > logs/neighbor.txt &
 java -jar mgmt/target/mgmt-0.0.1-SNAPSHOT.jar > logs/mgmt.txt &
 java -jar mgmt-mov/target/mgmtmov-0.0.1-SNAPSHOT.jar > logs/mgmt_mov.txt &
-java -jar neighbor-service/target/neighbor-service-0.1.0.jar > logs/neighbor.txt &
+java -jar nirs-service/target/nirs-service-0.1.0.jar > logs/nirs.txt &
+java -jar loc-service/target/loc-service-0.1.0.jar > logs/loc.txt &
 java -jar sp/target/sp-0.0.1-SNAPSHOT.jar > logs/sp.txt &
 
 # Show log of SP
