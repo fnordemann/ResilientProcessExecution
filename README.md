@@ -1,5 +1,5 @@
 # Resilient Business Process Execution
-This repository provides the proof-of-concept implementation for the resiliency concepts and implemention strategies presented in the paper *Resilient Business Process Modeling and Execution using BPMN and Microservices*. Since setting up an unreliable communication environment for evaluating the proof-of-concept is cumbersome, the code was adapted to be executable on a single system. A Neighbor-Service for *SP* can add and delete neighbors, resulting in an emulated unreliable communication environment. By interfacing a proactive routing protocol used in the unreliable network, the code may be used for execution in real-world environments.
+This repository provides the proof-of-concept implementation for the resiliency concepts and implemention strategies presented in the paper *Resilient Business Process Modeling and Execution using BPMN and Microservices*. Since setting up an unreliable communication environment for evaluating the proof-of-concept is cumbersome, the code was adapted to be executable on a single system. A Neighbor-Service for *S3* can add and delete neighbors, resulting in an emulated unreliable communication environment. By interfacing a proactive routing protocol used in the unreliable network, the code may be used for execution in real-world environments.
 
 ## Run the proof-of-concept implementation
 The following three options exist to run the proof-of-concept implementation. Afterward, the execution can be controlled and manipulated by the methods presented in the next section.
@@ -111,17 +111,17 @@ REST calls can be used to a start slurry process, to add/delete neighbor nodes a
     postman-rest-helpercalls -> Postman_REST_Helpercalls.postman_collection.json
 
 ### Controlling and inspecting BPMN processes running in Camunda BPM
-*MGMT* and *SP* execute BPMN processes that can be started / monitored from Camunda tools (for *username/password*, use *demo/demo*). Use Camunda Tasklist to start a slurry process and Camunda Cockpit to inspect running processes at:
+*MGMT* and *S3* execute BPMN processes that can be started / monitored from Camunda tools (for *username/password*, use *demo/demo*). Use Camunda Tasklist to start a slurry process and Camunda Cockpit to inspect running processes at:
 - MGMT: http://localhost:8025
-- SP: http://localhost:8035
-- MGMT-MOV on SP: http://localhost:8036
+- S3: http://localhost:8035
+- MGMT(L) on S3: http://localhost:8036
 
 ### Inspecting Eureka server instances
 The Eureka servers are providing information about their current status, including registered services:
 - Eureka-Cloud: http://localhost:8020
-- Eureka-SP: http://localhost:8030
+- Eureka-S3: http://localhost:8030
 - Eureka-NIRS: http://localhost:8040
-- Eureka-LGCS: http://localhost:8050
+- Eureka-LOC: http://localhost:8050
 
 ### Process and service logs
 Process and service operation can be examined from logs at:
@@ -136,10 +136,10 @@ Some services also provide information by accessing their interfaces. Besides, p
     - LAB: 8023
     - REF: 8026
     - CELL: 8028
-- SP:
-    - Eureka-SP: 8030
+- S3:
+    - Eureka-S3: 8030
     - Neighbor-Service: 8031
-    - Camunda-SP: 8035
+    - Camunda-S3: 8035
     - PF(L): 8038
     - REF(L): 8037
 - NIRS:
@@ -153,12 +153,12 @@ Some services also provide information by accessing their interfaces. Besides, p
 - Users may find the source code commentaries helpful for understanding/adapting the proof-of-concept.
 - Real-world deployments require to adapt the network configuration of services
     xyz-service->src->main->resources->application.yml
-- Service discovery and decision making is part of the *SP* implementation and may be used in other services.
-- Multiple instances of *OSAS/OGCS* may be started by using profiles *osas1/osas2 ogcs1/ogcs2*.
+- Service discovery and decision making is part of the *S3* implementation and may be used in other services.
 
 
 ## Used software
 - Java
 - Spring Framework
+- JGraphT Java Library
 - Camunda BPM
 - Docker (for executing the proof-of-concept)
