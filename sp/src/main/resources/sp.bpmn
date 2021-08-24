@@ -9,7 +9,7 @@
   <bpmn:signal id="Signal_1nfn5de" name="${sZipLogSignal}" />
   <bpmn:signal id="Signal_06aanx0" name="${sFarmsystemResultSignal}" />
   <bpmn:collaboration id="SlurryCollaboration">
-    <bpmn:participant id="Sp" name="Slurry proc. (S3)" processRef="SpKey" />
+    <bpmn:participant id="Sp" name="S3 on slurry spreader" processRef="SpKey" />
     <bpmn:participant id="Participant_1exclev" name="Ingridients reference (REF)" />
     <bpmn:participant id="Participant_0do7ppp" name="Near-infrared spectroscopy sensor (NIRS)" />
     <bpmn:participant id="Participant_0i4js6z" name="Precision Farming provider (PF)" />
@@ -156,9 +156,6 @@
       <bpmndi:BPMNShape id="Participant_0do7ppp_di" bpmnElement="Participant_0do7ppp" isHorizontal="true">
         <dc:Bounds x="395" y="629" width="300" height="60" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Participant_0i4js6z_di" bpmnElement="Participant_0i4js6z" isHorizontal="true">
-        <dc:Bounds x="156" y="224" width="300" height="60" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Participant_1hmmheu_di" bpmnElement="Participant_1hmmheu" isHorizontal="true">
         <dc:Bounds x="257" y="146" width="300" height="60" />
       </bpmndi:BPMNShape>
@@ -170,6 +167,9 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Participant_1ow8rxb_di" bpmnElement="Participant_1ow8rxb" isHorizontal="true">
         <dc:Bounds x="230" y="558" width="300" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_0i4js6z_di" bpmnElement="Participant_0i4js6z" isHorizontal="true">
+        <dc:Bounds x="156" y="230" width="300" height="60" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Group_0m52psv_di" bpmnElement="Group_0m52psv">
         <dc:Bounds x="250" y="320" width="216" height="210" />
@@ -191,10 +191,10 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="MessageFlow_120nsju_di" bpmnElement="MessageFlow_120nsju">
         <di:waypoint x="323" y="351" />
-        <di:waypoint x="323" y="284" />
+        <di:waypoint x="323" y="290" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="MessageFlow_1p7v220_di" bpmnElement="MessageFlow_1p7v220">
-        <di:waypoint x="336" y="284" />
+        <di:waypoint x="336" y="290" />
         <di:waypoint x="336" y="351" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0th07rp_di" bpmnElement="Flow_0th07rp">
