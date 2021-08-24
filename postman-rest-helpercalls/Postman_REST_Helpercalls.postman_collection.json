@@ -7,7 +7,36 @@
 	},
 	"item": [
 		{
-			"name": "StartSP",
+			"name": "StartS3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"taskId\":\"123456789\",\n    \"dMinAccuracy\":\"0.3\",\n    \"dCostLimit\":\"2.0\",\n    \"dAccuracyWeight\":\"0.5\",\n    \"dCostWeight\":\"0.3\",\n    \"dTimeWeight\":\"0.2\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8035/start",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8035",
+					"path": [
+						"start"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StartS4",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -159,7 +188,7 @@
 			"response": []
 		},
 		{
-			"name": "GetNeighbortableSP",
+			"name": "GetNeighbortableS3S4",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -191,7 +220,7 @@
 			"response": []
 		},
 		{
-			"name": "AddCloudNeighborsToSP",
+			"name": "AddCloudNeighborsToS3S4",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -221,7 +250,7 @@
 			"response": []
 		},
 		{
-			"name": "AddNIRSNeighborToSP",
+			"name": "AddNIRSNeighborToS3S4",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -251,7 +280,7 @@
 			"response": []
 		},
 		{
-			"name": "AddLGCSNeighborToSP",
+			"name": "AddLOCNeighborToS3S4",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -281,7 +310,7 @@
 			"response": []
 		},
 		{
-			"name": "DelCloudNeighborsFromSP",
+			"name": "DelCloudNeighborsFromS3S4",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -311,7 +340,7 @@
 			"response": []
 		},
 		{
-			"name": "DelNIRSNeighborFromSP",
+			"name": "DelNIRSNeighborFromS3S4",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -341,7 +370,7 @@
 			"response": []
 		},
 		{
-			"name": "DelLGCSNeighborFromSP",
+			"name": "DelLOCNeighborFromS3S4",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -371,7 +400,7 @@
 			"response": []
 		},
 		{
-			"name": "AddTestEnvNeighborsSP",
+			"name": "AddTestEnvNeighborsS3S4",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -437,7 +466,7 @@
 			"response": []
 		},
 		{
-			"name": "GetEurekaServicesSP",
+			"name": "GetEurekaServicesS3S4",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -505,7 +534,7 @@
 			"response": []
 		},
 		{
-			"name": "GetEurekaServicesLGCS",
+			"name": "GetEurekaServicesLOC",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -538,6 +567,5 @@
 			},
 			"response": []
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }
