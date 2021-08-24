@@ -5,8 +5,8 @@ WORKDIR /
 COPY datatypes/ /datatypes/
 COPY eureka-server/ /eureka-server/
 COPY neighbor-service/ /neighbor-service/
-COPY mgmt/ /mgmt/
-COPY mgmt-mov/ /mgmt-mov/
+COPY pf-service/ /pf-service/
+COPY lab-service/ /lab-service/
 COPY nirs-service/ /nirs-service/
 COPY ref-service/ /ref-service/
 COPY cell-service/ /cell-service/
