@@ -37,7 +37,7 @@ public class SpApplication {
 
     @Autowired
     private RuntimeService runtimeService;
-    private final static Logger LOGGER = Logger.getLogger("S4 INITIAL START");
+    private final static Logger LOGGER = Logger.getLogger("S4-Exe INITIAL START");
     @Autowired
     private DiscoveryClient discoveryClient;
     @Autowired
@@ -54,7 +54,7 @@ public class SpApplication {
         // Start process
         LOGGER.info("");
         LOGGER.info("-------------------------------");
-        LOGGER.info("Slurry process S4 started...");
+        LOGGER.info("Slurry process S4-Exe started.");
         LOGGER.info("*  WSM-based decision making  *");
         LOGGER.info("-------------------------------");
         LOGGER.info("");

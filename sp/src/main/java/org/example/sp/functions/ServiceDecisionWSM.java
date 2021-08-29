@@ -16,14 +16,14 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 // Class to decide on one of multiple services
-public class ServiceDecision {
+public class ServiceDecisionWSM {
 
     // Camunda variables
     private ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
     private RuntimeService runtimeService = processEngine.getRuntimeService();
-    private final static Logger LOGGER = Logger.getLogger("SERVICE-DECISION");
+    private final static Logger LOGGER = Logger.getLogger("SERVICE-DECISION-WSM");
 
-    public ServiceDecision() {
+    public ServiceDecisionWSM() {
     }
 
     // Selection based on Eureka instances
@@ -120,7 +120,7 @@ public class ServiceDecision {
 
             // Print matrix
             LOGGER.info("Decision matrix: ");
-            LOGGER.info("Weight Service0 Service1 Service2... (last line: summarization of criteria values for a service )");
+            LOGGER.info("Weight | Service0 Service1 Service2... (last line: summarization of criteria values for a service )");
             DecimalFormatSymbols customFormat = new DecimalFormatSymbols(Locale.getDefault());
             customFormat.setDecimalSeparator('.');
             customFormat.setGroupingSeparator(',');
@@ -131,6 +131,13 @@ public class ServiceDecision {
                     //System.out.print(weightedDecisionMatrix[j][i] + " ");
                 }
                 System.out.print("\n");
+                try {
+                    if (criteria.length > 1 && j == criteria.length - 1) {
+                        System.out.println("***");
+                    }
+                } catch (Exception e) {
+                    // nothing to do
+                }
             }
 
 

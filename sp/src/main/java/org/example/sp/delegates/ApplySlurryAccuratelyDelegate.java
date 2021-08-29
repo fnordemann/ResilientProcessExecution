@@ -10,8 +10,8 @@ import org.example.datatypes.GpsReply;
 import org.example.datatypes.GpsRequest;
 import org.example.eureka.Instance;
 import org.example.eureka.Metadata;
-import org.example.sp.functions.ServiceDecision;
-import org.example.sp.functions.ServiceSearch;
+import org.example.sp.functions.ServiceDecisionWSM;
+import org.example.sp.functions.ServiceDiscovery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.http.HttpEntity;
@@ -28,7 +28,7 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 @Component
-public class CorrectGpsDelegate implements JavaDelegate {
+public class ApplySlurryAccuratelyDelegate implements JavaDelegate {
 
     @Autowired
     private DiscoveryClient discoveryClient;
@@ -36,11 +36,11 @@ public class CorrectGpsDelegate implements JavaDelegate {
     // Camunda variables
     private ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
     private RuntimeService runtimeService = processEngine.getRuntimeService();
-    private final static Logger LOGGER = Logger.getLogger("CORRECT-GPS");
+    private final static Logger LOGGER = Logger.getLogger("APPLY-SLURRY-ACCURATELY");
 
     int debug = 0;
-    private ServiceDecision serviceDecision = new ServiceDecision();
-    private ServiceSearch serviceSearch = new ServiceSearch();
+    private ServiceDecisionWSM serviceDecisionWSM = new ServiceDecisionWSM();
+    private ServiceDiscovery serviceDiscovery = new ServiceDiscovery();
 
     public void execute(DelegateExecution execution) throws Exception {
         // Setup process variables
@@ -67,7 +67,7 @@ public class CorrectGpsDelegate implements JavaDelegate {
         double[] criteriaWeights = new double[]{0.7, 0.2, 0.1};
 
         LOGGER.info("Fetching available services for serviceId " + serviceId + "...");
-        List<Instance> instanceList = serviceSearch.findServices("gps-service");
+        List<Instance> instanceList = serviceDiscovery.findServices("gps-service");
 
         LOGGER.info("Available services: " + instanceList.size());
         for (int i = 0; i < instanceList.size(); i++) {
@@ -83,7 +83,7 @@ public class CorrectGpsDelegate implements JavaDelegate {
             // Instances found?
             if (instanceList.size() > 0) {
                 // Select by using decision matrix
-                serviceInstance = serviceDecision.selectServiceRestBased(instanceList, criteria, criteriaWeights);
+                serviceInstance = serviceDecisionWSM.selectServiceRestBased(instanceList, criteria, criteriaWeights);
 
                 if (serviceInstance != null) {
                     // Call chosen instance

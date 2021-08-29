@@ -33,15 +33,15 @@ import java.util.List;
 import java.util.logging.Logger;
 
 // Class to search for Eureka services / applications
-public class ServiceSearch {
+public class ServiceDiscovery {
 
     // Camunda variables
     private ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
     private RuntimeService runtimeService = processEngine.getRuntimeService();
-    private final static Logger LOGGER = Logger.getLogger("SERVICE-SEARCH");
+    private final static Logger LOGGER = Logger.getLogger("SERVICE-DISCOVERY");
     int debug = 0;
 
-    public ServiceSearch() {
+    public ServiceDiscovery() {
         // For test env
         addTestEnvNeighbors();
     }

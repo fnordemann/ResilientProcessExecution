@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.9.0">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.9.0">
   <bpmn:signal id="Signal_130ys5a" name="trash1" />
   <bpmn:signal id="Signal_0m70s51" name="${sStatusSignal}" />
   <bpmn:signal id="Signal_0il09nj" name="tractor123/stop" />
@@ -9,12 +9,13 @@
   <bpmn:signal id="Signal_1nfn5de" name="${sZipLogSignal}" />
   <bpmn:signal id="Signal_06aanx0" name="${sFarmsystemResultSignal}" />
   <bpmn:collaboration id="SlurryCollaboration">
-    <bpmn:participant id="Sp" name="S4 on slurry spreader" processRef="SpKey" />
+    <bpmn:participant id="Sp" name="S4-Exe on slurry spreader" processRef="SpKey" />
     <bpmn:participant id="Participant_1exclev" name="Ingridients reference (REF)" />
     <bpmn:participant id="Participant_0zxw00q" name="Cellular GPS corr. (CELL)" />
     <bpmn:participant id="Mgmt" name="MGMT" processRef="MgmtKey" />
     <bpmn:participant id="Participant_18bkvg1" name="Local GPS corr. (LOC)" />
     <bpmn:participant id="Participant_0do7ppp" name="Near-infrared spectroscopy sensor (NIRS)" />
+    <bpmn:participant id="Participant_1dt82o5" name="GPS" />
     <bpmn:messageFlow id="MessageFlow_02sc47h" name="Status" sourceRef="Task_15urs60" targetRef="IntermediateThrowEvent_1jnejq7" />
     <bpmn:messageFlow id="MessageFlow_146wqao" sourceRef="Participant_1exclev" targetRef="Task_0fues0g" />
     <bpmn:messageFlow id="MessageFlow_1ocdihj" sourceRef="Task_06kfpxy" targetRef="Participant_0zxw00q" />
@@ -27,17 +28,18 @@
     <bpmn:messageFlow id="MessageFlow_1omhoz1" sourceRef="Participant_18bkvg1" targetRef="Task_06kfpxy" />
     <bpmn:messageFlow id="MessageFlow_0xbafie" sourceRef="DeployTask" targetRef="StartEvent_1ovyfiz" />
     <bpmn:messageFlow id="MessageFlow_1wodbi8" sourceRef="Task_11v7qa0" targetRef="IntermediateThrowEvent_003ebys" />
+    <bpmn:messageFlow id="Flow_00wtf30" sourceRef="Participant_1dt82o5" targetRef="Task_06kfpxy" />
   </bpmn:collaboration>
   <bpmn:process id="SpKey" name="Sp" isExecutable="true">
     <bpmn:serviceTask id="Task_15urs60" name="Monitor&#10;operation" camunda:class="org.example.sp.delegates.MonitorOperationDelegate">
       <bpmn:incoming>SequenceFlow_1801aei</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1twb8mm</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:serviceTask id="Task_0fues0g" name="Analyze&#10; slurry" camunda:class="org.example.sp.delegates.AnalyzeSlurryIngredientsDelegate">
+    <bpmn:serviceTask id="Task_0fues0g" name="Analyze&#10; slurry" camunda:class="org.example.sp.delegates.AnalyzeSlurryDelegate">
       <bpmn:incoming>SequenceFlow_0k838e7</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0eh0amc</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:serviceTask id="Task_06kfpxy" name="Apply&#10;slurry" camunda:class="org.example.sp.delegates.CorrectGpsDelegate">
+    <bpmn:serviceTask id="Task_06kfpxy" name="Apply&#10;slurry&#10;accurately" camunda:class="org.example.sp.delegates.ApplySlurryAccuratelyDelegate">
       <bpmn:incoming>SequenceFlow_0eh0amc</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1lbpfzt</bpmn:outgoing>
     </bpmn:serviceTask>
@@ -184,13 +186,13 @@
         <di:waypoint x="542" y="477" />
         <di:waypoint x="563" y="477" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="ServiceTask_1835ojl_di" bpmnElement="Task_15urs60">
+      <bpmndi:BPMNShape id="ServiceTask_1835ojl_di" bpmnElement="Task_15urs60" bioc:stroke="#8e24aa" bioc:fill="#e1bee7" color:background-color="#e1bee7" color:border-color="#8e24aa">
         <dc:Bounds x="501" y="348" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="ServiceTask_1fsx1u4_di" bpmnElement="Task_0fues0g">
+      <bpmndi:BPMNShape id="ServiceTask_1fsx1u4_di" bpmnElement="Task_0fues0g" bioc:stroke="#fb8c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#fb8c00">
         <dc:Bounds x="442" y="437" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="ServiceTask_0x0izqj_di" bpmnElement="Task_06kfpxy">
+      <bpmndi:BPMNShape id="ServiceTask_0x0izqj_di" bpmnElement="Task_06kfpxy" bioc:stroke="#fb8c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#fb8c00">
         <dc:Bounds x="563" y="437" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="ParallelGateway_0qexffb_di" bpmnElement="ExclusiveGateway_0g5vycf">
@@ -215,7 +217,7 @@
         <dc:Bounds x="198" y="569" width="300" height="60" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Participant_0zxw00q_di" bpmnElement="Participant_0zxw00q" isHorizontal="true">
-        <dc:Bounds x="620" y="569" width="300" height="60" />
+        <dc:Bounds x="634" y="569" width="300" height="60" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Participant_01f75r4_di" bpmnElement="Mgmt" isHorizontal="true">
         <dc:Bounds x="156" y="110" width="854" height="181" />
@@ -298,7 +300,7 @@
       <bpmndi:BPMNShape id="EndEvent_175c0y5_di" bpmnElement="EndEvent_175c0y5">
         <dc:Bounds x="695" y="194" width="36" height="36" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="ServiceTask_1gw680c_di" bpmnElement="Task_0euu80y">
+      <bpmndi:BPMNShape id="ServiceTask_1gw680c_di" bpmnElement="Task_0euu80y" bioc:stroke="#000000" bioc:fill="#ffffff" color:background-color="#ffffff" color:border-color="#000000">
         <dc:Bounds x="510" y="172" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="IntermediateCatchEvent_1icmxl0_di" bpmnElement="IntermediateThrowEvent_1jnejq7">
@@ -311,10 +313,13 @@
         <dc:Bounds x="397" y="194" width="36" height="36" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Participant_18bkvg1_di" bpmnElement="Participant_18bkvg1" isHorizontal="true">
-        <dc:Bounds x="570" y="642" width="300" height="60" />
+        <dc:Bounds x="599" y="637" width="300" height="60" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Participant_0do7ppp_di" bpmnElement="Participant_0do7ppp" isHorizontal="true">
         <dc:Bounds x="247" y="642" width="300" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_1dt82o5_di" bpmnElement="Participant_1dt82o5" isHorizontal="true">
+        <dc:Bounds x="572" y="705" width="300" height="60" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="MessageFlow_02sc47h_di" bpmnElement="MessageFlow_02sc47h">
         <di:waypoint x="530" y="348" />
@@ -330,8 +335,8 @@
         <di:waypoint x="476" y="517" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="MessageFlow_1ocdihj_di" bpmnElement="MessageFlow_1ocdihj">
-        <di:waypoint x="633" y="517" />
-        <di:waypoint x="633" y="569" />
+        <di:waypoint x="634" y="517" />
+        <di:waypoint x="634" y="569" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="MessageFlow_1ckpaej_di" bpmnElement="MessageFlow_1ckpaej">
         <di:waypoint x="651" y="569" />
@@ -357,12 +362,12 @@
         <di:waypoint x="530" y="517" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="MessageFlow_1swbjca_di" bpmnElement="MessageFlow_1swbjca">
-        <di:waypoint x="584" y="517" />
-        <di:waypoint x="584" y="642" />
+        <di:waypoint x="600" y="517" />
+        <di:waypoint x="600" y="637" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="MessageFlow_1omhoz1_di" bpmnElement="MessageFlow_1omhoz1">
-        <di:waypoint x="602" y="642" />
-        <di:waypoint x="602" y="517" />
+        <di:waypoint x="613" y="637" />
+        <di:waypoint x="613" y="517" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="MessageFlow_0xbafie_di" bpmnElement="MessageFlow_0xbafie">
         <di:waypoint x="305" y="240" />
@@ -373,6 +378,10 @@
       <bpmndi:BPMNEdge id="MessageFlow_1wodbi8_di" bpmnElement="MessageFlow_1wodbi8">
         <di:waypoint x="798" y="390" />
         <di:waypoint x="798" y="218" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_00wtf30_di" bpmnElement="Flow_00wtf30">
+        <di:waypoint x="580" y="705" />
+        <di:waypoint x="580" y="517" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

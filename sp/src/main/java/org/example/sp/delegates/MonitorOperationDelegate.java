@@ -9,7 +9,7 @@ import org.camunda.bpm.engine.delegate.JavaDelegate;
 import org.example.datatypes.ProcessStatus;
 import org.example.eureka.Instance;
 import org.example.eureka.Metadata;
-import org.example.sp.functions.ServiceSearch;
+import org.example.sp.functions.ServiceDiscovery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.http.HttpEntity;
@@ -37,7 +37,7 @@ public class MonitorOperationDelegate implements JavaDelegate {
     private final static Logger LOGGER = Logger.getLogger("MONITOR-OPERATION");
 
     // Service search
-    private ServiceSearch serviceSearch = new ServiceSearch();
+    private ServiceDiscovery serviceDiscovery = new ServiceDiscovery();
     private static int seqCounter = 0;
 
 
@@ -68,7 +68,7 @@ public class MonitorOperationDelegate implements JavaDelegate {
         String serviceId = "mgmt-service";
 
         LOGGER.info("Fetching available services for serviceId " + serviceId + "...");
-        List<Instance> instanceList = serviceSearch.findServices("mgmt-service");
+        List<Instance> instanceList = serviceDiscovery.findServices("mgmt-service");
 
         LOGGER.info("Available services: " + instanceList.size());
         for (int i = 0; i < instanceList.size(); i++) {

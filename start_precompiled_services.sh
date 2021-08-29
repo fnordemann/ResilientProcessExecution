@@ -17,14 +17,14 @@ fi
 cd precompiled
 
 echo "Starting all services in parallel, this might take a while."
-echo "Following, SP will start a slurry process and show its output log."
+echo "Following, the slurry spreader will start a slurry process and show its output log."
 echo "Use the Postman-REST-Calls to:"
-echo "     - restart the slurry process on S4 (slurry spreader)"
-echo "     - add/delete neighbors on S4"
+echo "     - restart the slurry process S4-Exe (on the slurry spreader)"
+echo "     - add/delete neighbors on the slurry spreader"
 echo "     - restart the MGMT process"
 echo "     - manually send status/log messages to MGMT"
 echo "     - inspect Eureka servers"
-echo "* During first slurry process execution on S4, not all services might be available."
+echo "* During first slurry process execution of the slurry spreader, not all services might be available."
 echo "* This is normal behavior - the services require different amounts of time to start."
 echo " "
 java -jar -Dspring.profiles.active=cloud server-0.0.1-SNAPSHOT.jar > ../logs/eureka_cloud.txt &

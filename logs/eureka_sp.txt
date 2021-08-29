@@ -1,4 +1,4 @@
-2021-08-26 14:26:48.392  INFO 32834 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$6187d4db] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-29 21:11:58.269  INFO 70251 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e263afd3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -8,69 +8,66 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.1.7.RELEASE)
 
-2021-08-26 14:26:56.150  INFO 32834 --- [           main] o.e.eureka.EurekaServerApplication       : The following profiles are active: sp
-2021-08-26 14:27:17.101  WARN 32834 --- [           main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2021-08-26 14:27:23.842  INFO 32834 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=70732503-b5f4-38d3-8aa5-7fe93f9c0d3b
-2021-08-26 14:27:27.165  INFO 32834 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$6187d4db] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-08-26 14:27:35.777  INFO 32834 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8030 (http)
-2021-08-26 14:27:37.052  INFO 32834 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-08-26 14:27:37.053  INFO 32834 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
-2021-08-26 14:27:39.803  INFO 32834 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-08-26 14:27:39.803  INFO 32834 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 43252 ms
-2021-08-26 14:27:43.433  WARN 32834 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2021-08-26 14:27:43.455  INFO 32834 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-08-26 14:27:43.987  INFO 32834 --- [           main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@255990cc
-2021-08-26 14:27:59.720  INFO 32834 --- [           main] c.s.j.s.i.a.WebApplicationImpl           : Initiating Jersey application, version 'Jersey: 1.19.1 03/11/2016 02:08 PM'
-2021-08-26 14:28:01.294  INFO 32834 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2021-08-26 14:28:01.297  INFO 32834 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2021-08-26 14:28:04.295  INFO 32834 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2021-08-26 14:28:04.295  INFO 32834 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2021-08-26 14:28:14.011  WARN 32834 --- [           main] o.s.c.n.a.ArchaiusAutoConfiguration      : No spring.application.name found, defaulting to 'application'
-2021-08-26 14:28:14.012  WARN 32834 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2021-08-26 14:28:14.013  INFO 32834 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-08-26 14:28:16.578  INFO 32834 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-08-26 14:28:27.268  INFO 32834 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2021-08-26 14:28:27.629  INFO 32834 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2021-08-26 14:28:27.629  INFO 32834 --- [           main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
-2021-08-26 14:28:27.918  INFO 32834 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1629980907917 with initial instances count: 0
-2021-08-26 14:28:28.733  INFO 32834 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
-2021-08-26 14:28:28.737  INFO 32834 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://127.0.0.1:8030/eureka/]
-2021-08-26 14:28:31.837  INFO 32834 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2021-08-26 14:28:31.838  INFO 32834 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2021-08-26 14:28:31.839  INFO 32834 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2021-08-26 14:28:31.839  INFO 32834 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2021-08-26 14:28:33.721  INFO 32834 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://127.0.0.1:8030/eureka/
-2021-08-26 14:28:33.739  INFO 32834 --- [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
-2021-08-26 14:28:33.741  INFO 32834 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
-2021-08-26 14:28:34.006  INFO 32834 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2021-08-26 14:28:35.788  INFO 32834 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UNKNOWN with eureka with status UP
-2021-08-26 14:28:35.845  INFO 32834 --- [      Thread-10] o.s.c.n.e.server.EurekaServerBootstrap   : Setting the eureka configuration..
-2021-08-26 14:28:35.846  INFO 32834 --- [      Thread-10] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka data center value eureka.datacenter is not set, defaulting to default
-2021-08-26 14:28:35.848  INFO 32834 --- [      Thread-10] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka environment value eureka.environment is not set, defaulting to test
-2021-08-26 14:28:36.180  INFO 32834 --- [      Thread-10] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
-2021-08-26 14:28:36.181  INFO 32834 --- [      Thread-10] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
-2021-08-26 14:28:36.181  INFO 32834 --- [      Thread-10] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
-2021-08-26 14:28:36.181  INFO 32834 --- [      Thread-10] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
-2021-08-26 14:28:36.182  INFO 32834 --- [      Thread-10] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
-2021-08-26 14:28:36.196  INFO 32834 --- [      Thread-10] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
-2021-08-26 14:28:36.806  INFO 32834 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8030 (http) with context path ''
-2021-08-26 14:28:36.807  INFO 32834 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8030
-2021-08-26 14:28:36.812  INFO 32834 --- [           main] o.e.eureka.EurekaServerApplication       : Started EurekaServerApplication in 138.495 seconds (JVM running for 154.197)
-2021-08-26 14:28:38.589  INFO 32834 --- [nio-8030-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-08-26 14:28:38.592  INFO 32834 --- [nio-8030-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-08-26 14:28:38.811  INFO 32834 --- [nio-8030-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 219 ms
-2021-08-26 14:28:39.419  WARN 32834 --- [nio-8030-exec-1] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: INGREDIENTS-SERVICE - e04-laptop21.fritz.box:ingredients-service:8037
-2021-08-26 14:28:39.419  WARN 32834 --- [nio-8030-exec-1] c.n.eureka.resources.InstanceResource    : Not Found (Renew): INGREDIENTS-SERVICE - e04-laptop21.fritz.box:ingredients-service:8037
-2021-08-26 14:28:41.311  INFO 32834 --- [nio-8030-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance INGREDIENTS-SERVICE/e04-laptop21.fritz.box:ingredients-service:8037 with status UP (replication=false)
-2021-08-26 14:28:43.674  INFO 32834 --- [nio-8030-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance INGREDIENTS-SERVICE/e04-laptop21.fritz.box:ingredients-service:8037 with status UP (replication=true)
-2021-08-26 14:29:25.039  INFO 32834 --- [nio-8030-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance SP/e04-laptop21.fritz.box:sp:8035 with status UP (replication=false)
-2021-08-26 14:29:25.094  INFO 32834 --- [nio-8030-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MGMT-SERVICE/e04-laptop21.fritz.box:mgmt-service:8036 with status UP (replication=false)
-2021-08-26 14:29:25.557  INFO 32834 --- [nio-8030-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance SP/e04-laptop21.fritz.box:sp:8035 with status UP (replication=true)
-2021-08-26 14:29:25.558  INFO 32834 --- [nio-8030-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MGMT-SERVICE/e04-laptop21.fritz.box:mgmt-service:8036 with status UP (replication=true)
-2021-08-26 14:29:36.190  INFO 32834 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2021-08-26 14:30:36.192  INFO 32834 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2021-08-26 14:31:36.196  INFO 32834 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
-2021-08-26 14:32:36.199  INFO 32834 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
-2021-08-26 14:33:36.206  INFO 32834 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
-2021-08-26 14:34:36.212  INFO 32834 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
-2021-08-26 14:35:36.216  INFO 32834 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2021-08-29 21:12:08.472  INFO 70251 --- [           main] o.e.eureka.EurekaServerApplication       : The following profiles are active: sp
+2021-08-29 21:12:26.584  WARN 70251 --- [           main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2021-08-29 21:12:32.002  INFO 70251 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=70732503-b5f4-38d3-8aa5-7fe93f9c0d3b
+2021-08-29 21:12:34.343  INFO 70251 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e263afd3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-29 21:12:40.694  INFO 70251 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8030 (http)
+2021-08-29 21:12:41.312  INFO 70251 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-29 21:12:41.314  INFO 70251 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2021-08-29 21:12:43.373  INFO 70251 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-29 21:12:43.374  INFO 70251 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 34444 ms
+2021-08-29 21:12:45.818  WARN 70251 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-08-29 21:12:45.819  INFO 70251 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-08-29 21:12:46.392  INFO 70251 --- [           main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@88d6f9b
+2021-08-29 21:12:57.900  INFO 70251 --- [           main] c.s.j.s.i.a.WebApplicationImpl           : Initiating Jersey application, version 'Jersey: 1.19.1 03/11/2016 02:08 PM'
+2021-08-29 21:12:59.014  INFO 70251 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2021-08-29 21:12:59.016  INFO 70251 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2021-08-29 21:13:01.067  INFO 70251 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2021-08-29 21:13:01.067  INFO 70251 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2021-08-29 21:13:07.579  WARN 70251 --- [           main] o.s.c.n.a.ArchaiusAutoConfiguration      : No spring.application.name found, defaulting to 'application'
+2021-08-29 21:13:07.581  WARN 70251 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-08-29 21:13:07.582  INFO 70251 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-08-29 21:13:10.343  INFO 70251 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-29 21:13:16.956  INFO 70251 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-08-29 21:13:17.562  INFO 70251 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2021-08-29 21:13:17.564  INFO 70251 --- [           main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2021-08-29 21:13:17.585  INFO 70251 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1630264397584 with initial instances count: 0
+2021-08-29 21:13:18.175  INFO 70251 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2021-08-29 21:13:18.186  INFO 70251 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://127.0.0.1:8030/eureka/]
+2021-08-29 21:13:19.963  INFO 70251 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2021-08-29 21:13:19.963  INFO 70251 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2021-08-29 21:13:19.964  INFO 70251 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2021-08-29 21:13:19.964  INFO 70251 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2021-08-29 21:13:21.319  INFO 70251 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://127.0.0.1:8030/eureka/
+2021-08-29 21:13:21.481  INFO 70251 --- [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2021-08-29 21:13:21.482  INFO 70251 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2021-08-29 21:13:21.621  INFO 70251 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-08-29 21:13:22.654  INFO 70251 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UNKNOWN with eureka with status UP
+2021-08-29 21:13:22.680  INFO 70251 --- [      Thread-10] o.s.c.n.e.server.EurekaServerBootstrap   : Setting the eureka configuration..
+2021-08-29 21:13:22.681  INFO 70251 --- [      Thread-10] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka data center value eureka.datacenter is not set, defaulting to default
+2021-08-29 21:13:22.682  INFO 70251 --- [      Thread-10] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka environment value eureka.environment is not set, defaulting to test
+2021-08-29 21:13:22.755  INFO 70251 --- [      Thread-10] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2021-08-29 21:13:22.756  INFO 70251 --- [      Thread-10] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2021-08-29 21:13:22.756  INFO 70251 --- [      Thread-10] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2021-08-29 21:13:22.756  INFO 70251 --- [      Thread-10] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2021-08-29 21:13:22.757  INFO 70251 --- [      Thread-10] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2021-08-29 21:13:22.772  INFO 70251 --- [      Thread-10] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2021-08-29 21:13:22.984  INFO 70251 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8030 (http) with context path ''
+2021-08-29 21:13:22.985  INFO 70251 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8030
+2021-08-29 21:13:22.991  INFO 70251 --- [           main] o.e.eureka.EurekaServerApplication       : Started EurekaServerApplication in 112.073 seconds (JVM running for 123.2)
+2021-08-29 21:13:24.970  INFO 70251 --- [nio-8030-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-29 21:13:24.971  INFO 70251 --- [nio-8030-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-29 21:13:25.179  INFO 70251 --- [nio-8030-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 207 ms
+2021-08-29 21:13:25.568  WARN 70251 --- [nio-8030-exec-2] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: INGREDIENTS-SERVICE - e04-laptop21.fritz.box:ingredients-service:8037
+2021-08-29 21:13:25.569  WARN 70251 --- [nio-8030-exec-2] c.n.eureka.resources.InstanceResource    : Not Found (Renew): INGREDIENTS-SERVICE - e04-laptop21.fritz.box:ingredients-service:8037
+2021-08-29 21:13:26.875  WARN 70251 --- [nio-8030-exec-3] c.n.e.registry.AbstractInstanceRegistry  : There is an existing lease and the existing lease's dirty timestamp 1630264405883 is greater than the one that is being registered 1630264374456
+2021-08-29 21:13:26.875  WARN 70251 --- [nio-8030-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Using the existing instanceInfo instead of the new instanceInfo as the registrant
+2021-08-29 21:13:26.956  INFO 70251 --- [nio-8030-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance INGREDIENTS-SERVICE/e04-laptop21.fritz.box:ingredients-service:8037 with status UP (replication=false)
+2021-08-29 21:13:26.959  INFO 70251 --- [nio-8030-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance INGREDIENTS-SERVICE/e04-laptop21.fritz.box:ingredients-service:8037 with status UP (replication=false)
+2021-08-29 21:13:28.402  INFO 70251 --- [nio-8030-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance INGREDIENTS-SERVICE/e04-laptop21.fritz.box:ingredients-service:8037 with status UP (replication=true)
+2021-08-29 21:13:42.800  INFO 70251 --- [nio-8030-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MGMT-SERVICE/e04-laptop21.fritz.box:mgmt-service:8036 with status UP (replication=false)
+2021-08-29 21:13:43.312  INFO 70251 --- [nio-8030-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MGMT-SERVICE/e04-laptop21.fritz.box:mgmt-service:8036 with status UP (replication=true)
+2021-08-29 21:13:43.419  INFO 70251 --- [nio-8030-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance SP/e04-laptop21.fritz.box:sp:8035 with status UP (replication=false)
+2021-08-29 21:13:43.927  INFO 70251 --- [nio-8030-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance SP/e04-laptop21.fritz.box:sp:8035 with status UP (replication=true)
+2021-08-29 21:14:22.774  INFO 70251 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms

@@ -10,8 +10,8 @@ import org.example.datatypes.AnalysisReply;
 import org.example.datatypes.AnalysisRequest;
 import org.example.eureka.Instance;
 import org.example.eureka.Metadata;
-import org.example.sp.functions.ServiceDecision;
-import org.example.sp.functions.ServiceSearch;
+import org.example.sp.functions.ServiceDecisionWSM;
+import org.example.sp.functions.ServiceDiscovery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -29,7 +29,7 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 @Component
-public class AnalyzeSlurryIngredientsDelegate implements JavaDelegate {
+public class AnalyzeSlurryDelegate implements JavaDelegate {
 
     @Autowired
     private DiscoveryClient discoveryClient;
@@ -40,8 +40,8 @@ public class AnalyzeSlurryIngredientsDelegate implements JavaDelegate {
     private final static Logger LOGGER = Logger.getLogger("ANALYZE-SLURRY");
 
     int debug = 0;
-    private ServiceDecision serviceDecision = new ServiceDecision();
-    private ServiceSearch serviceSearch = new ServiceSearch();
+    private ServiceDecisionWSM serviceDecisionWSM = new ServiceDecisionWSM();
+    private ServiceDiscovery serviceDiscovery = new ServiceDiscovery();
 
     public void execute(DelegateExecution execution) throws Exception {
 
@@ -74,7 +74,7 @@ public class AnalyzeSlurryIngredientsDelegate implements JavaDelegate {
         double[] criteriaWeights = new double[]{0.6, 0.3, 0.1};
 
         LOGGER.info("Fetching available services for serviceId " + serviceId + "...");
-        List<Instance> instanceList = serviceSearch.findServices("ingredients-service");
+        List<Instance> instanceList = serviceDiscovery.findServices("ingredients-service");
 
         LOGGER.info("Available services: " + instanceList.size());
         for (int i = 0; i < instanceList.size(); i++) {
@@ -90,7 +90,7 @@ public class AnalyzeSlurryIngredientsDelegate implements JavaDelegate {
             // Instances found?
             if (instanceList.size() > 0) {
                 // Select by using decision matrix
-                serviceInstance = serviceDecision.selectServiceRestBased(instanceList, criteria, criteriaWeights);
+                serviceInstance = serviceDecisionWSM.selectServiceRestBased(instanceList, criteria, criteriaWeights);
 
                 if (serviceInstance != null) {
                     // Call chosen instance
@@ -180,7 +180,7 @@ public class AnalyzeSlurryIngredientsDelegate implements JavaDelegate {
                 // Instances found?
                 if (serviceInstanceList.size() > 0) {
                     // Select by using decision matrix
-                    serviceInstance = serviceDecision.selectService(serviceInstanceList, criteria, criteriaWeights);
+                    serviceInstance = serviceDecisionWSM.selectService(serviceInstanceList, criteria, criteriaWeights);
 
                     if (serviceInstance != null) {
                         // Call chosen instance
