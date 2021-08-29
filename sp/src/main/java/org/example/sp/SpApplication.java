@@ -37,7 +37,7 @@ public class SpApplication {
 
     @Autowired
     private RuntimeService runtimeService;
-    private final static Logger LOGGER = Logger.getLogger("S3 INITIAL START");
+    private final static Logger LOGGER = Logger.getLogger("S3-Exe INITIAL START");
     @Autowired
     private DiscoveryClient discoveryClient;
     @Autowired
@@ -54,7 +54,7 @@ public class SpApplication {
         // Start process
         LOGGER.info("");
         LOGGER.info("-------------------------------");
-        LOGGER.info("Slurry process S3 started...");
+        LOGGER.info("Slurry process S3-Exe started.");
         LOGGER.info("\ttaskId: 0000");
         LOGGER.info("\tdMinAccuracy: 0.3");
         LOGGER.info("\tdCostLimit: 2.0");

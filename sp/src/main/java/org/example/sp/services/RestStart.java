@@ -21,7 +21,7 @@ public class RestStart {
     // Variables
     private ProcessStart latestProcessStart = null;
     private ObjectMapper objectMapper = new ObjectMapper();
-    private final static Logger LOGGER = Logger.getLogger("S3 REST-BASED START");
+    private final static Logger LOGGER = Logger.getLogger("S3-Exe REST-BASED START");
     private ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
     private RuntimeService runtimeService = processEngine.getRuntimeService();
 
@@ -49,7 +49,7 @@ public class RestStart {
 
         LOGGER.info("");
         LOGGER.info("-------------------------------");
-        LOGGER.info("Slurry process S3 started...");
+        LOGGER.info("Slurry process S3-Exe started.");
         LOGGER.info("\ttaskId: "
                 + givenProcessStart.getTaskId());
         LOGGER.info("\tdMinAccuracy: " + givenProcessStart.getdMinAccuracy());

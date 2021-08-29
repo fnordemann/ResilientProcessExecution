@@ -7,17 +7,16 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.2.1.RELEASE)
 
-2021-08-24 09:31:43.842  WARN 30 --- [           main] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 499 milliseconds to respond. Please verify your network configuration.
-2021-08-24 09:31:44.144  INFO 30 --- [           main] org.example.neighbor.Application         : Starting Application v0.1.0 on 2395cc242fc4 with PID 30 (/neighbor-service/target/neighbor-service-0.1.0.jar started by root in /)
-2021-08-24 09:31:44.279  INFO 30 --- [           main] org.example.neighbor.Application         : No active profile set, falling back to default profiles: default
-2021-08-24 09:32:55.922  INFO 30 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8031 (http)
-2021-08-24 09:32:56.388  INFO 30 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-08-24 09:32:56.400  INFO 30 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
-2021-08-24 09:32:59.313  INFO 30 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-08-24 09:32:59.316  INFO 30 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 69209 ms
-2021-08-24 09:33:21.687  INFO 30 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-08-24 09:33:31.433  INFO 30 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8031 (http) with context path ''
-2021-08-24 09:33:31.511  INFO 30 --- [           main] org.example.neighbor.Application         : Started Application in 149.968 seconds (JVM running for 172.086)
-2021-08-24 09:35:21.451  INFO 30 --- [nio-8031-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-08-24 09:35:21.456  INFO 30 --- [nio-8031-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-08-24 09:35:21.507  INFO 30 --- [nio-8031-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 37 ms
+2021-08-29 21:28:23.962  INFO 71285 --- [           main] org.example.neighbor.Application         : Starting Application v0.1.0 on e04-laptop21.fritz.box with PID 71285 (/Users/fnordemann/eclipse-workspace/resilient-process/neighbor-service/target/neighbor-service-0.1.0.jar started by fnordemann in /Users/fnordemann/eclipse-workspace/resilient-process)
+2021-08-29 21:28:23.967  INFO 71285 --- [           main] org.example.neighbor.Application         : No active profile set, falling back to default profiles: default
+2021-08-29 21:28:45.127  INFO 71285 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8031 (http)
+2021-08-29 21:28:45.295  INFO 71285 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-29 21:28:45.424  INFO 71285 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-08-29 21:28:46.472  INFO 71285 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-29 21:28:46.473  INFO 71285 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 21192 ms
+2021-08-29 21:28:50.129  INFO 71285 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-29 21:28:54.098  INFO 71285 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8031 (http) with context path ''
+2021-08-29 21:28:54.292  INFO 71285 --- [           main] org.example.neighbor.Application         : Started Application in 42.231 seconds (JVM running for 49.803)
+2021-08-29 21:29:57.247  INFO 71285 --- [nio-8031-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-29 21:29:57.248  INFO 71285 --- [nio-8031-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-29 21:29:57.263  INFO 71285 --- [nio-8031-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms

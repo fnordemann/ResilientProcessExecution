@@ -9,320 +9,276 @@
   Camunda BPM: (v7.12.0)
   Camunda BPM Spring Boot Starter: (v3.4.0)
 
-2021-08-24 09:32:30.190  INFO 31 --- [           main] org.example.sp.SpApplication             : No active profile set, falling back to default profiles: default
-2021-08-24 09:33:43.936  INFO 31 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ef79ecf7-ab50-37ac-930c-b72d29eff38d
-2021-08-24 09:33:52.252  INFO 31 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-08-24 09:34:08.353  INFO 31 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8035 (http)
-2021-08-24 09:34:08.610  INFO 31 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-08-24 09:34:08.626  INFO 31 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
-2021-08-24 09:34:10.274  INFO 31 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-08-24 09:34:10.291  INFO 31 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 98551 ms
-2021-08-24 09:34:10.900  INFO 31 --- [           main] .c.b.s.b.s.r.CamundaJerseyResourceConfig : Configuring camunda rest api.
-2021-08-24 09:34:11.574  INFO 31 --- [           main] .c.b.s.b.s.r.CamundaJerseyResourceConfig : Finished configuring camunda rest api.
-2021-08-24 09:34:19.901  INFO 31 --- [           main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2021-08-24 09:34:27.964  INFO 31 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB040 Setting up jobExecutor with corePoolSize=3, maxPoolSize:10
-2021-08-24 09:34:28.044  INFO 31 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'camundaTaskExecutor'
-2021-08-24 09:34:30.293  INFO 31 --- [           main] org.camunda.bpm.engine.cfg               : ENGINE-12003 Plugin 'CompositeProcessEnginePlugin[genericPropertiesConfiguration, camundaProcessEngineConfiguration, camundaDatasourceConfiguration, camundaJobConfiguration, camundaHistoryConfiguration, camundaMetricsConfiguration, camundaAuthorizationConfiguration, CreateAdminUserConfiguration[adminUser=AdminUserProperty[id=demo, firstName=demo, lastName=Demo, email=demo@localhost, password=******]], failedJobConfiguration, CreateFilterConfiguration[filterName=All tasks], disableDeploymentResourcePattern, eventPublisherPlugin]' activated on process engine 'default'
-2021-08-24 09:34:30.402  INFO 31 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB020 ProcessApplication enabled: autoDeployment via springConfiguration#deploymentResourcePattern is disabled
-2021-08-24 09:34:30.432  INFO 31 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-001: Initialized Camunda Spring Boot Eventing Engine Plugin.
-2021-08-24 09:34:30.466  INFO 31 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-003: Task events will be published as Spring Events.
-2021-08-24 09:34:30.484  INFO 31 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-005: Execution events will be published as Spring Events.
-2021-08-24 09:34:30.586  INFO 31 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-007: History events will be published as Spring events.
-2021-08-24 09:35:14.387  INFO 31 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.engine.sql'
-2021-08-24 09:35:15.308  INFO 31 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.history.sql'
-2021-08-24 09:35:15.491  INFO 31 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'identity' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.identity.sql'
-2021-08-24 09:35:15.799  INFO 31 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'case.engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.case.engine.sql'
-2021-08-24 09:35:15.885  INFO 31 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'case.history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.case.history.sql'
-2021-08-24 09:35:15.962  INFO 31 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'decision.engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.decision.engine.sql'
-2021-08-24 09:35:16.268  INFO 31 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'decision.history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.decision.history.sql'
-2021-08-24 09:35:16.368  INFO 31 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03067 No history level property found in database
-2021-08-24 09:35:16.370  INFO 31 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03065 Creating historyLevel property in database for level: HistoryLevelFull(name=full, id=3)
-2021-08-24 09:35:17.712  INFO 31 --- [           main] org.camunda.bpm.engine                   : ENGINE-00001 Process Engine default created.
-2021-08-24 09:35:19.384  INFO 31 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB010 creating initial Admin User: AdminUserProperty[id=demo, firstName=demo, lastName=Demo, email=demo@localhost, password=******]
-2021-08-24 09:35:19.537  INFO 31 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB015 create initial filter: id=98c83e5f-04be-11ec-afbf-0242ac120002 name=All tasks
-2021-08-24 09:35:23.041  WARN 31 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2021-08-24 09:35:23.050  INFO 31 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-08-24 09:35:23.106  WARN 31 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2021-08-24 09:35:23.116  INFO 31 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-08-24 09:35:25.915  INFO 31 --- [           main] o.c.b.s.b.s.w.f.LazyInitRegistration     : lazy initialized org.camunda.bpm.spring.boot.starter.webapp.filter.LazyProcessEnginesFilter@f2ba39ac
-2021-08-24 09:35:26.238  INFO 31 --- [           main] o.c.b.s.b.s.w.f.LazyInitRegistration     : lazy initialized org.camunda.bpm.spring.boot.starter.webapp.filter.LazySecurityFilter@c80aae71
-2021-08-24 09:35:27.707  WARN 31 --- [           main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
-2021-08-24 09:35:28.758  INFO 31 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2021-08-24 09:35:29.502  INFO 31 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2021-08-24 09:35:30.077  INFO 31 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2021-08-24 09:35:30.079  INFO 31 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2021-08-24 09:35:30.596  INFO 31 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2021-08-24 09:35:30.598  INFO 31 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2021-08-24 09:35:31.394  INFO 31 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2021-08-24 09:35:31.431  INFO 31 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2021-08-24 09:35:31.432  INFO 31 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2021-08-24 09:35:31.433  INFO 31 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2021-08-24 09:35:31.435  INFO 31 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2021-08-24 09:35:31.441  INFO 31 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2021-08-24 09:35:31.442  INFO 31 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2021-08-24 09:35:31.443  INFO 31 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2021-08-24 09:35:31.766  INFO 31 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2021-08-24 09:35:31.784  INFO 31 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 5
-2021-08-24 09:35:31.793  INFO 31 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2021-08-24 09:35:31.804  INFO 31 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1629797731802 with initial instances count: 2
-2021-08-24 09:35:31.810  INFO 31 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SP with eureka with status UP
-2021-08-24 09:35:31.813  INFO 31 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1629797731813, current=UP, previous=STARTING]
-2021-08-24 09:35:31.820  INFO 31 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SP/2395cc242fc4:sp:8035: registering service...
-2021-08-24 09:35:31.892  INFO 31 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SP/2395cc242fc4:sp:8035 - registration status: 204
-2021-08-24 09:35:32.015  INFO 31 --- [           main] org.camunda.bpm.container                : ENGINE-08024 Found processes.xml file at jar:file:/sp/target/sp-0.0.1-SNAPSHOT.jar!/META-INF/processes.xml
-2021-08-24 09:35:32.018  INFO 31 --- [           main] org.camunda.bpm.container                : ENGINE-08025 Detected empty processes.xml file, using default values
-2021-08-24 09:35:32.043  INFO 31 --- [           main] org.camunda.bpm.container                : ENGINE-08023 Deployment summary for process archive 'spApplication': 
+2021-08-29 21:28:41.231  INFO 71286 --- [           main] org.example.sp.SpApplication             : No active profile set, falling back to default profiles: default
+2021-08-29 21:29:00.490  INFO 71286 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8cb251ef-780d-3412-9c15-c93a33d0672c
+2021-08-29 21:29:04.557  INFO 71286 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-29 21:29:13.137  INFO 71286 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8035 (http)
+2021-08-29 21:29:13.370  INFO 71286 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-29 21:29:13.370  INFO 71286 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2021-08-29 21:29:14.603  INFO 71286 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-29 21:29:14.604  INFO 71286 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 32860 ms
+2021-08-29 21:29:14.912  INFO 71286 --- [           main] .c.b.s.b.s.r.CamundaJerseyResourceConfig : Configuring camunda rest api.
+2021-08-29 21:29:15.642  INFO 71286 --- [           main] .c.b.s.b.s.r.CamundaJerseyResourceConfig : Finished configuring camunda rest api.
+2021-08-29 21:29:20.738  INFO 71286 --- [           main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2021-08-29 21:29:24.633  INFO 71286 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB040 Setting up jobExecutor with corePoolSize=3, maxPoolSize:10
+2021-08-29 21:29:24.700  INFO 71286 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'camundaTaskExecutor'
+2021-08-29 21:29:25.871  INFO 71286 --- [           main] org.camunda.bpm.engine.cfg               : ENGINE-12003 Plugin 'CompositeProcessEnginePlugin[genericPropertiesConfiguration, camundaProcessEngineConfiguration, camundaDatasourceConfiguration, camundaJobConfiguration, camundaHistoryConfiguration, camundaMetricsConfiguration, camundaAuthorizationConfiguration, CreateAdminUserConfiguration[adminUser=AdminUserProperty[id=demo, firstName=demo, lastName=Demo, email=demo@localhost, password=******]], failedJobConfiguration, CreateFilterConfiguration[filterName=All tasks], disableDeploymentResourcePattern, eventPublisherPlugin]' activated on process engine 'default'
+2021-08-29 21:29:26.032  INFO 71286 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB020 ProcessApplication enabled: autoDeployment via springConfiguration#deploymentResourcePattern is disabled
+2021-08-29 21:29:26.033  INFO 71286 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-001: Initialized Camunda Spring Boot Eventing Engine Plugin.
+2021-08-29 21:29:26.034  INFO 71286 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-003: Task events will be published as Spring Events.
+2021-08-29 21:29:26.035  INFO 71286 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-005: Execution events will be published as Spring Events.
+2021-08-29 21:29:26.039  INFO 71286 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-007: History events will be published as Spring events.
+2021-08-29 21:29:54.948  INFO 71286 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.engine.sql'
+2021-08-29 21:29:55.234  INFO 71286 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.history.sql'
+2021-08-29 21:29:55.323  INFO 71286 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'identity' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.identity.sql'
+2021-08-29 21:29:55.439  INFO 71286 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'case.engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.case.engine.sql'
+2021-08-29 21:29:55.467  INFO 71286 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'case.history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.case.history.sql'
+2021-08-29 21:29:55.489  INFO 71286 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'decision.engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.decision.engine.sql'
+2021-08-29 21:29:55.539  INFO 71286 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'decision.history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.decision.history.sql'
+2021-08-29 21:29:55.579  INFO 71286 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03067 No history level property found in database
+2021-08-29 21:29:55.580  INFO 71286 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03065 Creating historyLevel property in database for level: HistoryLevelFull(name=full, id=3)
+2021-08-29 21:29:55.674  INFO 71286 --- [           main] org.camunda.bpm.engine                   : ENGINE-00001 Process Engine default created.
+2021-08-29 21:29:56.281  INFO 71286 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB010 creating initial Admin User: AdminUserProperty[id=demo, firstName=demo, lastName=Demo, email=demo@localhost, password=******]
+2021-08-29 21:29:56.390  INFO 71286 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB015 create initial filter: id=7de9802a-08ff-11ec-a307-565839a817df name=All tasks
+2021-08-29 21:29:57.753  WARN 71286 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-08-29 21:29:57.754  INFO 71286 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-08-29 21:29:57.777  WARN 71286 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-08-29 21:29:57.777  INFO 71286 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-08-29 21:29:58.572  INFO 71286 --- [           main] o.c.b.s.b.s.w.f.LazyInitRegistration     : lazy initialized org.camunda.bpm.spring.boot.starter.webapp.filter.LazyProcessEnginesFilter@4c4d27c8
+2021-08-29 21:29:58.666  INFO 71286 --- [           main] o.c.b.s.b.s.w.f.LazyInitRegistration     : lazy initialized org.camunda.bpm.spring.boot.starter.webapp.filter.LazySecurityFilter@338494fa
+2021-08-29 21:29:58.910  WARN 71286 --- [           main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2021-08-29 21:29:59.079  INFO 71286 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-08-29 21:29:59.295  INFO 71286 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2021-08-29 21:29:59.637  INFO 71286 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2021-08-29 21:29:59.638  INFO 71286 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2021-08-29 21:30:00.112  INFO 71286 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2021-08-29 21:30:00.112  INFO 71286 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2021-08-29 21:30:00.525  INFO 71286 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-29 21:30:00.616  INFO 71286 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2021-08-29 21:30:00.617  INFO 71286 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2021-08-29 21:30:00.617  INFO 71286 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2021-08-29 21:30:00.617  INFO 71286 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2021-08-29 21:30:00.618  INFO 71286 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2021-08-29 21:30:00.618  INFO 71286 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2021-08-29 21:30:00.618  INFO 71286 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2021-08-29 21:30:01.132  INFO 71286 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2021-08-29 21:30:01.140  INFO 71286 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 5
+2021-08-29 21:30:01.151  INFO 71286 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-08-29 21:30:01.161  INFO 71286 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1630265401160 with initial instances count: 2
+2021-08-29 21:30:01.165  INFO 71286 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SP with eureka with status UP
+2021-08-29 21:30:01.170  INFO 71286 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1630265401170, current=UP, previous=STARTING]
+2021-08-29 21:30:01.183  INFO 71286 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SP/e04-laptop21.fritz.box:sp:8035: registering service...
+2021-08-29 21:30:01.261  INFO 71286 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SP/e04-laptop21.fritz.box:sp:8035 - registration status: 204
+2021-08-29 21:30:01.304  INFO 71286 --- [           main] org.camunda.bpm.container                : ENGINE-08024 Found processes.xml file at jar:file:/Users/fnordemann/eclipse-workspace/resilient-process/sp/target/sp-0.0.1-SNAPSHOT.jar!/META-INF/processes.xml
+2021-08-29 21:30:01.312  INFO 71286 --- [           main] org.camunda.bpm.container                : ENGINE-08025 Detected empty processes.xml file, using default values
+2021-08-29 21:30:01.337  INFO 71286 --- [           main] org.camunda.bpm.container                : ENGINE-08023 Deployment summary for process archive 'spApplication': 
 
         BOOT-INF/classes/sp.bpmn
 
-2021-08-24 09:35:32.526  INFO 31 --- [           main] org.camunda.bpm.application              : ENGINE-07021 ProcessApplication 'spApplication' registered for DB deployments [a0453490-04be-11ec-afbf-0242ac120002]. Will execute process definitions 
+2021-08-29 21:30:02.209  INFO 71286 --- [           main] org.camunda.bpm.application              : ENGINE-07021 ProcessApplication 'spApplication' registered for DB deployments [80ebeabb-08ff-11ec-a307-565839a817df]. Will execute process definitions 
 
-        SpKey[version: 1, id: SpKey:1:a087e2e2-04be-11ec-afbf-0242ac120002]
+        SpKey[version: 1, id: SpKey:1:8160a58d-08ff-11ec-a307-565839a817df]
 Deployment does not provide any case definitions.
-2021-08-24 09:35:32.543  INFO 31 --- [           main] S3 INITIAL START                         : 
-2021-08-24 09:35:32.545  INFO 31 --- [           main] S3 INITIAL START                         : -------------------------------
-2021-08-24 09:35:32.547  INFO 31 --- [           main] S3 INITIAL START                         : Slurry process S3 started...
-2021-08-24 09:35:32.550  INFO 31 --- [           main] S3 INITIAL START                         : 	taskId: 0000
-2021-08-24 09:35:32.554  INFO 31 --- [           main] S3 INITIAL START                         : 	dMinAccuracy: 0.3
-2021-08-24 09:35:32.557  INFO 31 --- [           main] S3 INITIAL START                         : 	dCostLimit: 2.0
-2021-08-24 09:35:32.559  INFO 31 --- [           main] S3 INITIAL START                         : 	dAccuracyWeight: 0.5
-2021-08-24 09:35:32.561  INFO 31 --- [           main] S3 INITIAL START                         : 	dCostWeight: 0.3
-2021-08-24 09:35:32.563  INFO 31 --- [           main] S3 INITIAL START                         : 	dTimeWeight: 0.2
-2021-08-24 09:35:32.565  INFO 31 --- [           main] S3 INITIAL START                         : * Graph-based decision making *
-2021-08-24 09:35:32.567  INFO 31 --- [           main] S3 INITIAL START                         : -------------------------------
-2021-08-24 09:35:32.572  INFO 31 --- [           main] S3 INITIAL START                         : 
-2021-08-24 09:35:32.678  INFO 31 --- [           main] PRECISION-FARMING                        : Deciding on Precision Farming usage...
-2021-08-24 09:35:32.680  INFO 31 --- [           main] PRECISION-FARMING                        : Fetching available services for serviceId precision-farming-service...
-2021-08-24 09:35:33.074  INFO 31 --- [           main] PRECISION-FARMING                        : Available services: 2
+2021-08-29 21:30:02.247  INFO 71286 --- [           main] S3-Exe INITIAL START                     : 
+2021-08-29 21:30:02.247  INFO 71286 --- [           main] S3-Exe INITIAL START                     : -------------------------------
+2021-08-29 21:30:02.247  INFO 71286 --- [           main] S3-Exe INITIAL START                     : Slurry process S3-Exe started.
+2021-08-29 21:30:02.250  INFO 71286 --- [           main] S3-Exe INITIAL START                     : 	taskId: 0000
+2021-08-29 21:30:02.251  INFO 71286 --- [           main] S3-Exe INITIAL START                     : 	dMinAccuracy: 0.3
+2021-08-29 21:30:02.252  INFO 71286 --- [           main] S3-Exe INITIAL START                     : 	dCostLimit: 2.0
+2021-08-29 21:30:02.253  INFO 71286 --- [           main] S3-Exe INITIAL START                     : 	dAccuracyWeight: 0.5
+2021-08-29 21:30:02.254  INFO 71286 --- [           main] S3-Exe INITIAL START                     : 	dCostWeight: 0.3
+2021-08-29 21:30:02.255  INFO 71286 --- [           main] S3-Exe INITIAL START                     : 	dTimeWeight: 0.2
+2021-08-29 21:30:02.255  INFO 71286 --- [           main] S3-Exe INITIAL START                     : * Graph-based decision making *
+2021-08-29 21:30:02.255  INFO 71286 --- [           main] S3-Exe INITIAL START                     : -------------------------------
+2021-08-29 21:30:02.256  INFO 71286 --- [           main] S3-Exe INITIAL START                     : 
+2021-08-29 21:30:02.463  INFO 71286 --- [           main] CONFIG-PRECISION-FARMING                 : Deciding on Precision Farming usage...
+2021-08-29 21:30:02.463  INFO 71286 --- [           main] CONFIG-PRECISION-FARMING                 : Fetching available services for serviceId precision-farming-service...
+2021-08-29 21:30:03.116  INFO 71286 --- [           main] CONFIG-PRECISION-FARMING                 : Available services: 2
 --- Service number 0 ---
-Host: 2395cc242fc4
-InstanceId: 2395cc242fc4:precision-farming-service:8024
+Host: e04-laptop21.fritz.box
+InstanceId: e04-laptop21.fritz.box:precision-farming-service:8024
 Metadata: [urlanalysis = /analysis, urlstatus = null, urllog = null, cost = 0.8, accuracy = 0.9, location = cloud, management.port = 8024, time = 0.8, type = PF, id = null]
 --- Service number 1 ---
-Host: 2395cc242fc4
-InstanceId: 2395cc242fc4:precision-farming-service:8038
+Host: e04-laptop21.fritz.box
+InstanceId: e04-laptop21.fritz.box:precision-farming-service:8038
 Metadata: [urlanalysis = /analysis, urlstatus = null, urllog = null, cost = 0.4, accuracy = 0.7, location = local, management.port = 8038, time = 0.1, type = PF(L), id = null]
 Updating precision farming segment in graph...
 Found vertex id: PF	Updated edge (PF : G1) with weight 0.45
 Found vertex id: PF(L)	Updated edge (PF(L) : G1) with weight 0.29
 Updating slurry analysis segment in graph...
+Found vertex id: LAB	Updated edge (LAB : G2) with weight 0.5
 Found vertex id: REF	Updated edge (REF : G2) with weight 0.35
 Found vertex id: REF(L)	Updated edge (REF(L) : G2) with weight 0.4
 Found vertex id: NIRS	Updated edge (NIRS : G2) with weight 0.29
-Removed vertex LAB from graph: unavailable or failing minimum accuracy.
 Updating position correction segment in graph...
+Found vertex id: CELL	Updated edge (CELL : S') with weight 0.16
 Found vertex id: LOC	Updated edge (LOC : S') with weight 0.23
-Removed vertex CELL from graph: unavailable or failing minimum accuracy.
-Current graph: ([S, S', PF, PF(L), noPF, G1, NIRS, REF, REF(L), G2, GPS, LOC], [(S,PF), (PF,G1), (S,PF(L)), (PF(L),G1), (S,noPF), (noPF,S'), (G1,NIRS), (NIRS,G2), (G1,REF), (REF,G2), (G1,REF(L)), (REF(L),G2), (G2,GPS), (GPS,S'), (G2,LOC), (LOC,S')])
+Current graph: ([S, S', PF, PF(L), noPF, G1, LAB, NIRS, REF, REF(L), G2, GPS, CELL, LOC], [(S,PF), (PF,G1), (S,PF(L)), (PF(L),G1), (S,noPF), (noPF,S'), (G1,LAB), (LAB,G2), (G1,NIRS), (NIRS,G2), (G1,REF), (REF,G2), (G1,REF(L)), (REF(L),G2), (G2,GPS), (GPS,S'), (G2,CELL), (CELL,S'), (G2,LOC), (LOC,S')])
 --- Precising farming segment ---
 	Edge (PF : G1) with weight 0.45
 	Edge (PF(L) : G1) with weight 0.29
 	Edge (noPF : S') with weight 0.43
 --- Slurry analysis segment ---
+	Edge (LAB : G2) with weight 0.5
 	Edge (NIRS : G2) with weight 0.29
 	Edge (REF : G2) with weight 0.35
 	Edge (REF(L) : G2) with weight 0.4
 --- Position correction segment ---
 	Edge (GPS : S') with weight 0.28
+	Edge (CELL : S') with weight 0.16
 	Edge (LOC : S') with weight 0.23
 --- k-shortest-paths analysis ---
-Number of shortest paths (S to S') found: 13
+Number of shortest paths (S to S') found: 25
 	yenKShortestPath-#0: [(S : noPF), (noPF : S')]
 	yenKShortestPath-#0-VertexList: [S, noPF, S']
 	yenKShortestPath-#0-Weight: 0.43
-	yenKShortestPath-#1: [S, PF(L), G1, NIRS, G2, LOC, S']
-	yenKShortestPath-#1-VertexList: [S, PF(L), G1, NIRS, G2, LOC, S']
-	yenKShortestPath-#1-Weight: 0.81
-	yenKShortestPath-#2: [S, PF(L), G1, NIRS, G2, GPS, S']
-	yenKShortestPath-#2-VertexList: [S, PF(L), G1, NIRS, G2, GPS, S']
-	yenKShortestPath-#2-Weight: 0.86
+	yenKShortestPath-#1: [S, PF(L), G1, NIRS, G2, CELL, S']
+	yenKShortestPath-#1-VertexList: [S, PF(L), G1, NIRS, G2, CELL, S']
+	yenKShortestPath-#1-Weight: 0.74
+	yenKShortestPath-#2: [S, PF(L), G1, REF, G2, CELL, S']
+	yenKShortestPath-#2-VertexList: [S, PF(L), G1, REF, G2, CELL, S']
+	yenKShortestPath-#2-Weight: 0.8
 	Omitting remaining paths...
 Checking minimum accuracy (min defined: 0.3) and total cost (max defined: 2.0) of path #0 ...
 	Minimum accuracy: 0.2
 	Total cost: 0.1
 Checking minimum accuracy (min defined: 0.3) and total cost (max defined: 2.0) of path #1 ...
 	Minimum accuracy: 0.7
-	Total cost: 1.5
+	Total cost: 1.1
 Path selected: #1
-	Path edge list:[(S : PF(L)), (PF(L) : G1), (G1 : NIRS), (NIRS : G2), (G2 : LOC), (LOC : S')]
-	Path vertex list: [S, PF(L), G1, NIRS, G2, LOC, S']
+	Path edge list:[(S : PF(L)), (PF(L) : G1), (G1 : NIRS), (NIRS : G2), (G2 : CELL), (CELL : S')]
+	Path vertex list: [S, PF(L), G1, NIRS, G2, CELL, S']
 	Minimum accuracy 0.7 >= 0.3 (dMinAccuracy)
-	Path cost 1.5 <= 2.0 (dCostLimit)
-2021-08-24 09:35:33.488  INFO 31 --- [           main] PRECISION-FARMING                        : Going to call service at http://2395cc242fc4:8038/analysis
-2021-08-24 09:35:33.693  INFO 31 --- [           main] PRECISION-FARMING                        : AppMap for taskId 0000 received: AppMap-Placeholder
-2021-08-24 09:35:33.714  INFO 31 --- [           main] ANALYZE-SLURRY                           : Analyzing slurry.
-2021-08-24 09:35:33.715  INFO 31 --- [           main] ANALYZE-SLURRY                           : Fetching available services for serviceId ingredients-service...
-2021-08-24 09:35:33.845  INFO 31 --- [           main] ANALYZE-SLURRY                           : Available services: 3
+	Path cost 1.1 <= 2.0 (dCostLimit)
+2021-08-29 21:30:03.597  INFO 71286 --- [           main] CONFIG-PRECISION-FARMING                 : Going to call service at http://e04-laptop21.fritz.box:8038/analysis
+2021-08-29 21:30:03.884  INFO 71286 --- [           main] CONFIG-PRECISION-FARMING                 : AppMap for taskId 0000 received: AppMap-Placeholder
+2021-08-29 21:30:03.901  INFO 71286 --- [           main] ANALYZE-SLURRY                           : Analyzing slurry.
+2021-08-29 21:30:03.902  INFO 71286 --- [           main] ANALYZE-SLURRY                           : Fetching available services for serviceId ingredients-service...
+2021-08-29 21:30:04.011  INFO 71286 --- [           main] ANALYZE-SLURRY                           : Available services: 4
 --- Service number 0 ---
-Host: 2395cc242fc4
-InstanceId: 2395cc242fc4:ingredients-service:8026
-Metadata: [urlanalysis = /analysis, urlstatus = null, urllog = null, cost = 0.1, accuracy = 0.4, location = cloud, management.port = 8026, time = 0.1, type = REF, id = null]
+Host: e04-laptop21.fritz.box
+InstanceId: e04-laptop21.fritz.box:ingredients-service:8023
+Metadata: [urlanalysis = /lab, urlstatus = null, urllog = null, cost = 0.9, accuracy = 0.9, location = local, management.port = 8023, time = 0.9, type = LAB, id = null]
 --- Service number 1 ---
-Host: 2395cc242fc4
-InstanceId: 2395cc242fc4:ingredients-service:8037
-Metadata: [urlanalysis = /analysis, urlstatus = null, urllog = null, cost = 0.1, accuracy = 0.3, location = local, management.port = 8037, time = 0.1, type = REF(L), id = null]
+Host: e04-laptop21.fritz.box
+InstanceId: e04-laptop21.fritz.box:ingredients-service:8026
+Metadata: [urlanalysis = /analysis, urlstatus = null, urllog = null, cost = 0.1, accuracy = 0.4, location = cloud, management.port = 8026, time = 0.1, type = REF, id = null]
 --- Service number 2 ---
-Host: 2395cc242fc4
-InstanceId: 2395cc242fc4:ingredients-service:8045
+Host: e04-laptop21.fritz.box
+InstanceId: e04-laptop21.fritz.box:ingredients-service:8037
+Metadata: [urlanalysis = /analysis, urlstatus = null, urllog = null, cost = 0.1, accuracy = 0.3, location = local, management.port = 8037, time = 0.1, type = REF(L), id = null]
+--- Service number 3 ---
+Host: e04-laptop21.fritz.box
+InstanceId: e04-laptop21.fritz.box:ingredients-service:8045
 Metadata: [urlanalysis = /nirs, urlstatus = null, urllog = null, cost = 0.4, accuracy = 0.7, location = local, management.port = 8045, time = 0.1, type = NIRS, id = null]
 Updating precision farming segment in graph...
 Found vertex id: PF	Updated edge (PF : G1) with weight 0.45
 Found vertex id: PF(L)	Updated edge (PF(L) : G1) with weight 0.29
 Updating slurry analysis segment in graph...
+Found vertex id: LAB	Updated edge (LAB : G2) with weight 0.5
 Found vertex id: REF	Updated edge (REF : G2) with weight 0.35
 Found vertex id: REF(L)	Updated edge (REF(L) : G2) with weight 0.4
 Found vertex id: NIRS	Updated edge (NIRS : G2) with weight 0.29
-Removed vertex LAB from graph: unavailable or failing minimum accuracy.
 Updating position correction segment in graph...
+Found vertex id: CELL	Updated edge (CELL : S') with weight 0.16
 Found vertex id: LOC	Updated edge (LOC : S') with weight 0.23
-Removed vertex CELL from graph: unavailable or failing minimum accuracy.
-Current graph: ([S, S', PF, PF(L), noPF, G1, NIRS, REF, REF(L), G2, GPS, LOC], [(S,PF), (PF,G1), (S,PF(L)), (PF(L),G1), (S,noPF), (noPF,S'), (G1,NIRS), (NIRS,G2), (G1,REF), (REF,G2), (G1,REF(L)), (REF(L),G2), (G2,GPS), (GPS,S'), (G2,LOC), (LOC,S')])
+Current graph: ([S, S', PF, PF(L), noPF, G1, LAB, NIRS, REF, REF(L), G2, GPS, CELL, LOC], [(S,PF), (PF,G1), (S,PF(L)), (PF(L),G1), (S,noPF), (noPF,S'), (G1,LAB), (LAB,G2), (G1,NIRS), (NIRS,G2), (G1,REF), (REF,G2), (G1,REF(L)), (REF(L),G2), (G2,GPS), (GPS,S'), (G2,CELL), (CELL,S'), (G2,LOC), (LOC,S')])
 --- Precising farming segment ---
 	Edge (PF : G1) with weight 0.45
 	Edge (PF(L) : G1) with weight 0.29
 	Edge (noPF : S') with weight 0.43
 --- Slurry analysis segment ---
+	Edge (LAB : G2) with weight 0.5
 	Edge (NIRS : G2) with weight 0.29
 	Edge (REF : G2) with weight 0.35
 	Edge (REF(L) : G2) with weight 0.4
 --- Position correction segment ---
 	Edge (GPS : S') with weight 0.28
+	Edge (CELL : S') with weight 0.16
 	Edge (LOC : S') with weight 0.23
 --- k-shortest-paths analysis ---
-Number of shortest paths (G1 to S') found: 6
-	yenKShortestPath-#0: [(G1 : NIRS), (NIRS : G2), (G2 : LOC), (LOC : S')]
-	yenKShortestPath-#0-VertexList: [G1, NIRS, G2, LOC, S']
-	yenKShortestPath-#0-Weight: 0.52
-	yenKShortestPath-#1: [G1, NIRS, G2, GPS, S']
-	yenKShortestPath-#1-VertexList: [G1, NIRS, G2, GPS, S']
-	yenKShortestPath-#1-Weight: 0.57
-	yenKShortestPath-#2: [G1, REF, G2, LOC, S']
-	yenKShortestPath-#2-VertexList: [G1, REF, G2, LOC, S']
-	yenKShortestPath-#2-Weight: 0.58
+Number of shortest paths (G1 to S') found: 12
+	yenKShortestPath-#0: [(G1 : NIRS), (NIRS : G2), (G2 : CELL), (CELL : S')]
+	yenKShortestPath-#0-VertexList: [G1, NIRS, G2, CELL, S']
+	yenKShortestPath-#0-Weight: 0.45
+	yenKShortestPath-#1: [G1, REF, G2, CELL, S']
+	yenKShortestPath-#1-VertexList: [G1, REF, G2, CELL, S']
+	yenKShortestPath-#1-Weight: 0.51
+	yenKShortestPath-#2: [G1, NIRS, G2, LOC, S']
+	yenKShortestPath-#2-VertexList: [G1, NIRS, G2, LOC, S']
+	yenKShortestPath-#2-Weight: 0.52
 	Omitting remaining paths...
 Checking minimum accuracy (min defined: 0.3) and total cost (max defined: 2.0) of path #0 ...
 	Minimum accuracy: 0.7
-	Total cost: 1.1
+	Total cost: 0.7
 Path selected: #0
-	Path edge list:[(G1 : NIRS), (NIRS : G2), (G2 : LOC), (LOC : S')]
-	Path vertex list: [G1, NIRS, G2, LOC, S']
+	Path edge list:[(G1 : NIRS), (NIRS : G2), (G2 : CELL), (CELL : S')]
+	Path vertex list: [G1, NIRS, G2, CELL, S']
 	Minimum accuracy 0.7 >= 0.3 (dMinAccuracy)
-	Path cost 1.1 <= 2.0 (dCostLimit)
-2021-08-24 09:35:34.271  INFO 31 --- [           main] ANALYZE-SLURRY                           : Going to call service at http://2395cc242fc4:8045/nirs
-2021-08-24 09:35:34.467  INFO 31 --- [           main] ANALYZE-SLURRY                           : Analysis for taskId 0000 resulted in nitrogen: 41.72934182280315
-2021-08-24 09:35:34.474  INFO 31 --- [           main] CORRECT-GPS                              : Correcting GPS.
-2021-08-24 09:35:34.475  INFO 31 --- [           main] CORRECT-GPS                              : Fetching available services for serviceId gps-service...
-2021-08-24 09:35:34.544  INFO 31 --- [           main] CORRECT-GPS                              : Available services: 1
+	Path cost 0.7 <= 2.0 (dCostLimit)
+2021-08-29 21:30:04.286  INFO 71286 --- [           main] ANALYZE-SLURRY                           : Going to call service at http://e04-laptop21.fritz.box:8045/nirs
+2021-08-29 21:30:04.588  INFO 71286 --- [           main] ANALYZE-SLURRY                           : Analysis for taskId 0000 resulted in nitrogen: 14.793397206605974
+2021-08-29 21:30:04.592  INFO 71286 --- [           main] APPLY-SLURRY-ACCURATELY                  : Correcting GPS.
+2021-08-29 21:30:04.592  INFO 71286 --- [           main] APPLY-SLURRY-ACCURATELY                  : Fetching available services for serviceId gps-service...
+2021-08-29 21:30:04.673  INFO 71286 --- [           main] APPLY-SLURRY-ACCURATELY                  : Available services: 2
 --- Service number 0 ---
-Host: 2395cc242fc4
-InstanceId: 2395cc242fc4:gps-service:8056
+Host: e04-laptop21.fritz.box
+InstanceId: e04-laptop21.fritz.box:gps-service:8028
+Metadata: [urlanalysis = /gps, urlstatus = null, urllog = null, cost = 0.3, accuracy = 0.9, location = cloud, management.port = 8028, time = 0.1, type = CELL, id = null]
+--- Service number 1 ---
+Host: e04-laptop21.fritz.box
+InstanceId: e04-laptop21.fritz.box:gps-service:8056
 Metadata: [urlanalysis = /gps, urlstatus = null, urllog = null, cost = 0.7, accuracy = 1.0, location = local, management.port = 8056, time = 0.1, type = LOC, id = null]
 Updating precision farming segment in graph...
 Found vertex id: PF	Updated edge (PF : G1) with weight 0.45
 Found vertex id: PF(L)	Updated edge (PF(L) : G1) with weight 0.29
 Updating slurry analysis segment in graph...
+Found vertex id: LAB	Updated edge (LAB : G2) with weight 0.5
 Found vertex id: REF	Updated edge (REF : G2) with weight 0.35
 Found vertex id: REF(L)	Updated edge (REF(L) : G2) with weight 0.4
 Found vertex id: NIRS	Updated edge (NIRS : G2) with weight 0.29
-Removed vertex LAB from graph: unavailable or failing minimum accuracy.
 Updating position correction segment in graph...
+Found vertex id: CELL	Updated edge (CELL : S') with weight 0.16
 Found vertex id: LOC	Updated edge (LOC : S') with weight 0.23
-Removed vertex CELL from graph: unavailable or failing minimum accuracy.
-Current graph: ([S, S', PF, PF(L), noPF, G1, NIRS, REF, REF(L), G2, GPS, LOC], [(S,PF), (PF,G1), (S,PF(L)), (PF(L),G1), (S,noPF), (noPF,S'), (G1,NIRS), (NIRS,G2), (G1,REF), (REF,G2), (G1,REF(L)), (REF(L),G2), (G2,GPS), (GPS,S'), (G2,LOC), (LOC,S')])
+Current graph: ([S, S', PF, PF(L), noPF, G1, LAB, NIRS, REF, REF(L), G2, GPS, CELL, LOC], [(S,PF), (PF,G1), (S,PF(L)), (PF(L),G1), (S,noPF), (noPF,S'), (G1,LAB), (LAB,G2), (G1,NIRS), (NIRS,G2), (G1,REF), (REF,G2), (G1,REF(L)), (REF(L),G2), (G2,GPS), (GPS,S'), (G2,CELL), (CELL,S'), (G2,LOC), (LOC,S')])
 --- Precising farming segment ---
 	Edge (PF : G1) with weight 0.45
 	Edge (PF(L) : G1) with weight 0.29
 	Edge (noPF : S') with weight 0.43
 --- Slurry analysis segment ---
+	Edge (LAB : G2) with weight 0.5
 	Edge (NIRS : G2) with weight 0.29
 	Edge (REF : G2) with weight 0.35
 	Edge (REF(L) : G2) with weight 0.4
 --- Position correction segment ---
 	Edge (GPS : S') with weight 0.28
+	Edge (CELL : S') with weight 0.16
 	Edge (LOC : S') with weight 0.23
 --- k-shortest-paths analysis ---
-Number of shortest paths (G2 to S') found: 2
-	yenKShortestPath-#0: [(G2 : LOC), (LOC : S')]
-	yenKShortestPath-#0-VertexList: [G2, LOC, S']
-	yenKShortestPath-#0-Weight: 0.23
-	yenKShortestPath-#1: [G2, GPS, S']
-	yenKShortestPath-#1-VertexList: [G2, GPS, S']
-	yenKShortestPath-#1-Weight: 0.28
+Number of shortest paths (G2 to S') found: 3
+	yenKShortestPath-#0: [(G2 : CELL), (CELL : S')]
+	yenKShortestPath-#0-VertexList: [G2, CELL, S']
+	yenKShortestPath-#0-Weight: 0.16
+	yenKShortestPath-#1: [G2, LOC, S']
+	yenKShortestPath-#1-VertexList: [G2, LOC, S']
+	yenKShortestPath-#1-Weight: 0.23
+	yenKShortestPath-#2: [G2, GPS, S']
+	yenKShortestPath-#2-VertexList: [G2, GPS, S']
+	yenKShortestPath-#2-Weight: 0.28
 Checking minimum accuracy (min defined: 0.3) and total cost (max defined: 2.0) of path #0 ...
-	Minimum accuracy: 1
-	Total cost: 0.7
+	Minimum accuracy: 0.9
+	Total cost: 0.3
 Path selected: #0
-	Path edge list:[(G2 : LOC), (LOC : S')]
-	Path vertex list: [G2, LOC, S']
-	Minimum accuracy 1 >= 0.3 (dMinAccuracy)
-	Path cost 0.7 <= 2.0 (dCostLimit)
-2021-08-24 09:35:34.862  INFO 31 --- [           main] CORRECT-GPS                              : Going to call service at http://2395cc242fc4:8056/gps
-2021-08-24 09:35:35.084  INFO 31 --- [           main] CORRECT-GPS                              : GPS correction for taskId 0000 resulted in offsets: 0.07386764421824381 / 0.07116513382322426
-2021-08-24 09:35:35.087  INFO 31 --- [           main] CORRECT-GPS                              : Slurry application done.
-2021-08-24 09:35:35.114  INFO 31 --- [           main] org.camunda.bpm.container                : ENGINE-08050 Process application spApplication successfully deployed
-2021-08-24 09:35:35.146  INFO 31 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8035 (http) with context path ''
-2021-08-24 09:35:35.149  INFO 31 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8035
-2021-08-24 09:35:35.156  INFO 31 --- [           main] org.example.sp.SpApplication             : Started SpApplication in 266.229 seconds (JVM running for 296.373)
-2021-08-24 09:35:35.162  INFO 31 --- [           main] org.camunda.bpm.engine.jobexecutor       : ENGINE-14014 Starting up the JobExecutor[org.camunda.bpm.engine.spring.components.jobexecutor.SpringJobExecutor].
-2021-08-24 09:35:35.169  INFO 31 --- [ingJobExecutor]] org.camunda.bpm.engine.jobexecutor       : ENGINE-14018 JobExecutor[org.camunda.bpm.engine.spring.components.jobexecutor.SpringJobExecutor] starting to acquire jobs
-2021-08-24 09:36:07.817  INFO 31 --- [nio-8035-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-08-24 09:36:07.819  INFO 31 --- [nio-8035-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-08-24 09:36:07.835  INFO 31 --- [nio-8035-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
-2021-08-24 09:36:07.914  INFO 31 --- [nio-8035-exec-6] S3 REST-BASED START                      : 
-2021-08-24 09:36:07.915  INFO 31 --- [nio-8035-exec-6] S3 REST-BASED START                      : -------------------------------
-2021-08-24 09:36:07.917  INFO 31 --- [nio-8035-exec-6] S3 REST-BASED START                      : Slurry process S3 started...
-2021-08-24 09:36:07.918  INFO 31 --- [nio-8035-exec-6] S3 REST-BASED START                      : 	taskId: 123456789
-2021-08-24 09:36:07.919  INFO 31 --- [nio-8035-exec-6] S3 REST-BASED START                      : 	dMinAccuracy: 0.2
-2021-08-24 09:36:07.921  INFO 31 --- [nio-8035-exec-6] S3 REST-BASED START                      : 	dCostLimit: 2.0
-2021-08-24 09:36:07.922  INFO 31 --- [nio-8035-exec-6] S3 REST-BASED START                      : 	dAccuracyWeight: 0.5
-2021-08-24 09:36:07.924  INFO 31 --- [nio-8035-exec-6] S3 REST-BASED START                      : 	dCostWeight: 0.3
-2021-08-24 09:36:07.928  INFO 31 --- [nio-8035-exec-6] S3 REST-BASED START                      : 	dTimeWeight: 0.2
-2021-08-24 09:36:07.931  INFO 31 --- [nio-8035-exec-6] S3 REST-BASED START                      : * Graph-based decision making *
-2021-08-24 09:36:07.932  INFO 31 --- [nio-8035-exec-6] S3 REST-BASED START                      : ** Initialized by REST-POST  **
-2021-08-24 09:36:07.934  INFO 31 --- [nio-8035-exec-6] S3 REST-BASED START                      : -------------------------------
-2021-08-24 09:36:07.936  INFO 31 --- [nio-8035-exec-6] S3 REST-BASED START                      : 
-2021-08-24 09:36:07.965  INFO 31 --- [nio-8035-exec-6] PRECISION-FARMING                        : Deciding on Precision Farming usage...
-2021-08-24 09:36:07.966  INFO 31 --- [nio-8035-exec-6] PRECISION-FARMING                        : Fetching available services for serviceId precision-farming-service...
-2021-08-24 09:36:08.076  INFO 31 --- [nio-8035-exec-6] PRECISION-FARMING                        : Available services: 1
---- Service number 0 ---
-Host: 2395cc242fc4
-InstanceId: 2395cc242fc4:precision-farming-service:8038
-Metadata: [urlanalysis = /analysis, urlstatus = null, urllog = null, cost = 0.4, accuracy = 0.7, location = local, management.port = 8038, time = 0.1, type = PF(L), id = null]
-Updating precision farming segment in graph...
-Found vertex id: PF(L)	Updated edge (PF(L) : G1) with weight 0.29
-Removed vertex PF from graph: unavailable or failing minimum accuracy.
-Updating slurry analysis segment in graph...
-Found vertex id: REF(L)	Updated edge (REF(L) : G2) with weight 0.4
-Removed vertex LAB from graph: unavailable or failing minimum accuracy.
-Removed vertex NIRS from graph: unavailable or failing minimum accuracy.
-Removed vertex REF from graph: unavailable or failing minimum accuracy.
-Updating position correction segment in graph...
-Removed vertex CELL from graph: unavailable or failing minimum accuracy.
-Removed vertex LOC from graph: unavailable or failing minimum accuracy.
-Current graph: ([S, S', PF(L), noPF, G1, REF(L), G2, GPS], [(S,PF(L)), (PF(L),G1), (S,noPF), (noPF,S'), (G1,REF(L)), (REF(L),G2), (G2,GPS), (GPS,S')])
---- Precising farming segment ---
-	Edge (PF(L) : G1) with weight 0.29
-	Edge (noPF : S') with weight 0.43
---- Slurry analysis segment ---
-	Edge (REF(L) : G2) with weight 0.4
---- Position correction segment ---
-	Edge (GPS : S') with weight 0.28
---- k-shortest-paths analysis ---
-Number of shortest paths (S to S') found: 2
-	yenKShortestPath-#0: [(S : noPF), (noPF : S')]
-	yenKShortestPath-#0-VertexList: [S, noPF, S']
-	yenKShortestPath-#0-Weight: 0.43
-	yenKShortestPath-#1: [S, PF(L), G1, REF(L), G2, GPS, S']
-	yenKShortestPath-#1-VertexList: [S, PF(L), G1, REF(L), G2, GPS, S']
-	yenKShortestPath-#1-Weight: 0.97
-Checking minimum accuracy (min defined: 0.2) and total cost (max defined: 2.0) of path #0 ...
-	Minimum accuracy: 0.2
-	Total cost: 0.1
-Path selected: #0
-	Path edge list:[(S : noPF), (noPF : S')]
-	Path vertex list: [S, noPF, S']
-	Minimum accuracy 0.2 >= 0.2 (dMinAccuracy)
-	Path cost 0.1 <= 2.0 (dCostLimit)
-2021-08-24 09:36:08.337  INFO 31 --- [nio-8035-exec-6] PRECISION-FARMING                        : Applying slurry without AppMap (noPF).
-2021-08-24 09:36:08.349  INFO 31 --- [nio-8035-exec-6] APPLY-MANUALLY                           : Applying slurry manually...
-2021-08-24 09:36:08.350  INFO 31 --- [nio-8035-exec-6] APPLY-MANUALLY                           : Slurry application done.
+	Path edge list:[(G2 : CELL), (CELL : S')]
+	Path vertex list: [G2, CELL, S']
+	Minimum accuracy 0.9 >= 0.3 (dMinAccuracy)
+	Path cost 0.3 <= 2.0 (dCostLimit)
+2021-08-29 21:30:04.859  INFO 71286 --- [           main] APPLY-SLURRY-ACCURATELY                  : Going to call service at http://e04-laptop21.fritz.box:8028/gps
+2021-08-29 21:30:05.163  INFO 71286 --- [           main] APPLY-SLURRY-ACCURATELY                  : GPS correction for taskId 0000 resulted in offsets: 0.05389817020796166 / 0.05211702504865438
+2021-08-29 21:30:05.164  INFO 71286 --- [           main] APPLY-SLURRY-ACCURATELY                  : Slurry application done.
+2021-08-29 21:30:05.183  INFO 71286 --- [           main] org.camunda.bpm.container                : ENGINE-08050 Process application spApplication successfully deployed
+2021-08-29 21:30:05.243  INFO 71286 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8035 (http) with context path ''
+2021-08-29 21:30:05.244  INFO 71286 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8035
+2021-08-29 21:30:05.255  INFO 71286 --- [           main] org.example.sp.SpApplication             : Started SpApplication in 106.944 seconds (JVM running for 120.697)
+2021-08-29 21:30:05.258  INFO 71286 --- [           main] org.camunda.bpm.engine.jobexecutor       : ENGINE-14014 Starting up the JobExecutor[org.camunda.bpm.engine.spring.components.jobexecutor.SpringJobExecutor].
+2021-08-29 21:30:05.260  INFO 71286 --- [ingJobExecutor]] org.camunda.bpm.engine.jobexecutor       : ENGINE-14018 JobExecutor[org.camunda.bpm.engine.spring.components.jobexecutor.SpringJobExecutor] starting to acquire jobs

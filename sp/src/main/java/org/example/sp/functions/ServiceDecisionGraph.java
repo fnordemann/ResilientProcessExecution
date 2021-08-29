@@ -23,7 +23,7 @@ public class ServiceDecisionGraph {
     // Camunda variables
     private ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
     private RuntimeService runtimeService = processEngine.getRuntimeService();
-    private final static Logger LOGGER = Logger.getLogger("SERVICE-DECISION-GRAPH-BASED");
+    private final static Logger LOGGER = Logger.getLogger("SERVICE-DECISION-GRAPH");
 
     // Graph variables
     private Graph<String, DefaultWeightedEdge> directedGraph = new SimpleDirectedWeightedGraph<>(DefaultWeightedEdge.class);

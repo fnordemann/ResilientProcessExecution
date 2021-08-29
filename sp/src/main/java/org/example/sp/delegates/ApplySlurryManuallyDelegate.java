@@ -20,7 +20,7 @@ public class ApplySlurryManuallyDelegate implements JavaDelegate {
     // Camunda variables
     private ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
     private RuntimeService runtimeService = processEngine.getRuntimeService();
-    private final static Logger LOGGER = Logger.getLogger("APPLY-MANUALLY");
+    private final static Logger LOGGER = Logger.getLogger("APPLY-SLURRY-MANUALLY");
 
     public void execute(DelegateExecution execution) throws Exception {
 

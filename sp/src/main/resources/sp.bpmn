@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.9.0">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.9.0">
   <bpmn:signal id="Signal_130ys5a" name="trash1" />
   <bpmn:signal id="Signal_0m70s51" name="${sStatusSignal}" />
   <bpmn:signal id="Signal_0il09nj" name="tractor123/stop" />
@@ -9,7 +9,7 @@
   <bpmn:signal id="Signal_1nfn5de" name="${sZipLogSignal}" />
   <bpmn:signal id="Signal_06aanx0" name="${sFarmsystemResultSignal}" />
   <bpmn:collaboration id="SlurryCollaboration">
-    <bpmn:participant id="Sp" name="S3 on slurry spreader" processRef="SpKey" />
+    <bpmn:participant id="Sp" name="S3-Exe on slurry spreader" processRef="SpKey" />
     <bpmn:participant id="Participant_1exclev" name="Ingridients reference (REF)" />
     <bpmn:participant id="Participant_0do7ppp" name="Near-infrared spectroscopy sensor (NIRS)" />
     <bpmn:participant id="Participant_0i4js6z" name="Precision Farming provider (PF)" />
@@ -58,11 +58,11 @@
     <bpmn:sequenceFlow id="Flow_121aj9k" name="Yes" sourceRef="ExclusiveGateway_1b1klsx" targetRef="Task_0fues0g">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${bUsePf == true}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
-    <bpmn:serviceTask id="Task_115r3ci" name="Configure&#10;Precision&#10;Farming" camunda:class="org.example.sp.delegates.PrecisionFarmingDelegate">
+    <bpmn:serviceTask id="Task_115r3ci" name="Configure&#10;Precision&#10;Farming" camunda:class="org.example.sp.delegates.ConfigPrecisionFarmingDelegate">
       <bpmn:incoming>SequenceFlow_0yw3il7</bpmn:incoming>
       <bpmn:outgoing>Flow_0uov181</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:serviceTask id="Task_0fues0g" name="Analyze&#10; slurry" camunda:class="org.example.sp.delegates.AnalyzeSlurryIngredientsDelegate">
+    <bpmn:serviceTask id="Task_0fues0g" name="Analyze&#10; slurry" camunda:class="org.example.sp.delegates.AnalyzeSlurryDelegate">
       <bpmn:incoming>Flow_121aj9k</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0eh0amc</bpmn:outgoing>
     </bpmn:serviceTask>
@@ -70,7 +70,7 @@
       <bpmn:incoming>Flow_0j2hkxn</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0qo6g35</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:serviceTask id="Task_11v7qa0" name="Apply&#10;slurry&#10;accurately" camunda:class="org.example.sp.delegates.CorrectGpsDelegate">
+    <bpmn:serviceTask id="Task_11v7qa0" name="Apply&#10;slurry&#10;accurately" camunda:class="org.example.sp.delegates.ApplySlurryAccuratelyDelegate">
       <bpmn:incoming>SequenceFlow_0eh0amc</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0bal59i</bpmn:outgoing>
     </bpmn:serviceTask>
@@ -138,16 +138,16 @@
           <dc:Bounds x="405" y="347" width="43" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0rxx6kk_di" bpmnElement="Task_115r3ci">
+      <bpmndi:BPMNShape id="Activity_0rxx6kk_di" bpmnElement="Task_115r3ci" bioc:stroke="#1e88e5" bioc:fill="#bbdefb" color:background-color="#bbdefb" color:border-color="#1e88e5">
         <dc:Bounds x="273" y="351" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0amotzc_di" bpmnElement="Task_0fues0g">
+      <bpmndi:BPMNShape id="Activity_0amotzc_di" bpmnElement="Task_0fues0g" bioc:stroke="#1e88e5" bioc:fill="#bbdefb" color:background-color="#bbdefb" color:border-color="#1e88e5">
         <dc:Bounds x="503" y="351" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0fclpy6_di" bpmnElement="Task_1qa4swu">
         <dc:Bounds x="651" y="436" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0deucnp_di" bpmnElement="Task_11v7qa0">
+      <bpmndi:BPMNShape id="Activity_0deucnp_di" bpmnElement="Task_11v7qa0" bioc:stroke="#1e88e5" bioc:fill="#bbdefb" color:background-color="#bbdefb" color:border-color="#1e88e5">
         <dc:Bounds x="651" y="351" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Participant_0ogjwq6_di" bpmnElement="Participant_1exclev" isHorizontal="true">
@@ -155,6 +155,9 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Participant_0do7ppp_di" bpmnElement="Participant_0do7ppp" isHorizontal="true">
         <dc:Bounds x="395" y="629" width="300" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_0i4js6z_di" bpmnElement="Participant_0i4js6z" isHorizontal="true">
+        <dc:Bounds x="156" y="230" width="300" height="60" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Participant_1hmmheu_di" bpmnElement="Participant_1hmmheu" isHorizontal="true">
         <dc:Bounds x="257" y="146" width="300" height="60" />
@@ -167,9 +170,6 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Participant_1ow8rxb_di" bpmnElement="Participant_1ow8rxb" isHorizontal="true">
         <dc:Bounds x="230" y="558" width="300" height="60" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Participant_0i4js6z_di" bpmnElement="Participant_0i4js6z" isHorizontal="true">
-        <dc:Bounds x="156" y="230" width="300" height="60" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Group_0m52psv_di" bpmnElement="Group_0m52psv">
         <dc:Bounds x="250" y="320" width="216" height="210" />

@@ -11,7 +11,7 @@ import org.example.datatypes.GpsRequest;
 import org.example.eureka.Instance;
 import org.example.eureka.Metadata;
 import org.example.sp.functions.ServiceDecisionGraph;
-import org.example.sp.functions.ServiceSearch;
+import org.example.sp.functions.ServiceDiscovery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.http.HttpEntity;
@@ -28,7 +28,7 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 @Component
-public class CorrectGpsDelegate implements JavaDelegate {
+public class ApplySlurryAccuratelyDelegate implements JavaDelegate {
 
     @Autowired
     private DiscoveryClient discoveryClient;
@@ -36,9 +36,9 @@ public class CorrectGpsDelegate implements JavaDelegate {
     // Camunda variables
     private ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
     private RuntimeService runtimeService = processEngine.getRuntimeService();
-    private final static Logger LOGGER = Logger.getLogger("CORRECT-GPS");
+    private final static Logger LOGGER = Logger.getLogger("APPLY-SLURRY-ACCURATELY");
 
-    private ServiceSearch serviceSearch = new ServiceSearch();
+    private ServiceDiscovery serviceDiscovery = new ServiceDiscovery();
 
     int debug = 0;
 
@@ -119,7 +119,7 @@ public class CorrectGpsDelegate implements JavaDelegate {
         String serviceId = "gps-service";
 
         LOGGER.info("Fetching available services for serviceId " + serviceId + "...");
-        List<Instance> instanceList = serviceSearch.findServices(serviceId);
+        List<Instance> instanceList = serviceDiscovery.findServices(serviceId);
 
         LOGGER.info("Available services: " + instanceList.size());
         for (int i = 0; i < instanceList.size(); i++) {
@@ -133,9 +133,9 @@ public class CorrectGpsDelegate implements JavaDelegate {
         // Search for service until an appropriate is found
         while (searchService) {
                 // Update graph for precision farming segment
-                serviceDecisionGraph.updateGraph("precision-farming", serviceSearch.findServices("precision-farming-service"), dAccuracyWeight, dCostWeight, dTimeWeight);
+                serviceDecisionGraph.updateGraph("precision-farming", serviceDiscovery.findServices("precision-farming-service"), dAccuracyWeight, dCostWeight, dTimeWeight);
                 // Update graph for slurry analysis segment
-                serviceDecisionGraph.updateGraph("slurry-analysis", serviceSearch.findServices("ingredients-service"), dAccuracyWeight, dCostWeight, dTimeWeight);
+                serviceDecisionGraph.updateGraph("slurry-analysis", serviceDiscovery.findServices("ingredients-service"), dAccuracyWeight, dCostWeight, dTimeWeight);
                 // Update graph for position correction segment
                 serviceDecisionGraph.updateGraph("position-sensing", instanceList, dAccuracyWeight, dCostWeight, dTimeWeight);
                 serviceDecisionGraph.printGraph();
