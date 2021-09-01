@@ -19,7 +19,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"taskId\":\"123456789\",\n    \"dMinAccuracy\":\"0.3\",\n    \"dCostLimit\":\"2.0\",\n    \"dAccuracyWeight\":\"0.5\",\n    \"dCostWeight\":\"0.3\",\n    \"dTimeWeight\":\"0.2\"\n}"
+					"raw": "{\n    \"taskId\":\"123456789\",\n    \"dMinAccuracy\":\"0.2\",\n    \"dCostLimit\":\"2.0\",\n    \"dAccuracyWeight\":\"0.5\",\n    \"dCostWeight\":\"0.3\",\n    \"dTimeWeight\":\"0.2\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:8035/start",

@@ -1,7 +1,7 @@
 # Resilient Business Process Execution
-This repository provides the proof-of-concept implementations for the resiliency concepts and implemention strategies presented in the thesis *Modeling and Execution of Resilient Business Processes in Unreliable Communication Environments*. Since setting up an unreliable communication environment for evaluating the proof-of-concept is cumbersome, the code is designed to be executable on a single system. A Neighbor-Service for the slurry spreader can add and delete neighbors, resulting in an emulated unreliable communication environment. By interfacing a proactive routing protocol used in an unreliable network, the code may be used for execution in real-world environments.
+This repository provides the proof-of-concept implementations for the resiliency concepts and implementation strategies presented in the PhD thesis *Modeling and Execution of Resilient Business Processes in Unreliable Communication Environments*. Since setting up an unreliable communication environment for evaluating the proof-of-concept is cumbersome, the code is designed to be executable on a single system. A Neighbor-Service for the slurry spreader can add and delete neighbors, resulting in an emulated unreliable communication environment. By interfacing a proactive routing protocol used in an unreliable network, the code may be used for execution in real-world environments.
 
-The evaluation of the thesis includes two implementations. While the *master* branch includes the graph-based multi-criteria process analysis of slurry process S3-Exe, the branch *phd-wsm* includes the second slurry process featuring a MGMT-entity and decision-making based on the Weighted Sum Model (WSM).
+The evaluation of the thesis includes two implementations. While the *master* branch includes the graph-based multi-criteria process analysis of slurry process S3-Exe, the branch *phd-wsm* includes the second slurry process featuring an MGMT-entity and decision-making based on the Weighted Sum Model (WSM).
 
 ## Run the proof-of-concept implementations
 First of all, the repository needs to be cloned to the system supposed to execute the proof-of-concept.
@@ -10,7 +10,7 @@ Clone the *master* branch for process S3-Exe (graph-based decision-making):
 
     git clone https://github.com/fnordemann/ResilientProcessExecution.git
 
-OR clone and checkout the *phd-wsm* branch for process S4-Exe (WSM-based decision-making):
+or clone and checkout the *phd-wsm* branch for process S4-Exe (WSM-based decision-making):
 
     git clone --single-branch --branch phd-wsm https://github.com/fnordemann/ResilientProcessExecution.git
 
@@ -57,13 +57,13 @@ Automatically trigger execution by running:
 Different options to control and manipulate the slurry process execution exist.
 
 ### REST-Calls in Postman
-REST-calls can be used to a start slurry process, to add/delete neighbor nodes and to inspect Eureka server instances. A collection of REST calls can be imported into the program *Postman* (https://www.postman.com):
+REST-calls can be used to start a slurry process, to add/delete neighbor nodes and to inspect Eureka server instances. A collection of REST calls can be imported into the program *Postman* (https://www.postman.com):
 
     postman-rest-helpercalls -> Postman_REST_Helpercalls.postman_collection.json
 
 ### Controlling and inspecting BPMN processes running in Camunda BPM
-The slurry spreader and the MGMT-entity (only in process S4-Exe) execute BPMN processes that can be started / monitored from Camunda tools (for *username/password*, use *demo/demo*). Use Camunda Tasklist to start a slurry process and Camunda Cockpit to inspect running processes at:
-- S: http://localhost:8035
+The slurry spreader and the MGMT-entity (only in process S4-Exe) execute BPMN processes that can be started/monitored from Camunda tools (for *username/password*, use *demo/demo*). Use Camunda Tasklist to start a slurry process and Camunda Cockpit to inspect running processes at:
+- S3-Exe/S4-Exe: http://localhost:8035
 - MGMT: http://localhost:8025
 - MGMT(L) on S3: http://localhost:8036
 
@@ -89,10 +89,10 @@ Some services also provide information by accessing their interfaces. Besides, p
     - REF2: 8026 (only in S4-Exe)
     - CELL: 8028
     - CELL2: 8029 (only in S4-Exe)
-- S:
-    - Eureka-S3: 8030
+- S3-Exe/S4-Exe:
+    - Eureka: 8030
     - Neighbor-Service: 8031
-    - Camunda-S3: 8035
+    - Camunda: 8035
     - PF(L): 8038 (only in S3-Exe)
     - REF(L): 8037
 - NIRS:
@@ -106,7 +106,7 @@ Some services also provide information by accessing their interfaces. Besides, p
 - Users may find the source code commentaries helpful for understanding/adapting the proof-of-concept.
 - Real-world deployments require to adapt the network configuration of services
     xyz-service->src->main->resources->application.yml
-- Service discovery and decision making is part of the slurry spreader implementation and may be used in other services.
+- Service discovery and decision-making is part of the slurry spreader implementation and may be used in other services.
 
 
 ## Used software
