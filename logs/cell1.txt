@@ -1,4 +1,4 @@
-2021-08-29 21:28:31.309  INFO 71281 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-01 20:00:21.652  INFO 32024 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -8,36 +8,36 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.2.1.RELEASE)
 
-2021-08-29 21:28:35.140  INFO 71281 --- [           main] org.example.cell.Application             : The following profiles are active: cell1
-2021-08-29 21:28:50.428  INFO 71281 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=05ea4fd2-de36-3350-ade8-9037da5bf5a7
-2021-08-29 21:28:53.599  INFO 71281 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-08-29 21:28:57.382  INFO 71281 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8028 (http)
-2021-08-29 21:28:57.671  INFO 71281 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-08-29 21:28:57.682  INFO 71281 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
-2021-08-29 21:28:58.958  INFO 71281 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-08-29 21:28:58.958  INFO 71281 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 23232 ms
-2021-08-29 21:29:01.128  WARN 71281 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2021-08-29 21:29:01.128  INFO 71281 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-08-29 21:29:01.271  WARN 71281 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2021-08-29 21:29:01.271  INFO 71281 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-08-29 21:29:06.949  INFO 71281 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-08-29 21:29:11.969  WARN 71281 --- [           main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
-2021-08-29 21:29:12.785  WARN 71281 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with default default cache. You can switch to using Caffeine cache, by adding it to the classpath.
-2021-08-29 21:29:13.223  INFO 71281 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2021-08-29 21:29:14.773  INFO 71281 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2021-08-29 21:29:18.760  INFO 71281 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2021-08-29 21:29:18.762  INFO 71281 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2021-08-29 21:29:22.928  INFO 71281 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2021-08-29 21:29:22.928  INFO 71281 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2021-08-29 21:29:26.191  INFO 71281 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2021-08-29 21:29:26.568  INFO 71281 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2021-08-29 21:29:26.569  INFO 71281 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2021-08-29 21:29:26.569  INFO 71281 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2021-08-29 21:29:26.569  INFO 71281 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2021-08-29 21:29:26.569  INFO 71281 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2021-08-29 21:29:26.569  INFO 71281 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2021-08-29 21:29:26.569  INFO 71281 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2021-08-29 21:29:27.923 ERROR 71281 --- [           main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:8020/eureka/}
+2021-09-01 20:00:25.862  INFO 32024 --- [           main] org.example.cell.Application             : The following profiles are active: cell1
+2021-09-01 20:00:41.027  INFO 32024 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=05ea4fd2-de36-3350-ade8-9037da5bf5a7
+2021-09-01 20:00:44.164  INFO 32024 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-01 20:00:49.393  INFO 32024 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8028 (http)
+2021-09-01 20:00:49.642  INFO 32024 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-01 20:00:49.643  INFO 32024 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-09-01 20:00:50.620  INFO 32024 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-09-01 20:00:50.620  INFO 32024 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 24304 ms
+2021-09-01 20:00:52.492  WARN 32024 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-09-01 20:00:52.569  INFO 32024 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-09-01 20:00:52.580  WARN 32024 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-09-01 20:00:52.689  INFO 32024 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-09-01 20:00:57.522  INFO 32024 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-09-01 20:01:02.719  WARN 32024 --- [           main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2021-09-01 20:01:03.904  WARN 32024 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with default default cache. You can switch to using Caffeine cache, by adding it to the classpath.
+2021-09-01 20:01:04.566  INFO 32024 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-09-01 20:01:06.192  INFO 32024 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2021-09-01 20:01:10.960  INFO 32024 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2021-09-01 20:01:10.960  INFO 32024 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2021-09-01 20:01:14.819  INFO 32024 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2021-09-01 20:01:14.840  INFO 32024 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2021-09-01 20:01:18.955  INFO 32024 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-09-01 20:01:19.329  INFO 32024 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2021-09-01 20:01:19.329  INFO 32024 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2021-09-01 20:01:19.329  INFO 32024 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2021-09-01 20:01:19.329  INFO 32024 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2021-09-01 20:01:19.329  INFO 32024 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2021-09-01 20:01:19.329  INFO 32024 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2021-09-01 20:01:19.329  INFO 32024 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2021-09-01 20:01:20.578 ERROR 32024 --- [           main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:8020/eureka/}
 
 com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused
 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar!/:1.19.1]
@@ -97,7 +97,7 @@ com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Con
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689) ~[spring-aop-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$EnhancerBySpringCGLIB$$8c14d67.getEurekaClient(<generated>) ~[spring-cloud-netflix-eureka-client-2.2.0.RELEASE.jar!/:2.2.0.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$EnhancerBySpringCGLIB$$7e0bc1a2.getEurekaClient(<generated>) ~[spring-cloud-netflix-eureka-client-2.2.0.RELEASE.jar!/:2.2.0.RELEASE]
 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:57) ~[spring-cloud-netflix-eureka-client-2.2.0.RELEASE.jar!/:2.2.0.RELEASE]
 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:38) ~[spring-cloud-netflix-eureka-client-2.2.0.RELEASE.jar!/:2.2.0.RELEASE]
 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:83) ~[spring-cloud-netflix-eureka-client-2.2.0.RELEASE.jar!/:2.2.0.RELEASE]
@@ -143,8 +143,8 @@ Caused by: java.net.ConnectException: Connection refused
 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar!/:1.19.1]
 	... 83 common frames omitted
 
-2021-08-29 21:29:27.926  WARN 71281 --- [           main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused
-2021-08-29 21:29:27.935 ERROR 71281 --- [           main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_GPS-SERVICE/e04-laptop21.fritz.box:gps-service:8028 - was unable to refresh its cache! status = Cannot execute request on any known server
+2021-09-01 20:01:20.579  WARN 32024 --- [           main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused
+2021-09-01 20:01:20.580 ERROR 32024 --- [           main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_GPS-SERVICE/e04-laptop21.fritz.box:gps-service:8028 - was unable to refresh its cache! status = Cannot execute request on any known server
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.13.jar!/:1.9.13]
@@ -187,7 +187,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689) ~[spring-aop-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$EnhancerBySpringCGLIB$$8c14d67.getEurekaClient(<generated>) ~[spring-cloud-netflix-eureka-client-2.2.0.RELEASE.jar!/:2.2.0.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$EnhancerBySpringCGLIB$$7e0bc1a2.getEurekaClient(<generated>) ~[spring-cloud-netflix-eureka-client-2.2.0.RELEASE.jar!/:2.2.0.RELEASE]
 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:57) ~[spring-cloud-netflix-eureka-client-2.2.0.RELEASE.jar!/:2.2.0.RELEASE]
 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:38) ~[spring-cloud-netflix-eureka-client-2.2.0.RELEASE.jar!/:2.2.0.RELEASE]
 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:83) ~[spring-cloud-netflix-eureka-client-2.2.0.RELEASE.jar!/:2.2.0.RELEASE]
@@ -215,14 +215,14 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:51) ~[cell-service-0.1.0.jar:0.1.0]
 	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:52) ~[cell-service-0.1.0.jar:0.1.0]
 
-2021-08-29 21:29:27.936  WARN 71281 --- [           main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
-2021-08-29 21:29:27.939  INFO 71281 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 5
-2021-08-29 21:29:27.945  INFO 71281 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2021-08-29 21:29:27.953  INFO 71281 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1630265367952 with initial instances count: 0
-2021-08-29 21:29:27.956  INFO 71281 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application GPS-SERVICE with eureka with status UP
-2021-08-29 21:29:28.049  INFO 71281 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1630265368049, current=UP, previous=STARTING]
-2021-08-29 21:29:28.053  INFO 71281 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_GPS-SERVICE/e04-laptop21.fritz.box:gps-service:8028: registering service...
-2021-08-29 21:29:28.074 ERROR 71281 --- [nfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:8020/eureka/}
+2021-09-01 20:01:20.584  WARN 32024 --- [           main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
+2021-09-01 20:01:20.590  INFO 32024 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 5
+2021-09-01 20:01:20.594  INFO 32024 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-09-01 20:01:20.602  INFO 32024 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1630519280601 with initial instances count: 0
+2021-09-01 20:01:20.606  INFO 32024 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application GPS-SERVICE with eureka with status UP
+2021-09-01 20:01:20.782  INFO 32024 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1630519280782, current=UP, previous=STARTING]
+2021-09-01 20:01:20.790  INFO 32024 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_GPS-SERVICE/e04-laptop21.fritz.box:gps-service:8028: registering service...
+2021-09-01 20:01:20.989 ERROR 32024 --- [nfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:8020/eureka/}
 
 com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused
 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar!/:1.19.1]
@@ -274,8 +274,8 @@ Caused by: java.net.ConnectException: Connection refused
 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar!/:1.19.1]
 	... 29 common frames omitted
 
-2021-08-29 21:29:28.075  WARN 71281 --- [nfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused
-2021-08-29 21:29:28.075  WARN 71281 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_GPS-SERVICE/e04-laptop21.fritz.box:gps-service:8028 - registration failed Cannot execute request on any known server
+2021-09-01 20:01:20.989  WARN 32024 --- [nfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused
+2021-09-01 20:01:20.990  WARN 32024 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_GPS-SERVICE/e04-laptop21.fritz.box:gps-service:8028 - registration failed Cannot execute request on any known server
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.13.jar!/:1.9.13]
@@ -293,7 +293,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
 
-2021-08-29 21:29:28.075  WARN 71281 --- [nfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+2021-09-01 20:01:20.990  WARN 32024 --- [nfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.13.jar!/:1.9.13]
@@ -311,10 +311,10 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
 
-2021-08-29 21:29:28.318  INFO 71281 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8028 (http) with context path ''
-2021-08-29 21:29:28.319  INFO 71281 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8028
-2021-08-29 21:29:28.328  INFO 71281 --- [           main] org.example.cell.Application             : Started Application in 74.883 seconds (JVM running for 83.647)
-2021-08-29 21:29:32.947 ERROR 71281 --- [tbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:8020/eureka/}
+2021-09-01 20:01:21.026  INFO 32024 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8028 (http) with context path ''
+2021-09-01 20:01:21.096  INFO 32024 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8028
+2021-09-01 20:01:21.111  INFO 32024 --- [           main] org.example.cell.Application             : Started Application in 78.926 seconds (JVM running for 88.605)
+2021-09-01 20:01:25.600 ERROR 32024 --- [tbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:8020/eureka/}
 
 com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused
 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar!/:1.19.1]
@@ -364,8 +364,8 @@ Caused by: java.net.ConnectException: Connection refused
 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar!/:1.19.1]
 	... 27 common frames omitted
 
-2021-08-29 21:29:32.947  WARN 71281 --- [tbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused
-2021-08-29 21:29:32.948 ERROR 71281 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_GPS-SERVICE/e04-laptop21.fritz.box:gps-service:8028 - was unable to send heartbeat!
+2021-09-01 20:01:25.601  WARN 32024 --- [tbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused
+2021-09-01 20:01:25.602 ERROR 32024 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_GPS-SERVICE/e04-laptop21.fritz.box:gps-service:8028 - was unable to send heartbeat!
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.13.jar!/:1.9.13]
@@ -381,7 +381,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
 
-2021-08-29 21:29:37.953 ERROR 71281 --- [tbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:8020/eureka/}
+2021-09-01 20:01:30.610 ERROR 32024 --- [tbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:8020/eureka/}
 
 com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused
 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar!/:1.19.1]
@@ -431,8 +431,8 @@ Caused by: java.net.ConnectException: Connection refused
 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar!/:1.19.1]
 	... 27 common frames omitted
 
-2021-08-29 21:29:37.954  WARN 71281 --- [tbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused
-2021-08-29 21:29:37.955 ERROR 71281 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_GPS-SERVICE/e04-laptop21.fritz.box:gps-service:8028 - was unable to send heartbeat!
+2021-09-01 20:01:30.610  WARN 32024 --- [tbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused
+2021-09-01 20:01:30.611 ERROR 32024 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_GPS-SERVICE/e04-laptop21.fritz.box:gps-service:8028 - was unable to send heartbeat!
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.13.jar!/:1.9.13]
@@ -448,7 +448,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
 
-2021-08-29 21:29:42.960 ERROR 71281 --- [tbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:8020/eureka/}
+2021-09-01 20:01:35.616 ERROR 32024 --- [tbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:8020/eureka/}
 
 com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused
 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar!/:1.19.1]
@@ -498,8 +498,8 @@ Caused by: java.net.ConnectException: Connection refused
 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar!/:1.19.1]
 	... 27 common frames omitted
 
-2021-08-29 21:29:42.961  WARN 71281 --- [tbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused
-2021-08-29 21:29:42.962 ERROR 71281 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_GPS-SERVICE/e04-laptop21.fritz.box:gps-service:8028 - was unable to send heartbeat!
+2021-09-01 20:01:35.617  WARN 32024 --- [tbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused
+2021-09-01 20:01:35.620 ERROR 32024 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_GPS-SERVICE/e04-laptop21.fritz.box:gps-service:8028 - was unable to send heartbeat!
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.13.jar!/:1.9.13]
@@ -515,17 +515,17 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
 
-2021-08-29 21:29:48.516  INFO 71281 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_GPS-SERVICE/e04-laptop21.fritz.box:gps-service:8028 - Re-registering apps/GPS-SERVICE
-2021-08-29 21:29:48.518  INFO 71281 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_GPS-SERVICE/e04-laptop21.fritz.box:gps-service:8028: registering service...
-2021-08-29 21:29:49.119  INFO 71281 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_GPS-SERVICE/e04-laptop21.fritz.box:gps-service:8028 - registration status: 204
-2021-08-29 21:29:57.940  INFO 71281 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2021-08-29 21:29:57.941  INFO 71281 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2021-08-29 21:29:57.941  INFO 71281 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2021-08-29 21:29:57.941  INFO 71281 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2021-08-29 21:29:57.942  INFO 71281 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2021-08-29 21:29:57.942  INFO 71281 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2021-08-29 21:29:57.942  INFO 71281 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2021-08-29 21:29:58.066  INFO 71281 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2021-08-29 21:30:05.023  INFO 71281 --- [nio-8028-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-08-29 21:30:05.025  INFO 71281 --- [nio-8028-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-08-29 21:30:05.043  INFO 71281 --- [nio-8028-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2021-09-01 20:01:40.770  INFO 32024 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_GPS-SERVICE/e04-laptop21.fritz.box:gps-service:8028 - Re-registering apps/GPS-SERVICE
+2021-09-01 20:01:40.771  INFO 32024 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_GPS-SERVICE/e04-laptop21.fritz.box:gps-service:8028: registering service...
+2021-09-01 20:01:41.317  INFO 32024 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_GPS-SERVICE/e04-laptop21.fritz.box:gps-service:8028 - registration status: 204
+2021-09-01 20:01:50.593  INFO 32024 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2021-09-01 20:01:50.594  INFO 32024 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2021-09-01 20:01:50.594  INFO 32024 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2021-09-01 20:01:50.594  INFO 32024 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2021-09-01 20:01:50.594  INFO 32024 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2021-09-01 20:01:50.594  INFO 32024 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2021-09-01 20:01:50.595  INFO 32024 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2021-09-01 20:01:50.694  INFO 32024 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2021-09-01 20:01:55.203  INFO 32024 --- [nio-8028-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-01 20:01:55.203  INFO 32024 --- [nio-8028-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-01 20:01:55.216  INFO 32024 --- [nio-8028-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
