@@ -86,7 +86,7 @@ Some services also provide information by accessing their interfaces. Besides, p
     - PF: 8024 (only in S3-Exe)
     - LAB: 8023 (only in S3-Exe)
     - REF: 8026
-    - REF2: 8026 (only in S4-Exe)
+    - REF2: 8027 (only in S4-Exe)
     - CELL: 8028
     - CELL2: 8029 (only in S4-Exe)
 - S3-Exe/S4-Exe:
