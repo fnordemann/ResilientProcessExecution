@@ -1,5 +1,5 @@
 server:
-  port: 8056
+  port: 8055
 eureka:
   instance:
     leaseRenewalIntervalInSeconds: 5
