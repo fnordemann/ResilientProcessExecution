@@ -1,4 +1,4 @@
-2021-10-21 23:08:18.546  INFO 10540 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$5f82bc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-21 21:41:24.774  INFO 22 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$295412] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -8,80 +8,173 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.1.7.RELEASE)
 
-2021-10-21 23:08:26.176  INFO 10540 --- [           main] o.e.eureka.EurekaServerApplication       : The following profiles are active: nirs
-2021-10-21 23:08:44.847  WARN 10540 --- [           main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2021-10-21 23:08:49.697  INFO 10540 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=70732503-b5f4-38d3-8aa5-7fe93f9c0d3b
-2021-10-21 23:08:51.604  INFO 10540 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$5f82bc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-10-21 23:08:56.290  INFO 10540 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8040 (http)
-2021-10-21 23:08:56.760  INFO 10540 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-21 23:08:56.761  INFO 10540 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
-2021-10-21 23:08:58.675  INFO 10540 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-10-21 23:08:58.676  INFO 10540 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 32159 ms
-2021-10-21 23:09:01.251  WARN 10540 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2021-10-21 23:09:01.251  INFO 10540 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-10-21 23:09:01.672  INFO 10540 --- [           main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@51c929ae
-2021-10-21 23:09:14.119  INFO 10540 --- [           main] c.s.j.s.i.a.WebApplicationImpl           : Initiating Jersey application, version 'Jersey: 1.19.1 03/11/2016 02:08 PM'
-2021-10-21 23:09:15.148  INFO 10540 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2021-10-21 23:09:15.151  INFO 10540 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2021-10-21 23:09:17.785  INFO 10540 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2021-10-21 23:09:17.786  INFO 10540 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2021-10-21 23:09:23.962  WARN 10540 --- [           main] o.s.c.n.a.ArchaiusAutoConfiguration      : No spring.application.name found, defaulting to 'application'
-2021-10-21 23:09:23.963  WARN 10540 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2021-10-21 23:09:23.964  INFO 10540 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-10-21 23:09:26.702  INFO 10540 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-10-21 23:09:32.527  INFO 10540 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2021-10-21 23:09:32.776  INFO 10540 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2021-10-21 23:09:32.777  INFO 10540 --- [           main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
-2021-10-21 23:09:32.862  INFO 10540 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1634850572860 with initial instances count: 0
-2021-10-21 23:09:33.218  INFO 10540 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
-2021-10-21 23:09:33.222  INFO 10540 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://127.0.0.1:8040/eureka/]
-2021-10-21 23:09:35.369  INFO 10540 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2021-10-21 23:09:35.369  INFO 10540 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2021-10-21 23:09:35.369  INFO 10540 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2021-10-21 23:09:35.369  INFO 10540 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2021-10-21 23:09:36.686  INFO 10540 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://127.0.0.1:8040/eureka/
-2021-10-21 23:09:36.805  INFO 10540 --- [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
-2021-10-21 23:09:36.806  INFO 10540 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
-2021-10-21 23:09:36.965  INFO 10540 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2021-10-21 23:09:38.114  INFO 10540 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UNKNOWN with eureka with status UP
-2021-10-21 23:09:38.126  INFO 10540 --- [      Thread-10] o.s.c.n.e.server.EurekaServerBootstrap   : Setting the eureka configuration..
-2021-10-21 23:09:38.132  INFO 10540 --- [      Thread-10] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka data center value eureka.datacenter is not set, defaulting to default
-2021-10-21 23:09:38.133  INFO 10540 --- [      Thread-10] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka environment value eureka.environment is not set, defaulting to test
-2021-10-21 23:09:38.515  INFO 10540 --- [      Thread-10] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
-2021-10-21 23:09:38.515  INFO 10540 --- [      Thread-10] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
-2021-10-21 23:09:38.516  INFO 10540 --- [      Thread-10] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
-2021-10-21 23:09:38.516  INFO 10540 --- [      Thread-10] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
-2021-10-21 23:09:38.516  INFO 10540 --- [      Thread-10] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
-2021-10-21 23:09:38.531  INFO 10540 --- [      Thread-10] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
-2021-10-21 23:09:38.913  INFO 10540 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8040 (http) with context path ''
-2021-10-21 23:09:38.913  INFO 10540 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8040
-2021-10-21 23:09:38.917  INFO 10540 --- [           main] o.e.eureka.EurekaServerApplication       : Started EurekaServerApplication in 104.91 seconds (JVM running for 114.543)
-2021-10-21 23:09:42.078  INFO 10540 --- [nio-8040-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-10-21 23:09:42.078  INFO 10540 --- [nio-8040-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-10-21 23:09:42.223  INFO 10540 --- [nio-8040-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 145 ms
-2021-10-21 23:09:42.442  WARN 10540 --- [nio-8040-exec-1] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: INGREDIENTS-SERVICE - 192.168.8.58:ingredients-service:8045
-2021-10-21 23:09:42.442  WARN 10540 --- [nio-8040-exec-1] c.n.eureka.resources.InstanceResource    : Not Found (Renew): INGREDIENTS-SERVICE - 192.168.8.58:ingredients-service:8045
-2021-10-21 23:09:43.654  INFO 10540 --- [nio-8040-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance INGREDIENTS-SERVICE/192.168.8.58:ingredients-service:8045 with status UP (replication=false)
-2021-10-21 23:09:43.659  INFO 10540 --- [nio-8040-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance INGREDIENTS-SERVICE/192.168.8.58:ingredients-service:8045 with status UP (replication=false)
-2021-10-21 23:09:44.830  INFO 10540 --- [nio-8040-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance INGREDIENTS-SERVICE/192.168.8.58:ingredients-service:8045 with status UP (replication=true)
-2021-10-21 23:10:38.521  INFO 10540 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2021-10-21 23:11:38.526  INFO 10540 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
-2021-10-21 23:12:38.528  INFO 10540 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
-2021-10-21 23:13:38.531  INFO 10540 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
-2021-10-21 23:14:38.537  INFO 10540 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
-2021-10-21 23:15:38.542  INFO 10540 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
-2021-10-21 23:16:38.545  INFO 10540 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
-2021-10-21 23:17:38.546  INFO 10540 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2021-10-21 23:18:38.550  INFO 10540 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
-2021-10-21 23:19:38.555  INFO 10540 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
-2021-10-21 23:20:38.557  INFO 10540 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2021-10-21 23:21:38.560  INFO 10540 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
-2021-10-21 23:22:38.563  INFO 10540 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
-2021-10-21 23:23:38.568  INFO 10540 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
-2021-10-21 23:24:36.808  INFO 10540 --- [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 3
-2021-10-21 23:24:38.574  INFO 10540 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
-2021-10-21 23:25:38.582  INFO 10540 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2021-10-21 23:26:38.588  INFO 10540 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
-2021-10-21 23:27:38.590  INFO 10540 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
-2021-10-21 23:28:38.593  INFO 10540 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
-2021-10-21 23:29:38.596  INFO 10540 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2021-10-21 21:41:47.135  INFO 22 --- [           main] o.e.eureka.EurekaServerApplication       : The following profiles are active: nirs
+2021-10-21 21:42:40.022  WARN 22 --- [           main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2021-10-21 21:42:57.909  INFO 22 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=70732503-b5f4-38d3-8aa5-7fe93f9c0d3b
+2021-10-21 21:43:18.917  INFO 22 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$295412] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-21 21:43:29.746  INFO 22 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8040 (http)
+2021-10-21 21:43:30.852  INFO 22 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-21 21:43:30.861  INFO 22 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2021-10-21 21:43:34.014  INFO 22 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-21 21:43:34.024  INFO 22 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 105887 ms
+2021-10-21 21:43:37.047  WARN 22 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-10-21 21:43:37.059  INFO 22 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-10-21 21:43:37.554  INFO 22 --- [           main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@c91f4e53
+2021-10-21 21:43:58.593  INFO 22 --- [           main] c.s.j.s.i.a.WebApplicationImpl           : Initiating Jersey application, version 'Jersey: 1.19.1 03/11/2016 02:08 PM'
+2021-10-21 21:44:00.619  INFO 22 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2021-10-21 21:44:00.663  INFO 22 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2021-10-21 21:44:06.270  INFO 22 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2021-10-21 21:44:06.278  INFO 22 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2021-10-21 21:44:10.676  WARN 22 --- [           main] o.s.c.n.a.ArchaiusAutoConfiguration      : No spring.application.name found, defaulting to 'application'
+2021-10-21 21:44:10.686  WARN 22 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-10-21 21:44:10.688  INFO 22 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-10-21 21:44:12.372  INFO 22 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-10-21 21:44:19.690  INFO 22 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-10-21 21:44:20.136  INFO 22 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2021-10-21 21:44:20.138  INFO 22 --- [           main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2021-10-21 21:44:20.248  INFO 22 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1634852660234 with initial instances count: 0
+2021-10-21 21:44:20.618  INFO 22 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2021-10-21 21:44:20.649  INFO 22 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://127.0.0.1:8040/eureka/]
+2021-10-21 21:44:22.994  INFO 22 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2021-10-21 21:44:23.016  INFO 22 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2021-10-21 21:44:23.019  INFO 22 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2021-10-21 21:44:23.023  INFO 22 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2021-10-21 21:44:24.759  INFO 22 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://127.0.0.1:8040/eureka/
+2021-10-21 21:44:24.945  INFO 22 --- [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2021-10-21 21:44:24.963  INFO 22 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2021-10-21 21:44:25.092  INFO 22 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-10-21 21:44:26.484  INFO 22 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UNKNOWN with eureka with status UP
+2021-10-21 21:44:26.520  INFO 22 --- [      Thread-17] o.s.c.n.e.server.EurekaServerBootstrap   : Setting the eureka configuration..
+2021-10-21 21:44:26.524  INFO 22 --- [      Thread-17] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka data center value eureka.datacenter is not set, defaulting to default
+2021-10-21 21:44:26.526  INFO 22 --- [      Thread-17] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka environment value eureka.environment is not set, defaulting to test
+2021-10-21 21:44:26.645  INFO 22 --- [      Thread-17] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2021-10-21 21:44:26.650  INFO 22 --- [      Thread-17] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2021-10-21 21:44:26.668  INFO 22 --- [      Thread-17] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2021-10-21 21:44:26.670  INFO 22 --- [      Thread-17] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2021-10-21 21:44:26.673  INFO 22 --- [      Thread-17] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2021-10-21 21:44:26.871  INFO 22 --- [      Thread-17] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2021-10-21 21:44:27.058  INFO 22 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8040 (http) with context path ''
+2021-10-21 21:44:27.068  INFO 22 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8040
+2021-10-21 21:44:27.085  INFO 22 --- [           main] o.e.eureka.EurekaServerApplication       : Started EurekaServerApplication in 226.821 seconds (JVM running for 250.723)
+2021-10-21 21:44:31.639  INFO 22 --- [nio-8040-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-21 21:44:31.647  INFO 22 --- [nio-8040-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-21 21:44:31.851  INFO 22 --- [nio-8040-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 201 ms
+2021-10-21 21:44:32.353  WARN 22 --- [nio-8040-exec-4] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: INGREDIENTS-SERVICE - f4c181cae660:ingredients-service:8045
+2021-10-21 21:44:32.359  WARN 22 --- [nio-8040-exec-4] c.n.eureka.resources.InstanceResource    : Not Found (Renew): INGREDIENTS-SERVICE - f4c181cae660:ingredients-service:8045
+2021-10-21 21:44:34.944  INFO 22 --- [nio-8040-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance INGREDIENTS-SERVICE/f4c181cae660:ingredients-service:8045 with status UP (replication=false)
+2021-10-21 21:44:38.536  INFO 22 --- [nio-8040-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance INGREDIENTS-SERVICE/f4c181cae660:ingredients-service:8045 with status UP (replication=true)
+2021-10-21 21:44:38.570 ERROR 22 --- [get_127.0.0.1-0] c.n.e.cluster.ReplicationTaskProcessor   : It seems to be a socket read timeout exception, it will retry later. if it continues to happen and some eureka node occupied all the cpu time, you should set property 'eureka.server.peer-node-read-timeout-ms' to a bigger value
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar!/:1.19.1]
+	at com.netflix.eureka.cluster.DynamicGZIPContentEncodingFilter.handle(DynamicGZIPContentEncodingFilter.java:48) ~[eureka-core-1.9.12.jar!/:1.9.12]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.12.jar!/:1.9.12]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570) ~[jersey-client-1.19.1.jar!/:1.19.1]
+	at com.netflix.eureka.transport.JerseyReplicationClient.submitBatchUpdates(JerseyReplicationClient.java:117) ~[eureka-core-1.9.12.jar!/:1.9.12]
+	at com.netflix.eureka.cluster.ReplicationTaskProcessor.process(ReplicationTaskProcessor.java:80) ~[eureka-core-1.9.12.jar!/:1.9.12]
+	at com.netflix.eureka.util.batcher.TaskExecutors$BatchWorkerRunnable.run(TaskExecutors.java:193) [eureka-core-1.9.12.jar!/:1.9.12]
+	at java.lang.Thread.run(Thread.java:821) [na:1.8.0_242]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[na:1.8.0_242]
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[na:1.8.0_242]
+	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[na:1.8.0_242]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[na:1.8.0_242]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:161) ~[httpcore-4.4.11.jar!/:4.4.11]
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82) ~[httpcore-4.4.11.jar!/:4.4.11]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:276) ~[httpcore-4.4.11.jar!/:4.4.11]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138) ~[httpclient-4.5.9.jar!/:4.5.9]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.9.jar!/:4.5.9]
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.11.jar!/:4.4.11]
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:294) ~[httpcore-4.4.11.jar!/:4.4.11]
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257) ~[httpclient-4.5.9.jar!/:4.5.9]
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230) ~[httpclient-4.5.9.jar!/:4.5.9]
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.11.jar!/:4.4.11]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.11.jar!/:4.4.11]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:679) ~[httpclient-4.5.9.jar!/:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:481) ~[httpclient-4.5.9.jar!/:4.5.9]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.9.jar!/:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.9.jar!/:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.9.jar!/:4.5.9]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar!/:1.19.1]
+	... 10 common frames omitted
+
+2021-10-21 21:44:39.959  INFO 22 --- [nio-8040-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance INGREDIENTS-SERVICE/f4c181cae660:ingredients-service:8045 with status UP (replication=true)
+2021-10-21 21:44:39.989 ERROR 22 --- [et_127.0.0.1-16] c.n.e.cluster.ReplicationTaskProcessor   : It seems to be a socket read timeout exception, it will retry later. if it continues to happen and some eureka node occupied all the cpu time, you should set property 'eureka.server.peer-node-read-timeout-ms' to a bigger value
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar!/:1.19.1]
+	at com.netflix.eureka.cluster.DynamicGZIPContentEncodingFilter.handle(DynamicGZIPContentEncodingFilter.java:48) ~[eureka-core-1.9.12.jar!/:1.9.12]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.12.jar!/:1.9.12]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570) ~[jersey-client-1.19.1.jar!/:1.19.1]
+	at com.netflix.eureka.transport.JerseyReplicationClient.submitBatchUpdates(JerseyReplicationClient.java:117) ~[eureka-core-1.9.12.jar!/:1.9.12]
+	at com.netflix.eureka.cluster.ReplicationTaskProcessor.process(ReplicationTaskProcessor.java:80) ~[eureka-core-1.9.12.jar!/:1.9.12]
+	at com.netflix.eureka.util.batcher.TaskExecutors$BatchWorkerRunnable.run(TaskExecutors.java:193) [eureka-core-1.9.12.jar!/:1.9.12]
+	at java.lang.Thread.run(Thread.java:821) [na:1.8.0_242]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[na:1.8.0_242]
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[na:1.8.0_242]
+	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[na:1.8.0_242]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[na:1.8.0_242]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:161) ~[httpcore-4.4.11.jar!/:4.4.11]
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82) ~[httpcore-4.4.11.jar!/:4.4.11]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:276) ~[httpcore-4.4.11.jar!/:4.4.11]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138) ~[httpclient-4.5.9.jar!/:4.5.9]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.9.jar!/:4.5.9]
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.11.jar!/:4.4.11]
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:294) ~[httpcore-4.4.11.jar!/:4.4.11]
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257) ~[httpclient-4.5.9.jar!/:4.5.9]
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230) ~[httpclient-4.5.9.jar!/:4.5.9]
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.11.jar!/:4.4.11]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.11.jar!/:4.4.11]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:679) ~[httpclient-4.5.9.jar!/:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:481) ~[httpclient-4.5.9.jar!/:4.5.9]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.9.jar!/:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.9.jar!/:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.9.jar!/:4.5.9]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar!/:1.19.1]
+	... 10 common frames omitted
+
+2021-10-21 21:44:46.169 ERROR 22 --- [et_127.0.0.1-16] c.n.e.cluster.ReplicationTaskProcessor   : It seems to be a socket read timeout exception, it will retry later. if it continues to happen and some eureka node occupied all the cpu time, you should set property 'eureka.server.peer-node-read-timeout-ms' to a bigger value
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar!/:1.19.1]
+	at com.netflix.eureka.cluster.DynamicGZIPContentEncodingFilter.handle(DynamicGZIPContentEncodingFilter.java:48) ~[eureka-core-1.9.12.jar!/:1.9.12]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.12.jar!/:1.9.12]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570) ~[jersey-client-1.19.1.jar!/:1.19.1]
+	at com.netflix.eureka.transport.JerseyReplicationClient.submitBatchUpdates(JerseyReplicationClient.java:117) ~[eureka-core-1.9.12.jar!/:1.9.12]
+	at com.netflix.eureka.cluster.ReplicationTaskProcessor.process(ReplicationTaskProcessor.java:80) ~[eureka-core-1.9.12.jar!/:1.9.12]
+	at com.netflix.eureka.util.batcher.TaskExecutors$BatchWorkerRunnable.run(TaskExecutors.java:193) [eureka-core-1.9.12.jar!/:1.9.12]
+	at java.lang.Thread.run(Thread.java:821) [na:1.8.0_242]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[na:1.8.0_242]
+	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[na:1.8.0_242]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[na:1.8.0_242]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:161) ~[httpcore-4.4.11.jar!/:4.4.11]
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82) ~[httpcore-4.4.11.jar!/:4.4.11]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:276) ~[httpcore-4.4.11.jar!/:4.4.11]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138) ~[httpclient-4.5.9.jar!/:4.5.9]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.9.jar!/:4.5.9]
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.11.jar!/:4.4.11]
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:294) ~[httpcore-4.4.11.jar!/:4.4.11]
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257) ~[httpclient-4.5.9.jar!/:4.5.9]
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230) ~[httpclient-4.5.9.jar!/:4.5.9]
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.11.jar!/:4.4.11]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.11.jar!/:4.4.11]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:679) ~[httpclient-4.5.9.jar!/:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:481) ~[httpclient-4.5.9.jar!/:4.5.9]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.9.jar!/:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.9.jar!/:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.9.jar!/:4.5.9]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar!/:1.19.1]
+	... 10 common frames omitted
+
+2021-10-21 21:45:26.677  INFO 22 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms

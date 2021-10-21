@@ -9,229 +9,164 @@
   Camunda BPM: (v7.12.0)
   Camunda BPM Spring Boot Starter: (v3.4.0)
 
-2021-10-21 23:08:23.013  INFO 10552 --- [           main] org.example.sp.SpApplication             : No active profile set, falling back to default profiles: default
-2021-10-21 23:08:45.302  INFO 10552 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=aa970b19-90c2-3833-b109-2a071b5f75e9
-2021-10-21 23:08:48.665  INFO 10552 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-10-21 23:08:56.013  INFO 10552 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8035 (http)
-2021-10-21 23:08:56.286  INFO 10552 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-21 23:08:56.287  INFO 10552 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
-2021-10-21 23:08:57.559  INFO 10552 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-10-21 23:08:57.559  INFO 10552 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 33830 ms
-2021-10-21 23:08:58.050  INFO 10552 --- [           main] .c.b.s.b.s.r.CamundaJerseyResourceConfig : Configuring camunda rest api.
-2021-10-21 23:08:58.546  INFO 10552 --- [           main] .c.b.s.b.s.r.CamundaJerseyResourceConfig : Finished configuring camunda rest api.
-2021-10-21 23:09:03.592  INFO 10552 --- [           main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2021-10-21 23:09:09.052  INFO 10552 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB040 Setting up jobExecutor with corePoolSize=3, maxPoolSize:10
-2021-10-21 23:09:09.059  INFO 10552 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'camundaTaskExecutor'
-2021-10-21 23:09:10.240  INFO 10552 --- [           main] org.camunda.bpm.engine.cfg               : ENGINE-12003 Plugin 'CompositeProcessEnginePlugin[genericPropertiesConfiguration, camundaProcessEngineConfiguration, camundaDatasourceConfiguration, camundaJobConfiguration, camundaHistoryConfiguration, camundaMetricsConfiguration, camundaAuthorizationConfiguration, CreateAdminUserConfiguration[adminUser=AdminUserProperty[id=demo, firstName=demo, lastName=Demo, email=demo@localhost, password=******]], failedJobConfiguration, CreateFilterConfiguration[filterName=All tasks], disableDeploymentResourcePattern, eventPublisherPlugin]' activated on process engine 'default'
-2021-10-21 23:09:10.251  INFO 10552 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB020 ProcessApplication enabled: autoDeployment via springConfiguration#deploymentResourcePattern is disabled
-2021-10-21 23:09:10.253  INFO 10552 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-001: Initialized Camunda Spring Boot Eventing Engine Plugin.
-2021-10-21 23:09:10.370  INFO 10552 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-003: Task events will be published as Spring Events.
-2021-10-21 23:09:10.370  INFO 10552 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-005: Execution events will be published as Spring Events.
-2021-10-21 23:09:10.374  INFO 10552 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-007: History events will be published as Spring events.
-2021-10-21 23:09:46.944  INFO 10552 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.engine.sql'
-2021-10-21 23:09:47.332  INFO 10552 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.history.sql'
-2021-10-21 23:09:47.491  INFO 10552 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'identity' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.identity.sql'
-2021-10-21 23:09:47.658  INFO 10552 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'case.engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.case.engine.sql'
-2021-10-21 23:09:47.740  INFO 10552 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'case.history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.case.history.sql'
-2021-10-21 23:09:47.788  INFO 10552 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'decision.engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.decision.engine.sql'
-2021-10-21 23:09:47.957  INFO 10552 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'decision.history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.decision.history.sql'
-2021-10-21 23:09:48.097  INFO 10552 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03067 No history level property found in database
-2021-10-21 23:09:48.100  INFO 10552 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03065 Creating historyLevel property in database for level: HistoryLevelFull(name=full, id=3)
-2021-10-21 23:09:48.492  INFO 10552 --- [           main] org.camunda.bpm.engine                   : ENGINE-00001 Process Engine default created.
-2021-10-21 23:09:49.602  INFO 10552 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB010 creating initial Admin User: AdminUserProperty[id=demo, firstName=demo, lastName=Demo, email=demo@localhost, password=******]
-2021-10-21 23:09:49.807  INFO 10552 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB015 create initial filter: id=3a28a682-32b3-11ec-acfb-464bff12ff64 name=All tasks
-2021-10-21 23:09:51.262  WARN 10552 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2021-10-21 23:09:51.263  INFO 10552 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-10-21 23:09:51.336  WARN 10552 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2021-10-21 23:09:51.337  INFO 10552 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-10-21 23:09:53.295  INFO 10552 --- [           main] o.c.b.s.b.s.w.f.LazyInitRegistration     : lazy initialized org.camunda.bpm.spring.boot.starter.webapp.filter.LazySecurityFilter@788fcafb
-2021-10-21 23:09:53.297  INFO 10552 --- [           main] o.c.b.s.b.s.w.f.LazyInitRegistration     : lazy initialized org.camunda.bpm.spring.boot.starter.webapp.filter.LazyProcessEnginesFilter@7e928e2f
-2021-10-21 23:09:53.856  WARN 10552 --- [           main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
-2021-10-21 23:09:54.387  INFO 10552 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2021-10-21 23:09:54.968  INFO 10552 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2021-10-21 23:09:56.024  INFO 10552 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2021-10-21 23:09:56.024  INFO 10552 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2021-10-21 23:09:56.984  INFO 10552 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2021-10-21 23:09:56.995  INFO 10552 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2021-10-21 23:09:58.117  INFO 10552 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2021-10-21 23:09:58.350  INFO 10552 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2021-10-21 23:09:58.351  INFO 10552 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2021-10-21 23:09:58.351  INFO 10552 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2021-10-21 23:09:58.351  INFO 10552 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2021-10-21 23:09:58.352  INFO 10552 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2021-10-21 23:09:58.352  INFO 10552 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2021-10-21 23:09:58.352  INFO 10552 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2021-10-21 23:09:59.368  INFO 10552 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2021-10-21 23:09:59.488  INFO 10552 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 5
-2021-10-21 23:09:59.498  INFO 10552 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2021-10-21 23:09:59.577  INFO 10552 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1634850599505 with initial instances count: 0
-2021-10-21 23:09:59.583  INFO 10552 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SP with eureka with status UP
-2021-10-21 23:09:59.584  INFO 10552 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1634850599584, current=UP, previous=STARTING]
-2021-10-21 23:09:59.588  INFO 10552 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SP/192.168.8.58:sp:8035: registering service...
-2021-10-21 23:09:59.776  INFO 10552 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SP/192.168.8.58:sp:8035 - registration status: 204
-2021-10-21 23:09:59.851  INFO 10552 --- [           main] org.camunda.bpm.container                : ENGINE-08024 Found processes.xml file at jar:file:/Users/fnordemann/eclipse-workspace/resilient-process/sp/target/sp-0.0.1-SNAPSHOT.jar!/META-INF/processes.xml
-2021-10-21 23:09:59.858  INFO 10552 --- [           main] org.camunda.bpm.container                : ENGINE-08025 Detected empty processes.xml file, using default values
-2021-10-21 23:09:59.983  INFO 10552 --- [           main] org.camunda.bpm.container                : ENGINE-08023 Deployment summary for process archive 'spApplication': 
+2021-10-21 21:41:30.734  INFO 34 --- [           main] org.example.sp.SpApplication             : No active profile set, falling back to default profiles: default
+2021-10-21 21:42:36.300  INFO 34 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=aa970b19-90c2-3833-b109-2a071b5f75e9
+2021-10-21 21:42:46.821  INFO 34 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-21 21:43:03.982  INFO 34 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8035 (http)
+2021-10-21 21:43:04.385  INFO 34 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-21 21:43:04.420  INFO 34 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2021-10-21 21:43:06.630  INFO 34 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-21 21:43:06.665  INFO 34 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 94543 ms
+2021-10-21 21:43:07.798  INFO 34 --- [           main] .c.b.s.b.s.r.CamundaJerseyResourceConfig : Configuring camunda rest api.
+2021-10-21 21:43:08.726  INFO 34 --- [           main] .c.b.s.b.s.r.CamundaJerseyResourceConfig : Finished configuring camunda rest api.
+2021-10-21 21:43:20.999  INFO 34 --- [           main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2021-10-21 21:43:29.182  INFO 34 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB040 Setting up jobExecutor with corePoolSize=3, maxPoolSize:10
+2021-10-21 21:43:29.436  INFO 34 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'camundaTaskExecutor'
+2021-10-21 21:43:33.379  INFO 34 --- [           main] org.camunda.bpm.engine.cfg               : ENGINE-12003 Plugin 'CompositeProcessEnginePlugin[genericPropertiesConfiguration, camundaProcessEngineConfiguration, camundaDatasourceConfiguration, camundaJobConfiguration, camundaHistoryConfiguration, camundaMetricsConfiguration, camundaAuthorizationConfiguration, CreateAdminUserConfiguration[adminUser=AdminUserProperty[id=demo, firstName=demo, lastName=Demo, email=demo@localhost, password=******]], failedJobConfiguration, CreateFilterConfiguration[filterName=All tasks], disableDeploymentResourcePattern, eventPublisherPlugin]' activated on process engine 'default'
+2021-10-21 21:43:33.447  INFO 34 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB020 ProcessApplication enabled: autoDeployment via springConfiguration#deploymentResourcePattern is disabled
+2021-10-21 21:43:33.474  INFO 34 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-001: Initialized Camunda Spring Boot Eventing Engine Plugin.
+2021-10-21 21:43:33.499  INFO 34 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-003: Task events will be published as Spring Events.
+2021-10-21 21:43:33.504  INFO 34 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-005: Execution events will be published as Spring Events.
+2021-10-21 21:43:33.550  INFO 34 --- [           main] o.c.b.s.b.s.event.EventPublisherPlugin   : EVENTING-007: History events will be published as Spring events.
+2021-10-21 21:44:23.472  INFO 34 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.engine.sql'
+2021-10-21 21:44:24.286  INFO 34 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.history.sql'
+2021-10-21 21:44:24.542  INFO 34 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'identity' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.identity.sql'
+2021-10-21 21:44:24.885  INFO 34 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'case.engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.case.engine.sql'
+2021-10-21 21:44:24.989  INFO 34 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'case.history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.case.history.sql'
+2021-10-21 21:44:25.126  INFO 34 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'decision.engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.decision.engine.sql'
+2021-10-21 21:44:25.349  INFO 34 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'decision.history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.decision.history.sql'
+2021-10-21 21:44:25.626  INFO 34 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03067 No history level property found in database
+2021-10-21 21:44:25.644  INFO 34 --- [           main] org.camunda.bpm.engine.persistence       : ENGINE-03065 Creating historyLevel property in database for level: HistoryLevelFull(name=full, id=3)
+2021-10-21 21:44:26.998  INFO 34 --- [           main] org.camunda.bpm.engine                   : ENGINE-00001 Process Engine default created.
+2021-10-21 21:44:29.117  INFO 34 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB010 creating initial Admin User: AdminUserProperty[id=demo, firstName=demo, lastName=Demo, email=demo@localhost, password=******]
+2021-10-21 21:44:29.606  INFO 34 --- [           main] org.camunda.bpm.spring.boot              : STARTER-SB015 create initial filter: id=11ca145c-32b8-11ec-b442-0242ac120002 name=All tasks
+2021-10-21 21:44:34.441  WARN 34 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-10-21 21:44:34.447  INFO 34 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-10-21 21:44:34.579  WARN 34 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-10-21 21:44:34.582  INFO 34 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-10-21 21:44:51.811  INFO 34 --- [           main] o.c.b.s.b.s.w.f.LazyInitRegistration     : lazy initialized org.camunda.bpm.spring.boot.starter.webapp.filter.LazySecurityFilter@1668263a
+2021-10-21 21:44:51.816  INFO 34 --- [           main] o.c.b.s.b.s.w.f.LazyInitRegistration     : lazy initialized org.camunda.bpm.spring.boot.starter.webapp.filter.LazyProcessEnginesFilter@aa39aee5
+2021-10-21 21:44:53.050  WARN 34 --- [           main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2021-10-21 21:44:53.547  INFO 34 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-10-21 21:44:54.703  INFO 34 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2021-10-21 21:44:55.989  INFO 34 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2021-10-21 21:44:56.008  INFO 34 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2021-10-21 21:44:57.208  INFO 34 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2021-10-21 21:44:57.210  INFO 34 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2021-10-21 21:44:58.013  INFO 34 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-10-21 21:44:58.080  INFO 34 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2021-10-21 21:44:58.081  INFO 34 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2021-10-21 21:44:58.084  INFO 34 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2021-10-21 21:44:58.091  INFO 34 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2021-10-21 21:44:58.093  INFO 34 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2021-10-21 21:44:58.096  INFO 34 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2021-10-21 21:44:58.097  INFO 34 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2021-10-21 21:44:58.549  INFO 34 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2021-10-21 21:44:58.556  INFO 34 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 5
+2021-10-21 21:44:58.563  INFO 34 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-10-21 21:44:58.573  INFO 34 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1634852698570 with initial instances count: 0
+2021-10-21 21:44:58.576  INFO 34 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SP with eureka with status UP
+2021-10-21 21:44:58.578  INFO 34 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1634852698578, current=UP, previous=STARTING]
+2021-10-21 21:44:58.583  INFO 34 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SP/f4c181cae660:sp:8035: registering service...
+2021-10-21 21:44:58.647  INFO 34 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SP/f4c181cae660:sp:8035 - registration status: 204
+2021-10-21 21:44:58.802  INFO 34 --- [           main] org.camunda.bpm.container                : ENGINE-08024 Found processes.xml file at jar:file:/sp/target/sp-0.0.1-SNAPSHOT.jar!/META-INF/processes.xml
+2021-10-21 21:44:58.807  INFO 34 --- [           main] org.camunda.bpm.container                : ENGINE-08025 Detected empty processes.xml file, using default values
+2021-10-21 21:44:58.831  INFO 34 --- [           main] org.camunda.bpm.container                : ENGINE-08023 Deployment summary for process archive 'spApplication': 
 
         BOOT-INF/classes/sp.bpmn
 
-2021-10-21 23:10:00.819  INFO 10552 --- [           main] org.camunda.bpm.engine.bpmn.parser       : ENGINE-01002 Ignoring non-executable process with id 'MgmtKey'. Set the attribute isExecutable="true" to deploy this process.
-2021-10-21 23:10:00.840  INFO 10552 --- [           main] org.camunda.bpm.application              : ENGINE-07021 ProcessApplication 'spApplication' registered for DB deployments [405527e3-32b3-11ec-acfb-464bff12ff64]. Will execute process definitions 
+2021-10-21 21:44:59.218  INFO 34 --- [           main] org.camunda.bpm.engine.bpmn.parser       : ENGINE-01002 Ignoring non-executable process with id 'MgmtKey'. Set the attribute isExecutable="true" to deploy this process.
+2021-10-21 21:44:59.238  INFO 34 --- [           main] org.camunda.bpm.application              : ENGINE-07021 ProcessApplication 'spApplication' registered for DB deployments [2345546d-32b8-11ec-b442-0242ac120002]. Will execute process definitions 
 
-        SpKey[version: 1, id: SpKey:1:40bc4e25-32b3-11ec-acfb-464bff12ff64]
+        SpKey[version: 1, id: SpKey:1:237a471f-32b8-11ec-b442-0242ac120002]
 Deployment does not provide any case definitions.
-2021-10-21 23:10:00.857  INFO 10552 --- [           main] S4-Exe INITIAL START                     : 
-2021-10-21 23:10:00.857  INFO 10552 --- [           main] S4-Exe INITIAL START                     : -------------------------------
-2021-10-21 23:10:00.857  INFO 10552 --- [           main] S4-Exe INITIAL START                     : Slurry process S4-Exe started.
-2021-10-21 23:10:00.858  INFO 10552 --- [           main] S4-Exe INITIAL START                     : *  WSM-based decision making  *
-2021-10-21 23:10:00.858  INFO 10552 --- [           main] S4-Exe INITIAL START                     : -------------------------------
-2021-10-21 23:10:00.858  INFO 10552 --- [           main] S4-Exe INITIAL START                     : 
-2021-10-21 23:10:00.950  INFO 10552 --- [           main] MONITOR-OPERATION                        : Monitoring operation.
-2021-10-21 23:10:00.951  INFO 10552 --- [           main] MONITOR-OPERATION                        : Fetching available services for serviceId mgmt-service...
-2021-10-21 23:10:01.112  INFO 10552 --- [           main] SERVICE-DISCOVERY                        : Current neighbors of SP: [http://localhost:8020/, http://localhost:8030/, http://localhost:8040/, http://localhost:8050/]
-2021-10-21 23:10:01.564  INFO 10552 --- [           main] MONITOR-OPERATION                        : Available services: 2
+2021-10-21 21:44:59.364  INFO 34 --- [           main] S4-Exe INITIAL START                     : 
+2021-10-21 21:44:59.366  INFO 34 --- [           main] S4-Exe INITIAL START                     : -------------------------------
+2021-10-21 21:44:59.367  INFO 34 --- [           main] S4-Exe INITIAL START                     : Slurry process S4-Exe started.
+2021-10-21 21:44:59.368  INFO 34 --- [           main] S4-Exe INITIAL START                     : *  WSM-based decision making  *
+2021-10-21 21:44:59.369  INFO 34 --- [           main] S4-Exe INITIAL START                     : -------------------------------
+2021-10-21 21:44:59.370  INFO 34 --- [           main] S4-Exe INITIAL START                     : 
+2021-10-21 21:44:59.406  INFO 34 --- [           main] MONITOR-OPERATION                        : Monitoring operation.
+2021-10-21 21:44:59.407  INFO 34 --- [           main] MONITOR-OPERATION                        : Fetching available services for serviceId mgmt-service...
+2021-10-21 21:44:59.498  INFO 34 --- [           main] SERVICE-DISCOVERY                        : Current neighbors of SP: [http://localhost:8020/, http://localhost:8030/, http://localhost:8040/, http://localhost:8050/]
+2021-10-21 21:44:59.800  INFO 34 --- [           main] MONITOR-OPERATION                        : Available services: 2
 --- Service number 0 ---
-Host: 192.168.8.58
-InstanceId: 192.168.8.58:mgmt-service:8025
+Host: f4c181cae660
+InstanceId: f4c181cae660:mgmt-service:8025
 Metadata: [urlanalysis = null, urlstatus = /status, urllog = /log, cost = null, accuracy = null, location = cloud, management.port = 8025, time = null, type = central]
 --- Service number 1 ---
-Host: 192.168.8.58
-InstanceId: 192.168.8.58:mgmt-service:8036
+Host: f4c181cae660
+InstanceId: f4c181cae660:mgmt-service:8036
 Metadata: [urlanalysis = null, urlstatus = /status, urllog = null, cost = null, accuracy = null, location = local, management.port = 8036, time = null, type = backup]
-2021-10-21 23:10:01.565  INFO 10552 --- [           main] MONITOR-OPERATION                        : Going to call service at http://192.168.8.58:8025/status of type central
-2021-10-21 23:10:02.363  INFO 10552 --- [           main] MONITOR-OPERATION                        : Posted status successfully to mgmt-instance.
-2021-10-21 23:10:02.368  INFO 10552 --- [           main] ANALYZE-SLURRY                           : Analyzing slurry.
-2021-10-21 23:10:02.369  INFO 10552 --- [           main] ANALYZE-SLURRY                           : Fetching available services for serviceId ingredients-service...
-2021-10-21 23:10:02.413  INFO 10552 --- [           main] SERVICE-DISCOVERY                        : Current neighbors of SP: [http://localhost:8020/, http://localhost:8030/, http://localhost:8040/, http://localhost:8050/]
-2021-10-21 23:10:02.514  INFO 10552 --- [           main] ANALYZE-SLURRY                           : Available services: 4
+2021-10-21 21:44:59.821  INFO 34 --- [           main] MONITOR-OPERATION                        : Going to call service at http://f4c181cae660:8025/status of type central
+2021-10-21 21:45:00.425  INFO 34 --- [           main] MONITOR-OPERATION                        : Posted status successfully to mgmt-instance.
+2021-10-21 21:45:00.432  INFO 34 --- [           main] ANALYZE-SLURRY                           : Analyzing slurry.
+2021-10-21 21:45:00.435  INFO 34 --- [           main] ANALYZE-SLURRY                           : Fetching available services for serviceId ingredients-service...
+2021-10-21 21:45:00.481  INFO 34 --- [           main] SERVICE-DISCOVERY                        : Current neighbors of SP: [http://localhost:8020/, http://localhost:8030/, http://localhost:8040/, http://localhost:8050/]
+2021-10-21 21:45:00.572  INFO 34 --- [           main] ANALYZE-SLURRY                           : Available services: 4
 --- Service number 0 ---
-Host: 192.168.8.58
-InstanceId: 192.168.8.58:ingredients-service:8027
-Metadata: [urlanalysis = /analysis, urlstatus = null, urllog = null, cost = 0.0, accuracy = 0.3, location = cloud, management.port = 8027, time = 0.1, type = REF]
---- Service number 1 ---
-Host: 192.168.8.58
-InstanceId: 192.168.8.58:ingredients-service:8026
+Host: f4c181cae660
+InstanceId: f4c181cae660:ingredients-service:8026
 Metadata: [urlanalysis = /analysis, urlstatus = null, urllog = null, cost = 0.1, accuracy = 0.4, location = cloud, management.port = 8026, time = 0.1, type = REF]
+--- Service number 1 ---
+Host: f4c181cae660
+InstanceId: f4c181cae660:ingredients-service:8027
+Metadata: [urlanalysis = /analysis, urlstatus = null, urllog = null, cost = 0.0, accuracy = 0.3, location = cloud, management.port = 8027, time = 0.1, type = REF]
 --- Service number 2 ---
-Host: 192.168.8.58
-InstanceId: 192.168.8.58:ingredients-service:8037
+Host: f4c181cae660
+InstanceId: f4c181cae660:ingredients-service:8037
 Metadata: [urlanalysis = /analysis, urlstatus = null, urllog = null, cost = 0.0, accuracy = 0.2, location = local, management.port = 8037, time = 0.0, type = REF]
 --- Service number 3 ---
-Host: 192.168.8.58
-InstanceId: 192.168.8.58:ingredients-service:8045
+Host: f4c181cae660
+InstanceId: f4c181cae660:ingredients-service:8045
 Metadata: [urlanalysis = /nirs, urlstatus = null, urllog = null, cost = 0.4, accuracy = 0.7, location = local, management.port = 8045, time = 0.1, type = NIRS]
-2021-10-21 23:10:02.516  INFO 10552 --- [           main] SERVICE-DECISION-WSM                     : Decision matrix: 
-2021-10-21 23:10:02.516  INFO 10552 --- [           main] SERVICE-DECISION-WSM                     : Weight | Service0 Service1 Service2... (last line: summarization of criteria values for a service )
-0.6 0.7 0.6 0.8 0.3 
-0.3 0.0 0.1 0.0 0.4 
+2021-10-21 21:45:00.605  INFO 34 --- [           main] SERVICE-DECISION-WSM                     : Decision matrix: 
+2021-10-21 21:45:00.607  INFO 34 --- [           main] SERVICE-DECISION-WSM                     : Weight | Service0 Service1 Service2... (last line: summarization of criteria values for a service )
+0.6 0.6 0.7 0.8 0.3 
+0.3 0.1 0.0 0.0 0.4 
 0.1 0.1 0.1 0.0 0.1 
 ***
 0.0 0.4 0.4 0.5 0.3 
-2021-10-21 23:10:02.520  INFO 10552 --- [           main] ANALYZE-SLURRY                           : Going to call service at http://192.168.8.58:8045/nirs
-2021-10-21 23:10:02.843  INFO 10552 --- [           main] ANALYZE-SLURRY                           : Analysis for taskId 0000 resulted in nitrogen: 17.322158621904254
-2021-10-21 23:10:02.845  INFO 10552 --- [           main] APPLY-SLURRY-ACCURATELY                  : Correcting GPS.
-2021-10-21 23:10:02.846  INFO 10552 --- [           main] APPLY-SLURRY-ACCURATELY                  : Fetching available services for serviceId gps-service...
-2021-10-21 23:10:02.889  INFO 10552 --- [           main] SERVICE-DISCOVERY                        : Current neighbors of SP: [http://localhost:8020/, http://localhost:8030/, http://localhost:8040/, http://localhost:8050/]
-2021-10-21 23:10:02.951  INFO 10552 --- [           main] APPLY-SLURRY-ACCURATELY                  : Available services: 3
+2021-10-21 21:45:00.634  INFO 34 --- [           main] ANALYZE-SLURRY                           : Going to call service at http://f4c181cae660:8045/nirs
+2021-10-21 21:45:00.880  INFO 34 --- [           main] ANALYZE-SLURRY                           : Analysis for taskId 0000 resulted in nitrogen: 47.93757548893773
+2021-10-21 21:45:00.885  INFO 34 --- [           main] APPLY-SLURRY-ACCURATELY                  : Correcting GPS.
+2021-10-21 21:45:00.887  INFO 34 --- [           main] APPLY-SLURRY-ACCURATELY                  : Fetching available services for serviceId gps-service...
+2021-10-21 21:45:00.921  INFO 34 --- [           main] SERVICE-DISCOVERY                        : Current neighbors of SP: [http://localhost:8020/, http://localhost:8030/, http://localhost:8040/, http://localhost:8050/]
+2021-10-21 21:45:00.995  INFO 34 --- [           main] APPLY-SLURRY-ACCURATELY                  : Available services: 3
 --- Service number 0 ---
-Host: 192.168.8.58
-InstanceId: 192.168.8.58:gps-service:8028
+Host: f4c181cae660
+InstanceId: f4c181cae660:gps-service:8028
 Metadata: [urlanalysis = /gps, urlstatus = null, urllog = null, cost = 0.1, accuracy = 0.7, location = cloud, management.port = 8028, time = 0.1, type = CELLULAR]
 --- Service number 1 ---
-Host: 192.168.8.58
-InstanceId: 192.168.8.58:gps-service:8029
+Host: f4c181cae660
+InstanceId: f4c181cae660:gps-service:8029
 Metadata: [urlanalysis = /gps, urlstatus = null, urllog = null, cost = 0.1, accuracy = 0.5, location = cloud, management.port = 8029, time = 0.1, type = CELLULAR]
 --- Service number 2 ---
-Host: 192.168.8.58
-InstanceId: 192.168.8.58:gps-service:8055
+Host: f4c181cae660
+InstanceId: f4c181cae660:gps-service:8055
 Metadata: [urlanalysis = /gps, urlstatus = null, urllog = null, cost = 0.3, accuracy = 0.9, location = local, management.port = 8055, time = 0.1, type = LOCAL]
-2021-10-21 23:10:02.955  INFO 10552 --- [           main] SERVICE-DECISION-WSM                     : Decision matrix: 
-2021-10-21 23:10:02.955  INFO 10552 --- [           main] SERVICE-DECISION-WSM                     : Weight | Service0 Service1 Service2... (last line: summarization of criteria values for a service )
+2021-10-21 21:45:01.020  INFO 34 --- [           main] SERVICE-DECISION-WSM                     : Decision matrix: 
+2021-10-21 21:45:01.021  INFO 34 --- [           main] SERVICE-DECISION-WSM                     : Weight | Service0 Service1 Service2... (last line: summarization of criteria values for a service )
 0.7 0.3 0.5 0.1 
 0.2 0.1 0.1 0.3 
 0.1 0.1 0.1 0.1 
 ***
 0.0 0.2 0.4 0.1 
-2021-10-21 23:10:02.958  INFO 10552 --- [           main] APPLY-SLURRY-ACCURATELY                  : Going to call service at http://192.168.8.58:8055/gps
-2021-10-21 23:10:03.319  INFO 10552 --- [           main] APPLY-SLURRY-ACCURATELY                  : GPS correction for taskId 0000 resulted in offsets: 0.07324192473076498 / 0.07047517824673187
-2021-10-21 23:10:03.327  INFO 10552 --- [           main] CREATING-LOG                             : Creating task log.
-2021-10-21 23:10:03.327  INFO 10552 --- [           main] CREATING-LOG                             : Finished slurry application process.
-2021-10-21 23:10:03.338  INFO 10552 --- [           main] org.camunda.bpm.container                : ENGINE-08050 Process application spApplication successfully deployed
-2021-10-21 23:10:03.441  INFO 10552 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8035 (http) with context path ''
-2021-10-21 23:10:03.443  INFO 10552 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8035
-2021-10-21 23:10:03.479  INFO 10552 --- [           main] org.example.sp.SpApplication             : Started SpApplication in 126.271 seconds (JVM running for 139.183)
-2021-10-21 23:10:03.518  INFO 10552 --- [           main] org.camunda.bpm.engine.jobexecutor       : ENGINE-14014 Starting up the JobExecutor[org.camunda.bpm.engine.spring.components.jobexecutor.SpringJobExecutor].
-2021-10-21 23:10:03.520  INFO 10552 --- [ingJobExecutor]] org.camunda.bpm.engine.jobexecutor       : ENGINE-14018 JobExecutor[org.camunda.bpm.engine.spring.components.jobexecutor.SpringJobExecutor] starting to acquire jobs
-2021-10-21 23:10:29.487  INFO 10552 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2021-10-21 23:10:29.488  INFO 10552 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2021-10-21 23:10:29.488  INFO 10552 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2021-10-21 23:10:29.488  INFO 10552 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2021-10-21 23:10:29.488  INFO 10552 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2021-10-21 23:10:29.488  INFO 10552 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
-2021-10-21 23:10:29.488  INFO 10552 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2021-10-21 23:10:29.524  INFO 10552 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2021-10-21 23:14:58.105  INFO 10552 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2021-10-21 23:19:58.114  INFO 10552 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2021-10-21 23:24:58.123  INFO 10552 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2021-10-21 23:29:58.137  INFO 10552 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2021-10-21 23:30:05.768  INFO 10552 --- [nio-8035-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-10-21 23:30:05.768  INFO 10552 --- [nio-8035-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-10-21 23:30:05.792  INFO 10552 --- [nio-8035-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 24 ms
-2021-10-21 23:30:05.889  INFO 10552 --- [nio-8035-exec-1] S4-Exe REST-BASED START                  : 
-2021-10-21 23:30:05.889  INFO 10552 --- [nio-8035-exec-1] S4-Exe REST-BASED START                  : -------------------------------
-2021-10-21 23:30:05.889  INFO 10552 --- [nio-8035-exec-1] S4-Exe REST-BASED START                  : Slurry process S4-Exe started.
-2021-10-21 23:30:05.889  INFO 10552 --- [nio-8035-exec-1] S4-Exe REST-BASED START                  : 	taskId: 123456789
-2021-10-21 23:30:05.889  INFO 10552 --- [nio-8035-exec-1] S4-Exe REST-BASED START                  : *  WSM-based decision making  *
-2021-10-21 23:30:05.889  INFO 10552 --- [nio-8035-exec-1] S4-Exe REST-BASED START                  : ** Initialized by REST-POST  **
-2021-10-21 23:30:05.890  INFO 10552 --- [nio-8035-exec-1] S4-Exe REST-BASED START                  : -------------------------------
-2021-10-21 23:30:05.890  INFO 10552 --- [nio-8035-exec-1] S4-Exe REST-BASED START                  : 
-2021-10-21 23:30:05.914  INFO 10552 --- [nio-8035-exec-1] MONITOR-OPERATION                        : Monitoring operation.
-2021-10-21 23:30:05.918  INFO 10552 --- [nio-8035-exec-1] MONITOR-OPERATION                        : Fetching available services for serviceId mgmt-service...
-2021-10-21 23:30:05.961  INFO 10552 --- [nio-8035-exec-1] SERVICE-DISCOVERY                        : Current neighbors of SP: [http://localhost:8030/, http://localhost:8040/, http://localhost:8050/]
-2021-10-21 23:30:05.995  INFO 10552 --- [nio-8035-exec-1] MONITOR-OPERATION                        : Available services: 1
---- Service number 0 ---
-Host: 192.168.8.58
-InstanceId: 192.168.8.58:mgmt-service:8036
-Metadata: [urlanalysis = null, urlstatus = /status, urllog = null, cost = null, accuracy = null, location = local, management.port = 8036, time = null, type = backup]
-2021-10-21 23:30:05.996  INFO 10552 --- [nio-8035-exec-1] MONITOR-OPERATION                        : Going to call service at http://192.168.8.58:8036/status of type local
-2021-10-21 23:30:06.489  INFO 10552 --- [nio-8035-exec-1] MONITOR-OPERATION                        : Posted status successfully to mgmt-instance.
-2021-10-21 23:30:06.491  INFO 10552 --- [nio-8035-exec-1] ANALYZE-SLURRY                           : Analyzing slurry.
-2021-10-21 23:30:06.492  INFO 10552 --- [nio-8035-exec-1] ANALYZE-SLURRY                           : Fetching available services for serviceId ingredients-service...
-2021-10-21 23:30:06.522  INFO 10552 --- [nio-8035-exec-1] SERVICE-DISCOVERY                        : Current neighbors of SP: [http://localhost:8030/, http://localhost:8040/, http://localhost:8050/]
-2021-10-21 23:30:06.562  INFO 10552 --- [nio-8035-exec-1] ANALYZE-SLURRY                           : Available services: 2
---- Service number 0 ---
-Host: 192.168.8.58
-InstanceId: 192.168.8.58:ingredients-service:8037
-Metadata: [urlanalysis = /analysis, urlstatus = null, urllog = null, cost = 0.0, accuracy = 0.2, location = local, management.port = 8037, time = 0.0, type = REF]
---- Service number 1 ---
-Host: 192.168.8.58
-InstanceId: 192.168.8.58:ingredients-service:8045
-Metadata: [urlanalysis = /nirs, urlstatus = null, urllog = null, cost = 0.4, accuracy = 0.7, location = local, management.port = 8045, time = 0.1, type = NIRS]
-2021-10-21 23:30:06.564  INFO 10552 --- [nio-8035-exec-1] SERVICE-DECISION-WSM                     : Decision matrix: 
-2021-10-21 23:30:06.565  INFO 10552 --- [nio-8035-exec-1] SERVICE-DECISION-WSM                     : Weight | Service0 Service1 Service2... (last line: summarization of criteria values for a service )
-0.6 0.8 0.3 
-0.3 0.0 0.4 
-0.1 0.0 0.1 
-***
-0.0 0.5 0.3 
-2021-10-21 23:30:06.567  INFO 10552 --- [nio-8035-exec-1] ANALYZE-SLURRY                           : Going to call service at http://192.168.8.58:8045/nirs
-2021-10-21 23:30:06.611  INFO 10552 --- [nio-8035-exec-1] ANALYZE-SLURRY                           : Analysis for taskId 123456789 resulted in nitrogen: 40.958844743461896
-2021-10-21 23:30:06.614  INFO 10552 --- [nio-8035-exec-1] APPLY-SLURRY-ACCURATELY                  : Correcting GPS.
-2021-10-21 23:30:06.615  INFO 10552 --- [nio-8035-exec-1] APPLY-SLURRY-ACCURATELY                  : Fetching available services for serviceId gps-service...
-2021-10-21 23:30:06.674  INFO 10552 --- [nio-8035-exec-1] SERVICE-DISCOVERY                        : Current neighbors of SP: [http://localhost:8030/, http://localhost:8040/, http://localhost:8050/]
-2021-10-21 23:30:06.708  INFO 10552 --- [nio-8035-exec-1] APPLY-SLURRY-ACCURATELY                  : Available services: 1
---- Service number 0 ---
-Host: 192.168.8.58
-InstanceId: 192.168.8.58:gps-service:8055
-Metadata: [urlanalysis = /gps, urlstatus = null, urllog = null, cost = 0.3, accuracy = 0.9, location = local, management.port = 8055, time = 0.1, type = LOCAL]
-2021-10-21 23:30:06.710  INFO 10552 --- [nio-8035-exec-1] SERVICE-DECISION-WSM                     : Decision matrix: 
-2021-10-21 23:30:06.710  INFO 10552 --- [nio-8035-exec-1] SERVICE-DECISION-WSM                     : Weight | Service0 Service1 Service2... (last line: summarization of criteria values for a service )
-0.7 0.1 
-0.2 0.3 
-0.1 0.1 
-***
-0.0 0.1 
-2021-10-21 23:30:06.710  INFO 10552 --- [nio-8035-exec-1] APPLY-SLURRY-ACCURATELY                  : Going to call service at http://192.168.8.58:8055/gps
-2021-10-21 23:30:06.746  INFO 10552 --- [nio-8035-exec-1] APPLY-SLURRY-ACCURATELY                  : GPS correction for taskId 123456789 resulted in offsets: 0.07672222353302552 / 0.07221282216942786
-2021-10-21 23:30:06.762  INFO 10552 --- [nio-8035-exec-1] CREATING-LOG                             : Creating task log.
-2021-10-21 23:30:06.762  INFO 10552 --- [nio-8035-exec-1] CREATING-LOG                             : Finished slurry application process.
+2021-10-21 21:45:01.042  INFO 34 --- [           main] APPLY-SLURRY-ACCURATELY                  : Going to call service at http://f4c181cae660:8055/gps
+2021-10-21 21:45:01.277  INFO 34 --- [           main] APPLY-SLURRY-ACCURATELY                  : GPS correction for taskId 0000 resulted in offsets: 0.07302075503966982 / 0.07145971381240564
+2021-10-21 21:45:01.291  INFO 34 --- [           main] CREATING-LOG                             : Creating task log.
+2021-10-21 21:45:01.292  INFO 34 --- [           main] CREATING-LOG                             : Finished slurry application process.
+2021-10-21 21:45:01.320  INFO 34 --- [           main] org.camunda.bpm.container                : ENGINE-08050 Process application spApplication successfully deployed
+2021-10-21 21:45:01.354  INFO 34 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8035 (http) with context path ''
+2021-10-21 21:45:01.356  INFO 34 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8035
+2021-10-21 21:45:01.361  INFO 34 --- [           main] org.example.sp.SpApplication             : Started SpApplication in 259.237 seconds (JVM running for 285.08)
+2021-10-21 21:45:01.366  INFO 34 --- [           main] org.camunda.bpm.engine.jobexecutor       : ENGINE-14014 Starting up the JobExecutor[org.camunda.bpm.engine.spring.components.jobexecutor.SpringJobExecutor].
+2021-10-21 21:45:01.370  INFO 34 --- [ingJobExecutor]] org.camunda.bpm.engine.jobexecutor       : ENGINE-14018 JobExecutor[org.camunda.bpm.engine.spring.components.jobexecutor.SpringJobExecutor] starting to acquire jobs
+2021-10-21 21:45:28.536  INFO 34 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2021-10-21 21:45:28.538  INFO 34 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2021-10-21 21:45:28.544  INFO 34 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2021-10-21 21:45:28.546  INFO 34 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2021-10-21 21:45:28.547  INFO 34 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2021-10-21 21:45:28.548  INFO 34 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2021-10-21 21:45:28.549  INFO 34 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2021-10-21 21:45:28.586  INFO 34 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
