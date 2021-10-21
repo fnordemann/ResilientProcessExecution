@@ -48,7 +48,11 @@ public class ServiceDecisionWSM {
                 metadataMap = serviceInstance.getMetadata();
                 double serviceRating = 0.0;
                 for (int i = 0; i < criteria.length; i++) {
-                    weightedDecisionMatrix[i][j] = Double.parseDouble(metadataMap.get(criteria[i]));
+                    Double dCriteriaValue = Double.parseDouble(metadataMap.get(criteria[i]));
+                    if(criteria[i].equals("accuracy")){
+                        dCriteriaValue = 1 - dCriteriaValue;
+                    }
+                    weightedDecisionMatrix[i][j] = dCriteriaValue;
                     serviceRating = serviceRating + weightedDecisionMatrix[i][j] * weightedDecisionMatrix[i][0];
                 }
                 weightedDecisionMatrix[criteria.length][j] = serviceRating;
@@ -68,7 +72,7 @@ public class ServiceDecisionWSM {
             double currentRating = weightedDecisionMatrix[criteria.length][1];
             int highestRated = 1;
             for (int i = 2; i < services + 1; i++) {
-                if (currentRating < weightedDecisionMatrix[criteria.length][i]) {
+                if (currentRating > weightedDecisionMatrix[criteria.length][i]) {
                     highestRated = i;
                 }
             }
@@ -111,7 +115,11 @@ public class ServiceDecisionWSM {
                 metadataMap.put("time", metadata.getTime());
                 double serviceRating = 0.0;
                 for (int i = 0; i < criteria.length; i++) {
-                    weightedDecisionMatrix[i][j] = Double.parseDouble(metadataMap.get(criteria[i]));
+                    Double dCriteriaValue = Double.parseDouble(metadataMap.get(criteria[i]));
+                    if(criteria[i].equals("accuracy")){
+                        dCriteriaValue = 1 - dCriteriaValue;
+                    }
+                    weightedDecisionMatrix[i][j] = dCriteriaValue;
                     serviceRating = serviceRating + weightedDecisionMatrix[i][j] * weightedDecisionMatrix[i][0];
                 }
                 metadataMap.clear();
@@ -145,7 +153,7 @@ public class ServiceDecisionWSM {
             double currentRating = weightedDecisionMatrix[criteria.length][1];
             int highestRated = 1;
             for (int i = 2; i < services + 1; i++) {
-                if (currentRating < weightedDecisionMatrix[criteria.length][i]) {
+                if (currentRating > weightedDecisionMatrix[criteria.length][i]) {
                     highestRated = i;
                 }
             }
