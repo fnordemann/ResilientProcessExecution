@@ -14,6 +14,8 @@ or clone and checkout the *phd-wsm* branch for process S4-Exe (WSM-based decisio
 
     git clone --single-branch --branch phd-wsm https://github.com/fnordemann/ResilientProcessExecution.git
 
+After cloning a repository to the local file system, be sure to change into the newly created directory before continuing.
+
 The following three options exist to run the proof-of-concept implementations. Afterward, the execution can be controlled and manipulated by the methods presented in the following section.
 
 ### Option 1: Run with Docker
